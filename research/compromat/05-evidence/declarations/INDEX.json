@@ -1,0 +1,2234 @@
+[
+  {
+    "key": "aksakov_x",
+    "person_id": "33",
+    "full_name": "Аксаков Анатолий Геннадьевич",
+    "birthdate": "28.11.1957",
+    "sanctions": "Австралия, Великобритания, Европейский союз, Канада, Новая Зеландия, Соединенные Штаты Америки, Украина, Франция, Швейцария, Япония",
+    "declarations": [
+      {
+        "year": 2024,
+        "income_rub": 14363258,
+        "sqm": 262.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2023,
+        "income_rub": 10335713,
+        "sqm": 36.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2022,
+        "income_rub": 8130867,
+        "sqm": 262.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2021,
+        "income_rub": 7032979,
+        "sqm": 304.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2020,
+        "income_rub": 6731951,
+        "sqm": 304.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2019,
+        "income_rub": 6304389,
+        "sqm": 304.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2018,
+        "income_rub": 5484038,
+        "sqm": 304.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2017,
+        "income_rub": 5886907,
+        "sqm": 641.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2016,
+        "income_rub": 5270722,
+        "sqm": 641.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2015,
+        "income_rub": 5448622,
+        "sqm": 641.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2014,
+        "income_rub": 4680946,
+        "sqm": 641.0,
+        "vehicles": 2
+      },
+      {
+        "year": 2013,
+        "income_rub": 3193634,
+        "sqm": 641.0,
+        "vehicles": 2
+      },
+      {
+        "year": 2012,
+        "income_rub": 2299414,
+        "sqm": 641.0,
+        "vehicles": 2
+      },
+      {
+        "year": 2011,
+        "income_rub": 4587626,
+        "sqm": 641.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2010,
+        "income_rub": 2041698,
+        "sqm": 600.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2010,
+        "income_rub": 2104543,
+        "sqm": 641.0,
+        "vehicles": 2
+      },
+      {
+        "year": 2009,
+        "income_rub": 1958596,
+        "sqm": 788.0,
+        "vehicles": 2
+      },
+      {
+        "year": 2006,
+        "income_rub": 1375684,
+        "sqm": 677.0,
+        "vehicles": 2
+      }
+    ]
+  },
+  {
+    "key": "mironov_x",
+    "person_id": "80",
+    "full_name": "Миронов Сергей Михайлович",
+    "birthdate": "14.02.1953",
+    "sanctions": "Европейский союз, Соединенные Штаты Америки, Австралия, Великобритания, Франция, Новая Зеландия, Швейцария, Канада, Украина, Япония",
+    "declarations": [
+      {
+        "year": 2024,
+        "income_rub": 14298792,
+        "sqm": 38.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2023,
+        "income_rub": 11768381,
+        "sqm": 38.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2022,
+        "income_rub": 8821632,
+        "sqm": 38.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2021,
+        "income_rub": 5751170,
+        "sqm": 0.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2020,
+        "income_rub": 5236317,
+        "sqm": 0.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2019,
+        "income_rub": 4292657,
+        "sqm": 31.0,
+        "vehicles": 3
+      },
+      {
+        "year": 2018,
+        "income_rub": 4940191,
+        "sqm": 31.0,
+        "vehicles": 3
+      },
+      {
+        "year": 2017,
+        "income_rub": 4498107,
+        "sqm": 31.0,
+        "vehicles": 4
+      },
+      {
+        "year": 2016,
+        "income_rub": 4551709,
+        "sqm": 31.0,
+        "vehicles": 4
+      },
+      {
+        "year": 2015,
+        "income_rub": 4735563,
+        "sqm": 31.0,
+        "vehicles": 4
+      },
+      {
+        "year": 2014,
+        "income_rub": 3890353,
+        "sqm": 64.0,
+        "vehicles": 4
+      },
+      {
+        "year": 2013,
+        "income_rub": 2465803,
+        "sqm": 64.0,
+        "vehicles": 4
+      },
+      {
+        "year": 2012,
+        "income_rub": 1994794,
+        "sqm": 550.0,
+        "vehicles": 4
+      },
+      {
+        "year": 2011,
+        "income_rub": 1979982,
+        "sqm": 550.0,
+        "vehicles": 4
+      },
+      {
+        "year": 2010,
+        "income_rub": 12230817,
+        "sqm": 550.0,
+        "vehicles": 4
+      },
+      {
+        "year": 2010,
+        "income_rub": 2444334,
+        "sqm": 396.0,
+        "vehicles": 4
+      },
+      {
+        "year": 2009,
+        "income_rub": 2466942,
+        "sqm": 32.0,
+        "vehicles": 2
+      },
+      {
+        "year": 2006,
+        "income_rub": 1515223,
+        "sqm": 278.0,
+        "vehicles": 4
+      },
+      {
+        "year": 2002,
+        "income_rub": 1086788,
+        "sqm": 121.0,
+        "vehicles": 3
+      }
+    ]
+  },
+  {
+    "key": "afonin_y",
+    "person_id": "12",
+    "full_name": "Афонин Юрий Вячеславович",
+    "birthdate": "22.03.1977",
+    "sanctions": "Австралия, Великобритания, Европейский союз, Канада, Новая Зеландия, Соединенные Штаты Америки, Украина, Франция, Швейцария, Япония",
+    "declarations": [
+      {
+        "year": 2021,
+        "income_rub": 5737492,
+        "sqm": 408.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2020,
+        "income_rub": 5726905,
+        "sqm": 104.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2019,
+        "income_rub": 5640811,
+        "sqm": 63.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2018,
+        "income_rub": 4630965,
+        "sqm": 63.0,
+        "vehicles": 2
+      },
+      {
+        "year": 2017,
+        "income_rub": 4655320,
+        "sqm": 63.0,
+        "vehicles": 2
+      },
+      {
+        "year": 2016,
+        "income_rub": 5641097,
+        "sqm": 63.0,
+        "vehicles": 2
+      },
+      {
+        "year": 2015,
+        "income_rub": 4838724,
+        "sqm": 39.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2015,
+        "income_rub": 4838724,
+        "sqm": 63.0,
+        "vehicles": 2
+      },
+      {
+        "year": 2014,
+        "income_rub": 3934403,
+        "sqm": 39.0,
+        "vehicles": 2
+      },
+      {
+        "year": 2013,
+        "income_rub": 2541317,
+        "sqm": 989.0,
+        "vehicles": 2
+      },
+      {
+        "year": 2012,
+        "income_rub": 9320111,
+        "sqm": 865.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2012,
+        "income_rub": 9320111,
+        "sqm": 865.0,
+        "vehicles": 2
+      },
+      {
+        "year": 2011,
+        "income_rub": 2260352,
+        "sqm": 865.0,
+        "vehicles": 3
+      },
+      {
+        "year": 2010,
+        "income_rub": 11192197,
+        "sqm": 865.0,
+        "vehicles": 3
+      },
+      {
+        "year": 2010,
+        "income_rub": 11192197,
+        "sqm": 865.0,
+        "vehicles": 2
+      },
+      {
+        "year": 2009,
+        "income_rub": 1975954,
+        "sqm": 715.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2006,
+        "income_rub": 828664,
+        "sqm": 21.0,
+        "vehicles": 0
+      }
+    ]
+  },
+  {
+    "key": "aksakov_a",
+    "person_id": "33",
+    "full_name": "Аксаков Анатолий Геннадьевич",
+    "birthdate": "28.11.1957",
+    "sanctions": "Австралия, Великобритания, Европейский союз, Канада, Новая Зеландия, Соединенные Штаты Америки, Украина, Франция, Швейцария, Япония",
+    "declarations": [
+      {
+        "year": 2024,
+        "income_rub": 14363258,
+        "sqm": 262.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2023,
+        "income_rub": 10335713,
+        "sqm": 36.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2022,
+        "income_rub": 8130867,
+        "sqm": 262.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2021,
+        "income_rub": 7032979,
+        "sqm": 304.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2020,
+        "income_rub": 6731951,
+        "sqm": 304.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2019,
+        "income_rub": 6304389,
+        "sqm": 304.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2018,
+        "income_rub": 5484038,
+        "sqm": 304.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2017,
+        "income_rub": 5886907,
+        "sqm": 641.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2016,
+        "income_rub": 5270722,
+        "sqm": 641.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2015,
+        "income_rub": 5448622,
+        "sqm": 641.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2014,
+        "income_rub": 4680946,
+        "sqm": 641.0,
+        "vehicles": 2
+      },
+      {
+        "year": 2013,
+        "income_rub": 3193634,
+        "sqm": 641.0,
+        "vehicles": 2
+      },
+      {
+        "year": 2012,
+        "income_rub": 2299414,
+        "sqm": 641.0,
+        "vehicles": 2
+      },
+      {
+        "year": 2011,
+        "income_rub": 4587626,
+        "sqm": 641.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2010,
+        "income_rub": 2041698,
+        "sqm": 600.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2010,
+        "income_rub": 2104543,
+        "sqm": 641.0,
+        "vehicles": 2
+      },
+      {
+        "year": 2009,
+        "income_rub": 1958596,
+        "sqm": 788.0,
+        "vehicles": 2
+      },
+      {
+        "year": 2006,
+        "income_rub": 1375684,
+        "sqm": 677.0,
+        "vehicles": 2
+      }
+    ]
+  },
+  {
+    "key": "avksentieva_s",
+    "person_id": "135486",
+    "full_name": "Авксентьева Сардана Владимировна",
+    "birthdate": "02.07.1970",
+    "sanctions": "Австралия, Великобритания, Европейский союз, Канада, Новая Зеландия, Соединенные Штаты Америки, Франция, Швейцария, Япония",
+    "declarations": [
+      {
+        "year": 2022,
+        "income_rub": 6039842,
+        "sqm": 393.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2021,
+        "income_rub": 3550320,
+        "sqm": 393.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2020,
+        "income_rub": 5047427,
+        "sqm": 715.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2019,
+        "income_rub": 3979521,
+        "sqm": 493.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2018,
+        "income_rub": 13457317,
+        "sqm": 475.0,
+        "vehicles": 1
+      }
+    ]
+  },
+  {
+    "key": "davankov_v",
+    "person_id": "399390",
+    "full_name": "Даванков Владислав Андреевич",
+    "birthdate": "25.02.1984",
+    "sanctions": "Австралия, Бельгия, Великобритания, Европейский союз, Канада, Новая Зеландия, Соединенные Штаты Америки, Франция, Швейцария, Япония",
+    "declarations": [
+      {
+        "year": 2023,
+        "income_rub": 76915250,
+        "sqm": 695.0,
+        "vehicles": 2
+      },
+      {
+        "year": 2022,
+        "income_rub": 9622304,
+        "sqm": 695.0,
+        "vehicles": 2
+      },
+      {
+        "year": 2021,
+        "income_rub": 5088795,
+        "sqm": 695.0,
+        "vehicles": 2
+      },
+      {
+        "year": 2020,
+        "income_rub": 5970564,
+        "sqm": 695.0,
+        "vehicles": 1
+      }
+    ]
+  },
+  {
+    "key": "gartung_v",
+    "person_id": "40",
+    "full_name": "Гартунг Валерий Карлович",
+    "birthdate": "12.11.1960",
+    "sanctions": "Австралия, Великобритания, Европейский союз, Канада, Новая Зеландия, Соединенные Штаты Америки, Украина, Франция, Швейцария, Япония",
+    "declarations": [
+      {
+        "year": 2024,
+        "income_rub": 11466179,
+        "sqm": 563.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2023,
+        "income_rub": 10384070,
+        "sqm": 482.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2022,
+        "income_rub": 6522008,
+        "sqm": 506.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2021,
+        "income_rub": 30990404,
+        "sqm": 201.0,
+        "vehicles": 4
+      },
+      {
+        "year": 2020,
+        "income_rub": 39341462,
+        "sqm": 201.0,
+        "vehicles": 4
+      },
+      {
+        "year": 2019,
+        "income_rub": 32435644,
+        "sqm": 201.0,
+        "vehicles": 4
+      },
+      {
+        "year": 2018,
+        "income_rub": 28570637,
+        "sqm": 201.0,
+        "vehicles": 4
+      },
+      {
+        "year": 2017,
+        "income_rub": 38825163,
+        "sqm": 201.0,
+        "vehicles": 4
+      },
+      {
+        "year": 2016,
+        "income_rub": 28770357,
+        "sqm": 107.0,
+        "vehicles": 4
+      },
+      {
+        "year": 2015,
+        "income_rub": 18362770,
+        "sqm": 107.0,
+        "vehicles": 2
+      },
+      {
+        "year": 2014,
+        "income_rub": 19315779,
+        "sqm": 101.0,
+        "vehicles": 2
+      },
+      {
+        "year": 2013,
+        "income_rub": 29254260,
+        "sqm": 995.0,
+        "vehicles": 2
+      },
+      {
+        "year": 2012,
+        "income_rub": 30786169,
+        "sqm": 994.0,
+        "vehicles": 3
+      },
+      {
+        "year": 2011,
+        "income_rub": 47005407,
+        "sqm": 61.0,
+        "vehicles": 3
+      },
+      {
+        "year": 2010,
+        "income_rub": 10703400,
+        "sqm": 233.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2010,
+        "income_rub": 10703400,
+        "sqm": 20.0,
+        "vehicles": 3
+      },
+      {
+        "year": 2009,
+        "income_rub": 15823810,
+        "sqm": 82.0,
+        "vehicles": 3
+      },
+      {
+        "year": 2006,
+        "income_rub": 2391409,
+        "sqm": 480.0,
+        "vehicles": 4
+      }
+    ]
+  },
+  {
+    "key": "goryacheva_k",
+    "person_id": "399306",
+    "full_name": "Горячева Ксения Александровна",
+    "birthdate": "16.05.1996",
+    "sanctions": "Австралия, Великобритания, Европейский союз, Канада, Новая Зеландия, Соединенные Штаты Америки, Франция, Швейцария, Япония",
+    "declarations": [
+      {
+        "year": 2021,
+        "income_rub": 1612946,
+        "sqm": 681.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2020,
+        "income_rub": 611600,
+        "sqm": 681.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2020,
+        "income_rub": 611600,
+        "sqm": 681.0,
+        "vehicles": 1
+      }
+    ]
+  },
+  {
+    "key": "grudinin_p",
+    "person_id": "21056",
+    "full_name": "Грудинин Павел Николаевич",
+    "birthdate": "20.10.1960",
+    "sanctions": null,
+    "declarations": [
+      {
+        "year": 2017,
+        "income_rub": 157413983,
+        "sqm": 160.0,
+        "vehicles": 2
+      },
+      {
+        "year": 2009,
+        "income_rub": 10250025,
+        "sqm": 101.0,
+        "vehicles": 1
+      }
+    ]
+  },
+  {
+    "key": "kurinny_a",
+    "person_id": "15050",
+    "full_name": "Куринный Алексей Владимирович",
+    "birthdate": "18.01.1974",
+    "sanctions": "Австралия, Великобритания, Европейский союз, Канада, Новая Зеландия, Соединенные Штаты Америки, Франция, Швейцария, Япония",
+    "declarations": [
+      {
+        "year": 2021,
+        "income_rub": 5754447,
+        "sqm": 362.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2020,
+        "income_rub": 5611778,
+        "sqm": 115.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2019,
+        "income_rub": 5445975,
+        "sqm": 115.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2018,
+        "income_rub": 4870390,
+        "sqm": 115.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2017,
+        "income_rub": 4677963,
+        "sqm": 115.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2016,
+        "income_rub": 1516175,
+        "sqm": 115.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2015,
+        "income_rub": 399227,
+        "sqm": 115.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2015,
+        "income_rub": 399227,
+        "sqm": 115.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2015,
+        "income_rub": 399227,
+        "sqm": 115.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2014,
+        "income_rub": 700638,
+        "sqm": 115.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2013,
+        "income_rub": 911663,
+        "sqm": 0.0,
+        "vehicles": 1
+      }
+    ]
+  },
+  {
+    "key": "leonov_o",
+    "person_id": "399383",
+    "full_name": "Леонов Олег Юрьевич",
+    "birthdate": "10.09.1970",
+    "sanctions": "Австралия, Бельгия, Великобритания, Европейский союз, Канада, Новая Зеландия, Соединенные Штаты Америки, Франция, Швейцария, Япония",
+    "declarations": [
+      {
+        "year": 2021,
+        "income_rub": 3398457,
+        "sqm": 430.0,
+        "vehicles": 2
+      }
+    ]
+  },
+  {
+    "key": "lugovoy_a",
+    "person_id": "95",
+    "full_name": "Луговой Андрей Константинович",
+    "birthdate": "19.09.1966",
+    "sanctions": "Европейский союз, Соединенные Штаты Америки, Австралия, Великобритания, Франция, Новая Зеландия, Швейцария, Канада, Украина, Япония",
+    "declarations": [
+      {
+        "year": 2021,
+        "income_rub": 7332735,
+        "sqm": 881.0,
+        "vehicles": 2
+      },
+      {
+        "year": 2020,
+        "income_rub": 7227755,
+        "sqm": 585.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2020,
+        "income_rub": 7227755,
+        "sqm": 585.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2020,
+        "income_rub": 7227755,
+        "sqm": 881.0,
+        "vehicles": 2
+      },
+      {
+        "year": 2019,
+        "income_rub": 7555269,
+        "sqm": 881.0,
+        "vehicles": 2
+      },
+      {
+        "year": 2018,
+        "income_rub": 4641666,
+        "sqm": 588.0,
+        "vehicles": 2
+      },
+      {
+        "year": 2017,
+        "income_rub": 4548962,
+        "sqm": 442.0,
+        "vehicles": 2
+      },
+      {
+        "year": 2016,
+        "income_rub": 13646051,
+        "sqm": 755.0,
+        "vehicles": 2
+      },
+      {
+        "year": 2015,
+        "income_rub": 10830560,
+        "sqm": 755.0,
+        "vehicles": 2
+      },
+      {
+        "year": 2014,
+        "income_rub": 30572888,
+        "sqm": 755.0,
+        "vehicles": 3
+      },
+      {
+        "year": 2013,
+        "income_rub": 2477235,
+        "sqm": 989.0,
+        "vehicles": 3
+      },
+      {
+        "year": 2012,
+        "income_rub": 1999939,
+        "sqm": 368.0,
+        "vehicles": 3
+      },
+      {
+        "year": 2011,
+        "income_rub": 103167942,
+        "sqm": 0.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2010,
+        "income_rub": 1961840,
+        "sqm": 500.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2010,
+        "income_rub": 1961840,
+        "sqm": 0.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2009,
+        "income_rub": 1958596,
+        "sqm": 892.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2006,
+        "income_rub": 3420000,
+        "sqm": 378.0,
+        "vehicles": 1
+      }
+    ]
+  },
+  {
+    "key": "matveev_m",
+    "person_id": "14238",
+    "full_name": "Матвеев Михаил Николаевич",
+    "birthdate": "13.05.1968",
+    "sanctions": "Австралия, Великобритания, Европейский союз, Канада, Новая Зеландия, Соединенные Штаты Америки, Франция, Швейцария, Япония",
+    "declarations": [
+      {
+        "year": 2021,
+        "income_rub": 2978894,
+        "sqm": 800.0,
+        "vehicles": 3
+      },
+      {
+        "year": 2020,
+        "income_rub": 2017031,
+        "sqm": 800.0,
+        "vehicles": 3
+      },
+      {
+        "year": 2019,
+        "income_rub": 1797819,
+        "sqm": 800.0,
+        "vehicles": 3
+      },
+      {
+        "year": 2018,
+        "income_rub": 1407330,
+        "sqm": 230.0,
+        "vehicles": 3
+      },
+      {
+        "year": 2017,
+        "income_rub": 990380,
+        "sqm": 774.0,
+        "vehicles": 4
+      },
+      {
+        "year": 2017,
+        "income_rub": 990380,
+        "sqm": 766.0,
+        "vehicles": 6
+      },
+      {
+        "year": 2016,
+        "income_rub": 1339224,
+        "sqm": 576.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2015,
+        "income_rub": 1592699,
+        "sqm": 136.0,
+        "vehicles": 2
+      },
+      {
+        "year": 2015,
+        "income_rub": 1645567,
+        "sqm": 445.0,
+        "vehicles": 2
+      },
+      {
+        "year": 2015,
+        "income_rub": 1592699,
+        "sqm": 136.0,
+        "vehicles": 2
+      },
+      {
+        "year": 2014,
+        "income_rub": 1668657,
+        "sqm": 445.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2012,
+        "income_rub": 1719536,
+        "sqm": 402.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2011,
+        "income_rub": 1583445,
+        "sqm": 402.0,
+        "vehicles": 1
+      }
+    ]
+  },
+  {
+    "key": "melnikov_i",
+    "person_id": "30",
+    "full_name": "Мельников Иван Иванович",
+    "birthdate": "07.08.1950",
+    "sanctions": "Монако, Европейский союз, Соединенные Штаты Америки, Австралия, Великобритания, Франция, Новая Зеландия, Швейцария, Канада, Украина, Япония",
+    "declarations": [
+      {
+        "year": 2021,
+        "income_rub": 6702112,
+        "sqm": 600.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2020,
+        "income_rub": 6637504,
+        "sqm": 600.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2019,
+        "income_rub": 6296390,
+        "sqm": 600.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2018,
+        "income_rub": 5723669,
+        "sqm": 600.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2017,
+        "income_rub": 5214557,
+        "sqm": 600.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2016,
+        "income_rub": 5175324,
+        "sqm": 600.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2015,
+        "income_rub": 5334387,
+        "sqm": 600.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2015,
+        "income_rub": 5334387,
+        "sqm": 600.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2015,
+        "income_rub": 5334387,
+        "sqm": 600.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2014,
+        "income_rub": 4288009,
+        "sqm": 0.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2013,
+        "income_rub": 2900941,
+        "sqm": 0.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2012,
+        "income_rub": 2337305,
+        "sqm": 0.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2012,
+        "income_rub": 2337306,
+        "sqm": 0.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2011,
+        "income_rub": 2252060,
+        "sqm": 0.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2010,
+        "income_rub": 2165139,
+        "sqm": 0.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2010,
+        "income_rub": 2165139,
+        "sqm": 0.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2009,
+        "income_rub": 2103077,
+        "sqm": 0.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2006,
+        "income_rub": 1263690,
+        "sqm": 818.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2002,
+        "income_rub": 322887,
+        "sqm": 866.0,
+        "vehicles": 0
+      }
+    ]
+  },
+  {
+    "key": "mironov_s",
+    "person_id": "80",
+    "full_name": "Миронов Сергей Михайлович",
+    "birthdate": "14.02.1953",
+    "sanctions": "Европейский союз, Соединенные Штаты Америки, Австралия, Великобритания, Франция, Новая Зеландия, Швейцария, Канада, Украина, Япония",
+    "declarations": [
+      {
+        "year": 2024,
+        "income_rub": 14298792,
+        "sqm": 38.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2023,
+        "income_rub": 11768381,
+        "sqm": 38.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2022,
+        "income_rub": 8821632,
+        "sqm": 38.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2021,
+        "income_rub": 5751170,
+        "sqm": 0.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2020,
+        "income_rub": 5236317,
+        "sqm": 0.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2019,
+        "income_rub": 4292657,
+        "sqm": 31.0,
+        "vehicles": 3
+      },
+      {
+        "year": 2018,
+        "income_rub": 4940191,
+        "sqm": 31.0,
+        "vehicles": 3
+      },
+      {
+        "year": 2017,
+        "income_rub": 4498107,
+        "sqm": 31.0,
+        "vehicles": 4
+      },
+      {
+        "year": 2016,
+        "income_rub": 4551709,
+        "sqm": 31.0,
+        "vehicles": 4
+      },
+      {
+        "year": 2015,
+        "income_rub": 4735563,
+        "sqm": 31.0,
+        "vehicles": 4
+      },
+      {
+        "year": 2014,
+        "income_rub": 3890353,
+        "sqm": 64.0,
+        "vehicles": 4
+      },
+      {
+        "year": 2013,
+        "income_rub": 2465803,
+        "sqm": 64.0,
+        "vehicles": 4
+      },
+      {
+        "year": 2012,
+        "income_rub": 1994794,
+        "sqm": 550.0,
+        "vehicles": 4
+      },
+      {
+        "year": 2011,
+        "income_rub": 1979982,
+        "sqm": 550.0,
+        "vehicles": 4
+      },
+      {
+        "year": 2010,
+        "income_rub": 12230817,
+        "sqm": 550.0,
+        "vehicles": 4
+      },
+      {
+        "year": 2010,
+        "income_rub": 2444334,
+        "sqm": 396.0,
+        "vehicles": 4
+      },
+      {
+        "year": 2009,
+        "income_rub": 2466942,
+        "sqm": 32.0,
+        "vehicles": 2
+      },
+      {
+        "year": 2006,
+        "income_rub": 1515223,
+        "sqm": 278.0,
+        "vehicles": 4
+      },
+      {
+        "year": 2002,
+        "income_rub": 1086788,
+        "sqm": 121.0,
+        "vehicles": 3
+      }
+    ]
+  },
+  {
+    "key": "nechaev_a",
+    "person_id": "399370",
+    "full_name": "Нечаев Алексей Геннадьевич",
+    "birthdate": "30.08.1966",
+    "sanctions": "Австралия, Великобритания, Европейский союз, Канада, Монако, Новая Зеландия, Соединенные Штаты Америки, Франция, Швейцария, Япония",
+    "declarations": [
+      {
+        "year": 2021,
+        "income_rub": 2475800619,
+        "sqm": 680.0,
+        "vehicles": 1
+      }
+    ]
+  },
+  {
+    "key": "nilov_o",
+    "person_id": "304",
+    "full_name": "Нилов Олег Анатольевич",
+    "birthdate": "08.05.1962",
+    "sanctions": "Европейский союз, Соединенные Штаты Америки, Австралия, Великобритания, Франция, Новая Зеландия, Швейцария, Канада, Украина, Япония",
+    "declarations": [
+      {
+        "year": 2022,
+        "income_rub": 7447542,
+        "sqm": 748.0,
+        "vehicles": 4
+      },
+      {
+        "year": 2021,
+        "income_rub": 5596150,
+        "sqm": 761.0,
+        "vehicles": 5
+      },
+      {
+        "year": 2020,
+        "income_rub": 5724537,
+        "sqm": 761.0,
+        "vehicles": 4
+      },
+      {
+        "year": 2019,
+        "income_rub": 5444831,
+        "sqm": 761.0,
+        "vehicles": 4
+      },
+      {
+        "year": 2018,
+        "income_rub": 4766271,
+        "sqm": 761.0,
+        "vehicles": 4
+      },
+      {
+        "year": 2017,
+        "income_rub": 4587170,
+        "sqm": 761.0,
+        "vehicles": 4
+      },
+      {
+        "year": 2016,
+        "income_rub": 4680747,
+        "sqm": 761.0,
+        "vehicles": 4
+      },
+      {
+        "year": 2015,
+        "income_rub": 4735560,
+        "sqm": 261.0,
+        "vehicles": 5
+      },
+      {
+        "year": 2014,
+        "income_rub": 3890958,
+        "sqm": 261.0,
+        "vehicles": 5
+      },
+      {
+        "year": 2013,
+        "income_rub": 2484258,
+        "sqm": 261.0,
+        "vehicles": 5
+      },
+      {
+        "year": 2012,
+        "income_rub": 2002399,
+        "sqm": 261.0,
+        "vehicles": 5
+      },
+      {
+        "year": 2011,
+        "income_rub": 1577106,
+        "sqm": 261.0,
+        "vehicles": 5
+      },
+      {
+        "year": 2010,
+        "income_rub": 1536644,
+        "sqm": 255.0,
+        "vehicles": 5
+      },
+      {
+        "year": 2010,
+        "income_rub": 1536644,
+        "sqm": 781.0,
+        "vehicles": 5
+      }
+    ]
+  },
+  {
+    "key": "ostanina_n",
+    "person_id": "44",
+    "full_name": "Останина Нина Александровна",
+    "birthdate": "26.12.1955",
+    "sanctions": "Австралия, Великобритания, Европейский союз, Канада, Новая Зеландия, Соединенные Штаты Америки, Франция, Швейцария, Япония",
+    "declarations": [
+      {
+        "year": 2021,
+        "income_rub": 4693815,
+        "sqm": 762.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2020,
+        "income_rub": 4745702,
+        "sqm": 762.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2020,
+        "income_rub": 4745702,
+        "sqm": 762.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2019,
+        "income_rub": 4463566,
+        "sqm": 762.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2019,
+        "income_rub": 4463566,
+        "sqm": 762.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2018,
+        "income_rub": 14090879,
+        "sqm": 104.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2018,
+        "income_rub": 14090879,
+        "sqm": 104.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2017,
+        "income_rub": 4557636,
+        "sqm": 104.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2010,
+        "income_rub": 1963050,
+        "sqm": 0.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2010,
+        "income_rub": 1963050,
+        "sqm": 0.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2009,
+        "income_rub": 2058596,
+        "sqm": 0.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2006,
+        "income_rub": 1207264,
+        "sqm": 111.0,
+        "vehicles": 1
+      }
+    ]
+  },
+  {
+    "key": "pevtsov_d",
+    "person_id": "399362",
+    "full_name": "Певцов Дмитрий Анатольевич",
+    "birthdate": "08.07.1963",
+    "sanctions": "Австралия, Великобритания, Европейский союз, Канада, Новая Зеландия, Соединенные Штаты Америки, Франция, Швейцария, Япония",
+    "declarations": [
+      {
+        "year": 2021,
+        "income_rub": 10325074,
+        "sqm": 74.0,
+        "vehicles": 4
+      }
+    ]
+  },
+  {
+    "key": "prilepin_z",
+    "person_id": "167172",
+    "full_name": "Прилепин Евгений Николаевич",
+    "birthdate": "07.07.1975",
+    "sanctions": "Австралия, Великобритания, Европейский союз, Канада, Монако, Новая Зеландия, Украина, Франция, Швейцария",
+    "declarations": [
+      {
+        "year": 2019,
+        "income_rub": 25547110,
+        "sqm": 936.0,
+        "vehicles": 2
+      },
+      {
+        "year": 2019,
+        "income_rub": 25844110,
+        "sqm": 488.0,
+        "vehicles": 2
+      }
+    ]
+  },
+  {
+    "key": "semigin_g",
+    "person_id": "137281",
+    "full_name": "Семигин Геннадий Юрьевич",
+    "birthdate": "23.03.1964",
+    "sanctions": "Австралия, Бельгия, Великобритания, Европейский союз, Канада, Новая Зеландия, Соединенные Штаты Америки, Франция, Швейцария, Япония",
+    "declarations": [
+      {
+        "year": 2024,
+        "income_rub": 8376828,
+        "sqm": 82.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2023,
+        "income_rub": 13691504,
+        "sqm": 82.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2022,
+        "income_rub": 19540968,
+        "sqm": 82.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2021,
+        "income_rub": 225305823,
+        "sqm": 82.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2020,
+        "income_rub": 630802,
+        "sqm": 82.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2002,
+        "income_rub": 289364,
+        "sqm": 0.0,
+        "vehicles": 0
+      }
+    ]
+  },
+  {
+    "key": "shargunov_s",
+    "person_id": "32009",
+    "full_name": "Шаргунов Сергей Александрович",
+    "birthdate": "12.05.1980",
+    "sanctions": "Австралия, Великобритания, Европейский союз, Канада, Новая Зеландия, Соединенные Штаты Америки, Франция, Швейцария, Япония",
+    "declarations": [
+      {
+        "year": 2021,
+        "income_rub": 10261696,
+        "sqm": 47.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2020,
+        "income_rub": 10774575,
+        "sqm": 47.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2019,
+        "income_rub": 22936634,
+        "sqm": 47.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2018,
+        "income_rub": 6833596,
+        "sqm": 78.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2017,
+        "income_rub": 6622650,
+        "sqm": 102.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2016,
+        "income_rub": 5419836,
+        "sqm": 54.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2015,
+        "income_rub": 3201953,
+        "sqm": 131.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2015,
+        "income_rub": 3201953,
+        "sqm": 131.0,
+        "vehicles": 1
+      }
+    ]
+  },
+  {
+    "key": "shlosberg_l",
+    "person_id": "14114",
+    "full_name": "Шлосберг Лев Маркович",
+    "birthdate": "30.07.1963",
+    "sanctions": null,
+    "declarations": [
+      {
+        "year": 2020,
+        "income_rub": 1254133,
+        "sqm": 114.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2020,
+        "income_rub": 1254133,
+        "sqm": 114.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2020,
+        "income_rub": 1254133,
+        "sqm": 182.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2019,
+        "income_rub": 927524,
+        "sqm": 153.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2018,
+        "income_rub": 788779,
+        "sqm": 153.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2017,
+        "income_rub": 756009,
+        "sqm": 153.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2016,
+        "income_rub": 1375393,
+        "sqm": 96.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2015,
+        "income_rub": 677769,
+        "sqm": 28.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2015,
+        "income_rub": 677769,
+        "sqm": 56.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2015,
+        "income_rub": 677769,
+        "sqm": 28.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2014,
+        "income_rub": 665605,
+        "sqm": 96.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2013,
+        "income_rub": 654597,
+        "sqm": 124.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2012,
+        "income_rub": 775556,
+        "sqm": 124.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2011,
+        "income_rub": 215042,
+        "sqm": 28.0,
+        "vehicles": 0
+      }
+    ]
+  },
+  {
+    "key": "slabunova_e",
+    "person_id": "13032",
+    "full_name": "Слабунова Эмилия Эдгардовна",
+    "birthdate": "07.10.1958",
+    "sanctions": null,
+    "declarations": [
+      {
+        "year": 2021,
+        "income_rub": 2725983,
+        "sqm": 945.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2020,
+        "income_rub": 1679827,
+        "sqm": 314.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2019,
+        "income_rub": 3889508,
+        "sqm": 314.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2018,
+        "income_rub": 2947125,
+        "sqm": 285.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2017,
+        "income_rub": 2964896,
+        "sqm": 268.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2016,
+        "income_rub": 2710311,
+        "sqm": 268.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2015,
+        "income_rub": 1710180,
+        "sqm": 116.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2014,
+        "income_rub": 1537836,
+        "sqm": 116.0,
+        "vehicles": 1
+      }
+    ]
+  },
+  {
+    "key": "slutsky_l",
+    "person_id": "105",
+    "full_name": "Слуцкий Леонид Эдуардович",
+    "birthdate": "04.01.1968",
+    "sanctions": "Европейский союз, Соединенные Штаты Америки, Австралия, Великобритания, Бельгия, Франция, Новая Зеландия, Швейцария, Канада, Украина, Япония",
+    "declarations": [
+      {
+        "year": 2024,
+        "income_rub": 13463862,
+        "sqm": 453.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2024,
+        "income_rub": 13463862,
+        "sqm": 453.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2024,
+        "income_rub": 13463862,
+        "sqm": 453.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2024,
+        "income_rub": 13463862,
+        "sqm": 453.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2023,
+        "income_rub": 10788949,
+        "sqm": 453.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2023,
+        "income_rub": 10788949,
+        "sqm": 453.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2023,
+        "income_rub": 10788949,
+        "sqm": 414.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2023,
+        "income_rub": 10788949,
+        "sqm": 414.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2023,
+        "income_rub": 10788949,
+        "sqm": 414.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2023,
+        "income_rub": 35989903,
+        "sqm": 15.0,
+        "vehicles": 2
+      },
+      {
+        "year": 2023,
+        "income_rub": 10788949,
+        "sqm": 453.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2022,
+        "income_rub": 8857916,
+        "sqm": 267.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2022,
+        "income_rub": 8857916,
+        "sqm": 267.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2022,
+        "income_rub": 8857916,
+        "sqm": 285.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2022,
+        "income_rub": 8857916,
+        "sqm": 267.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2021,
+        "income_rub": 5781679,
+        "sqm": 829.0,
+        "vehicles": 2
+      },
+      {
+        "year": 2020,
+        "income_rub": 5612437,
+        "sqm": 809.0,
+        "vehicles": 2
+      },
+      {
+        "year": 2020,
+        "income_rub": 5612437,
+        "sqm": 267.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2019,
+        "income_rub": 5672975,
+        "sqm": 809.0,
+        "vehicles": 2
+      },
+      {
+        "year": 2018,
+        "income_rub": 5093364,
+        "sqm": 809.0,
+        "vehicles": 3
+      }
+    ]
+  },
+  {
+    "key": "titov_b",
+    "person_id": "2649",
+    "full_name": "Титов Борис Юрьевич",
+    "birthdate": "24.12.1960",
+    "sanctions": "Австралия, Великобритания, Канада",
+    "declarations": [
+      {
+        "year": 2017,
+        "income_rub": 274307117,
+        "sqm": 637.0,
+        "vehicles": 5
+      },
+      {
+        "year": 2014,
+        "income_rub": 16691713,
+        "sqm": 986.0,
+        "vehicles": 10
+      },
+      {
+        "year": 2013,
+        "income_rub": 8946590,
+        "sqm": 100.0,
+        "vehicles": 14
+      },
+      {
+        "year": 2012,
+        "income_rub": 20105174,
+        "sqm": 70.0,
+        "vehicles": 12
+      }
+    ]
+  },
+  {
+    "key": "vishnevsky_b",
+    "person_id": "9185",
+    "full_name": "Вишневский Борис Лазаревич",
+    "birthdate": "15.10.1955",
+    "sanctions": null,
+    "declarations": [
+      {
+        "year": 2021,
+        "income_rub": 2824626,
+        "sqm": 76.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2020,
+        "income_rub": 2995753,
+        "sqm": 76.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2019,
+        "income_rub": 2612779,
+        "sqm": 75.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2018,
+        "income_rub": 2497660,
+        "sqm": 75.0,
+        "vehicles": 2
+      },
+      {
+        "year": 2017,
+        "income_rub": 2488418,
+        "sqm": 75.0,
+        "vehicles": 2
+      },
+      {
+        "year": 2016,
+        "income_rub": 2548685,
+        "sqm": 75.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2015,
+        "income_rub": 2160432,
+        "sqm": 76.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2015,
+        "income_rub": 2101703,
+        "sqm": 75.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2015,
+        "income_rub": 2160432,
+        "sqm": 41.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2014,
+        "income_rub": 2101703,
+        "sqm": 117.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2013,
+        "income_rub": 1932828,
+        "sqm": 122.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2002,
+        "income_rub": 149041,
+        "sqm": 70.0,
+        "vehicles": 0
+      }
+    ]
+  },
+  {
+    "key": "yavlinsky_g",
+    "person_id": "9214",
+    "full_name": "Явлинский Григорий Алексеевич",
+    "birthdate": "10.04.1952",
+    "sanctions": null,
+    "declarations": [
+      {
+        "year": 2017,
+        "income_rub": 23022402,
+        "sqm": 105.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2015,
+        "income_rub": 2362471,
+        "sqm": 76.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2015,
+        "income_rub": 3001598,
+        "sqm": 105.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2015,
+        "income_rub": 2362471,
+        "sqm": 76.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2014,
+        "income_rub": 2650356,
+        "sqm": 105.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2013,
+        "income_rub": 2463028,
+        "sqm": 105.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2002,
+        "income_rub": 1681874,
+        "sqm": 158.0,
+        "vehicles": 0
+      },
+      {
+        "year": 1999,
+        "income_rub": 2480848,
+        "sqm": 157.0,
+        "vehicles": 0
+      },
+      {
+        "year": 1998,
+        "income_rub": 953250,
+        "sqm": 0.0,
+        "vehicles": 0
+      }
+    ]
+  },
+  {
+    "key": "zhuravlev_a",
+    "person_id": "573",
+    "full_name": "Журавлев Алексей Александрович",
+    "birthdate": "30.06.1962",
+    "sanctions": "Монако, Европейский союз, Соединенные Штаты Америки, Австралия, Великобритания, Франция, Новая Зеландия, Швейцария, Канада, Украина, Япония",
+    "declarations": [
+      {
+        "year": 2021,
+        "income_rub": 5754447,
+        "sqm": 0.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2020,
+        "income_rub": 5616112,
+        "sqm": 0.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2019,
+        "income_rub": 5423655,
+        "sqm": 0.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2018,
+        "income_rub": 4744641,
+        "sqm": 0.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2017,
+        "income_rub": 4653373,
+        "sqm": 0.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2016,
+        "income_rub": 4361615,
+        "sqm": 0.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2015,
+        "income_rub": 4985560,
+        "sqm": 0.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2014,
+        "income_rub": 3882888,
+        "sqm": 104.0,
+        "vehicles": 2
+      },
+      {
+        "year": 2013,
+        "income_rub": 2477235,
+        "sqm": 104.0,
+        "vehicles": 2
+      },
+      {
+        "year": 2012,
+        "income_rub": 5000942,
+        "sqm": 82.0,
+        "vehicles": 2
+      },
+      {
+        "year": 2011,
+        "income_rub": 796929,
+        "sqm": 82.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2010,
+        "income_rub": 935826,
+        "sqm": 0.0,
+        "vehicles": 0
+      }
+    ]
+  },
+  {
+    "key": "zyuganov_g",
+    "person_id": "8",
+    "full_name": "Зюганов Геннадий Андреевич",
+    "birthdate": "26.04.1944",
+    "sanctions": "Европейский союз, Соединенные Штаты Америки, Австралия, Великобритания, Франция, Новая Зеландия, Швейцария, Канада, Украина, Япония",
+    "declarations": [
+      {
+        "year": 2021,
+        "income_rub": 7798835,
+        "sqm": 281.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2020,
+        "income_rub": 7589957,
+        "sqm": 281.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2019,
+        "income_rub": 7903534,
+        "sqm": 281.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2018,
+        "income_rub": 7927848,
+        "sqm": 281.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2017,
+        "income_rub": 6333995,
+        "sqm": 281.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2016,
+        "income_rub": 5499188,
+        "sqm": 281.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2015,
+        "income_rub": 6536738,
+        "sqm": 281.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2015,
+        "income_rub": 6538890,
+        "sqm": 281.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2015,
+        "income_rub": 6536738,
+        "sqm": 281.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2014,
+        "income_rub": 4460788,
+        "sqm": 167.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2013,
+        "income_rub": 3194616,
+        "sqm": 167.0,
+        "vehicles": 1
+      },
+      {
+        "year": 2012,
+        "income_rub": 2458749,
+        "sqm": 167.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2011,
+        "income_rub": 2177567,
+        "sqm": 167.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2010,
+        "income_rub": 2126487,
+        "sqm": 41.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2010,
+        "income_rub": 2127686,
+        "sqm": 167.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2010,
+        "income_rub": 7681748,
+        "sqm": 41.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2009,
+        "income_rub": 2075542,
+        "sqm": 167.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2006,
+        "income_rub": 3445292,
+        "sqm": 41.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2006,
+        "income_rub": 1257784,
+        "sqm": 167.0,
+        "vehicles": 0
+      },
+      {
+        "year": 2002,
+        "income_rub": 324709,
+        "sqm": 197.0,
+        "vehicles": 0
+      }
+    ]
+  }
+]

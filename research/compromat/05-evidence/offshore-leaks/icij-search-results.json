@@ -1,0 +1,93 @@
+{
+  "source": "ICIJ Offshore Leaks Database (offshoreleaks.icij.org) — search via WebFetch + Google indexed pages",
+  "date_retrieved": "2026-05-04",
+  "method": "Direct API/JSON access blocked from this VPS (CloudFront WAF challenge / 406 Not Acceptable). Used WebFetch on individual /nodes/<id> pages and Google site-search for indexed records.",
+  "searches_performed": [
+    "Yavlinsky", "Zyuganov", "Slutsky", "Mironov", "Zhirinovsky",
+    "Lebedev (Igor)", "Garcia (David Alexandrovich)", "Nechaev (Alexey, Andrey)",
+    "Davankov (Vladislav)", "Avksentieva", "Prokhorov (Mikhail)",
+    "Prilepin (Zakhar/Yevgeniy)", "Khodorkovsky (Mikhail)", "Nevzlin (Leonid)",
+    "Titov (Boris, Pavel)", "Babkin (Konstantin)", "Rybakov", "Shlosberg",
+    "Slabunova", "Vishnevsky", "Lugovoy"
+  ],
+  "results_found": [
+    {
+      "name": "Mikhail Dmitrievitch Prokhorov",
+      "icij_id": "https://offshoreleaks.icij.org/nodes/240552471",
+      "role": "Beneficial owner",
+      "entity": "Rosso Industry Ltd.",
+      "jurisdiction": "British Virgin Islands",
+      "incorporation": "01 Jul 2008",
+      "status": "Struck off",
+      "linked_country": "Russia",
+      "leak": "Pandora Papers (Overseas Management Company / OMC)",
+      "data_currency": "through 2018",
+      "russian_party_link": "Кандидат в президенты РФ 2012, основатель «Гражданская платформа» (предшественница Партии Роста). Считается одним из спонсоров Партии Роста / Прохорова Иры в неприкосновенный круг."
+    },
+    {
+      "name": "Igor Lebedev",
+      "icij_id": "https://offshoreleaks.icij.org/nodes/21298",
+      "role": "Director",
+      "entities": [
+        {"name": "Perrywood Corporation", "since": "2003-09-23"},
+        {"name": "Appleridge Corporation", "since": "2003-07-23"},
+        {"name": "Linkwood Creek Corporation", "since": "2003-07-23", "until": "2004-06-25"},
+        {"name": "Springerfield Corporation", "since": "2003-09-29", "until": "2004-06-25"}
+      ],
+      "address": "app. 41, block 3, 14 Aminyevskoye shosse, Moscow, Russia",
+      "leak": "Offshore Leaks (2013) investigation",
+      "data_currency": "through 2010",
+      "russian_party_link": "Сын В.В.Жириновского, депутат ГД от ЛДПР 2003–2021, замспикера. Адрес — Москва, что согласуется с биографией. Но идентификация требует доп. проверки (Igor Lebedev — распространённое имя)."
+    },
+    {
+      "name": "Sergey Rybakov",
+      "icij_id": "https://offshoreleaks.icij.org/nodes/13001234",
+      "role": "Beneficiary",
+      "entity": "Norfolk Business Ltd.",
+      "jurisdiction": "British Virgin Islands",
+      "incorporation": "19 Apr 2004",
+      "status": "Defaulted",
+      "address": "Apt. 75; h; 1; Sharapovskaya Str.; Mytishchi; Moscow Province; Russia",
+      "leak": "Panama Papers",
+      "data_currency": "through 2015",
+      "russian_party_link": "Sergey Rybakov из Мытищ — НЕ И.Л.Рыбаков, основатель «Магнита» / совладелец «Технониколь» (Игорь Леонидович Рыбаков, известный как спонсор оппозиционных проектов)."
+    }
+  ],
+  "names_with_no_matches": [
+    "Yavlinsky (Grigory)",
+    "Zyuganov (Gennady, Leonid, Mikhail)",
+    "Slutsky (Leonid)",
+    "Mironov (Sergey)",
+    "Zhirinovsky (Vladimir himself)",
+    "Nechaev (Alexey Gennadyevich, Andrey Alexeyevich)",
+    "Davankov (Vladislav)",
+    "Avksentieva (Sardana)",
+    "Prilepin (Zakhar / Yevgeniy Lavlinsky)",
+    "Khodorkovsky (Mikhail)",
+    "Nevzlin (Leonid)",
+    "Titov (Boris, Pavel)",
+    "Babkin (Konstantin)",
+    "Shlosberg (Lev)",
+    "Slabunova (Emilia)",
+    "Vishnevsky (Boris)",
+    "Lugovoy (Andrey)"
+  ],
+  "icij_power_players_russia": [
+    {"name": "Gennady Timchenko", "tag": "Putin inner circle"},
+    {"name": "Konstantin Ernst", "tag": "Putin inner circle"},
+    {"name": "Mikhail Fridman", "tag": "Putin inner circle"},
+    {"name": "Suleiman Kerimov", "tag": "Putin inner circle"},
+    {"name": "Family of Sergei Chemezov", "tag": "Putin inner circle"},
+    {"name": "Svetlana Krivonogikh", "tag": "Putin associate"},
+    {"name": "Sergey Roldugin", "tag": "Putin close friend"},
+    {"name": "Arkady and Boris Rotenberg", "tag": "Putin childhood friends"},
+    {"name": "Mikail Gutseriev", "tag": "ex-Duma, RussNeft, 84 offshore entities"},
+    {"name": "Sait-Salam Gutseriev", "tag": "ex-Duma, brother of Mikail"},
+    {"name": "Leonid Reiman", "tag": "ex-Communications Minister, presidential adviser"}
+  ],
+  "negative_finding_summary": "Из руководителей и активов системных партий (КПРФ, ЛДПР, СРЗП, НЛ, Партия Роста, Яблоко, Гражданская инициатива) — НЕ найдены прямые записи в ICIJ. Это согласуется с тем, что: (а) лидеры этих партий действительно не имеют офшоров, (б) офшоры есть на родственников (как у семьи Жириновского — недвижимость в Испании ~$135 млн, OCCRP 2018), (в) или офшоры есть, но документы не попали в Pandora/Panama/Offshore Leaks. Отсутствие записи != отсутствие офшоров. Семья Жириновского-Лебедева хорошо документирована в OCCRP отдельно (см. occrp.org).",
+  "related_occrp_findings": {
+    "url": "https://www.occrp.org/en/investigation/family-of-eccentric-russian-loyal-opposition-leader-owns-millions-in-undeclared-property",
+    "summary": "Семья Жириновского/Лебедева — ~$135 млн в недекларированной недвижимости. Жена Жириновского Галина Лебедева: апартамент в Бенидорме, 3 офиса в Барселоне, вилла в Альтее (Испания, ~$5 млн); 5 апартаментов в Москва-Сити, 2 на Нежинской (~$14 млн). Гражданская жена И.Лебедева Надежда Гришаева: Azuline Hotel-Apartamento Rosamar в Ибице (~$39 млн), >12 апартаментов на Нежинской через компанию Telmi (~$32 млн). Оформлено НЕ на политиков, поэтому не декларируется."
+  }
+}

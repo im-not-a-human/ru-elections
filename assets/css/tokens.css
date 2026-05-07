@@ -1,0 +1,47 @@
+/* Design tokens — palette, sizes, fonts. Single source of truth. */
+:root {
+  --bg: #F0EAD6;
+  --bg-paper: #F7F2E1;
+  --bg-card: #FFFEF8;
+  --bg-dark: #1A1815;
+  --ink: #1A1815;
+  --ink-soft: #43403A;
+  --ink-muted: #6B6760;
+  --ink-faded: #6F6A60;
+  --line: #DDD3B8;
+  --line-soft: #E8DFC4;
+  --accent: #B91C1C;
+  --accent-soft: #DC2626;
+  --gold: #B45309;
+  --gold-soft: #D97706;
+  --green: #15803D;
+  --green-soft: #DCFCE7;
+
+  --party-er: #1A4584;
+  --party-er-bg: #E8EEF6;
+  --party-kprf: #CC0000;
+  --party-kprf-bg: #FBEAEA;
+  --party-ldpr: #B8860B;
+  --party-ldpr-bg: #FBF4D8;
+  --party-sr: #C71F1F;
+  --party-sr-bg: #FCE9E7;
+  --party-nl: #5046E5;
+  --party-nl-bg: #ECEAFC;
+
+  --vote-za: #DC2626;
+  --vote-za-bg: #FEE2E2;
+  --vote-against: #15803D;
+  --vote-against-bg: #DCFCE7;
+  --vote-abstain: #B45309;
+  --vote-abstain-bg: #FEF3C7;
+  --vote-partial: #92400E;
+  --vote-partial-bg: #FED7AA;
+  --vote-didnt: #6B7280;
+  --vote-didnt-bg: #E5E7EB;
+  --vote-absent: #D6D3D1;
+  --vote-absent-bg: #F5F4F1;
+
+  --max: 1280px;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}

@@ -1,0 +1,1536 @@
+{
+  "name": "05-evidence",
+  "type": "dir",
+  "children": [
+    {
+      "name": "consultant-laws",
+      "type": "dir",
+      "children": [
+        {
+          "name": "consultant-fz-386-trans.html",
+          "type": "file",
+          "size": 29496,
+          "ext": "html"
+        },
+        {
+          "name": "consultant-fz-439-2023-conscription.html",
+          "type": "file",
+          "size": 29644,
+          "ext": "html"
+        },
+        {
+          "name": "fz-15-2022-dnr-ratification.html",
+          "type": "file",
+          "size": 21958,
+          "ext": "html"
+        },
+        {
+          "name": "fz-156-2025-max-messenger.html",
+          "type": "file",
+          "size": 31037,
+          "ext": "html"
+        },
+        {
+          "name": "fz-255-2022-inoagents.html",
+          "type": "file",
+          "size": 37431,
+          "ext": "html"
+        },
+        {
+          "name": "fz-281-2025-vpn-ban.html",
+          "type": "file",
+          "size": 30193,
+          "ext": "html"
+        },
+        {
+          "name": "fz-303-2024-blogger-deanon.html",
+          "type": "file",
+          "size": 39907,
+          "ext": "html"
+        },
+        {
+          "name": "fz-32-2022-uk-207-3.html",
+          "type": "file",
+          "size": 48038,
+          "ext": "html"
+        },
+        {
+          "name": "fz-339-2023-digital-ruble.html",
+          "type": "file",
+          "size": 31827,
+          "ext": "html"
+        },
+        {
+          "name": "fz-411-2024-vsu-property-confiscation.html",
+          "type": "file",
+          "size": 29591,
+          "ext": "html"
+        },
+        {
+          "name": "garant-base-fz-386-trans-full.html",
+          "type": "file",
+          "size": 76046,
+          "ext": "html"
+        },
+        {
+          "name": "garant-fz-121-2025-migrants-app.html",
+          "type": "file",
+          "size": 104506,
+          "ext": "html"
+        },
+        {
+          "name": "garant-fz-255-2022-inoagents.html",
+          "type": "file",
+          "size": 103535,
+          "ext": "html"
+        },
+        {
+          "name": "garant-fz-386-2023-trans-ban.html",
+          "type": "file",
+          "size": 102522,
+          "ext": "html"
+        },
+        {
+          "name": "garant-fz-479-2022-lgbt-koap.html",
+          "type": "file",
+          "size": 103165,
+          "ext": "html"
+        },
+        {
+          "name": "postanovlenie-1432-2012-agro-subsidies.html",
+          "type": "file",
+          "size": 30134,
+          "ext": "html"
+        }
+      ]
+    },
+    {
+      "name": "court-rulings",
+      "type": "dir",
+      "children": [
+        {
+          "name": "vsrf-2024-partiya-dela-liquidation.html",
+          "type": "file",
+          "size": 134321,
+          "ext": "html"
+        },
+        {
+          "name": "vsrf-2025-grazhd-iniciativa-liquidation.html",
+          "type": "file",
+          "size": 274855,
+          "ext": "html"
+        },
+        {
+          "name": "vsrf-2025-partiya-rosta-liquidation.html",
+          "type": "file",
+          "size": 317443,
+          "ext": "html"
+        },
+        {
+          "name": "vsrf-party-liquidations.json",
+          "type": "file",
+          "size": 5580,
+          "ext": "json"
+        }
+      ]
+    },
+    {
+      "name": "declarations",
+      "type": "dir",
+      "children": [
+        {
+          "name": "INDEX.csv",
+          "type": "file",
+          "size": 90356,
+          "ext": "csv"
+        },
+        {
+          "name": "INDEX.json",
+          "type": "file",
+          "size": 49161,
+          "ext": "json"
+        },
+        {
+          "name": "person-33-aksakov.html",
+          "type": "file",
+          "size": 160922,
+          "ext": "html"
+        },
+        {
+          "name": "person-80-mironov.html",
+          "type": "file",
+          "size": 171013,
+          "ext": "html"
+        },
+        {
+          "name": "person-afonin_y-12.html",
+          "type": "file",
+          "size": 153332,
+          "ext": "html"
+        },
+        {
+          "name": "person-aksakov_a-33.html",
+          "type": "file",
+          "size": 160922,
+          "ext": "html"
+        },
+        {
+          "name": "person-avksentieva_s-135486.html",
+          "type": "file",
+          "size": 104429,
+          "ext": "html"
+        },
+        {
+          "name": "person-davankov_v-399390.html",
+          "type": "file",
+          "size": 102570,
+          "ext": "html"
+        },
+        {
+          "name": "person-gartung_v-40.html",
+          "type": "file",
+          "size": 157297,
+          "ext": "html"
+        },
+        {
+          "name": "person-goryacheva_k-399306.html",
+          "type": "file",
+          "size": 96027,
+          "ext": "html"
+        },
+        {
+          "name": "person-grudinin_p-21056.html",
+          "type": "file",
+          "size": 86840,
+          "ext": "html"
+        },
+        {
+          "name": "person-kurinny_a-15050.html",
+          "type": "file",
+          "size": 128328,
+          "ext": "html"
+        },
+        {
+          "name": "person-leonov_o-399383.html",
+          "type": "file",
+          "size": 88250,
+          "ext": "html"
+        },
+        {
+          "name": "person-lugovoy_a-95.html",
+          "type": "file",
+          "size": 151976,
+          "ext": "html"
+        },
+        {
+          "name": "person-matveev_m-14238.html",
+          "type": "file",
+          "size": 133071,
+          "ext": "html"
+        },
+        {
+          "name": "person-melnikov_i-30.html",
+          "type": "file",
+          "size": 160888,
+          "ext": "html"
+        },
+        {
+          "name": "person-mironov_s-80.html",
+          "type": "file",
+          "size": 171013,
+          "ext": "html"
+        },
+        {
+          "name": "person-nechaev_a-399370.html",
+          "type": "file",
+          "size": 90546,
+          "ext": "html"
+        },
+        {
+          "name": "person-nilov_o-304.html",
+          "type": "file",
+          "size": 137434,
+          "ext": "html"
+        },
+        {
+          "name": "person-ostanina_n-44.html",
+          "type": "file",
+          "size": 134381,
+          "ext": "html"
+        },
+        {
+          "name": "person-pevtsov_d-399362.html",
+          "type": "file",
+          "size": 87904,
+          "ext": "html"
+        },
+        {
+          "name": "person-prilepin_z-167172.html",
+          "type": "file",
+          "size": 88754,
+          "ext": "html"
+        },
+        {
+          "name": "person-semigin_g-137281.html",
+          "type": "file",
+          "size": 116459,
+          "ext": "html"
+        },
+        {
+          "name": "person-shargunov_s-32009.html",
+          "type": "file",
+          "size": 115713,
+          "ext": "html"
+        },
+        {
+          "name": "person-shlosberg_l-14114.html",
+          "type": "file",
+          "size": 132791,
+          "ext": "html"
+        },
+        {
+          "name": "person-slabunova_e-13032.html",
+          "type": "file",
+          "size": 114957,
+          "ext": "html"
+        },
+        {
+          "name": "person-slutsky_l-105.html",
+          "type": "file",
+          "size": 219993,
+          "ext": "html"
+        },
+        {
+          "name": "person-titov_b-2649.html",
+          "type": "file",
+          "size": 96828,
+          "ext": "html"
+        },
+        {
+          "name": "person-vishnevsky_b-9185.html",
+          "type": "file",
+          "size": 128478,
+          "ext": "html"
+        },
+        {
+          "name": "person-yavlinsky_g-9214.html",
+          "type": "file",
+          "size": 113163,
+          "ext": "html"
+        },
+        {
+          "name": "person-zhuravlev_a-573.html",
+          "type": "file",
+          "size": 134227,
+          "ext": "html"
+        },
+        {
+          "name": "person-zyuganov_g-8.html",
+          "type": "file",
+          "size": 173092,
+          "ext": "html"
+        }
+      ]
+    },
+    {
+      "name": "duma-api",
+      "type": "dir",
+      "children": [
+        {
+          "name": "votes",
+          "type": "dir",
+          "children": [
+            {
+              "name": "annex-dnr.json",
+              "type": "file",
+              "size": 83614,
+              "ext": "json"
+            },
+            {
+              "name": "annex-dnr.xml",
+              "type": "file",
+              "size": 121319,
+              "ext": "xml"
+            },
+            {
+              "name": "annex-kherson.json",
+              "type": "file",
+              "size": 83580,
+              "ext": "json"
+            },
+            {
+              "name": "annex-kherson.xml",
+              "type": "file",
+              "size": 121285,
+              "ext": "xml"
+            },
+            {
+              "name": "annex-lnr.json",
+              "type": "file",
+              "size": 83618,
+              "ext": "json"
+            },
+            {
+              "name": "annex-lnr.xml",
+              "type": "file",
+              "size": 121323,
+              "ext": "xml"
+            },
+            {
+              "name": "annex-zaporozhye.json",
+              "type": "file",
+              "size": 83586,
+              "ext": "json"
+            },
+            {
+              "name": "annex-zaporozhye.xml",
+              "type": "file",
+              "size": 121291,
+              "ext": "xml"
+            },
+            {
+              "name": "army-fakes.json",
+              "type": "file",
+              "size": 84134,
+              "ext": "json"
+            },
+            {
+              "name": "army-fakes.xml",
+              "type": "file",
+              "size": 121930,
+              "ext": "xml"
+            },
+            {
+              "name": "conscription-30.json",
+              "type": "file",
+              "size": 83065,
+              "ext": "json"
+            },
+            {
+              "name": "conscription-30.xml",
+              "type": "file",
+              "size": 120446,
+              "ext": "xml"
+            },
+            {
+              "name": "constitution-2020.json",
+              "type": "file",
+              "size": 82683,
+              "ext": "json"
+            },
+            {
+              "name": "constitution-2020.xml",
+              "type": "file",
+              "size": 119989,
+              "ext": "xml"
+            },
+            {
+              "name": "deanonymization.json",
+              "type": "file",
+              "size": 82994,
+              "ext": "json"
+            },
+            {
+              "name": "deanonymization.xml",
+              "type": "file",
+              "size": 120368,
+              "ext": "xml"
+            },
+            {
+              "name": "digital-ruble-1.json",
+              "type": "file",
+              "size": 82904,
+              "ext": "json"
+            },
+            {
+              "name": "digital-ruble-1.xml",
+              "type": "file",
+              "size": 120285,
+              "ext": "xml"
+            },
+            {
+              "name": "digital-ruble-2.json",
+              "type": "file",
+              "size": 82919,
+              "ext": "json"
+            },
+            {
+              "name": "digital-ruble-2.xml",
+              "type": "file",
+              "size": 120300,
+              "ext": "xml"
+            },
+            {
+              "name": "dnr-ratification.json",
+              "type": "file",
+              "size": 83723,
+              "ext": "json"
+            },
+            {
+              "name": "dnr-ratification.xml",
+              "type": "file",
+              "size": 121514,
+              "ext": "xml"
+            },
+            {
+              "name": "electoral-reform-2022.json",
+              "type": "file",
+              "size": 83733,
+              "ext": "json"
+            },
+            {
+              "name": "electoral-reform-2022.xml",
+              "type": "file",
+              "size": 121363,
+              "ext": "xml"
+            },
+            {
+              "name": "fake-confiscation.json",
+              "type": "file",
+              "size": 83411,
+              "ext": "json"
+            },
+            {
+              "name": "fake-confiscation.xml",
+              "type": "file",
+              "size": 120958,
+              "ext": "xml"
+            },
+            {
+              "name": "gender-transition.json",
+              "type": "file",
+              "size": 82857,
+              "ext": "json"
+            },
+            {
+              "name": "gender-transition.xml",
+              "type": "file",
+              "size": 120238,
+              "ext": "xml"
+            },
+            {
+              "name": "inoagent-fizlitsa.json",
+              "type": "file",
+              "size": 82102,
+              "ext": "json"
+            },
+            {
+              "name": "inoagent-fizlitsa.xml",
+              "type": "file",
+              "size": 119169,
+              "ext": "xml"
+            },
+            {
+              "name": "inoagent-united.json",
+              "type": "file",
+              "size": 83606,
+              "ext": "json"
+            },
+            {
+              "name": "inoagent-united.xml",
+              "type": "file",
+              "size": 121319,
+              "ext": "xml"
+            },
+            {
+              "name": "it-landing.json",
+              "type": "file",
+              "size": 82324,
+              "ext": "json"
+            },
+            {
+              "name": "it-landing.xml",
+              "type": "file",
+              "size": 119472,
+              "ext": "xml"
+            },
+            {
+              "name": "klishas-disrespect.json",
+              "type": "file",
+              "size": 83058,
+              "ext": "json"
+            },
+            {
+              "name": "klishas-disrespect.xml",
+              "type": "file",
+              "size": 120456,
+              "ext": "xml"
+            },
+            {
+              "name": "klishas-fakes.json",
+              "type": "file",
+              "size": 83113,
+              "ext": "json"
+            },
+            {
+              "name": "klishas-fakes.xml",
+              "type": "file",
+              "size": 120511,
+              "ext": "xml"
+            },
+            {
+              "name": "lgbt-propaganda.json",
+              "type": "file",
+              "size": 83781,
+              "ext": "json"
+            },
+            {
+              "name": "lgbt-propaganda.xml",
+              "type": "file",
+              "size": 121482,
+              "ext": "xml"
+            },
+            {
+              "name": "lnr-ratification.json",
+              "type": "file",
+              "size": 83727,
+              "ext": "json"
+            },
+            {
+              "name": "lnr-ratification.xml",
+              "type": "file",
+              "size": 121518,
+              "ext": "xml"
+            },
+            {
+              "name": "max-messenger.json",
+              "type": "file",
+              "size": 82002,
+              "ext": "json"
+            },
+            {
+              "name": "max-messenger.xml",
+              "type": "file",
+              "size": 118958,
+              "ext": "xml"
+            },
+            {
+              "name": "migrant-control.json",
+              "type": "file",
+              "size": 82572,
+              "ext": "json"
+            },
+            {
+              "name": "migrant-control.xml",
+              "type": "file",
+              "size": 119621,
+              "ext": "xml"
+            },
+            {
+              "name": "mobilization-uk.json",
+              "type": "file",
+              "size": 83742,
+              "ext": "json"
+            },
+            {
+              "name": "mobilization-uk.xml",
+              "type": "file",
+              "size": 121455,
+              "ext": "xml"
+            },
+            {
+              "name": "rec-algorithms.json",
+              "type": "file",
+              "size": 83047,
+              "ext": "json"
+            },
+            {
+              "name": "rec-algorithms.xml",
+              "type": "file",
+              "size": 120427,
+              "ext": "xml"
+            },
+            {
+              "name": "sov-runet.json",
+              "type": "file",
+              "size": 83209,
+              "ext": "json"
+            },
+            {
+              "name": "sov-runet.xml",
+              "type": "file",
+              "size": 120598,
+              "ext": "xml"
+            },
+            {
+              "name": "volunteer-discreditation.json",
+              "type": "file",
+              "size": 84195,
+              "ext": "json"
+            },
+            {
+              "name": "volunteer-discreditation.xml",
+              "type": "file",
+              "size": 121908,
+              "ext": "xml"
+            },
+            {
+              "name": "vpn-ban.json",
+              "type": "file",
+              "size": 82645,
+              "ext": "json"
+            },
+            {
+              "name": "vpn-ban.xml",
+              "type": "file",
+              "size": 119605,
+              "ext": "xml"
+            }
+          ]
+        },
+        {
+          "name": "INDEX.md",
+          "type": "file",
+          "size": 50300,
+          "ext": "md"
+        },
+        {
+          "name": "convocations.xml",
+          "type": "file",
+          "size": 1645,
+          "ext": "xml"
+        },
+        {
+          "name": "deputies.xml",
+          "type": "file",
+          "size": 1623290,
+          "ext": "xml"
+        },
+        {
+          "name": "dissidents.md",
+          "type": "file",
+          "size": 102139,
+          "ext": "md"
+        },
+        {
+          "name": "factions.xml",
+          "type": "file",
+          "size": 23417,
+          "ext": "xml"
+        },
+        {
+          "name": "parse_votes.py",
+          "type": "file",
+          "size": 22080,
+          "ext": "py"
+        },
+        {
+          "name": "votes-summary.csv",
+          "type": "file",
+          "size": 23114,
+          "ext": "csv"
+        }
+      ]
+    },
+    {
+      "name": "egrul",
+      "type": "dir",
+      "children": []
+    },
+    {
+      "name": "foreign-agent-registry",
+      "type": "dir",
+      "children": [
+        {
+          "name": "INDEX.csv",
+          "type": "file",
+          "size": 464207,
+          "ext": "csv"
+        },
+        {
+          "name": "fa-combined.json",
+          "type": "file",
+          "size": 1645974,
+          "ext": "json"
+        },
+        {
+          "name": "fa.xlsx",
+          "type": "file",
+          "size": 239723,
+          "ext": "xlsx"
+        },
+        {
+          "name": "political-figures.json",
+          "type": "file",
+          "size": 62764,
+          "ext": "json"
+        },
+        {
+          "name": "registries-list.json",
+          "type": "file",
+          "size": 28812,
+          "ext": "json"
+        },
+        {
+          "name": "yabloko-foreign-agents.json",
+          "type": "file",
+          "size": 6771,
+          "ext": "json"
+        }
+      ]
+    },
+    {
+      "name": "gov-uk",
+      "type": "dir",
+      "children": [
+        {
+          "name": "UK-Sanctions-List.csv",
+          "type": "file",
+          "size": 48259319,
+          "ext": "csv"
+        },
+        {
+          "name": "UK-Sanctions-List.ods",
+          "type": "file",
+          "size": 7817540,
+          "ext": "ods"
+        },
+        {
+          "name": "litvinenko-inquiry-report.pdf",
+          "type": "file",
+          "size": 2608068,
+          "ext": "pdf"
+        },
+        {
+          "name": "uk-sanctions-list.html",
+          "type": "file",
+          "size": 258696,
+          "ext": "html"
+        },
+        {
+          "name": "uk-sanctions-litvinenko.csv",
+          "type": "file",
+          "size": 3970,
+          "ext": "csv"
+        }
+      ]
+    },
+    {
+      "name": "kremlin-decrees",
+      "type": "dir",
+      "children": [
+        {
+          "name": "decree-239-2024-zyuganov.html",
+          "type": "file",
+          "size": 38451,
+          "ext": "html"
+        },
+        {
+          "name": "decree-299-2024-titov-special-rep.html",
+          "type": "file",
+          "size": 39921,
+          "ext": "html"
+        },
+        {
+          "name": "decree-416-2023-06-06-state-awards-incl-prilepin.pdf",
+          "type": "file",
+          "size": 2089796,
+          "ext": "pdf"
+        },
+        {
+          "name": "decree-544-2024-06-26-zyuganov-hero-of-labour.html",
+          "type": "file",
+          "size": 33733,
+          "ext": "html"
+        },
+        {
+          "name": "decree-544-2024-zyuganov-hero-of-labour.pdf",
+          "type": "file",
+          "size": 50105,
+          "ext": "pdf"
+        },
+        {
+          "name": "decree-544-zyuganov-hero-of-labour.html",
+          "type": "file",
+          "size": 38501,
+          "ext": "html"
+        },
+        {
+          "name": "decree-879-2012-06-22-titov-business-ombudsman.html",
+          "type": "file",
+          "size": 35798,
+          "ext": "html"
+        },
+        {
+          "name": "decree-879-2012-06-22-titov-business-ombudsman.pdf",
+          "type": "file",
+          "size": 31835,
+          "ext": "pdf"
+        },
+        {
+          "name": "decree-digital-rouble-2023.html",
+          "type": "file",
+          "size": 66310,
+          "ext": "html"
+        },
+        {
+          "name": "decree-fz255-2022-inoagents.html",
+          "type": "file",
+          "size": 73108,
+          "ext": "html"
+        },
+        {
+          "name": "news-74413-zyuganov-hero-en.html",
+          "type": "file",
+          "size": 31146,
+          "ext": "html"
+        }
+      ]
+    },
+    {
+      "name": "laws-texts",
+      "type": "dir",
+      "children": [
+        {
+          "name": "fz255-consultant-info.html",
+          "type": "file",
+          "size": 37431,
+          "ext": "html"
+        },
+        {
+          "name": "fz255-inoagent-2022-07-14.pdf",
+          "type": "file",
+          "size": 100134,
+          "ext": "pdf"
+        },
+        {
+          "name": "fz32-fakes-2022-03-04.pdf",
+          "type": "file",
+          "size": 195666,
+          "ext": "pdf"
+        }
+      ]
+    },
+    {
+      "name": "leaks",
+      "type": "dir",
+      "children": []
+    },
+    {
+      "name": "media-investigations",
+      "type": "dir",
+      "children": [
+        {
+          "name": "kommersant-2022-prilepin-grants-donbass.html",
+          "type": "file",
+          "size": 137658,
+          "ext": "html"
+        },
+        {
+          "name": "ng-2024-yabloko-foreign-agents.html",
+          "type": "file",
+          "size": 195493,
+          "ext": "html"
+        },
+        {
+          "name": "occrp-2018-zhirinovsky-family.html",
+          "type": "file",
+          "size": 634517,
+          "ext": "html"
+        },
+        {
+          "name": "pertsev-2021-nechaev-kovalchuk.html",
+          "type": "file",
+          "size": 848292,
+          "ext": "html"
+        },
+        {
+          "name": "rbc-2023-shlosberg-foreign-agent.html",
+          "type": "file",
+          "size": 282309,
+          "ext": "html"
+        }
+      ]
+    },
+    {
+      "name": "ofac-sanctions",
+      "type": "dir",
+      "children": [
+        {
+          "name": "lugovoy-extract.csv",
+          "type": "file",
+          "size": 383,
+          "ext": "csv"
+        },
+        {
+          "name": "party-leaders-extract-raw.csv",
+          "type": "file",
+          "size": 18774,
+          "ext": "csv"
+        },
+        {
+          "name": "sdn.csv",
+          "type": "file",
+          "size": 5525098,
+          "ext": "csv"
+        },
+        {
+          "name": "sdn.xml",
+          "type": "file",
+          "size": 28385819,
+          "ext": "xml"
+        }
+      ]
+    },
+    {
+      "name": "offshore-leaks",
+      "type": "dir",
+      "children": [
+        {
+          "name": "icij-search-results.json",
+          "type": "file",
+          "size": 6704,
+          "ext": "json"
+        }
+      ]
+    },
+    {
+      "name": "pandora-papers",
+      "type": "dir",
+      "children": []
+    },
+    {
+      "name": "party-financial-reports-cik",
+      "type": "dir",
+      "children": []
+    },
+    {
+      "name": "party-registry-minjust",
+      "type": "dir",
+      "children": []
+    },
+    {
+      "name": "pravo-gov",
+      "type": "dir",
+      "children": [
+        {
+          "name": "davankov-bio.html",
+          "type": "file",
+          "size": 226134,
+          "ext": "html"
+        },
+        {
+          "name": "decree-416-2023-prilepin.html",
+          "type": "file",
+          "size": 25539,
+          "ext": "html"
+        },
+        {
+          "name": "decree-fz340-digital-ruble.html",
+          "type": "file",
+          "size": 25660,
+          "ext": "html"
+        }
+      ]
+    },
+    {
+      "name": "president-grants",
+      "type": "dir",
+      "children": [
+        {
+          "name": "grants-findings.json",
+          "type": "file",
+          "size": 6301,
+          "ext": "json"
+        }
+      ]
+    },
+    {
+      "name": "procurement",
+      "type": "dir",
+      "children": [
+        {
+          "name": "INDEX.json",
+          "type": "file",
+          "size": 19375,
+          "ext": "json"
+        },
+        {
+          "name": "search-abrau-durso.html",
+          "type": "file",
+          "size": 373832,
+          "ext": "html"
+        },
+        {
+          "name": "search-chkpz.html",
+          "type": "file",
+          "size": 262320,
+          "ext": "html"
+        },
+        {
+          "name": "search-faberlic-2.html",
+          "type": "file",
+          "size": 260050,
+          "ext": "html"
+        },
+        {
+          "name": "search-faberlic-name.html",
+          "type": "file",
+          "size": 260050,
+          "ext": "html"
+        },
+        {
+          "name": "search-faberlic.html",
+          "type": "file",
+          "size": 260050,
+          "ext": "html"
+        },
+        {
+          "name": "search-faberlik.html",
+          "type": "file",
+          "size": 241058,
+          "ext": "html"
+        },
+        {
+          "name": "search-investroy-n.html",
+          "type": "file",
+          "size": 373545,
+          "ext": "html"
+        },
+        {
+          "name": "search-rostselmash.html",
+          "type": "file",
+          "size": 376618,
+          "ext": "html"
+        },
+        {
+          "name": "search-russ-invest.html",
+          "type": "file",
+          "size": 387709,
+          "ext": "html"
+        },
+        {
+          "name": "search-sovkhoz-lenina.html",
+          "type": "file",
+          "size": 367033,
+          "ext": "html"
+        },
+        {
+          "name": "search-voentekstilprom.html",
+          "type": "file",
+          "size": 241064,
+          "ext": "html"
+        },
+        {
+          "name": "search-voentorg.html",
+          "type": "file",
+          "size": 377403,
+          "ext": "html"
+        },
+        {
+          "name": "search-zarubezhenergoproekt.html",
+          "type": "file",
+          "size": 241088,
+          "ext": "html"
+        }
+      ]
+    },
+    {
+      "name": "sozd-bills",
+      "type": "dir",
+      "children": [
+        {
+          "name": "1057914-7-summary.json",
+          "type": "file",
+          "size": 1802,
+          "ext": "json"
+        },
+        {
+          "name": "1057914-7.html",
+          "type": "file",
+          "size": 2647631,
+          "ext": "html"
+        },
+        {
+          "name": "112293-8-summary.json",
+          "type": "file",
+          "size": 1679,
+          "ext": "json"
+        },
+        {
+          "name": "112293-8.html",
+          "type": "file",
+          "size": 2523226,
+          "ext": "html"
+        },
+        {
+          "name": "113045-8-summary.json",
+          "type": "file",
+          "size": 1740,
+          "ext": "json"
+        },
+        {
+          "name": "113045-8.html",
+          "type": "file",
+          "size": 2814114,
+          "ext": "html"
+        },
+        {
+          "name": "160006-8-summary.json",
+          "type": "file",
+          "size": 1382,
+          "ext": "json"
+        },
+        {
+          "name": "160006-8.html",
+          "type": "file",
+          "size": 2554688,
+          "ext": "html"
+        },
+        {
+          "name": "203812-8-summary.json",
+          "type": "file",
+          "size": 1231,
+          "ext": "json"
+        },
+        {
+          "name": "203812-8.html",
+          "type": "file",
+          "size": 2518681,
+          "ext": "html"
+        },
+        {
+          "name": "203813-8-summary.json",
+          "type": "file",
+          "size": 1158,
+          "ext": "json"
+        },
+        {
+          "name": "203813-8.html",
+          "type": "file",
+          "size": 2519536,
+          "ext": "html"
+        },
+        {
+          "name": "203814-8-summary.json",
+          "type": "file",
+          "size": 1185,
+          "ext": "json"
+        },
+        {
+          "name": "203814-8.html",
+          "type": "file",
+          "size": 2523174,
+          "ext": "html"
+        },
+        {
+          "name": "203815-8-summary.json",
+          "type": "file",
+          "size": 1177,
+          "ext": "json"
+        },
+        {
+          "name": "203815-8.html",
+          "type": "file",
+          "size": 2523129,
+          "ext": "html"
+        },
+        {
+          "name": "203816-8-summary.json",
+          "type": "file",
+          "size": 1313,
+          "ext": "json"
+        },
+        {
+          "name": "203816-8.html",
+          "type": "file",
+          "size": 2654215,
+          "ext": "html"
+        },
+        {
+          "name": "203817-8-summary.json",
+          "type": "file",
+          "size": 1321,
+          "ext": "json"
+        },
+        {
+          "name": "203817-8.html",
+          "type": "file",
+          "size": 2654669,
+          "ext": "html"
+        },
+        {
+          "name": "203818-8-summary.json",
+          "type": "file",
+          "size": 868,
+          "ext": "json"
+        },
+        {
+          "name": "203818-8.html",
+          "type": "file",
+          "size": 2653063,
+          "ext": "html"
+        },
+        {
+          "name": "203819-8-summary.json",
+          "type": "file",
+          "size": 860,
+          "ext": "json"
+        },
+        {
+          "name": "203819-8.html",
+          "type": "file",
+          "size": 2653831,
+          "ext": "html"
+        },
+        {
+          "name": "217471-8-summary.json",
+          "type": "file",
+          "size": 15080,
+          "ext": "json"
+        },
+        {
+          "name": "217471-8.html",
+          "type": "file",
+          "size": 2641543,
+          "ext": "html"
+        },
+        {
+          "name": "217472-8-summary.json",
+          "type": "file",
+          "size": 14938,
+          "ext": "json"
+        },
+        {
+          "name": "217472-8.html",
+          "type": "file",
+          "size": 2657520,
+          "ext": "html"
+        },
+        {
+          "name": "270838-8-summary.json",
+          "type": "file",
+          "size": 1648,
+          "ext": "json"
+        },
+        {
+          "name": "270838-8.html",
+          "type": "file",
+          "size": 2691072,
+          "ext": "html"
+        },
+        {
+          "name": "270852-8-summary.json",
+          "type": "file",
+          "size": 1755,
+          "ext": "json"
+        },
+        {
+          "name": "270852-8.html",
+          "type": "file",
+          "size": 2679813,
+          "ext": "html"
+        },
+        {
+          "name": "312507-8-summary.json",
+          "type": "file",
+          "size": 1494,
+          "ext": "json"
+        },
+        {
+          "name": "312507-8.html",
+          "type": "file",
+          "size": 2515470,
+          "ext": "html"
+        },
+        {
+          "name": "369814-8-summary.json",
+          "type": "file",
+          "size": 14910,
+          "ext": "json"
+        },
+        {
+          "name": "369814-8.html",
+          "type": "file",
+          "size": 2624494,
+          "ext": "html"
+        },
+        {
+          "name": "387593-8-summary.json",
+          "type": "file",
+          "size": 1311,
+          "ext": "json"
+        },
+        {
+          "name": "387593-8.html",
+          "type": "file",
+          "size": 2510796,
+          "ext": "html"
+        },
+        {
+          "name": "464757-7-summary.json",
+          "type": "file",
+          "size": 2321,
+          "ext": "json"
+        },
+        {
+          "name": "464757-7.html",
+          "type": "file",
+          "size": 2802130,
+          "ext": "html"
+        },
+        {
+          "name": "533912-8-summary.json",
+          "type": "file",
+          "size": 14978,
+          "ext": "json"
+        },
+        {
+          "name": "533912-8.html",
+          "type": "file",
+          "size": 2698703,
+          "ext": "html"
+        },
+        {
+          "name": "606593-7-summary.json",
+          "type": "file",
+          "size": 1936,
+          "ext": "json"
+        },
+        {
+          "name": "606593-7.html",
+          "type": "file",
+          "size": 3040642,
+          "ext": "html"
+        },
+        {
+          "name": "608767-7-summary.json",
+          "type": "file",
+          "size": 1587,
+          "ext": "json"
+        },
+        {
+          "name": "608767-7.html",
+          "type": "file",
+          "size": 2948234,
+          "ext": "html"
+        },
+        {
+          "name": "647048-8-summary.json",
+          "type": "file",
+          "size": 1258,
+          "ext": "json"
+        },
+        {
+          "name": "647048-8.html",
+          "type": "file",
+          "size": 2577905,
+          "ext": "html"
+        },
+        {
+          "name": "679980-8-summary.json",
+          "type": "file",
+          "size": 1709,
+          "ext": "json"
+        },
+        {
+          "name": "679980-8.html",
+          "type": "file",
+          "size": 2562003,
+          "ext": "html"
+        },
+        {
+          "name": "682709-7-summary.json",
+          "type": "file",
+          "size": 2956,
+          "ext": "json"
+        },
+        {
+          "name": "682709-7.html",
+          "type": "file",
+          "size": 3057253,
+          "ext": "html"
+        },
+        {
+          "name": "755710-8-summary.json",
+          "type": "file",
+          "size": 2136,
+          "ext": "json"
+        },
+        {
+          "name": "755710-8.html",
+          "type": "file",
+          "size": 2558889,
+          "ext": "html"
+        },
+        {
+          "name": "75577-8-summary.json",
+          "type": "file",
+          "size": 1047,
+          "ext": "json"
+        },
+        {
+          "name": "75577-8.html",
+          "type": "file",
+          "size": 2458976,
+          "ext": "html"
+        },
+        {
+          "name": "75578-8-summary.json",
+          "type": "file",
+          "size": 991,
+          "ext": "json"
+        },
+        {
+          "name": "75578-8.html",
+          "type": "file",
+          "size": 2464345,
+          "ext": "html"
+        },
+        {
+          "name": "859523-8-summary.json",
+          "type": "file",
+          "size": 1595,
+          "ext": "json"
+        },
+        {
+          "name": "859523-8.html",
+          "type": "file",
+          "size": 2522313,
+          "ext": "html"
+        },
+        {
+          "name": "all-bills-summary.json",
+          "type": "file",
+          "size": 90126,
+          "ext": "json"
+        },
+        {
+          "name": "parse_bills.py",
+          "type": "file",
+          "size": 8396,
+          "ext": "py"
+        }
+      ]
+    },
+    {
+      "name": "undesirable-orgs",
+      "type": "dir",
+      "children": [
+        {
+          "name": "undesirable-all.json",
+          "type": "file",
+          "size": 218811,
+          "ext": "json"
+        },
+        {
+          "name": "undesirable.xlsx",
+          "type": "file",
+          "size": 38891,
+          "ext": "xlsx"
+        }
+      ]
+    },
+    {
+      "name": "voting-rolls",
+      "type": "dir",
+      "children": []
+    },
+    {
+      "name": "INDEX.md",
+      "type": "file",
+      "size": 36379,
+      "ext": "md"
+    }
+  ]
+}

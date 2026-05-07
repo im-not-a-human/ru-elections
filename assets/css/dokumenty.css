@@ -1,0 +1,566 @@
+/* /dokumenty.html — file explorer (Windows Explorer-style chrome) */
+
+/* Full-viewport explorer page (override site .wrap padding) */
+.dok-page {
+  max-width: none;
+  margin: 0;
+  padding: 16px 24px 24px;
+  background: #f3f3f3;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  min-height: 100vh;
+}
+
+.dok-header { margin-bottom: 16px; }
+.dok-header h1 {
+  font-size: clamp(22px, 2.5vw, 28px);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  margin: 0 0 4px;
+}
+.dok-header .meta {
+  font-size: 12px;
+  color: var(--ink-muted);
+}
+.dok-header .meta .num {
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* Search bar */
+.dok-search {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+  align-items: center;
+}
+.dok-search input {
+  flex: 1;
+  min-width: 0;
+  padding: 8px 12px;
+  border: 1px solid #d4d4d4;
+  border-radius: 4px;
+  font-size: 13px;
+  background: #fff;
+  color: var(--ink);
+}
+.dok-search input:focus { outline: 2px solid var(--accent); border-color: transparent; }
+.dok-search select {
+  padding: 8px 10px;
+  border: 1px solid #d4d4d4;
+  border-radius: 4px;
+  font-size: 13px;
+  background: #fff;
+  color: var(--ink);
+}
+.dok-search .dok-tree-toggle {
+  padding: 8px 12px;
+  border: 1px solid #d4d4d4;
+  border-radius: 4px;
+  background: #fff;
+  color: var(--ink);
+  font-size: 13px;
+  cursor: pointer;
+  white-space: nowrap;
+  display: flex; align-items: center; gap: 6px;
+}
+.dok-search .dok-tree-toggle:hover { background: #f5f5f5; }
+.dok-search .dok-tree-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.dok-search .dok-tree-toggle .icn { width: 16px; height: 16px; flex-shrink: 0; }
+
+/* Two-column layout — tree (left) + preview (right) */
+.dok-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  border: 1px solid #d4d4d4;
+  border-radius: 4px;
+  overflow: hidden;
+  height: calc(100vh - 200px);
+  min-height: 500px;
+  background: #fff;
+}
+
+/* Fullscreen support — when layout is in fullscreen, fill the screen */
+.dok-layout:fullscreen {
+  border-radius: 0;
+  border: 0;
+  height: 100vh;
+  width: 100vw;
+}
+.dok-layout:fullscreen .dok-tree { max-height: none; }
+
+@media (min-width: 900px) {
+  .dok-layout {
+    grid-template-columns: 320px 1fr;
+  }
+  .dok-layout.tree-hidden {
+    grid-template-columns: 0 1fr;
+  }
+  .dok-layout.tree-hidden .dok-tree {
+    display: none;
+  }
+}
+
+/* Tree panel (left) */
+.dok-tree {
+  background: #fafafa;
+  border-right: 1px solid #e0e0e0;
+  overflow-y: auto;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 13px;
+  padding: 8px 0;
+  min-height: 0;
+}
+.dok-tree ul { list-style: none; padding: 0; margin: 0; }
+.dok-tree li { line-height: 1.45; }
+.dok-tree .dok-item {
+  display: flex; align-items: center;
+  padding: 3px 12px;
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+  border-radius: 2px;
+  margin: 0 4px;
+}
+.dok-tree .dok-item:hover { background: #ebebeb; }
+.dok-tree .dok-item:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+.dok-tree .dok-item.dok-selected {
+  background: #cfe5ff; color: #000;
+}
+.dok-tree .dok-icon {
+  margin-right: 8px;
+  width: 16px; height: 16px;
+  flex-shrink: 0;
+  color: #6f7681;
+}
+.dok-tree .dok-selected .dok-icon { color: #000; }
+.dok-tree .dok-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.dok-tree .dok-dir > .dok-item { font-weight: 600; }
+.dok-tree .dok-collapsed > ul { display: none; }
+.dok-tree .dok-meta {
+  margin-left: auto;
+  font-size: 10px; color: var(--ink-muted);
+  font-family: 'JetBrains Mono', monospace;
+  padding-left: 8px;
+  flex-shrink: 0;
+}
+.dok-tree .dok-selected .dok-meta { color: #000; opacity: 0.7; }
+.dok-tree .dok-chevron {
+  width: 12px; height: 12px;
+  margin-right: 2px;
+  color: var(--ink-muted);
+  flex-shrink: 0;
+  transition: transform 0.12s;
+}
+.dok-tree .dok-dir.dok-collapsed > .dok-item .dok-chevron { transform: rotate(-90deg); }
+.dok-tree .dok-file .dok-chevron { visibility: hidden; }
+
+/* Indent levels */
+.dok-tree .level-0 { padding-left: 8px; }
+.dok-tree .level-1 { padding-left: 24px; }
+.dok-tree .level-2 { padding-left: 40px; }
+.dok-tree .level-3 { padding-left: 56px; }
+.dok-tree .level-4 { padding-left: 72px; }
+
+/* Preview pane (right) */
+.dok-preview {
+  background: #fff;
+  display: flex; flex-direction: column;
+  min-height: 0;
+  min-width: 0; /* issue 3: allow flex/grid child to shrink so tabs strip can scroll */
+  /* Override site-wide layout.css `section { padding: 80px 0; border-top: 1px solid var(--line); }`
+     — that rule injected 80px white strips above and below this element. */
+  padding: 0 !important;
+  border-top: none !important;
+}
+
+/* Tabs bar — single chrome strip (replaces both old .dok-tabs and .dok-preview-head) */
+.dok-tabs-bar {
+  display: flex;
+  align-items: stretch;
+  background: #f5f5f5;
+  border-bottom: 1px solid #e0e0e0;
+  flex-shrink: 0;
+  min-width: 0;
+}
+
+/* Drop the old preview-head entirely */
+.dok-preview-head { display: none; }
+
+/* Tabs strip — left side of the bar, scrollable */
+.dok-tabs {
+  display: flex;
+  gap: 0;
+  flex: 1;
+  min-width: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: thin;
+  min-height: 32px;
+}
+.dok-tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  background: transparent;
+  border: 0;
+  border-right: 1px solid #e0e0e0;
+  border-bottom: 2px solid transparent; /* keep height stable when active border appears */
+  font-size: 12px;
+  cursor: pointer;
+  color: #444;
+  white-space: nowrap;
+  flex-shrink: 0;
+  max-width: 280px;
+  font-family: inherit;
+}
+.dok-tab:hover { background: #ebebeb; color: #000; }
+.dok-tab.active {
+  background: #fff;
+  color: #000;
+  font-weight: 600;
+  border-bottom: 2px solid var(--accent);
+}
+.dok-tab:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+.dok-tab .icn {
+  width: 14px; height: 14px;
+  flex-shrink: 0;
+}
+.dok-tab .label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
+.dok-tab .close-x {
+  width: 16px; height: 16px;
+  display: inline-flex;
+  align-items: center; justify-content: center;
+  border-radius: 3px;
+  color: var(--ink-muted);
+  margin-left: 4px;
+  flex-shrink: 0;
+}
+.dok-tab .close-x:hover { background: rgba(0,0,0,0.1); color: #000; }
+.dok-tab.active .close-x { color: #444; }
+
+/* Tab actions — right side of bar (download, external, fullscreen) */
+.dok-tab-actions {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 0 6px;
+  border-left: 1px solid #e0e0e0;
+  flex-shrink: 0;
+  background: #f5f5f5;
+}
+.dok-tab-actions[hidden] { display: none; }
+.dok-tab-actions .dok-action {
+  display: inline-flex;
+  align-items: center; justify-content: center;
+  width: 28px; height: 28px;
+  background: transparent;
+  border: 0;
+  border-radius: 3px;
+  color: #444;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 0;
+  font: inherit;
+}
+.dok-tab-actions .dok-action:hover { background: #e5e5e5; color: #000; }
+.dok-tab-actions .dok-action:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+.dok-tab-actions .dok-action .icn { width: 14px; height: 14px; }
+
+/* Preview body — fills remaining space */
+.dok-preview-body {
+  flex: 1;
+  overflow: auto;
+  padding: 0;
+  position: relative;
+  min-height: 0;
+  scrollbar-gutter: stable; /* issue 2: reserve scrollbar space, prevent layout shift */
+}
+.dok-preview-body pre {
+  margin: 0; padding: 0 20px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--ink);
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+.dok-preview-body iframe,
+.dok-preview-body embed {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+/* CSV / XLSX scroll wrap — scroll horizontally + vertically inside */
+.dok-table-wrap {
+  overflow: auto;
+  height: 100%;
+  width: 100%;
+}
+
+/* CSV / XLSX tables — content-sized, all-side cell borders, hover-expand */
+.dok-preview-body .dok-csv-table,
+.dok-preview-body .dok-xlsx-sheet {
+  width: max-content;
+  min-width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+  font-family: 'JetBrains Mono', monospace;
+  margin: 0;
+  background: #fff;
+}
+.dok-preview-body .dok-csv-table th,
+.dok-preview-body .dok-xlsx-sheet th {
+  text-align: left;
+  padding: 6px 10px;
+  background: #f0f0f0;
+  font-weight: 700;
+  border: 1px solid #e0e0e0;
+  position: sticky; top: 0;
+  z-index: 1;
+  white-space: nowrap;
+  max-width: 320px;
+}
+.dok-preview-body .dok-csv-table td,
+.dok-preview-body .dok-xlsx-sheet td {
+  padding: 4px 10px;
+  border: 1px solid #e0e0e0;
+  white-space: nowrap;
+  max-width: 320px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: top;
+}
+.dok-preview-body .dok-csv-table td:hover,
+.dok-preview-body .dok-xlsx-sheet td:hover,
+.dok-preview-body .dok-csv-table th:hover,
+.dok-preview-body .dok-xlsx-sheet th:hover {
+  white-space: normal;
+  overflow: visible;
+  word-break: break-word;
+  background: #fffae6;
+}
+.dok-preview-body .dok-csv-table tr:nth-child(even) td,
+.dok-preview-body .dok-xlsx-sheet tr:nth-child(even) td {
+  background: #fafafa;
+}
+.dok-preview-body .dok-csv-table tr:nth-child(even) td:hover,
+.dok-preview-body .dok-xlsx-sheet tr:nth-child(even) td:hover {
+  background: #fffae6;
+}
+
+/* Markdown rendering (uses marked.js HTML output) */
+.dok-preview-body .dok-md {
+  padding: 0 32px;
+  font-size: 14px;
+  line-height: 1.65;
+  /* issue 7: full-width, no centering. No vertical padding — content edge-to-edge */
+}
+/* First/last child margin-collapse: drop the leading/trailing margins so content sits flush */
+.dok-preview-body .dok-md > *:first-child { margin-top: 12px; }
+.dok-preview-body .dok-md > *:last-child { margin-bottom: 12px; }
+.dok-preview-body .dok-md h1,
+.dok-preview-body .dok-md h2,
+.dok-preview-body .dok-md h3,
+.dok-preview-body .dok-md h4 { margin-top: 28px; margin-bottom: 10px; line-height: 1.25; }
+.dok-preview-body .dok-md h1 { font-size: 28px; font-weight: 900; letter-spacing: -0.02em; }
+.dok-preview-body .dok-md h2 { font-size: 22px; font-weight: 800; }
+.dok-preview-body .dok-md h3 { font-size: 17px; font-weight: 700; }
+.dok-preview-body .dok-md h4 { font-size: 14px; font-weight: 700; color: var(--ink-soft); }
+.dok-preview-body .dok-md p { margin: 10px 0; }
+.dok-preview-body .dok-md a { color: var(--accent); text-decoration: none; }
+.dok-preview-body .dok-md a:hover { text-decoration: underline; }
+.dok-preview-body .dok-md code {
+  background: #f5f5f5;
+  padding: 1px 6px;
+  border-radius: 3px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+}
+/* Clickable path-links inside markdown — wraps <code> for known evidence paths */
+.dok-preview-body .dok-md .dok-md-pathlink {
+  text-decoration: none;
+}
+.dok-preview-body .dok-md .dok-md-pathlink code {
+  cursor: pointer;
+  background: #e7f0ff;
+  border: 1px solid #c6dbff;
+  color: var(--accent);
+  transition: background 0.12s, border-color 0.12s;
+}
+.dok-preview-body .dok-md .dok-md-pathlink:hover code {
+  background: #d4e4ff;
+  border-color: #9bbef0;
+}
+.dok-preview-body .dok-md .dok-md-pathlink:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+.dok-preview-body .dok-md pre {
+  background: #f7f7f7;
+  padding: 12px 16px;
+  border-radius: 4px;
+  border-left: 3px solid var(--accent);
+  margin: 12px 0;
+  overflow-x: auto;
+}
+.dok-preview-body .dok-md pre code {
+  padding: 0; background: transparent;
+}
+.dok-preview-body .dok-md blockquote {
+  margin: 14px 0;
+  padding: 10px 16px;
+  border-left: 3px solid var(--accent);
+  background: #f7f7f7;
+  color: var(--ink-soft);
+}
+.dok-preview-body .dok-md ul,
+.dok-preview-body .dok-md ol { padding-left: 24px; margin: 10px 0; }
+.dok-preview-body .dok-md li { margin: 4px 0; }
+.dok-preview-body .dok-md hr { border: 0; border-top: 1px solid #e0e0e0; margin: 28px 0; }
+.dok-preview-body .dok-md table {
+  border-collapse: collapse;
+  margin: 14px 0;
+  font-size: 13px;
+  /* issue 7: don't force full-width tables — let them be content-sized */
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.dok-preview-body .dok-md th,
+.dok-preview-body .dok-md td {
+  border: 1px solid #e0e0e0;
+  padding: 8px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+.dok-preview-body .dok-md th {
+  background: #f0f0f0;
+  font-weight: 700;
+}
+.dok-preview-body .dok-md tr:nth-child(even) td { background: #fafafa; }
+
+/* Empty / loading / error states */
+.dok-empty,
+.dok-loading,
+.dok-error {
+  padding: 80px 24px;
+  text-align: center;
+  color: var(--ink-muted);
+}
+.dok-empty .ico,
+.dok-error .ico {
+  font-size: 36px; opacity: 0.25; margin-bottom: 14px;
+  display: block;
+}
+.dok-empty .ico .icn,
+.dok-error .ico .icn { width: 48px; height: 48px; margin: 0 auto; }
+.dok-loading::after {
+  content: '';
+  display: inline-block;
+  width: 12px; height: 12px;
+  border: 2px solid #e0e0e0;
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: dok-spin 0.8s linear infinite;
+  margin-left: 8px; vertical-align: -2px;
+}
+@keyframes dok-spin { to { transform: rotate(360deg); } }
+
+/* Large-file guard card */
+.dok-large-guard {
+  padding: 64px 32px;
+  max-width: 560px;
+  margin: 0 auto;
+  text-align: center;
+}
+.dok-large-guard .ico { font-size: 48px; opacity: 0.6; margin-bottom: 16px; }
+.dok-large-guard h3 {
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  margin: 0 0 12px;
+  color: #1a1815;
+}
+.dok-large-guard p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ink-muted);
+  margin: 0 0 24px;
+}
+.dok-large-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.dok-large-btn {
+  padding: 10px 18px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #fff;
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.15s, border-color 0.15s;
+}
+.dok-large-btn:hover {
+  background: #f5efe1;
+  border-color: var(--accent);
+}
+
+/* xlsx multi-sheet tabs (sub-tabs INSIDE preview body, distinct from main tabs) */
+.dok-xlsx-tabs {
+  display: flex; gap: 4px;
+  padding: 6px 12px 0;
+  background: #f5f5f5;
+  border-bottom: 1px solid #e0e0e0;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+.dok-xlsx-tabs button {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-bottom: 0;
+  padding: 4px 10px;
+  font-size: 11px;
+  cursor: pointer;
+  border-radius: 4px 4px 0 0;
+  white-space: nowrap;
+  color: #444;
+  font-family: inherit;
+}
+.dok-xlsx-tabs button.active { background: var(--ink); color: #fff; border-color: var(--ink); }
+.dok-xlsx-tabs button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* Mobile fallback */
+@media (max-width: 899px) {
+  .dok-page { padding: 12px 16px 24px; }
+  .dok-layout { height: auto; min-height: auto; grid-template-columns: 1fr; }
+  .dok-tree {
+    max-height: 35vh;
+    border-right: 0;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  .dok-preview-body { min-height: 50vh; }
+  .dok-preview-body iframe, .dok-preview-body embed { height: 60vh; }
+  .dok-search { flex-wrap: wrap; }
+  .dok-search .dok-tree-toggle { display: none; } /* tree always visible at top on mobile */
+}

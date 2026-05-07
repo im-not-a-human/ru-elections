@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#1A1815"/>
+
+  <!-- Subtle grid pattern -->
+  <defs>
+    <pattern id="grid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(240,234,214,0.04)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+
+  <!-- Top label / brand -->
+  <g transform="translate(72, 88)">
+    <rect width="32" height="32" rx="6" fill="#F0EAD6"/>
+    <text x="16" y="23" text-anchor="middle" fill="#1A1815" font-family="Unbounded, sans-serif" font-weight="900" font-size="20">Г</text>
+    <text x="48" y="22" fill="rgba(240,234,214,0.65)" font-family="Manrope, sans-serif" font-weight="600" font-size="13" letter-spacing="0.16em">ГОЛОСОВАНИЕ БЕЗ ВЫБОРА · РАЗДЕЛ III</text>
+  </g>
+
+  <!-- Section tag -->
+  <g transform="translate(72, 156)">
+    <rect width="304" height="36" rx="100" fill="none" stroke="rgba(240,234,214,0.32)" stroke-width="1"/>
+    <text x="152" y="23" text-anchor="middle" fill="#F0EAD6" font-family="Manrope, sans-serif" font-weight="600" font-size="12" letter-spacing="0.18em">ЦИФРОВЫЕ ОГРАНИЧЕНИЯ 2021–2026</text>
+  </g>
+
+  <!-- Main headline -->
+  <g transform="translate(72, 220)">
+    <text x="0" y="60" fill="#F0EAD6" font-family="Unbounded, sans-serif" font-weight="900" font-size="76" letter-spacing="-0.03em">Белые списки</text>
+    <text x="0" y="148" fill="#F0EAD6" font-family="Lora, serif" font-weight="500" font-size="76" font-style="italic" letter-spacing="-0.02em">вместо</text>
+    <text x="220" y="148" fill="#B91C1C" font-family="Unbounded, sans-serif" font-weight="900" font-size="76" letter-spacing="-0.03em">интернета.</text>
+  </g>
+
+  <!-- Big arrow + numbers row -->
+  <g transform="translate(72, 460)">
+    <text x="0" y="0" fill="#F0EAD6" font-family="JetBrains Mono, monospace" font-weight="600" font-size="48">14,2</text>
+    <text x="0" y="38" fill="rgba(240,234,214,0.45)" font-family="Manrope, sans-serif" font-weight="500" font-size="14">млрд ₽ — 2022</text>
+
+    <text x="190" y="0" fill="rgba(240,234,214,0.55)" font-family="JetBrains Mono, monospace" font-weight="400" font-size="48">→</text>
+
+    <text x="262" y="0" fill="#B91C1C" font-family="JetBrains Mono, monospace" font-weight="700" font-size="48">29,3</text>
+    <text x="262" y="38" fill="rgba(240,234,214,0.45)" font-family="Manrope, sans-serif" font-weight="500" font-size="14">млрд ₽ — 2025 (ЦБ РФ)</text>
+
+    <text x="500" y="0" fill="rgba(240,234,214,0.55)" font-family="JetBrains Mono, monospace" font-weight="400" font-size="48">·</text>
+
+    <text x="540" y="0" fill="#F0EAD6" font-family="JetBrains Mono, monospace" font-weight="600" font-size="48">1 730</text>
+    <text x="540" y="38" fill="rgba(240,234,214,0.45)" font-family="Manrope, sans-serif" font-weight="500" font-size="14">компаний с легальным VPN</text>
+
+    <text x="800" y="0" fill="rgba(240,234,214,0.55)" font-family="JetBrains Mono, monospace" font-weight="400" font-size="48">·</text>
+
+    <text x="840" y="0" fill="#F0EAD6" font-family="JetBrains Mono, monospace" font-weight="600" font-size="48">469</text>
+    <text x="840" y="38" fill="rgba(240,234,214,0.45)" font-family="Manrope, sans-serif" font-weight="500" font-size="14">VPN заблокировано</text>
+  </g>
+
+  <!-- Bottom URL -->
+  <g transform="translate(72, 580)">
+    <text x="0" y="0" fill="rgba(240,234,214,0.55)" font-family="JetBrains Mono, monospace" font-weight="500" font-size="14">im-not-a-human.github.io/ru-elections/tsenzura.html</text>
+  </g>
+
+  <!-- Right-side bracket / mark -->
+  <g transform="translate(1060, 240)">
+    <line x1="0" y1="0" x2="40" y2="0" stroke="#B91C1C" stroke-width="3"/>
+    <line x1="40" y1="0" x2="40" y2="160" stroke="#B91C1C" stroke-width="3"/>
+    <line x1="40" y1="160" x2="0" y2="160" stroke="#B91C1C" stroke-width="3"/>
+  </g>
+</svg>

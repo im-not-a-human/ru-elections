@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="title" content="API поиска по законопроектам" />
+    <meta name="language" content="ru" />
+    <meta name="robots" content="index, follow" />
+    <title>API поиска по законопроектам</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="stylesheet" type="text/css" href="/css/style.css" media="screen,project" />
+  <!--[if IE 6]>
+    <link rel="stylesheet" type="text/css" media="screen,project" href="css/ie6.css" />
+  <![endif]-->
+</head>
+<body><div id="wrap">
+	<div id="head"><a href="#">API - Взаимодействия сторонних приложений с АИС «Законопроект»</a></div>
+	<div id="main" class="error">
+        <h2 class="h1 bord-head">Ошибка 404</h2>
+<p class="error-info-block">Страница не найдена</p>
+<p>Данная страница не существовала ранее или была удалена с сервера.</p>
+<p>Возможно, вы хотите вернуться на <a href="/">главную страницу</a>.</p>
+	</div>
+	<div id="foot">
+		<div id="foot-l">© Государственная Дума Федерального Собрания Российской Федерации, 2026</div>
+		<div id="foot-r"><a href="http://www.duma.gov.ru">www.duma.gov.ru</a></div>
+	</div>
+</div></body>
+</html>

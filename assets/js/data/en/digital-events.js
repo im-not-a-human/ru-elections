@@ -1,0 +1,360 @@
+// EN translation of assets/js/data/digital-events.js
+// Sync source: assets/js/data/digital-events.js
+// Glossary: research/i18n_glossary_draft.md
+// Editorial rules: research/i18n_locked_decisions.md
+
+// Timeline events for the digital restrictions page.
+// kind: 'law' (red), 'tech' (gold), 'event' (ink), 'statement' (green)
+// Each event has id, date, kind, title, summary; optional details (longer
+// description for the modal) and sources[] (primary source links).
+window.DIGITAL_TIMELINE = [
+  {
+    id: 'fz90-2019',
+    date: '01.05.2019',
+    kind: 'law',
+    title: 'Federal Law No. 90-FZ on the "sovereign Runet" (law on internet sovereignty)',
+    summary: 'The infrastructural foundation: the beginning of TSPU deployment. Budget 2019–2021 — no less than ₽30 billion, of which ₽20.8 billion for TSPU.',
+    details: 'Federal Law No. 90-FZ of 01.05.2019 ("On amendments to the Federal Law \'On Communications\' and the Federal Law \'On Information, Information Technologies and the Protection of Information\'") established the legal framework for centralised management of traffic routing at the operator level. TSPU (deep-packet-inspection infrastructure for traffic filtering) is DPI equipment installed at backbone operators and managed by Roskomnadzor. By 2024, the programme budget had exceeded ₽83.7 billion; according to government-appointed experts, annual operator and budgetary costs could reach ₽134 billion. Reuters, citing sources (September 2024): more than $0.5 billion had been allocated for TSPU.',
+    sources: [
+      { name: 'publication.pravo.gov.ru / ФЗ-90', url: 'http://publication.pravo.gov.ru/Document/View/0001201905010025' },
+      { name: 'Reuters о бюджете ТСПУ', url: 'https://www.reuters.com/world/europe/russia-spends-over-half-billion-internet-control-system-2024-09-30/' },
+    ],
+  },
+  {
+    id: 'rkn-vpn-2021',
+    date: '03.09.2021',
+    kind: 'law',
+    title: 'Blocking of 6 major VPNs + first "whitelists"',
+    summary: 'Hola, ExpressVPN, KeepSolid, NordVPN, Speedify, IPVanish. RKN simultaneously acknowledges exemptions: 27 companies, 33 technical processes, 100+ IPs.',
+    details: 'In an announcement on its own website, Roskomnadzor (RKN) publicly declared the blocking of six major commercial VPN services for the first time. In the same announcement the agency admitted that "whitelists" were being formed for technical processes: notifications from 64 industry organisations, 27 companies using these VPNs across 33 technical processes, and more than 100 IP addresses on the exemptions list. This was an early and significant episode: already in 2021 the logic was not "VPN is technically harmful" but "mass civilian VPN is harmful, corporately authorised VPN is permissible". By April 2026, the "whitelist" had grown to more than 57,000 addresses and subnets across 1,730 companies.',
+    sources: [
+      { name: 'РКН, 03.09.2021', url: 'https://old.rkn.gov.ru/news/rsoc/news73836.htm' },
+      { name: 'Интерфакс / РКН, 22.04.2026', url: 'https://www.interfax.ru/russia/1085410' },
+    ],
+  },
+  {
+    id: 'tor-2021',
+    date: '01.12.2021',
+    kind: 'tech',
+    title: 'Start of Tor blocking',
+    summary: 'Russia will later become No. 1 in the world for Tor bridge users (~62,000/day, 2024).',
+    details: 'From 1 December 2021, a number of Russian ISPs began blocking Tor by IP address at the demand of Roskomnadzor. The Tor Project and OONI recorded this shift as a transition from "passive tolerance" to active blocking. The paradox: by 2024, Russia had become No. 1 in the world for Tor bridge users (approximately 62,000 per day on average over July–October 2024); Iran was second at approximately 17,900 per day. This simultaneously reflects the scale of demand for circumvention and the relative permeability of the existing blocks.',
+    sources: [
+      { name: 'Tor Project blog', url: 'https://blog.torproject.org/tor-network-ddos-attack/' },
+      { name: 'Tor Metrics', url: 'https://metrics.torproject.org' },
+      { name: 'OONI Russia blocks Tor', url: 'https://ooni.org/post/2021-russia-blocks-tor/' },
+    ],
+  },
+  {
+    id: 'mincifry-cert-2022',
+    date: '24.02.2022',
+    kind: 'tech',
+    title: 'Mincifry root certificate',
+    summary: 'Introduced in response to the revocation of foreign TLS certificates. Supported "out of the box" only in Yandex Browser, Atom, and "Sputnik".',
+    details: 'The Mincifry certificate was introduced on 24 February 2022 in response to the revocation of foreign TLS certificates from Russian websites. It is supported "out of the box" only in Yandex Browser, Atom, and "Sputnik"; Chrome, Firefox, and Safari require manual installation. This creates a permanent circumvention channel: a user who has not installed the certificate is not exposed to the risk of a potential MITM attack, but gains access to the global internet via standard TLS certificates. A parallel: Kazakhstan\'s attempts at a national Qaznet certificate (2015, 2019, 2020) — all three failed after the certificates were blocked by Mozilla, Google, and Apple.',
+    sources: [
+      { name: 'Минцифры', url: 'https://digital.gov.ru/ru/events/41722/' },
+    ],
+  },
+  {
+    id: 'fb-block-2022',
+    date: '04.03.2022',
+    kind: 'event',
+    title: 'RKN restricted access to Facebook',
+    summary: 'A chronological paradox: the block preceded the formal pretext — a Reuters report of 10.03 on Meta\'s decision to permit calls for violence against Russian soldiers.',
+    details: 'RKN restricted access to Facebook on 4 March 2022, following reports of service throttling on 25 February. The formal public pretext — Meta\'s decision to permit calls for violence against Russian soldiers — was published by Reuters only on 10 March, i.e. after the block. This chronological sequence establishes that the block preceded the stated formal grounds.',
+    sources: [
+      { name: 'РБК / Мосгорсуд, 20.06.2022', url: 'https://www.rbc.ru/technology_and_media/20/06/2022/62b076d99a79474b3991e5b4' },
+      { name: 'Reuters, 10.03.2022', url: 'https://www.reuters.com/world/europe/exclusive-meta-allows-war-posts-urging-violence-against-russian-invaders-2022-03-10/' },
+    ],
+  },
+  {
+    id: 'instagram-block-2022',
+    date: '14.03.2022',
+    kind: 'event',
+    title: 'Instagram blocked',
+    summary: 'DAU fell from 40.9 million to 6.9 million in a single day. Top10VPN: VPN demand surge +2,692% in one day (Mediascope; Top10VPN).',
+    details: 'RKN restricted access to Instagram on 14 March 2022. According to Mediascope, Instagram\'s daily audience fell from 40.9 million (14.03) to 6.9 million (15.03) — a fivefold drop in a single day. Top10VPN: VPN demand in Russia on 14 March showed a surge of +2,692% relative to the weekly average before 24 February. By October 2023, MAU had fallen to 25.1 million (–60% against 2021), DAU in March 2023 was 7.1 million, and average daily time spent fell from 41 to 17 minutes. In parallel, Telegram\'s average daily reach grew from 23% to 41%, and MAU in October 2023 reached 82.3 million (+62% against 2021).',
+    sources: [
+      { name: 'РБК / Мосгорсуд', url: 'https://www.rbc.ru/technology_and_media/20/06/2022/62b076d99a79474b3991e5b4' },
+      { name: 'Mediascope', url: 'https://mediascope.net' },
+      { name: 'Top10VPN VPN demand 2022', url: 'https://www.top10vpn.com/research/investigations/vpn-demand-russia-ukraine-conflict/' },
+    ],
+  },
+  {
+    id: 'tverskoy-meta-2022',
+    date: '21.03.2022',
+    kind: 'law',
+    title: 'Tverskoy court: ban on Meta\'s activities',
+    summary: 'Case No. 02-2473/2022, Judge Olga Solopova. "On the grounds of carrying out extremist activities" — with the explicit exclusion of WhatsApp.',
+    details: 'On 21 March 2022, the Tverskoy District Court of Moscow (case No. 02-2473/2022, Judge Olga Solopova) upheld the Prosecutor General\'s claim and banned Meta Platforms from operating Facebook and Instagram "on the grounds of carrying out extremist activities". The reasoning explicitly provided: "The ruling does not apply to the activities of the WhatsApp messenger of Meta, owing to the absence of functions for the public dissemination of information." This is a textbook case of selectivity: applying "extremist" logic to two services of the same corporation, but not to a third. The Moscow City Court appeal on 20.06.2022 upheld the ruling.',
+    sources: [
+      { name: 'РБК / Мосгорсуд, 20.06.2022', url: 'https://www.rbc.ru/technology_and_media/20/06/2022/62b076d99a79474b3991e5b4' },
+    ],
+  },
+  {
+    id: 'fz255-foragents-2022',
+    date: '14.07.2022',
+    kind: 'law',
+    title: 'Federal Law No. 255-FZ — foreign agents under the new formula',
+    summary: '"Foreign influence" no longer requires financing — it is sufficient to be "under influence in other forms". As of January 2026 — 1,138 entries in the register.',
+    details: 'Federal Law No. 255-FZ "On the Control of the Activities of Persons under Foreign Influence" was signed on 14 July 2022 and entered into force on 1 December 2022. The key change: "foreign influence" no longer requires mandatory financing; it is sufficient to be "under influence in other forms". As of January 2026, approximately 1,138 entries were listed in the foreign-agent register (including those removed). According to OVD-Info, 142 organisations were forced to liquidate or reorganise following inclusion. Amendments of 6 May 2024 completely banned foreign agents from participating in elections at all levels, acting as observers, authorised representatives, or proxy representatives.',
+    sources: [
+      { name: 'publication.pravo.gov.ru / ФЗ-255', url: 'http://publication.pravo.gov.ru/document/0001202207140019' },
+      { name: 'ОВД-Инфо', url: 'https://ovdinfo.org' },
+    ],
+  },
+  {
+    id: 'lgbt-2022',
+    date: '05.12.2022',
+    kind: 'law',
+    title: 'Federal Laws No. 478/479-FZ — ban on LGBT "propaganda" for all ages',
+    summary: 'The first in a series of "child protection" laws; simultaneously, child suicide figures rose from 311 (2020) to 753 (2021), 735 (2024).',
+    details: 'Federal Laws No. 478-FZ and No. 479-FZ of 5 December 2022 extended the ban on LGBT "propaganda" to all ages (previously applicable only to minors). This was the first in a series of "protective" initiatives; combined with Federal Law No. 386-FZ of 24.07.2023 (ban on gender reassignment procedures), the Supreme Court ruling of 30.11.2023 (designating the so-called \'LGBT movement\', designated extremist by Russia\'s Supreme Court in 2023, as an extremist organisation), and Federal Laws No. 401/411-FZ of 23.11.2024 (fines for promoting childfree ideology). According to the Investigative Committee and MVD, child suicides: 311 (2020) → 753 (2021) → 679 (2022) → 678 (2023) → 735 (2024, +8.4% on 2023). The claim that digital bans resolve the problem is not empirically supported.',
+    sources: [
+      { name: 'publication.pravo.gov.ru / ФЗ-478', url: 'http://publication.pravo.gov.ru/document/0001202212050003' },
+    ],
+  },
+  {
+    id: 'vs-lgbt-2023',
+    date: '30.11.2023',
+    kind: 'law',
+    title: 'Supreme Court of Russia — the "LGBT movement" designated extremist',
+    summary: 'Criminalisation of identity.',
+    details: 'On 30 November 2023, the Supreme Court of Russia designated the "international LGBT public movement" as an extremist organisation. The judicial ruling de facto criminalises a significant volume of public speech and symbolism relating to LGBT themes. Following this ruling, the Ministry of Justice register began to include materials containing basic LGBT symbolism, which broadened the scope of Article 13.53 of the Code of Administrative Offences ("intentional search for extremist materials"), introduced by Federal Law No. 281-FZ of 31.07.2025. (First reference: the so-called \'LGBT movement\', designated extremist by Russia\'s Supreme Court in 2023.)',
+    sources: [
+      { name: 'Решение ВС РФ', url: 'http://vsrf.ru' },
+    ],
+  },
+  {
+    id: 'crocus-2024',
+    date: '22.03.2024',
+    kind: 'event',
+    title: 'Terrorist attack at Crocus City Hall',
+    summary: '149 killed, 600+ wounded. According to the Investigative Committee: coordination via voice messages in Telegram. Channel with a cryptocurrency wallet ($2,525) deleted 01.04.2024. Telegram regulated as an information dissemination organiser (IDO) since 2017.',
+    details: 'Despite the full legislative framework in force at that time — foreign-agent and blogger registers, the Meta ban, Telegram\'s IDO (information dissemination organiser under Russian law) status, the TSPU system, and the "Yarovaya package" requiring mandatory traffic storage — the attack took place. According to the Investigative Committee (29.03.2024), the accused confirmed during questioning that their actions were coordinated by a man using a pseudonym via voice messages in Telegram. RIAMO: recruitment through a Telegram channel of the Afghan wing of ISIS "Voice of Khorasan". The Telegram channel through which payment passed (cryptocurrency wallet, $2,525) was deleted on 01.04.2024 following publication by RIA Novosti. Per the verdict (January 2025): 149 killed, more than 600 wounded, 27 defendants.',
+    sources: [
+      { name: 'РБК / СКР, 29.03.2024', url: 'https://www.rbc.ru/society/29/03/2024/6606b0429a7947ee0b5d3f48' },
+    ],
+  },
+  {
+    id: 'youtube-throttling-start-2024',
+    date: '12.07.2024',
+    kind: 'tech',
+    title: 'Start of YouTube throttling',
+    summary: '"Rostelecom": problems with Google Global Cache equipment. Peskov: "degradation". Khinshtein (25–26.07): "a forced step against a foreign resource".',
+    details: 'On 12 July 2024, Rostelecom reported "technical problems with equipment belonging to Google" (Google Global Cache). Dmitry Peskov (Дмитрий Песков): "This is degradation. There can be no other explanation." On 25–26 July, Alexander Khinshtein (Александр Хинштейн) revealed the political nature of the decision via Telegram: "The \'degradation\' of YouTube is a forced step directed not against Russian users but against the administration of a foreign resource." From 1 August, TCP connections were throttled to 128 kbps, QUIC to 512 kbps. According to the Google Transparency Report, YouTube\'s traffic index in Russia fell from 48.759 (12.07) to 7.78 (23.12) — a 6.3-fold drop. Deputy Minister Shadayev in December 2024: "approximately half the traffic that YouTube is losing in Russia is \'landing\' on Russian platforms".',
+    sources: [
+      { name: 'РБК / Хинштейн, 26.07.2024', url: 'https://www.rbc.ru/technology_and_media/26/07/2024/66a393d79a794754343bc1de' },
+      { name: 'РБК / Google, 02.08.2024', url: 'https://www.rbc.ru/technology_and_media/02/08/2024/66ac42089a79470ef13d71eb' },
+    ],
+  },
+  {
+    id: 'fz303-2024',
+    date: '08.08.2024',
+    kind: 'law',
+    title: 'Federal Law No. 303-FZ — SIM card limits, biometrics for foreigners',
+    summary: '20 SIMs per Russian citizen, 10 per foreign national; mandatory in-person identification and biometric enrolment in the Unified Biometric System with IMEI registration.',
+    details: 'Federal Law No. 303-FZ of 8 August 2024 capped Russian citizens at 20 SIM cards and foreign nationals at 10, introduced mandatory in-person identification, and required biometric enrolment in the Unified Biometric System (EBS) with IMEI registration. Biometrics for foreign nationals became mandatory from 1 January 2025; the obligation for operators to terminate services to foreigners without biometrics came into force from 1 July 2025. The stated objective: "combating fraud and grey SIM cards". The law applies only to contracts with Russian operators; not covered: foreign SIMs in international roaming, eSIM profiles from foreign operators, M2M/IoT SIM cards from foreign operators. This is the key technical gap in the logic of the "counter-terrorism" rationale.',
+    sources: [
+      { name: 'publication.pravo.gov.ru / ФЗ-303', url: 'http://publication.pravo.gov.ru/document/0001202408080127' },
+    ],
+  },
+  {
+    id: 'discord-2024',
+    date: '08.10.2024',
+    kind: 'event',
+    title: 'Discord blocked',
+    summary: 'Audience ~30 million in Russia. Mass outcry from pro-war Z-channels: "drone streams via closed messenger rooms went down". The Russian Ministry of Defence declined to comment.',
+    details: 'RKN\'s decision was justified by "preventing the use of the messenger for terrorist and extremist purposes, the recruitment of citizens, and drug sales". Discord\'s audience in Russia at the time of the block was approximately 30 million users. The paradox: widespread outrage from Russian military pro-war "Z-channels". Fighterbomber (530,000+ subscribers): "nobody expected such a stab in the back"; Discord "serves to transmit video images to headquarters at various levels". "Troyka": after the block, "drone streams that had been running through closed messenger rooms went down" at the command posts of "dozens of formations". The Russian Ministry of Defence officially commented on neither the block nor military use of Discord. According to a Meduza investigation of 06.02.2026, the primary "application" of Starlink in the conflict zone was streaming drone video through the same Discord.',
+    sources: [
+      { name: 'Meduza, 09.10.2024', url: 'https://meduza.io/feature/2024/10/09/nashi-zakonotvortsy-vse-tak-zhe-strashno-daleki-ot-chugunnoy-zhopy-realnosti-naroda-i-armii' },
+    ],
+  },
+  {
+    id: 'blogger-registry-2024',
+    date: '01.11.2024',
+    kind: 'law',
+    title: 'Blogger register for channels with more than 10,000 subscribers',
+    summary: 'Registered: Medvedev, Volodin, TASS, the Kremlin. Not registered: Kadyrov, Zakharova, Malofeyev, a number of deputies.',
+    details: 'From 1 November 2024, channels with more than 10,000 subscribers are required to register in the RKN register. According to an investigation by Systema/Meduza of 8 January 2025: those who registered include Dmitry Medvedev (1.4 million subscribers), Vyacheslav Volodin (Вячеслав Володин) (1.3 million), TASS, and the official Kremlin channel. Those who did not register: Ramzan Kadyrov (more than 2 million), Maria Zakharova (approximately 500,000), Magomed Daudov, Konstantin Malofeyev, and deputies Butina, Ostanina, Tolstoy, Zhuravlyov, Nemkin, and Andrei Lugovoy (Андрей Луговой). This is a textbook case of selective enforcement: application of the law depends on the status of the individual.',
+    sources: [
+      { name: 'Meduza / Система, 08.01.2025', url: 'https://meduza.io/feature/2025/01/08/avtory-krupnyh-telegram-kanalov-obyazany-zaregistrirovatsya-v-reestre-blogerov-roskomnadzora-etogo-ne-sdelali-ni-kadyrov-ni-zaharova-ni-deputaty-kotorye-prinyali-takoy-zakon' },
+    ],
+  },
+  {
+    id: 'ech-2024',
+    date: '05.11.2024',
+    kind: 'tech',
+    title: 'Cloudflare ECH blocked',
+    summary: 'RKN began blocking via TSPU after Cloudflare enabled ECH by default in October 2024.',
+    details: 'After Cloudflare enabled ECH (Encrypted Client Hello) by default in October 2024, RKN began blocking ECH via TSPU on 5 November. ECH encrypts the SNI field in the TLS handshake, preventing intermediate equipment from determining exactly which domain is being requested — this effectively breaks domain-based blocking. A technical analysis of TSPU circumvention via ClientHello fragmentation is described in detail on Habr ("DPI IS ALL YOU NEED"). Local tools — GoodbyeDPI, Zapret — continue to work via packet fragmentation and fake injection.',
+    sources: [
+      { name: 'OONI Censorship Chronicles', url: 'https://ooni.org/post/2024-russia-report/' },
+    ],
+  },
+  {
+    id: 'rkn-vpn-popularization-2024',
+    date: '20.11.2024',
+    kind: 'law',
+    title: 'RKN order banning the "popularisation" of VPNs',
+    summary: 'Entered into force 30.11.2024. Exception for "scientific, scientific-technical and statistical information" for technical purposes.',
+    details: 'The Roskomnadzor order of 20.11.2024 (in force from 30.11.2024) banned the dissemination of information "advertising or popularising" circumvention tools. The key exception: "scientific, scientific-technical and statistical information... to ensure protected access" for state and commercial entities. This legally entrenched the two-tier architecture: for the state, banks, online marketplaces, and large businesses — a legal VPN with a growing "whitelist"; for the private user — an administratively penalisable "advertisement". Federal Law No. 281-FZ of 31.07.2025 extended the provision to fines of ₽80,000 / ₽150,000 / ₽500,000.',
+    sources: [
+      { name: 'РКН / приказ', url: 'https://rkn.gov.ru' },
+    ],
+  },
+  {
+    id: 'youtube-bottom-2024',
+    date: '23.12.2024',
+    kind: 'tech',
+    title: 'YouTube traffic index in Russia falls to 7.78 (×6.3)',
+    summary: 'Google Transparency Report: down from 48.759 (12.07.2024). Shadayev: "half the lost traffic is landing on Russian platforms".',
+    details: 'According to the Google Transparency Report, YouTube\'s traffic index in Russia fell from 48.759 (12.07.2024) to 7.78 (23.12.2024) — a 6.3-fold drop, a historic low. In parallel, the index in the Netherlands rose from 6.228 to 9.994 — due to VPN traffic that technically terminates at foreign data centres. Google\'s response (RIA Novosti, 23.12.2024): "The slowdown of YouTube in Russia is not the result of any technical problems or actions on the part of Google." According to Mediascope, YouTube\'s MAU fell from 95.8 million (July 2024) to 91.1 million (November 2024), DAU from 55.7 to 46.2 million (–17%), and average viewing time from 52 minutes to 17 minutes by October 2025.',
+    sources: [
+      { name: 'РБК / Google, 02.08.2024', url: 'https://www.rbc.ru/technology_and_media/02/08/2024/66ac42089a79470ef13d71eb' },
+      { name: 'Google Transparency Report', url: 'https://transparencyreport.google.com/traffic/' },
+    ],
+  },
+  {
+    id: 'fz41-antifraud-2025',
+    date: '01.04.2025',
+    kind: 'law',
+    title: 'Federal Law No. 41-FZ — anti-fraud package',
+    summary: 'The "Antifraud" state information system, a self-imposed bar on telecommunications contracts without personal attendance, mandatory call labelling. Ban on government agencies and banks communicating via foreign messengers.',
+    details: 'Federal Law No. 41-FZ of 1 April 2025 introduced the state information system "Antifraud", a self-imposed bar on telecommunications contracts without personal attendance, mandatory call labelling, and a ban on government agencies and banks communicating via foreign messengers. Actual theft dynamics per the Central Bank of Russia (CBR): ₽14.2 billion (2022) → ₽15.8 billion (2023) → ₽27.5 billion (2024, +74.4%) → ₽29.3 billion (2025, +6.4%). Customer reimbursement in 2025: 5.9% (₽1.7 billion). Sberbank (Kuznetsov, January 2026, Federation Council) estimates total harm at ₽275–295 billion per year — an eleven-fold discrepancy with CBR statistics. Elvira Nabiullina (Эльвира Набиуллина) stated in February 2025 that "many banks were simply under-reporting the level of cyber-fraud".',
+    sources: [
+      { name: 'publication.pravo.gov.ru / ФЗ-41', url: 'http://publication.pravo.gov.ru/document/0001202504010001' },
+      { name: 'ЦБ РФ — статистика', url: 'https://www.cbr.ru/statistics/protection/' },
+    ],
+  },
+  {
+    id: 'fz156-max-2025',
+    date: '24.06.2025',
+    kind: 'law',
+    title: 'Federal Law No. 156-FZ — national messenger MAX',
+    summary: 'The legal basis for MAX: messages sent via a verified ESIA account have the force of paper documents (Article 1, Part 8).',
+    details: 'Federal Law No. 156-FZ "On the establishment of a multifunctional information-exchange service" of 24.06.2025: Article 1, Part 8 — messages sent via a verified ESIA (the state authentication portal) account have the force of paper documents. The law created the legal basis for the national messenger. MAX does not use end-to-end encryption; messages are stored on VK servers in decrypted form; integrated with the FSB, MVD, FTS, and CBR. According to VK: 1 million registered users in June 2025, 50 million by 27.10.2025, 100 million by 10.03.2026. According to Mediascope, in October 2025 MAX had 48 million MAU versus 96.2 million for WhatsApp and 91 million for Telegram. iStories (23.02.2026): Russian Armed Forces units have been banned from using MAX at the front.',
+    sources: [
+      { name: 'publication.pravo.gov.ru / ФЗ-156', url: 'http://publication.pravo.gov.ru/document/0001202506240003' },
+      { name: 'Интерфакс / MAX, 21.08.2025', url: 'https://www.interfax.ru/digital/1043261' },
+    ],
+  },
+  {
+    id: 'rasp-1880r-max-2025',
+    date: '12.07.2025',
+    kind: 'law',
+    title: 'Russian Government Order No. 1880-r: MAX operator designated',
+    summary: 'LLC "Kommunikatsionnaya Platforma" (a VK subsidiary) designated as the national service operator. The product: MAX.',
+    details: 'Government Order No. 1880-r of 12.07.2025 designated LLC "Kommunikatsionnaya Platforma" (a VK subsidiary) as the national service operator; the product became MAX. Orders No. 2240-r and No. 2241-r of 19.08.2025 (Prime Minister Mishustin): from 1 September 2025, MAX is mandatory for pre-installation on smartphones and tablets. Fines for violations: for legal entities, up to ₽200,000. In 2025, the Mincifry budget allocated more than ₽43.5 billion for VK services, including ₽39.5 billion for the "national video platform" (VK Video) and more than ₽4 billion for the "multifunctional information-exchange service" (i.e. MAX) — approximately 10% of Mincifry\'s total budget (₽457 billion).',
+    sources: [
+      { name: 'Интерфакс / MAX, 21.08.2025', url: 'https://www.interfax.ru/digital/1043261' },
+    ],
+  },
+  {
+    id: 'gosduma-fz281-2025',
+    date: '22.07.2025',
+    kind: 'law',
+    title: 'State Duma: Federal Law No. 281-FZ passed 306–67–22',
+    summary: 'Fines of ₽3,000–5,000 for "searching for extremism"; ₽80,000/150,000/500,000 for VPN "advertising". Boyarsky: "they won\'t go rummaging in people\'s phones". Simonyan: "how are we supposed to cover the FBK if reading them becomes banned?".',
+    details: 'The State Duma passed Federal Law No. 281-FZ on 22 July 2025 with 306 votes in favour, 67 against, and 22 abstentions. The amendments introduced Article 13.53 of the Code of Administrative Offences — a fine of ₽3,000–5,000 for "the intentional search for knowingly extremist materials" (including via VPN) — and expanded Article 14.3 — fines for advertising VPNs: up to ₽80,000 for individuals, ₽150,000 for officials, and ₽500,000 for legal entities. At the time of entry into force, the Ministry of Justice register contained approximately 5,411 "extremist materials". Reactions: Margarita Simonyan (Маргарита Симоньян) (RT, Telegram): "How are we supposed to investigate the activities of the FBK in future if even reading them will be banned?" An open poll by "New People" (370,000+ participants): 72% — "the law is harmful". VTsIOM/Insomar, August 2025: 61% in favour. Sensor Tower: the active user base of the top 5 VPNs grew from 247,000 to 6 million+ users in Q3 2025.',
+    sources: [
+      { name: 'publication.pravo.gov.ru / ФЗ-281', url: 'http://publication.pravo.gov.ru/document/0001202507310012' },
+    ],
+  },
+  {
+    id: 'rkn-calls-block-2025',
+    date: '13.08.2025',
+    kind: 'event',
+    title: 'RKN: "partial restriction" of voice calls in Telegram and WhatsApp',
+    summary: 'Justification: anti-fraud. Afterwards: on 22.10, RKN reported a 40% reduction in fraudulent calls. ComNews, 20.08: increase in fraud from foreign numbers.',
+    details: 'On 13 August 2025, RKN officially confirmed the "partial restriction" of voice calls in Telegram and WhatsApp: "Foreign messengers Telegram and WhatsApp have become the primary voice services used for fraud, extortion, and the recruitment of citizens for subversive and terrorist activities." A partial success: RKN reported a 40% reduction in fraudulent calls (Kommersant, 22.10.2025). However, ComNews (20.08.2025): operators recorded an increase in fraud from foreign numbers. Total theft volume per CBR for 2025: ₽29.3 billion (+6.4% on 2024); Sberbank estimates total harm at ₽295 billion per year. The MAX messenger rollout was proceeding in parallel with the voice call restrictions.',
+    sources: [
+      { name: 'РБК / РКН, 13.08.2025', url: 'https://www.rbc.ru/politics/13/08/2025/689c8c7c9a79479b1087586d' },
+      { name: 'Коммерсант, 22.10.2025', url: 'https://www.kommersant.ru/doc/8140609' },
+      { name: 'ComNews, 20.08.2025', url: 'https://www.comnews.ru/content/240797/2025-08-20/2025-w34/1007/moshenniki-telegram-i-whatsapp-peretekli-trubu' },
+    ],
+  },
+  {
+    id: 'max-preinstall-2025',
+    date: '01.09.2025',
+    kind: 'law',
+    title: 'MAX mandatory for pre-installation + Federal Law No. 281-FZ enters into force',
+    summary: 'Government Orders No. 2240-r, No. 2241-r of 19.08.2025. Fine for legal entities up to ₽200,000.',
+    details: 'From 1 September 2025, the following entered into force: (1) mandatory pre-installation of MAX on smartphones and tablets sold in Russia (Government Orders No. 2240-r and No. 2241-r of 19.08.2025), fine for legal entities up to ₽200,000; (2) Federal Law No. 281-FZ — fines for "intentional searching for extremism" via VPN and for VPN "advertising". This is a symmetrical construction: the national messenger is locked in as the "default", whilst foreign services and circumvention tools are criminalised at the user level. According to Mediascope, in October 2025 MAX had 48 million MAU versus 96.2 million for WhatsApp; the declared reach of 39% against 78% for WhatsApp — regulatory dominance has not yet converted into actual adoption.',
+    sources: [
+      { name: 'Интерфакс / MAX, 21.08.2025', url: 'https://www.interfax.ru/digital/1043261' },
+      { name: 'publication.pravo.gov.ru / ФЗ-281', url: 'http://publication.pravo.gov.ru/document/0001202507310012' },
+    ],
+  },
+  {
+    id: 'sim-cooldown-2025',
+    date: '10.11.2025',
+    kind: 'event',
+    title: 'SIM "cool-down period"',
+    summary: '24-hour block on mobile internet and SMS after returning from abroad or prolonged inactivity. Mincifry: "it is necessary to confirm that the SIM card is being used by a person, not a drone".',
+    details: 'From 10 November 2025, Russians returning from abroad and holders of foreign SIM cards have their mobile internet and SMS blocked for 24 hours. Restoration is via CAPTCHA, SMS, a link, or a call centre. Mincifry on the "obyasnyaem.rf" portal: "it is necessary to confirm that the SIM card is being used by a person, not a drone." SberMobile: "The primary objective is to combat the use of SIM cards in drones." The same logic applies to Russian SIMs after prolonged inactivity (>72 hours). The paradox: an anti-drone measure has become a mass check of citizens, whilst drones using radio channels, satellite communications, autopilot, or inertial navigation are not covered by it.',
+    sources: [
+      { name: 'РБК / иностранные SIM, 28.11.2025', url: 'https://www.rbc.ru/rbcfreenews/692985d69a79471457093cc8' },
+      { name: 'Коммерсант, 07.11.2025', url: 'https://www.kommersant.ru/doc/8181485' },
+      { name: 'CNews, 11.11.2025', url: 'https://www.cnews.ru/news/top/2025-11-11_rossiyanevernuvshiesya_iz-za' },
+    ],
+  },
+  {
+    id: 'fz466-mkd-chats-2025',
+    date: '16.12.2025',
+    kind: 'law',
+    title: 'Federal Law No. 466-FZ — mandatory housing-block chats in MAX',
+    summary: 'Management companies, utility suppliers, and regional solid-waste operators — interaction with residents of apartment blocks via chats in MAX. ~1 million apartment blocks by end of 2025 (Faizullin).',
+    details: 'Federal Law No. 466-FZ of 16.12.2025 required management companies, utility-supply organisations, and regional solid-waste operators to communicate with residents of apartment blocks via housing chats in MAX. Construction Minister Irek Faizullin stated that each of approximately one million apartment blocks should open a chat in MAX by the end of 2025. The stated objective of the Ministry of Construction: "ensuring a secure digital environment in the provision of housing and utilities services", eliminating fraud. Deputy Vladimir Koshelev: MAX would solve "the main problem — the identification of participants". This is, at the time of writing, the largest step in the compulsory migration of everyday communications to the national messenger.',
+    sources: [
+      { name: 'publication.pravo.gov.ru / ФЗ-466', url: 'http://publication.pravo.gov.ru/document/0001202512160001' },
+    ],
+  },
+  {
+    id: 'fsb-shutdowns-2026',
+    date: '20.02.2026',
+    kind: 'law',
+    title: 'Law on FSB demands to operators',
+    summary: 'Signed by Putin. Operators are required to suspend communications at FSB demand; exempted from liability to subscribers. Circumstances determined by presidential decrees.',
+    details: 'On 20 February 2026, Putin signed a law under which telecommunications operators are required to suspend the provision of communications services at the demand of the FSB in circumstances determined by presidential decrees. An important detail: operators are released from liability to subscribers if the disconnection occurs in response to an FSB demand. Pravo.ru noted that the wording changed during deliberation: "request" was replaced with "demand", and references to the government and security threats as limiting conditions were removed from the text. This transforms communications restrictions from an exceptional practice into a stable element of the legal system.',
+    sources: [
+      { name: 'РБК, 20.02.2026', url: 'https://www.rbc.ru/rbcfreenews/6998bacd9a7947720c215815' },
+      { name: 'Pravo.ru, 17.02.2026', url: 'https://pravo.ru/news/262459/' },
+    ],
+  },
+  {
+    id: 'shoygu-2026',
+    date: '17.03.2026',
+    kind: 'statement',
+    title: 'Shoigu: "not a single region of Russia is protected"',
+    summary: 'Security Council session, Yekaterinburg. An admission of failure by the anti-drone metric, against the backdrop of drone attacks growing from 6,200 (2024) to 23,000+ (2025).',
+    details: 'Sergei Shoigu (Сергей Шойгу) stated on 17 March 2026 at a Security Council session in Yekaterinburg: "Not a single region of Russia is protected from the threat of drone attacks." This is a public admission of failure by precisely the metric that underpins most of the "anti-drone" digital measures of 2024–2026. According to the Security Council: in 2024 infrastructure was subjected to 6,200 aerial attacks; in 2025 — more than 23,000 (+275%). According to CIT, in 2025, 1,376 civilians in Russia were killed by drones (a 2.85-fold increase on 2024), and 10,089 were wounded (a threefold increase). Registered terrorist incidents: 271 (2023) → 1,101 (2024) → 1,830 (2025) — a 6.5-fold increase over two years.',
+    sources: [
+      { name: 'Фонтанка / Шойгу, 17.03.2026', url: 'https://www.fontanka.ru/2026/03/17/76315850/' },
+    ],
+  },
+  {
+    id: 'mincifry-vpn-block-2026',
+    date: '30.03.2026',
+    kind: 'law',
+    title: 'Mincifry meeting: 20+ IT companies required to block VPNs',
+    summary: 'Sber, Yandex, VK, Wildberries, Ozon, X5, Gazprom-Media, Avito, ivi, Lamoda, CIAN, HeadHunter, Lemana Pro, VkusVill, Lenta — to block users with "unrecognised" VPNs by 15.04.2026.',
+    details: 'Mincifry meeting of 30.03.2026: by 15 April 2026, more than 20 of the largest IT companies — Sber, Yandex, VK, Wildberries, Ozon, X5, Gazprom-Media, Avito, ivi, Lamoda, CIAN, HeadHunter, Lemana Pro, VkusVill, Lenta — are required to block users with "unrecognised" VPNs. Meduza (15.04.2026): "Among those who began denying access to users with VPNs were Gosuslugi, Sberbank, Ozon, Wildberries, Aviasales, Yandex services, and Russian Railways." The paradox: the very same companies required to block user-level VPNs have legal corporate VPN access on the RKN "whitelist".',
+    sources: [
+      { name: 'Pravo.ru, 17.02.2026', url: 'https://pravo.ru/news/262459/' },
+      { name: 'Интерфакс / РКН, 22.04.2026', url: 'https://www.interfax.ru/russia/1085410' },
+    ],
+  },
+  {
+    id: 'rkn-1730-2026',
+    date: '22.04.2026',
+    kind: 'event',
+    title: 'RKN: 1,730 companies and 57,000+ addresses with legal VPN',
+    summary: 'Via Interfax. Simultaneously — 469 VPN services blocked (per RKN data as of March 2026). The two-tier architecture officially documented.',
+    details: 'On 22 April 2026, RKN officially confirmed via Interfax: 1,730 Russian companies have been granted access to foreign resources via VPN for production activities; access is granted for more than 57,000 addresses and subnets; 469 VPN services were simultaneously blocked. RBC separately reported that "government agencies have spent ₽14.1 billion on VPN since the start of the year." This is the moment of official documentation of the two-tier architecture: for the state, banks, online marketplaces, and large businesses, VPN is a legal tool with a growing "whitelist"; for the private user, it is an administratively punishable "advertisement", and the use of VPN in connection with any other offence risks being treated as an aggravating circumstance.',
+    sources: [
+      { name: 'Интерфакс / РКН, 22.04.2026', url: 'https://www.interfax.ru/russia/1085410' },
+    ],
+  },
+];

@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Цифровые ограничения России 2021–2026: разрыв между декларациями и эффектом. Антифрод, антитеррор, защита детей — на цифрах ЦБ, МВД, Mediascope, Top10VPN, Freedom House, Tor Metrics. Карта противоречий, threat-model, калькулятор ущерба.">
+<title>Белые списки вместо интернета · Цифровые ограничения 2021–2026</title>
+
+<link rel="canonical" href="https://im-not-a-human.github.io/ru-elections/tsenzura.html">
+
+<!-- Open Graph / Twitter cards -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Голосование без выбора">
+<meta property="og:title" content="Белые списки вместо интернета · 14,2 → 29,3 млрд ₽">
+<meta property="og:description" content="Цифровые ограничения 2021–2026: декларация — безопасность, архитектура — разрешительный режим. Карта противоречий, threat-model, калькулятор ущерба, источники.">
+<meta property="og:url" content="https://im-not-a-human.github.io/ru-elections/tsenzura.html">
+<meta property="og:image" content="https://im-not-a-human.github.io/ru-elections/assets/og/tsenzura.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="14,2 → 29,3 млрд ₽: рост мошенничества при антифрод-законах">
+<meta property="og:locale" content="ru_RU">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Белые списки вместо интернета">
+<meta name="twitter:description" content="Цифровые ограничения 2021–2026 на цифрах: декларация vs архитектура.">
+<meta name="twitter:image" content="https://im-not-a-human.github.io/ru-elections/assets/og/tsenzura.png">
+<link rel="icon" href="data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'&gt;&lt;rect width='32' height='32' rx='6' fill='%231A1815'/&gt;&lt;text x='16' y='22' text-anchor='middle' font-family='Unbounded,sans-serif' font-weight='900' font-size='18' fill='%23F0EAD6'&gt;Г&lt;/text&gt;&lt;/svg&gt;">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;700;900&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Lora:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/layout.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/home.css">
+<link rel="stylesheet" href="assets/css/elections.css">
+<link rel="stylesheet" href="assets/css/tsenzura.css">
+<link rel="stylesheet" href="assets/css/presentation.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<noscript>
+  <div style="background: #FEF3C7; border-bottom: 2px solid #B45309; padding: 14px 20px; text-align: center; font-size: 14px;">
+    JavaScript отключён. Текстовые разделы и числа доступны полностью; интерактивные виджеты (карта противоречий, threat-model, калькулятор) недоступны.
+  </div>
+</noscript>
+
+<a class="skip-link" href="#main">К содержанию</a>
+
+<div class="dev-banner" role="status">
+  <strong>Сайт в разработке.</strong> Контент собирается AI-агентами под наблюдением автора. Возможны неточности и визуальные баги — пишите через <a href="#" data-open-feedback>обратную связь</a>.
+</div>
+
+<nav class="topnav">
+  <div class="wrap">
+    <div class="nav-row">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">Г</span>
+        <span class="brand-text">Голосование без выбора</span>
+      </a>
+      <nav class="page-toggle" id="pageToggle" aria-label="Разделы сайта">
+        <a href="index.html">
+          <span class="lbl-full">Голосования</span>
+          <span class="lbl-short">Дума</span>
+        </a>
+        <a href="vybory.html">
+          <span class="lbl-full">Математика выборов</span>
+          <span class="lbl-short">Выборы</span>
+        </a>
+        <a href="tsenzura.html" class="is-current" aria-current="page">
+          <span class="lbl-full">Цифровые ограничения</span>
+          <span class="lbl-short">Рунет</span>
+        </a>
+        <a href="dokumenty.html">
+          <span class="lbl-full">Документы</span>
+          <span class="lbl-short">Архив</span>
+        </a>
+      </nav>
+      <div class="nav-links">
+        <a href="#contradiction-map">Противоречия</a>
+        <a href="#vpn">VPN</a>
+        <a href="#drones">БПЛА</a>
+        <a href="#calc">Калькулятор</a>
+        <a href="#international">Сравнение</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main id="main" data-page="tsenzura">
+
+<aside id="mainTOC" class="main-toc" aria-label="Содержание страницы">
+  <div class="main-toc-h">Содержание</div>
+  <a href="#main-contradiction" data-target="contradiction" class="toc-cur"><span class="num">1</span> Противоречие</a>
+  <a href="#contradiction-map" data-target="cmap"><span class="num">2</span> Карта противоречий</a>
+  <a href="#vpn" data-target="vpn"><span class="num">3</span> VPN</a>
+  <a href="#drones" data-target="drones"><span class="num">4</span> Дроны</a>
+  <a href="#whitelist" data-target="whitelist"><span class="num">5</span> Белый список</a>
+  <a href="#platforms" data-target="platforms"><span class="num">6</span> Платформы</a>
+  <a href="#failures" data-target="failures"><span class="num">7</span> Провалы</a>
+  <a href="#selectivity" data-target="selectivity"><span class="num">8</span> Селективность</a>
+  <a href="#international" data-target="international"><span class="num">9</span> В мире</a>
+  <a href="#timeline" data-target="timeline"><span class="num">10</span> Хроника</a>
+  <a href="#conclusion" data-target="conclusion"><span class="num">11</span> Выводы</a>
+  <div class="main-toc-progress">
+    <div class="main-toc-progress-bar"><div class="main-toc-progress-fill" id="mainTOCProgress"></div></div>
+  </div>
+</aside>
+
+<!-- HERO ====================================================== -->
+<section class="tsenzura-hero">
+  <div class="wrap">
+    <div class="tsenzura-meta">
+      <div class="tsenzura-meta-item">Раздел сайта</div>
+      <div class="tsenzura-meta-item"><span class="mono">2021–2026</span></div>
+      <div class="tsenzura-meta-item">Открытые источники</div>
+    </div>
+
+    <h1 class="display">Белые списки<br><em>вместо</em><br><span class="accent">интернета.</span></h1>
+
+    <div class="tsenzura-kicker">
+      <div class="tsenzura-kicker-num">14,2 млрд ₽</div>
+      <div class="tsenzura-kicker-arrow">→</div>
+      <div class="tsenzura-kicker-num alert">29,3 млрд ₽</div>
+      <div class="tsenzura-kicker-text">
+        — так вырос объём похищенного у граждан банковского мошенничества за время действия антифрод-законов и национального мессенджера. Это — иллюстрация ключевого расхождения между заявленной целью цифровых ограничений и измеримым результатом по этой же цели.
+      </div>
+    </div>
+
+    <p class="tsenzura-deck">
+      В 2021–2026 годах в России принят пакет цифровых ограничений: <a href="https://www.rbc.ru/technology_and_media/26/07/2024/66a393d79a794754343bc1de" class="src-link" target="_blank" rel="noopener">блокировка и замедление иностранных платформ</a>, <a href="http://publication.pravo.gov.ru/document/0001202408080127" class="src-link" target="_blank" rel="noopener">обязательная биометрия SIM</a>, <a href="http://publication.pravo.gov.ru/document/0001202507310012" class="src-link" target="_blank" rel="noopener">штрафы за «поиск экстремизма» и «рекламу» VPN</a>, <a href="https://www.interfax.ru/digital/1043261" class="src-link" target="_blank" rel="noopener">обязательная предустановка национального мессенджера</a>, <a href="https://www.rbc.ru/rbcfreenews/6998bacd9a7947720c215815" class="src-link" target="_blank" rel="noopener">формализованное право ФСБ требовать отключения связи</a>. Каждая мера обоснована безопасностью — антитеррор, антимошенничество, защита детей, защита от экстремизма.
+      Но <strong>измеримые показатели по этим самым целям ухудшились</strong>: <a href="https://www.cbr.ru" class="src-link" target="_blank" rel="noopener">рекордный рост мошенничества</a> и <a href="https://www.interfax.ru/digital/1073418" class="src-link" target="_blank" rel="noopener">IT-преступлений</a>, кратный рост атак БПЛА, теракт «Крокус Сити Холла», <a href="https://www.rbc.ru/society/29/03/2024/6606b0429a7947ee0b5d3f48" class="src-link" target="_blank" rel="noopener">координированный через Telegram</a>. Параллельно для государства, банков и крупного бизнеса выстроен <a href="https://www.interfax.ru/russia/1085410" class="src-link" target="_blank" rel="noopener">легальный «белый список» VPN на десятки тысяч IP-адресов</a>, а для гражданина — административная ответственность за поиск контента и обход.
+      Это страница про <strong>разрыв между декларациями и эффектом</strong>. Все цифры — со ссылками на первоисточники.
+    </p>
+
+    <div id="heroNumbers" class="tsenzura-big-numbers"></div>
+
+    <div class="tsenzura-toc">
+      <a class="tsenzura-toc-card" href="#contradiction-map">
+        <div class="tsenzura-toc-card-num">01</div>
+        <div class="tsenzura-toc-card-title">Карта противоречий: 18 сюжетов</div>
+      </a>
+      <a class="tsenzura-toc-card" href="#vpn">
+        <div class="tsenzura-toc-card-num">02</div>
+        <div class="tsenzura-toc-card-title">VPN: запрет для граждан, разрешение для корпораций</div>
+      </a>
+      <a class="tsenzura-toc-card" href="#drones">
+        <div class="tsenzura-toc-card-num">03</div>
+        <div class="tsenzura-toc-card-title">SIM-карты, дроны и threat-model</div>
+      </a>
+      <a class="tsenzura-toc-card" href="#whitelist">
+        <div class="tsenzura-toc-card-num">04</div>
+        <div class="tsenzura-toc-card-title">Белые списки: переворот логики интернета</div>
+      </a>
+      <a class="tsenzura-toc-card" href="#platforms">
+        <div class="tsenzura-toc-card-num">05</div>
+        <div class="tsenzura-toc-card-title">Meta, YouTube, Discord, MAX</div>
+      </a>
+      <a class="tsenzura-toc-card" href="#failures">
+        <div class="tsenzura-toc-card-num">06</div>
+        <div class="tsenzura-toc-card-title">Провалы по заявленной цели</div>
+      </a>
+      <a class="tsenzura-toc-card" href="#selectivity">
+        <div class="tsenzura-toc-card-num">07</div>
+        <div class="tsenzura-toc-card-title">Четыре уровня правоприменения</div>
+      </a>
+      <a class="tsenzura-toc-card" href="#international">
+        <div class="tsenzura-toc-card-num">08</div>
+        <div class="tsenzura-toc-card-title">Международное сравнение</div>
+      </a>
+      <a class="tsenzura-toc-card" href="#timeline">
+        <div class="tsenzura-toc-card-num">09</div>
+        <div class="tsenzura-toc-card-title">Хронология 2021–2026</div>
+      </a>
+    </div>
+
+    <div class="tsenzura-disclaimer">
+      <strong>Этическая рамка.</strong> Документ не содержит инструкций по обходу блокировок, эксплуатации сетей или управлению беспилотниками. Технические упоминания — на уровне публичного threat modeling: какие классы угроз меры закрывают, а какие нет. Все данные — из открытых источников: ЦБ, МВД, Mediascope, Top10VPN, Freedom House, Tor Metrics, Google Transparency Report, OONI, заявлений самих авторов законов и публикаций провластных СМИ.
+    </div>
+  </div>
+</section>
+
+<!-- MAIN CONTRADICTION ====================================== -->
+<section id="main-contradiction" data-toc-id="contradiction">
+  <div class="wrap">
+    <span class="section-label">Главное противоречие</span>
+    <h2 style="font-size: clamp(28px, 4vw, 44px); letter-spacing: -0.02em; margin-bottom: 12px; line-height: 1.1;">Декларация и архитектура.</h2>
+    <p style="font-size: 15px; color: var(--ink-soft); max-width: 780px; line-height: 1.6;">
+      Безопасность присутствует в риторике и иногда в реальном threat model. Но если смотреть на дизайн мер — какие сервисы остаются доступны, кому даются исключения, кто несёт издержки, кто освобождается от ответственности — видна другая закономерность.
+    </p>
+    <div class="contradiction-hero">
+      <div class="contradiction-half declared">
+        <div class="contradiction-half-label">Официальная формула</div>
+        <div class="contradiction-half-title">Отключаем интернет, чтобы защитить от дронов и мошенников</div>
+        <ul>
+          <li>Блокировки — для защиты от экстремизма и террористов.</li>
+          <li>Мобильные шатдауны — против БПЛА.</li>
+          <li>Запрет VPN — против преступников.</li>
+          <li>MAX — для удобной идентификации и антифрода.</li>
+        </ul>
+      </div>
+      <div class="contradiction-half actual">
+        <div class="contradiction-half-label">Фактическая архитектура</div>
+        <div class="contradiction-half-title">Доступ к выбранным сервисам, обход — по заявке</div>
+        <ul>
+          <li>Белый список из 500+ российских сервисов.</li>
+          <li>Корпоративный VPN на 1 730 компаний и 57 тыс. IP.</li>
+          <li>Обязательная предустановка MAX и перевод банков, ЖКХ, школ.</li>
+          <li>Освобождение операторов от ответственности при отключениях по требованию ФСБ.</li>
+          <li>Штрафы для гражданина за «поиск» и «рекламу» VPN.</li>
+          <li>Ограничения голосовых вызовов конкурентов MAX.</li>
+          <li>Параллельная защищённая связь у силовиков (АТС-1, АТС-2, ВЧ).</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTRADICTION MATRIX ==================================== -->
+<section id="contradiction-map" data-toc-id="cmap">
+  <div class="wrap">
+    <span class="section-label">01 · Карта противоречий</span>
+    <h2 style="font-size: clamp(28px, 4vw, 44px); letter-spacing: -0.02em; margin-bottom: 12px; line-height: 1.1;">18 сюжетов, в которых архитектура шире цели.</h2>
+    <p style="font-size: 15px; color: var(--ink-soft); max-width: 780px; line-height: 1.6;">
+      Каждая строка — отдельная мера или решение. Слева — официальная логика. Справа — наблюдаемая реализация. Расхождение — сжатая формулировка противоречия. Кликните по строке для расширенного описания и источников.
+    </p>
+    <div id="cmatrixFilters" class="cmatrix-filters"></div>
+    <div id="cmatrixTable" class="cmatrix-table"></div>
+  </div>
+</section>
+
+<!-- VPN ====================================================== -->
+<section id="vpn" data-toc-id="vpn">
+  <div class="wrap">
+    <span class="section-label">02 · VPN</span>
+    <h2 style="font-size: clamp(28px, 4vw, 44px); letter-spacing: -0.02em; margin-bottom: 12px; line-height: 1.1;">Сословный VPN.</h2>
+    <p style="font-size: 15px; color: var(--ink-soft); max-width: 780px; line-height: 1.6;">
+      Роскомнадзор <a href="https://old.rkn.gov.ru/news/rsoc/news73836.htm" class="src-link" target="_blank" rel="noopener">блокирует массовые VPN как угрозу</a> — но сам формирует исключения для технологических процессов и корпоративного доступа. Уже в 2021 году схема была не «VPN опасен как технология», а «массовый VPN опасен, корпоративный — допустим». К 2026 году селективный режим <a href="https://www.interfax.ru/russia/1085410" class="src-link" target="_blank" rel="noopener">стал на порядок масштабнее</a>.
+    </p>
+    <div class="vpn-asym">
+      <div class="vpn-col civic">
+        <div class="vpn-col-tag">Гражданин РФ</div>
+        <div class="vpn-col-title">Запрет и штрафы</div>
+        <div class="vpn-col-num">469</div>
+        <div class="vpn-col-num-label">VPN-сервисов заблокировано Роскомнадзором (март 2026)</div>
+        <ul>
+          <li><a href="http://publication.pravo.gov.ru/document/0001202507310012" class="src-link" target="_blank" rel="noopener">Штраф 80 / 150 / 500 тыс. ₽ за «рекламу»</a> (для физлиц / должностных / юрлиц)</li>
+          <li><a href="http://publication.pravo.gov.ru/document/0001202507310012" class="src-link" target="_blank" rel="noopener">Штраф 3–5 тыс. ₽ за «умышленный поиск» экстремистских материалов через VPN</a> (ст. 13.53 КоАП)</li>
+          <li>С апреля 2026 — <a href="https://pravo.ru/news/262459/" class="src-link" target="_blank" rel="noopener">Сбер, Яндекс, Wildberries, Ozon, «Госуслуги» обязаны блокировать пользователей с «непризнанными» VPN</a></li>
+          <li><a href="https://www.consultant.ru/document/cons_doc_LAW_478977/" class="src-link" target="_blank" rel="noopener">Запрет «популяризации» средств обхода с 1 марта 2024</a></li>
+        </ul>
+      </div>
+      <div class="vpn-col corp">
+        <div class="vpn-col-tag">Корпоративный субъект</div>
+        <div class="vpn-col-title">Разрешение по заявке</div>
+        <div class="vpn-col-num">1 730</div>
+        <div class="vpn-col-num-label">российских компаний с легальным VPN-доступом (апрель 2026)</div>
+        <ul>
+          <li><a href="https://www.interfax.ru/russia/1085410" class="src-link" target="_blank" rel="noopener">Более 57 000 адресов и подсетей в «белом списке» РКН</a></li>
+          <li>14,1 млрд ₽ — расходы госорганов на VPN в 2025 году</li>
+          <li>Исключение для «научно-технической и статистической информации в технологических целях» (приказ РКН 20.11.2024)</li>
+          <li><a href="https://www.consultant.ru/document/cons_doc_LAW_221230/" class="src-link" target="_blank" rel="noopener">Закон 2017 года прямо исключает анонимайзеры</a> «при условии, что круг пользователей заранее определён»</li>
+        </ul>
+      </div>
+    </div>
+    <div class="vpn-formula">
+      VPN не запрещён как технология. Запрещён неконтролируемый VPN для населения. Разрешённый VPN для бизнеса превращается в административную привилегию.
+    </div>
+
+    <h3 style="margin-top: 36px; font-family: 'Unbounded', sans-serif; font-size: 18px; font-weight: 700;">Реакция рынка: спрос растёт, несмотря на штрафы</h3>
+    <div class="chart-block">
+      <div class="chart-block-title">Рост спроса на VPN после ФЗ № 281-ФЗ (31.07.2025)</div>
+      <div class="chart-block-deck">Активная база топ-5 VPN-сервисов в РФ; скачивания в Google Play; пользователи Tor через bridges.</div>
+      <div class="chart-canvas"><canvas id="vpnGrowthCanvas"></canvas></div>
+      <p style="font-size: 12px; color: var(--ink-faded); margin-top: 12px; line-height: 1.5;">
+        Источники: Sensor Tower; Similarweb / Digital Budget («Коммерсант»); Tor Metrics / Statista; Институт социального маркетинга. На январь 2026 — 46% россиян хотя бы раз пользовались VPN (рост вдвое за год); по «Обществу защиты интернета» — знакомы с VPN около 60 млн человек.
+      </p>
+    </div>
+
+    <h3 style="margin-top: 36px; font-family: 'Unbounded', sans-serif; font-size: 18px; font-weight: 700;">Реакция внутри провластного лагеря</h3>
+    <div id="vpnQuotes"></div>
+
+    <h3 style="margin-top: 36px; font-family: 'Unbounded', sans-serif; font-size: 18px; font-weight: 700;">Расхождение опросов</h3>
+    <p style="font-size: 14px; color: var(--ink-soft); line-height: 1.6;">
+      <a href="https://www.rbc.ru/politics/22/07/2025/687f78609a79473cd84b48bd" class="src-link" target="_blank" rel="noopener">Открытый онлайн-опрос «Новых людей»</a> (более 370 тыс. участников) показал, что <strong>72% считают закон вредным</strong>. <a href="https://www.kommersant.ru/doc/7959308" class="src-link" target="_blank" rel="noopener">Квотный опрос ВЦИОМ / ИНСОМАР в августе 2025 года</a> — <strong>61% за</strong>. Расхождение типично: открытые опросы с самовыборкой ближе к активной позиции; квотные опросы могут фиксировать более лояльную или социально-желательную позицию. Обе цифры показаны без выбора «правильной».
+    </p>
+
+    <div class="src-list" aria-label="Источники раздела VPN">
+      <div class="src-list-title">Источники раздела</div>
+      <a href="http://publication.pravo.gov.ru/document/0001202507310012" target="_blank" rel="noopener">ФЗ № 281-ФЗ от 31.07.2025</a>
+      <a href="https://old.rkn.gov.ru/news/rsoc/news73836.htm" target="_blank" rel="noopener">РКН, 03.09.2021</a>
+      <a href="https://www.interfax.ru/russia/1085410" target="_blank" rel="noopener">Интерфакс / РКН, 22.04.2026</a>
+      <a href="https://pravo.ru/news/262459/" target="_blank" rel="noopener">Pravo.ru, 17.02.2026</a>
+      <a href="https://www.top10vpn.com/research/cost-of-internet-shutdowns/" target="_blank" rel="noopener">Top10VPN COST</a>
+      <a href="https://metrics.torproject.org" target="_blank" rel="noopener">Tor Metrics</a>
+    </div>
+  </div>
+</section>
+
+<!-- DRONES + THREAT MODEL =================================== -->
+<section id="drones" data-toc-id="drones">
+  <div class="wrap">
+    <span class="section-label">03 · SIM-карты, БПЛА</span>
+    <h2 style="font-size: clamp(28px, 4vw, 44px); letter-spacing: -0.02em; margin-bottom: 12px; line-height: 1.1;">Антидроновая логика частично реальна.</h2>
+    <p style="font-size: 15px; color: var(--ink-soft); max-width: 800px; line-height: 1.6;">
+      Мобильные SIM-карты действительно могут использоваться <a href="https://www.vedomosti.ru/technology/articles/2025/08/09/1130511-novie-pravila-ispolzovaniya-interneta" class="src-link" target="_blank" rel="noopener">в части БПЛА — для передачи телеметрии, финального управления или связи с оператором</a>. Это нужно признать. Но из этого не следует, что любая массовая блокировка мобильного интернета и <a href="https://www.interfax.ru/digital/1043261" class="src-link" target="_blank" rel="noopener">предустановка MAX</a> являются необходимыми антидроновыми мерами.
+      Матрица угроз и контрмер показывает, какие классы угроз меры действительно закрывают.
+    </p>
+
+    <div class="threat-matrix-scroll-hint">→ прокрутите матрицу вправо</div>
+    <div class="threat-matrix-wrap">
+      <div id="threatMatrix" class="threat-matrix"></div>
+    </div>
+    <div class="tm-legend">
+      <span class="tm-legend-swatch"><span style="background: rgba(21,128,61,0.5)"></span> Закрывает</span>
+      <span class="tm-legend-swatch"><span style="background: rgba(180,83,9,0.5)"></span> Частично</span>
+      <span class="tm-legend-swatch"><span style="background: rgba(185,28,28,0.45)"></span> Не закрывает</span>
+      <span class="tm-legend-swatch"><span style="background: repeating-linear-gradient(45deg, rgba(107,103,96,0.16) 0 4px, rgba(107,103,96,0.32) 4px 8px)"></span> Побочный ущерб</span>
+    </div>
+
+    <p style="font-size: 14px; color: var(--ink-soft); line-height: 1.6; margin-top: 22px;">
+      <strong>Расхождение оснований.</strong> Председатель комитета ГД по информполитике Сергей Боярский (<a href="https://ria.ru/20250813/gosduma-2035105320.html" class="src-link" target="_blank" rel="noopener">РИА Новости, 13.08.2025</a>): «иностранные мессенджеры стали единственным пространством, на которое невозможно повлиять». <a href="https://www.vedomosti.ru/technology/articles/2025/08/09/1130511-novie-pravila-ispolzovaniya-interneta" class="src-link" target="_blank" rel="noopener">Один из документированных каналов управления дальнобойными БПЛА</a> — сотовая связь через российских операторов в зоне приёма или через иностранных операторов в роуминге у границ; параллельно используются радиоканал, спутниковая связь, автопилот, инерциальная и визуальная навигация. Регуляторное усилие сосредоточено на гражданах РФ, использующих VPN и WhatsApp, а не на каналах, через которые координируются атаки.
+    </p>
+
+    <div class="chart-block">
+      <div class="chart-block-title">Атаки БПЛА на территорию РФ: 6,2 → 23+ тыс.</div>
+      <div class="chart-block-deck">Рост в 3,7 раза за год по <a href="https://www.fontanka.ru/2026/03/17/76315850/" class="src-link" target="_blank" rel="noopener">данным Совбеза (Шойгу, март 2026)</a>: «не защищён ни один регион России».</div>
+      <div class="chart-canvas short"><canvas id="droneCanvas"></canvas></div>
+    </div>
+
+    <div id="droneQuotes" style="margin-top: 22px;"></div>
+
+    <div class="src-list" aria-label="Источники раздела БПЛА">
+      <div class="src-list-title">Источники раздела</div>
+      <a href="http://publication.pravo.gov.ru/document/0001202408080127" target="_blank" rel="noopener">ФЗ № 303-ФЗ (биометрия SIM)</a>
+      <a href="https://www.vedomosti.ru/technology/articles/2025/08/09/1130511-novie-pravila-ispolzovaniya-interneta" target="_blank" rel="noopener">Ведомости, 09.08.2025</a>
+      <a href="https://www.kommersant.ru/doc/8181485" target="_blank" rel="noopener">Коммерсант, 07.11.2025</a>
+      <a href="https://www.rbc.ru/rbcfreenews/692985d69a79471457093cc8" target="_blank" rel="noopener">РБК / иностранные SIM, 28.11.2025</a>
+      <a href="https://www.cnews.ru/news/top/2025-11-11_rossiyanevernuvshiesya_iz-za" target="_blank" rel="noopener">CNews, 11.11.2025</a>
+      <a href="https://www.ifri.org/en/studies/mapping-miltech-war-eight-lessons-ukraines-battlefield" target="_blank" rel="noopener">IFRI MilTech War 2026</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHITELIST + SHUTDOWN CALC ============================== -->
+<section id="whitelist" data-toc-id="whitelist">
+  <div class="wrap">
+    <span class="section-label">04 · Белые списки</span>
+    <h2 style="font-size: clamp(28px, 4vw, 44px); letter-spacing: -0.02em; margin-bottom: 12px; line-height: 1.1;">Переворот логики интернета.</h2>
+    <p style="font-size: 15px; color: var(--ink-soft); max-width: 800px; line-height: 1.6;">
+      Обычная блокировка работает по принципу «всё разрешено, кроме запрещённого». Белый список — наоборот: «всё запрещено, кроме разрешённого». Это не количественный, а архитектурный сдвиг: меняется базовое множество доступных ресурсов.
+    </p>
+
+    <div class="list-flip">
+      <div class="list-flip-block open">
+        <div class="list-flip-shape">
+          <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="44" fill="rgba(21,128,61,0.15)" stroke="var(--green)" stroke-width="2"/><line x1="20" y1="35" x2="80" y2="35" stroke="var(--accent)" stroke-width="2" stroke-dasharray="3 3"/><line x1="20" y1="55" x2="80" y2="55" stroke="var(--accent)" stroke-width="2" stroke-dasharray="3 3"/></svg>
+        </div>
+        <div class="list-flip-title">Открытый интернет</div>
+        <div class="list-flip-formula">
+          доступно всё<br>− запрещённые ресурсы<br>= пользовательский интернет
+        </div>
+      </div>
+      <div class="list-flip-arrow">→</div>
+      <div class="list-flip-block closed">
+        <div class="list-flip-shape">
+          <svg viewBox="0 0 100 100"><rect x="10" y="10" width="80" height="80" fill="rgba(185,28,28,0.1)" stroke="var(--accent)" stroke-width="2" rx="6"/><circle cx="35" cy="35" r="6" fill="var(--green)"/><circle cx="65" cy="35" r="6" fill="var(--green)"/><circle cx="35" cy="65" r="6" fill="var(--green)"/><circle cx="65" cy="65" r="6" fill="var(--green)"/></svg>
+        </div>
+        <div class="list-flip-title">Белый список</div>
+        <div class="list-flip-formula">
+          разрешённые ресурсы<br>= весь доступный интернет
+        </div>
+      </div>
+    </div>
+
+    <div class="chart-block">
+      <div class="chart-block-title">Рост белого списка: от ~12 тыс. до 57+ тыс. IP за полтора года</div>
+      <div class="chart-block-deck">Рост корпоративного VPN-исключения по данным РКН и vc.ru. Условие включения сервиса в белый список Минцифры — российские вычислительные мощности.</div>
+      <div class="chart-canvas"><canvas id="whitelistCanvas"></canvas></div>
+      <p style="font-size: 12px; color: var(--ink-faded); margin-top: 12px; line-height: 1.5;">
+        Источники: РКН через «Интерфакс» (22.04.2026); vc.ru; «Профиль»; Forbes (Минцифры). Расхождение оценок (57 тыс. РКН vs 75 тыс. vc.ru) объясняется методологией: РКН считает адреса/подсети у конкретных компаний; vc.ru агрегирует включая стандартные пакеты лицензированных корпоративных VPN.
+      </p>
+    </div>
+
+    <h3 style="margin-top: 36px; font-family: 'Unbounded', sans-serif; font-size: 18px; font-weight: 700;">Бытовой тест: работает ли «всё нужное для жизни»</h3>
+    <p style="font-size: 14px; color: var(--ink-soft); line-height: 1.6;">
+      <a href="https://apnews.com/article/russia-internet-outage-cellphone-app-disruptions-1792cfb177c26682efdb8046e0f9b063" class="src-link" target="_blank" rel="noopener">AP писало</a>, что во время московских мобильных отключений переставали работать даже сервисы из белого списка: государственные сервисы, топ-банки, приложения такси. Также страдали банкоматы, парковочные автоматы, карты, доставки, каршеринг, розница. <a href="https://www.hrw.org/news/2026/03/31/russia-internet-shutdowns-escalate" class="src-link" target="_blank" rel="noopener">Human Rights Watch (31.03.2026)</a> фиксировала, что пользователи теряли доступ к картам, мессенджерам, банкоматам, такси, карточным платежам — и белые списки иногда не срабатывали.
+    </p>
+
+    <h3 id="calc" style="margin-top: 36px; font-family: 'Unbounded', sans-serif; font-size: 18px; font-weight: 700;">Калькулятор ущерба от шатдауна</h3>
+    <p style="font-size: 14px; color: var(--ink-soft); line-height: 1.6;">
+      На основе <a href="https://www.akit.ru/news/kak-massovye-otklyucheniya-interneta-povliyali-na-stolichnyj-biznes" class="src-link" target="_blank" rel="noopener">оценок АКИТ (3–5 млрд ₽ за 5 дней массовых отключений в Москве, март 2026)</a> и <a href="https://www.top10vpn.com/research/cost-of-internet-shutdowns/" class="src-link" target="_blank" rel="noopener">методологии Top10VPN ($11,9 млрд глобальных потерь РФ за 2025, мировой максимум)</a>. Введите параметры — получите оценку.
+    </p>
+    <div class="calc-block">
+      <div class="calc-grid">
+        <div>
+          <div class="calc-control">
+            <label for="calcDays">Дней ограничений <span class="calc-val" id="calcDaysVal">5</span></label>
+            <input type="range" id="calcDays" min="1" max="60" value="5">
+          </div>
+          <div class="calc-control">
+            <label for="calcRate">Базовая ставка ущерба, ₽/день <span class="calc-val" id="calcRateVal">0,8 млрд</span></label>
+            <input type="range" id="calcRate" min="60" max="1000" value="800" step="20">
+          </div>
+          <div class="calc-control">
+            <label for="calcRegion">Региональный коэффициент <span class="calc-val" id="calcRegionVal">1,0 (Москва)</span></label>
+            <select id="calcRegion">
+              <option value="1.0">Москва (1,0)</option>
+              <option value="0.6">Уральский ФО (0,6)</option>
+              <option value="0.3">Северо-Кавказский ФО (0,3)</option>
+              <option value="0.15">Малый регион (0,15)</option>
+            </select>
+          </div>
+          <div class="calc-control">
+            <label for="calcShare">Доля бизнеса, завязанного на мобильный интернет <span class="calc-val" id="calcShareVal">35%</span></label>
+            <input type="range" id="calcShare" min="10" max="80" value="35">
+          </div>
+        </div>
+        <div class="calc-output">
+          <div class="calc-out-line">
+            <span>Минимум ущерба бизнесу</span>
+            <span class="calc-out-num" id="calcMin">—</span>
+          </div>
+          <div class="calc-out-line">
+            <span>Максимум ущерба бизнесу</span>
+            <span class="calc-out-num alert" id="calcMax">—</span>
+          </div>
+          <div class="calc-out-line">
+            <span>Эквивалент: годовых бюджетов районной больницы (~250 млн ₽)</span>
+            <span class="calc-out-num" id="calcCompare">—</span>
+          </div>
+          <div class="calc-out-foot">
+            Дефолт — параметры московского кейса марта 2026 года: 5 дней × ~0,8 млрд ₽/день × 35% бизнеса на mobile = диапазон, который АКИТ оценила в 3–5 млрд ₽. Региональные коэффициенты (1,0 / 0,6 / 0,3 / 0,15) — <strong>экспертная иллюстративная шкала</strong>, грубо отражающая разницу в плотности бизнеса на mobile-инфраструктуре и в долях ВРП; они не привязаны к конкретному источнику и нужны только для порядка величины. Эквивалент больницы — 250 млн ₽/год бюджета районной/межрайонной больницы.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="src-list" aria-label="Источники раздела «Белые списки»">
+      <div class="src-list-title">Источники раздела</div>
+      <a href="https://www.interfax.ru/russia/1048120" target="_blank" rel="noopener">Интерфакс / Минцифры, 19.09.2025</a>
+      <a href="https://www.reuters.com/technology/russia-lists-local-apps-that-will-survive-its-internet-blackouts-2025-09-05/" target="_blank" rel="noopener">Reuters, 05.09.2025</a>
+      <a href="https://www.forbes.ru/tekhnologii/559771-mincifry-rassirilo-belyj-spisok-dostupnyh-pri-otklucenii-interneta-sajtov" target="_blank" rel="noopener">Forbes / Минцифры, 23.04.2026</a>
+      <a href="https://www.akit.ru/news/kak-massovye-otklyucheniya-interneta-povliyali-na-stolichnyj-biznes" target="_blank" rel="noopener">АКИТ</a>
+      <a href="https://apnews.com/article/russia-internet-outage-cellphone-app-disruptions-1792cfb177c26682efdb8046e0f9b063" target="_blank" rel="noopener">AP, 2026</a>
+      <a href="https://www.hrw.org/news/2026/03/31/russia-internet-shutdowns-escalate" target="_blank" rel="noopener">HRW, 31.03.2026</a>
+      <a href="https://www.top10vpn.com/research/cost-of-internet-shutdowns/" target="_blank" rel="noopener">Top10VPN COST</a>
+      <a href="https://www.rbc.ru/rbcfreenews/6998bacd9a7947720c215815" target="_blank" rel="noopener">РБК, 20.02.2026</a>
+    </div>
+  </div>
+</section>
+
+<!-- PLATFORMS ============================================== -->
+<section id="platforms" data-toc-id="platforms">
+  <div class="wrap">
+    <span class="section-label">05 · Meta · YouTube · Discord · MAX</span>
+    <h2 style="font-size: clamp(28px, 4vw, 44px); letter-spacing: -0.02em; margin-bottom: 12px; line-height: 1.1;">Принудительная миграция аудитории.</h2>
+    <p style="font-size: 15px; color: var(--ink-soft); max-width: 800px; line-height: 1.6;">
+      Каждое отдельное решение объясняется отдельной угрозой: <a href="https://www.rbc.ru/technology_and_media/20/06/2022/62b076d99a79474b3991e5b4" class="src-link" target="_blank" rel="noopener">Meta — экстремизм</a>, <a href="https://www.rbc.ru/technology_and_media/26/07/2024/66a393d79a794754343bc1de" class="src-link" target="_blank" rel="noopener">YouTube — техническая деградация</a>, Discord — антитеррор, <a href="https://www.rbc.ru/politics/13/08/2025/689c8c7c9a79479b1087586d" class="src-link" target="_blank" rel="noopener">ограничение голосовых вызовов — антифрод</a>. Но вместе они выстраивают одну архитектуру: <strong>конкуренты MAX вытесняются, а сам MAX получает <a href="https://www.interfax.ru/digital/1043261" class="src-link" target="_blank" rel="noopener">обязательную предустановку</a>, <a href="https://www.kommersant.ru/doc/8632840" class="src-link" target="_blank" rel="noopener">бюджет 4 млрд ₽</a>, перевод банков и ЖКХ — параллельно с замедлением и блокировкой альтернатив</strong>.
+    </p>
+
+    <h3 style="margin-top: 32px; font-family: 'Unbounded', sans-serif; font-size: 18px; font-weight: 700;">Мессенджеры: декларация ≠ факт</h3>
+    <div id="messengerComparison" class="msgr-bars"></div>
+    <p style="font-size: 12px; color: var(--ink-faded); margin-top: 14px; line-height: 1.5;">
+      Источники: <a href="https://mediascope.net" class="src-link" target="_blank" rel="noopener">Mediascope (октябрь 2025)</a>; Альфа-курс / Mediascope (2025) для месячного охвата. MAX обязателен к предустановке с 01.09.2025; не использует сквозного шифрования; интегрирован с ФСБ, МВД, ФНС, ЦБ. <a href="https://istories.media" class="src-link" target="_blank" rel="noopener">Подразделениям ВС РФ запрещено использовать MAX на фронте (iStories, 23.02.2026)</a>.
+    </p>
+
+    <h3 style="margin-top: 36px; font-family: 'Unbounded', sans-serif; font-size: 18px; font-weight: 700;">YouTube: «техническая деградация» и политическое наказание</h3>
+    <div class="chart-block">
+      <div class="chart-block-title">Индекс трафика YouTube в РФ: 48,8 → 7,8 (×6,3)</div>
+      <div class="chart-block-deck">Google Transparency Report. Параллельно индекс в Нидерландах вырос с 6,2 до 10,0 — за счёт VPN-трафика, который приземляется в зарубежных дата-центрах.</div>
+      <div class="chart-canvas"><canvas id="youtubeCanvas"></canvas></div>
+    </div>
+    <blockquote class="dquote">
+      «Деградация YouTube — вынужденный шаг, направленный не против российских пользователей, а против администрации иностранного ресурса». «Не случайно для приведения в чувство YouTube выбран именно летний период».
+      <span class="dquote-author">— Александр Хинштейн, <a href="https://www.rbc.ru/technology_and_media/26/07/2024/66a393d79a794754343bc1de" target="_blank" rel="noopener">Telegram, 25–26.07.2024</a></span>
+    </blockquote>
+    <blockquote class="dquote">
+      «Замедление работы YouTube в России не является результатом каких-либо технических проблем или действий со стороны Google».
+      <span class="dquote-author">— Google, через <a href="https://www.rbc.ru/technology_and_media/02/08/2024/66ac42089a79470ef13d71eb" target="_blank" rel="noopener">РИА Новости, 23.12.2024</a></span>
+    </blockquote>
+
+    <h3 style="margin-top: 36px; font-family: 'Unbounded', sans-serif; font-size: 18px; font-weight: 700;">Discord: военные Z-каналы против блокировки</h3>
+    <p style="font-size: 14px; color: var(--ink-soft); line-height: 1.6;">
+      После <a href="https://meduza.io/feature/2024/10/09/nashi-zakonotvortsy-vse-tak-zhe-strashno-daleki-ot-chugunnoy-zhopy-realnosti-naroda-i-armii" class="src-link" target="_blank" rel="noopener">блокировки Discord 08.10.2024</a> (аудитория ~30 млн в РФ на момент) военные Z-каналы массово возмущались потерей канала координации БПЛА.
+    </p>
+    <blockquote class="dquote">
+      «Такого удара в спину никто не ожидал. Наши законотворцы и запрещальщики все так же страшно далеки от чугунной жопы реальности, народа и, к сожалению, армии. Discord служит для передачи видеоизображений в штабы разного уровня».
+      <span class="dquote-author">— Fighterbomber (530+ тыс. подписчиков), через <a href="https://meduza.io/feature/2024/10/09/nashi-zakonotvortsy-vse-tak-zhe-strashno-daleki-ot-chugunnoy-zhopy-realnosti-naroda-i-armii" target="_blank" rel="noopener">Meduza, 09.10.2024</a></span>
+    </blockquote>
+    <blockquote class="dquote">
+      «На пунктах управления десятков соединений упали трансляции с беспилотников, работавшие через закрытые комнаты мессенджера».
+      <span class="dquote-author">— Z-канал «Тройка», через <a href="https://meduza.io/feature/2024/10/09/nashi-zakonotvortsy-vse-tak-zhe-strashno-daleki-ot-chugunnoy-zhopy-realnosti-naroda-i-armii" target="_blank" rel="noopener">Meduza, 09.10.2024</a></span>
+    </blockquote>
+    <p style="font-size: 13px; color: var(--ink-muted); line-height: 1.6; margin-top: 14px;">
+      Минобороны РФ официально не комментировало ни блокировку, ни использование Discord военными. По <a href="https://meduza.io/feature/2026/02/06/chem-grozit-rossiyskoy-armii-otklyuchenie-terminalov-starlink-i-pochemu-ona-voobsche-polzovalas-nedruzhestvennoy-tehnologiey-ot-kompanii-maska" class="src-link" target="_blank" rel="noopener">расследованию Meduza от 06.02.2026</a>, главным «приложением» Starlink в зоне СВО был стриминг видео с дронов через тот же Discord.
+    </p>
+
+    <div class="src-list" aria-label="Источники раздела «Платформы»">
+      <div class="src-list-title">Источники раздела</div>
+      <a href="https://www.rbc.ru/technology_and_media/20/06/2022/62b076d99a79474b3991e5b4" target="_blank" rel="noopener">РБК / Тверской суд по Meta, 20.06.2022</a>
+      <a href="https://www.rbc.ru/technology_and_media/26/07/2024/66a393d79a794754343bc1de" target="_blank" rel="noopener">РБК / Хинштейн, 26.07.2024</a>
+      <a href="https://www.rbc.ru/technology_and_media/02/08/2024/66ac42089a79470ef13d71eb" target="_blank" rel="noopener">РБК / Google, 02.08.2024</a>
+      <a href="https://www.rbc.ru/politics/13/08/2025/689c8c7c9a79479b1087586d" target="_blank" rel="noopener">РБК / РКН, 13.08.2025</a>
+      <a href="https://www.kommersant.ru/doc/8140609" target="_blank" rel="noopener">Коммерсант, 22.10.2025</a>
+      <a href="https://www.comnews.ru/content/240797/2025-08-20/2025-w34/1007/moshenniki-telegram-i-whatsapp-peretekli-trubu" target="_blank" rel="noopener">ComNews, 20.08.2025</a>
+      <a href="https://www.interfax.ru/digital/1043261" target="_blank" rel="noopener">Интерфакс / MAX, 21.08.2025</a>
+      <a href="https://transparencyreport.google.com/traffic/" target="_blank" rel="noopener">Google Transparency Report</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAILURES ================================================ -->
+<section id="failures" data-toc-id="failures">
+  <div class="wrap">
+    <span class="section-label">06 · Провалы по заявленной цели</span>
+    <h2 style="font-size: clamp(28px, 4vw, 44px); letter-spacing: -0.02em; margin-bottom: 12px; line-height: 1.1;">Метрики, по которым меры обоснованы — ухудшаются.</h2>
+    <p style="font-size: 15px; color: var(--ink-soft); max-width: 800px; line-height: 1.6;">
+      Это сильнейшая часть доказательства. Все цифры — из официальных источников: <a href="https://www.cbr.ru" class="src-link" target="_blank" rel="noopener">ЦБ</a>, <a href="https://мвд.рф" class="src-link" target="_blank" rel="noopener">МВД</a>, СКР, Совбез, Сбербанк. Период — 2022–2025: ровно те годы, когда принимались антифрод-законы, обязательная биометрия SIM, реестры блогеров и иноагентов, шла блокировка платформ.
+    </p>
+
+    <div class="chart-block">
+      <div class="chart-block-title">Хищения у граждан со счетов: 14,2 → 29,3 млрд ₽ (×2,06)</div>
+      <div class="chart-block-deck">Данные <a href="https://www.cbr.ru/statistics/protection/" class="src-link" target="_blank" rel="noopener">ЦБ РФ</a>. Сбербанк (Кузнецов, Совфед, январь 2026) оценивает совокупный ущерб в 275–295 млрд ₽/год — расхождение с ЦБ в 11 раз.</div>
+      <div class="chart-canvas"><canvas id="fraudCanvas"></canvas></div>
+    </div>
+
+    <div class="chart-block">
+      <div class="chart-block-title">IT-преступления: 522 → 765,4 тыс. (40% всей преступности)</div>
+      <div class="chart-block-deck"><a href="https://www.interfax.ru/digital/1073418" class="src-link" target="_blank" rel="noopener">МВД РФ</a>. 2024 год — рекорд; за январь–июль 2025 — 424,9 тыс. с ущербом 119,6 млрд ₽ (+16% к 2024).</div>
+      <div class="chart-canvas short"><canvas id="itCrimeCanvas"></canvas></div>
+    </div>
+
+    <div class="chart-block">
+      <div class="chart-block-title">Детские суициды: 311 (2020) → 753 (2021) → 735 (2024, +8,4% к 2023)</div>
+      <div class="chart-block-deck">СКР, МВД. После законов о «защите детей» 2022–2024 годов уровень остался выше показателей 2018–2020 годов. Тезис о том, что цифровые запреты решают проблему, эмпирически не подтверждается.</div>
+      <div class="chart-canvas short"><canvas id="suicideCanvas"></canvas></div>
+    </div>
+
+    <h3 style="margin-top: 36px; font-family: 'Unbounded', sans-serif; font-size: 18px; font-weight: 700;">Теракт в «Крокус Сити Холле» 22.03.2024</h3>
+    <p style="font-size: 14px; color: var(--ink-soft); line-height: 1.6;">
+      Несмотря на действовавшее на этот момент полное законодательство — реестры иноагентов и блогеров, блокировку Meta, ОРИ-статус Telegram, систему ТСПУ, «пакет Яровой» с обязательным хранением трафика — атака произошла. <a href="https://www.rbc.ru/society/29/03/2024/6606b0429a7947ee0b5d3f48" class="src-link" target="_blank" rel="noopener">По данным СКР (29.03.2024)</a>, обвиняемые на допросах подтвердили, что их действия координировал мужчина под псевдонимом через <strong>голосовые сообщения в Telegram</strong>. Telegram-канал, через который проходила оплата (криптокошелёк, $2 525), удалён 01.04.2024. Приговор (январь 2025): 149 погибших, более 600 раненых, 27 обвиняемых.
+    </p>
+
+    <div class="src-list" aria-label="Источники раздела «Провалы»">
+      <div class="src-list-title">Источники раздела</div>
+      <a href="https://www.cbr.ru" target="_blank" rel="noopener">ЦБ РФ</a>
+      <a href="https://www.interfax.ru/digital/1073418" target="_blank" rel="noopener">Интерфакс / МВД, 18.02.2026</a>
+      <a href="https://www.rbc.ru/society/29/03/2024/6606b0429a7947ee0b5d3f48" target="_blank" rel="noopener">РБК / СКР по «Крокусу», 29.03.2024</a>
+      <a href="https://www.fontanka.ru/2026/03/17/76315850/" target="_blank" rel="noopener">Совбез / Шойгу, 17.03.2026</a>
+      <a href="https://www.kommersant.ru/doc/8140609" target="_blank" rel="noopener">Коммерсант, 22.10.2025</a>
+    </div>
+  </div>
+</section>
+
+<!-- SELECTIVITY ============================================ -->
+<section id="selectivity" data-toc-id="selectivity">
+  <div class="wrap">
+    <span class="section-label">07 · Селективность правоприменения</span>
+    <h2 style="font-size: clamp(28px, 4vw, 44px); letter-spacing: -0.02em; margin-bottom: 12px; line-height: 1.1;">Четыре уровня применения.</h2>
+    <p style="font-size: 15px; color: var(--ink-soft); max-width: 800px; line-height: 1.6;">
+      Цифровые ограничения 2024–2026 годов формально универсальны. По факту они имеют как минимум четыре уровня: для высших чиновников действует <a href="https://carnegieendowment.org/politika/" class="src-link" target="_blank" rel="noopener">параллельная инфраструктура</a>; крупный бизнес получает <a href="https://www.interfax.ru/russia/1085410" class="src-link" target="_blank" rel="noopener">легальный VPN</a>; частный пользователь — <a href="http://publication.pravo.gov.ru/document/0001202507310012" class="src-link" target="_blank" rel="noopener">полный режим штрафов</a>; <a href="https://ovdinfo.org" class="src-link" target="_blank" rel="noopener">иноагенты поражены в политических правах</a>.
+    </p>
+    <div id="selectivityCards" class="selectivity-grid"></div>
+
+    <div class="src-list" aria-label="Источники раздела «Селективность»">
+      <div class="src-list-title">Источники раздела</div>
+      <a href="https://www.interfax.ru/russia/1085410" target="_blank" rel="noopener">Интерфакс / РКН, 22.04.2026</a>
+      <a href="https://ovdinfo.org" target="_blank" rel="noopener">ОВД-Инфо</a>
+      <a href="https://meduza.io/feature/2025/01/08/avtory-krupnyh-telegram-kanalov-obyazany-zaregistrirovatsya-v-reestre-blogerov-roskomnadzora-etogo-ne-sdelali-ni-kadyrov-ni-zaharova-ni-deputaty-kotorye-prinyali-takoy-zakon" target="_blank" rel="noopener">Meduza / Система, 08.01.2025</a>
+      <a href="https://carnegieendowment.org/politika/" target="_blank" rel="noopener">Carnegie Politika</a>
+    </div>
+  </div>
+</section>
+
+<!-- INTERNATIONAL ========================================== -->
+<section id="international" data-toc-id="international">
+  <div class="wrap">
+    <span class="section-label">08 · Международное сравнение</span>
+    <h2 style="font-size: clamp(28px, 4vw, 44px); letter-spacing: -0.02em; margin-bottom: 12px; line-height: 1.1;">РФ между Турцией и Ираном.</h2>
+    <p style="font-size: 15px; color: var(--ink-soft); max-width: 800px; line-height: 1.6;">
+      Россия не просто «защищается от дронов». Она воспроизводит стандартный набор инструментов государств с несвободным интернетом: блокировки, throttling, шатдауны, давление на VPN, национальные платформы, идентификация, разрешительные списки, исключения для лояльных субъектов, юридическая непрозрачность.
+    </p>
+
+    <div class="chart-block">
+      <div class="chart-block-title">Freedom on the Net: 30 → 17 / 100 (новый минимум 2025)</div>
+      <div class="chart-block-deck">Россия выделена в <a href="https://freedomhouse.org/country/russia/freedom-net/2025" class="src-link" target="_blank" rel="noopener">Freedom House 2025</a> среди 5 стран с худшей многолетней деградацией (с Египтом, Пакистаном, Турцией, Венесуэлой). По <a href="https://rsf.org/en/index" class="src-link" target="_blank" rel="noopener">RSF Press Freedom Index 2025</a> РФ — 171/180.</div>
+      <div class="fon-grid">
+        <div class="chart-canvas"><canvas id="fonCanvas"></canvas></div>
+        <div id="fonLeaderboard" class="fon-leaderboard"></div>
+      </div>
+    </div>
+
+    <h3 style="margin-top: 36px; font-family: 'Unbounded', sans-serif; font-size: 18px; font-weight: 700;">Демократические аналоги: где границы и почему российская модель отличается</h3>
+    <div id="regulationCompare"></div>
+
+    <div class="src-list" aria-label="Источники раздела «Международное сравнение»">
+      <div class="src-list-title">Источники раздела</div>
+      <a href="https://freedomhouse.org/country/russia/freedom-net/2025" target="_blank" rel="noopener">Freedom House: Russia 2025</a>
+      <a href="https://freedomhouse.org/country/china/freedom-net/2025" target="_blank" rel="noopener">FH: China 2025</a>
+      <a href="https://freedomhouse.org/country/iran/freedom-net/2025" target="_blank" rel="noopener">FH: Iran 2025</a>
+      <a href="https://freedomhouse.org/country/belarus/freedom-net/2025" target="_blank" rel="noopener">FH: Belarus 2025</a>
+      <a href="https://rsf.org/en/index" target="_blank" rel="noopener">RSF Index</a>
+      <a href="https://www.hrw.org/news/2025/07/30/russia-internet-blocking-disruptions-and-increasing-isolation" target="_blank" rel="noopener">HRW, 30.07.2025</a>
+      <a href="https://www.accessnow.org/internet-shutdowns-2025/" target="_blank" rel="noopener">Access Now, 2025</a>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE =============================================== -->
+<section id="timeline" data-toc-id="timeline">
+  <div class="wrap">
+    <span class="section-label">09 · Хронология</span>
+    <h2 style="font-size: clamp(28px, 4vw, 44px); letter-spacing: -0.02em; margin-bottom: 12px; line-height: 1.1;">2021–2026: ключевые события.</h2>
+    <p style="font-size: 15px; color: var(--ink-soft); max-width: 800px; line-height: 1.6;">
+      От первых блокировок VPN и судебного запрета Meta до национального мессенджера, штрафов за поиск экстремизма и формализации требований ФСБ к операторам.
+    </p>
+    <div id="dtimeline" class="dtimeline"></div>
+  </div>
+</section>
+
+<!-- CONCLUSION ============================================= -->
+<section id="conclusion" data-toc-id="conclusion">
+  <div class="wrap">
+    <span class="section-label">Вывод</span>
+    <h2 style="font-size: clamp(28px, 4vw, 44px); letter-spacing: -0.02em; margin-bottom: 12px; line-height: 1.1;">Безопасность как легитимирующая рамка.</h2>
+    <p style="font-size: 15px; color: var(--ink-soft); max-width: 800px; line-height: 1.6;">
+      Имеющиеся данные не позволяют утверждать, что цифровые ограничения 2021–2026 годов решили заявленные задачи — данные правоохранительных органов и финансовых регуляторов фиксируют обратную динамику. Но и тезис о полном отсутствии эффекта неверен: блокировка Meta привела к перераспределению аудитории и рекламных бюджетов в пользу российских платформ, ТСПУ стал инструментом оперативной фильтрации трафика. Сильный честный вывод другой.
+    </p>
+    <div class="verdict-block">
+      <h3>Российская политика цифровых ограничений использует реальные риски безопасности как основание для непропорционально широкой инфраструктуры контроля.</h3>
+      <p>Эта инфраструктура не просто защищает от угроз; она меняет саму модель интернета — с открытой сети на сеть разрешённых сервисов, разрешённых субъектов и разрешённых каналов связи.</p>
+      <p style="margin-top: 18px; font-weight: 600; color: rgba(247,242,225,0.95);">Что меняется параллельно с ростом цифровых ограничений:</p>
+      <ol>
+        <li>Меры технически закрывают только часть заявленной угрозы.</li>
+        <li>Систематически создают разрешительные исключения для государственно одобренных субъектов.</li>
+        <li>Юридически защищают операторов и государство от ответственности перед пользователем.</li>
+        <li>Систематически совпадают с экономической поддержкой национальных платформ (43,5 млрд ₽ из бюджета Минцифры на VK и MAX в 2025 году).</li>
+        <li>Систематически фиксируются как ухудшение по тем самым метрикам, которыми обоснованы (мошенничество, IT-преступность, БПЛА).</li>
+        <li>Меняют саму архитектуру доступа к сети: от блокировки отдельных сайтов к управлению слоями доступа.</li>
+        <li>Сближают российский интернет с моделями Китая, Ирана и Беларуси.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- SOURCES ================================================ -->
+<section id="sources-block">
+  <div class="wrap">
+    <span class="section-label">Источники</span>
+    <h2 style="font-size: clamp(24px, 3vw, 36px); letter-spacing: -0.02em; margin-bottom: 8px; line-height: 1.1;">Открытые публикации, на которые опирается страница.</h2>
+    <p style="font-size: 14px; color: var(--ink-soft); max-width: 800px; line-height: 1.6;">
+      Каждое утверждение со страницы привязано минимум к одному первичному источнику или двум независимым публикациям. Часть источников может быть заблокирована для российского пользователя — это парадокс самого материала: страница описывает блокировки, ссылаясь на заблокированные источники.
+    </p>
+    <div id="sourcesGrid" class="dsources"></div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>О странице</h4>
+        <p>Аналитическая страница раздела «Голосование без выбора». Цифровые ограничения России 2021–2026 годов: декларация vs архитектура. Все расчёты доступны для проверки — ссылки на первоисточники приведены в каждой секции.</p>
+        <p style="margin-top: 12px;">Лицензия: CC BY 4.0. Распространять и адаптировать с указанием источника.</p>
+      </div>
+      <div>
+        <h4>Институциональные источники</h4>
+        <a href="http://www.cbr.ru" target="_blank" rel="noopener">ЦБ РФ ↗</a>
+        <a href="https://мвд.рф" target="_blank" rel="noopener">МВД ↗</a>
+        <a href="https://rkn.gov.ru" target="_blank" rel="noopener">Роскомнадзор ↗</a>
+        <a href="https://publication.pravo.gov.ru" target="_blank" rel="noopener">Официальное опубликование ↗</a>
+      </div>
+      <div>
+        <h4>Независимые измерители</h4>
+        <a href="https://freedomhouse.org/country/russia/freedom-net/2025" target="_blank" rel="noopener">Freedom House ↗</a>
+        <a href="https://www.top10vpn.com/research/cost-of-internet-shutdowns/" target="_blank" rel="noopener">Top10VPN COST ↗</a>
+        <a href="https://metrics.torproject.org" target="_blank" rel="noopener">Tor Metrics ↗</a>
+        <a href="https://ooni.org" target="_blank" rel="noopener">OONI ↗</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 · Голосование без выбора · Цифровые ограничения</div>
+      <div class="mono">v1.0 · обновлено 2026-05-04 · данные ЦБ / МВД / Mediascope / Top10VPN / Freedom House</div>
+    </div>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalContent" hidden>
+  <div class="modal" id="modal">
+    <button class="modal-close" id="modalClose" aria-label="Закрыть">×</button>
+    <div id="modalContent"></div>
+  </div>
+</div>
+
+<!-- TOOLTIP -->
+<div class="tooltip" id="tooltip"></div>
+
+<!-- Chart.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script src="assets/js/lib/lang-switch.js"></script>
+
+<!-- data — ВСЁ для всех страниц (нужно для SPA-навигации) -->
+<script src="assets/js/data/parties.js"></script>
+<script src="assets/js/data/laws.js"></script>
+<script src="assets/js/data/social-laws.js"></script>
+<script src="assets/js/data/elections.js"></script>
+<script src="assets/js/data/digital-numbers.js"></script>
+<script src="assets/js/data/digital-events.js"></script>
+<script src="assets/js/data/contradictions.js"></script>
+<script src="assets/js/data/threat-matrix.js"></script>
+<script src="assets/js/data/digital-platforms.js"></script>
+<script src="assets/js/data/digital-fraud.js"></script>
+<script src="assets/js/data/whitelist.js"></script>
+<script src="assets/js/data/intl-comparison.js"></script>
+<script src="assets/js/data/digital-quotes.js"></script>
+<script src="assets/js/data/digital-sources.js"></script>
+
+<!-- lib -->
+<script src="assets/js/lib/dom.js"></script>
+<script src="assets/js/lib/modal.js"></script>
+<script src="assets/js/lib/tooltip.js"></script>
+<script src="assets/js/lib/reveal.js"></script>
+<script src="assets/js/lib/counter.js"></script>
+<script src="assets/js/lib/spoiler.js"></script>
+<script src="assets/js/lib/intro.js"></script>
+<script src="assets/js/lib/page-toggle-ping.js"></script>
+<script src="assets/js/lib/reading-progress.js"></script>
+<script src="assets/js/lib/scroll-steps.js"></script>
+<script src="assets/js/lib/scroll-spy.js"></script>
+<script src="assets/js/lib/feedback.js"></script>
+<script src="assets/js/lib/github-fab.js"></script>
+<script src="assets/js/lib/presentation.js"></script>
+
+<!-- components -->
+<script src="assets/js/components/matrix.js"></script>
+<script src="assets/js/components/party-cards.js"></script>
+<script src="assets/js/components/timeline.js"></script>
+<script src="assets/js/components/comparison-bars.js"></script>
+<script src="assets/js/components/law-modal.js"></script>
+<script src="assets/js/components/party-modal.js"></script>
+<script src="assets/js/components/digital-numbers.js"></script>
+<script src="assets/js/components/digital-timeline.js"></script>
+<script src="assets/js/components/contradiction-matrix.js"></script>
+<script src="assets/js/components/threat-matrix.js"></script>
+<script src="assets/js/components/selectivity-cards.js"></script>
+<script src="assets/js/components/digital-sources.js"></script>
+<script src="assets/js/components/digital-modal.js"></script>
+
+<!-- charts -->
+<script src="assets/js/charts/defaults.js"></script>
+<script src="assets/js/charts/years-chart.js"></script>
+<script src="assets/js/charts/opposition-chart.js"></script>
+<script src="assets/js/charts/waffle.js"></script>
+<script src="assets/js/charts/districts.js"></script>
+<script src="assets/js/charts/distortion.js"></script>
+<script src="assets/js/charts/gauge.js"></script>
+<script src="assets/js/charts/flow.js"></script>
+<script src="assets/js/charts/shpilkin-chart.js"></script>
+<script src="assets/js/charts/ladder.js"></script>
+<script src="assets/js/charts/heatmap.js"></script>
+<script src="assets/js/charts/calculator.js"></script>
+<script src="assets/js/charts/vpn-growth.js"></script>
+<script src="assets/js/charts/whitelist-growth.js"></script>
+<script src="assets/js/charts/messenger-comparison.js"></script>
+<script src="assets/js/charts/youtube-throttling.js"></script>
+<script src="assets/js/charts/fraud-vs-laws.js"></script>
+<script src="assets/js/charts/drone-attacks.js"></script>
+<script src="assets/js/charts/it-crime.js"></script>
+<script src="assets/js/charts/child-suicide.js"></script>
+<script src="assets/js/charts/freedom-on-net.js"></script>
+<script src="assets/js/charts/regulation-compare.js"></script>
+<script src="assets/js/charts/shutdown-cost-calc.js"></script>
+
+<!-- page init (all — SPA router calls the right one on transition) -->
+<script src="assets/js/pages/home.js"></script>
+<script src="assets/js/pages/elections.js"></script>
+<script src="assets/js/pages/tsenzura.js"></script>
+
+<!-- presentation deck for this page -->
+<script src="assets/js/decks/tsenzura.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,218 @@
+// Intro disclaimer popup — 10-minute cooldown across navigations and reloads.
+//   1. window.__gbvIntroShown — in-page memory (cheapest check).
+//   2. localStorage 'gbv-intro-last' — timestamp of last appearance;
+//      suppresses the disclaimer for COOLDOWN_MS regardless of cross-page
+//      navigation, reload, or new tab. Resurfaces after the cooldown.
+(function () {
+  const LS_KEY = 'gbv-intro-last';
+  const COOLDOWN_MS = 10 * 60 * 1000; // 10 minutes
+
+  function alreadyShown() {
+    if (window.__gbvIntroShown) return true;
+    try {
+      const last = parseInt(localStorage.getItem(LS_KEY) || '0', 10);
+      if (last && Date.now() - last < COOLDOWN_MS) return true;
+    } catch (_) {}
+    return false;
+  }
+  function markShown() {
+    window.__gbvIntroShown = true;
+    try { localStorage.setItem(LS_KEY, String(Date.now())); } catch (_) {}
+  }
+
+  function init() {
+    if (alreadyShown()) return;
+
+    const previousFocus = document.activeElement;
+
+    const overlay = document.createElement('div');
+    overlay.className = 'intro-overlay';
+    overlay.setAttribute('role', 'dialog');
+    overlay.setAttribute('aria-modal', 'true');
+    overlay.setAttribute('aria-labelledby', 'intro-title');
+    overlay.innerHTML = `
+      <div class="intro-card">
+        <div class="intro-head">
+          <div class="intro-mark">Г</div>
+          <div class="intro-tabs" role="tablist" aria-label="Режим знакомства с материалом">
+            <button type="button" class="intro-tab is-active" role="tab"
+              aria-selected="true" data-mode="reader" id="intro-tab-reader" aria-controls="intro-pane-reader">
+              <span class="intro-tab-ico" aria-hidden="true">📖</span>
+              Для читателя
+            </button>
+            <button type="button" class="intro-tab" role="tab"
+              aria-selected="false" data-mode="streamer" id="intro-tab-streamer" aria-controls="intro-pane-streamer">
+              <span class="intro-tab-ico" aria-hidden="true">🎙</span>
+              Для стрима / эфира
+            </button>
+          </div>
+        </div>
+
+        <h2 id="intro-title" class="intro-title" data-mode-title>Об этом материале</h2>
+
+        <div class="intro-body">
+          <div class="intro-pane is-active" id="intro-pane-reader" role="tabpanel" aria-labelledby="intro-tab-reader">
+            <p>Это <strong>независимое исследование</strong> на основе открытых данных: официальных публикаций Государственной Думы (sozd.duma.gov.ru), ЦИК России (cikrf.ru), государственных СМИ (ТАСС, РИА Новости, «Российская газета», «Парламентская газета»), деловой прессы («Коммерсантъ», «Ведомости», РБК, Forbes Russia) и официальных текстов федеральных законов (pravo.gov.ru, garant.ru, consultant.ru).</p>
+            <p>Каждое фактическое утверждение сопровождается <strong>ссылкой на первоисточник</strong>. Авторская позиция — там, где она присутствует, — выражена как оценочное суждение и отделена от изложения фактов.</p>
+
+            <div class="intro-author">
+              <div class="intro-author-label">О позиции автора</div>
+              <p>Автор сайта — <strong>не политолог и не социолог</strong>; научная и профессиональная специализация — в смежной технической области (системы автоматизации, AI-агенты). Сайт — <strong>экспериментальный проект</strong>: вся аналитика, расчёты, тексты и интерактивы подготовлены силами AI-агентов под контролем автора, что и является частью его специальности.</p>
+              <p>Это <strong>аналитика по публичным данным, а не политическая агитация</strong>. Сайт не содержит призывов к каким-либо действиям, не аффилирован с политическими движениями или организациями и не имеет цели дискредитировать органы власти. Цель — показать, что современные инструменты позволяют любому собрать многослойный аналитический материал по открытым данным и проверить его на состоятельность.</p>
+            </div>
+
+            <div class="intro-author">
+              <div class="intro-author-label">О критериях источников</div>
+              <p>Сайт опирается прежде всего на <strong>первичные документы</strong>: тексты законов, постановления ЦИК, стенограммы Госдумы, поимённые результаты голосований. Где приводятся <strong>цитаты публичных комментаторов</strong> (Шульман, Галлямов, Кынев, Кац, Любарев и др.) — это иллюстрация позиций, а не подтверждение фактов; факты подтверждаются только первоисточниками.</p>
+              <p>Автор сайта <strong>не идентифицирует себя ни с одним из политических лагерей</strong> — ни «либеральным», ни «государственническим» — и не опирается на оценки отдельных публицистов как на самостоятельный аргумент. Включение цитаты в материал не означает поддержки автором цитируемого лица или его деятельности.</p>
+            </div>
+
+            <p class="intro-muted">Материал носит информационно-просветительский характер. Проект не финансируется иностранными источниками, не аффилирован с какими-либо организациями и не получает поддержки в иных формах от иностранных лиц.</p>
+          </div>
+
+          <div class="intro-pane" id="intro-pane-streamer" role="tabpanel" aria-labelledby="intro-tab-streamer" hidden>
+            <div class="intro-streamer-meta">
+              Обращение автора. Не для зачитывания — для понимания контекста. Стримерам и зрителям рекомендую прочитать перед знакомством с материалом.
+            </div>
+            <div class="intro-streamer-body">
+              <p>Привет.</p>
+              <p>Этот сайт делает один анонимный человек с помощью AI-агентов. Я задаю вопрос — «как точно выглядит финансирование КПРФ за 2017—2025?», — агенты собирают источники и пишут черновик, я проверяю по первоисточникам и правлю. Так получились 18 законов, 14 партий, 6 сюжетов, 233 документа и три расчётных интерактива. Один человек без агентов этого бы не сделал; со старыми инструментами — тоже.</p>
+              <p>Поэтому сайт не идеален: где-то агент мог сократить нюанс, где-то я мог пропустить опечатку. Если что-то криво — пишите через GitHub Issues или PR, починю.</p>
+              <p>Стримерам — показывайте, в эфире можно целиком или фрагментарно (CC BY 4.0). Имя автора называть не обязательно: ссылайтесь на ЦИК, СОЗД, kremlin.ru — они весомее меня.</p>
+              <p>Читателям — не верьте мне на слово. У каждого числа есть ссылка на первоисточник; у каждого утверждения — документ. Открывайте параллельно vote.duma.gov.ru, двигайте слайдеры в калькуляторах. Если число противоречит источнику — значит, я ошибся, это надо чинить. Цитаты с разных сторон спектра — иллюстрация позиций, не аргумент.</p>
+              <p>Я не политик и не журналист. Я AI-инженер, который попробовал доказать: современные инструменты позволяют любому собрать проверяемую многослойную аналитику по открытым данным. Цифры должны быть видны — и теперь они видны.</p>
+              <p>Удачи.</p>
+            </div>
+            <button type="button" class="intro-streamer-copy" data-copy>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="9" y="9" width="13" height="13" rx="2"/>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+              </svg>
+              <span class="intro-streamer-copy-label">скопировать обращение</span>
+              <span class="intro-streamer-copy-toast" aria-hidden="true">✓ скопировано</span>
+            </button>
+          </div>
+        </div>
+
+        <a class="intro-repo" href="https://github.com/im-not-a-human/ru-elections" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.74.4-1.25.73-1.54-2.55-.29-5.23-1.27-5.23-5.66 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.17.91-.25 1.89-.38 2.86-.38.97 0 1.95.13 2.86.38 2.19-1.48 3.15-1.17 3.15-1.17.62 1.58.23 2.75.11 3.04.74.8 1.18 1.82 1.18 3.07 0 4.4-2.69 5.37-5.25 5.65.41.36.78 1.05.78 2.12v3.14c0 .31.21.67.8.56 4.57-1.52 7.85-5.83 7.85-10.91C23.5 5.65 18.35.5 12 .5z"/>
+          </svg>
+          <span>Исходники сайта · <strong>github.com/im-not-a-human/ru-elections</strong></span>
+          <span class="intro-repo-arrow" aria-hidden="true">↗</span>
+        </a>
+
+        <button class="intro-btn" type="button">Понятно</button>
+      </div>
+    `;
+    document.body.appendChild(overlay);
+    document.body.style.overflow = 'hidden';
+    markShown(); // mark even before dismiss — once visible, don't repeat in this tab/session
+    // Inert background so screen readers / keyboard skip past nav/main/footer
+    ['nav.topnav', 'main', 'footer'].forEach(sel => {
+      const el = document.querySelector(sel);
+      if (el) { el.setAttribute('inert', ''); el.setAttribute('aria-hidden', 'true'); }
+    });
+
+    // Trigger fade-in on next frame so transition plays
+    requestAnimationFrame(() => requestAnimationFrame(() => overlay.classList.add('is-open')));
+
+    // Focus the dismiss button after the fade-in.
+    // preventScroll: focusing the bottom button would otherwise scroll the
+    // card to it, hiding the tabs (including "Для стрима") at the top.
+    setTimeout(() => overlay.querySelector('.intro-btn')?.focus({ preventScroll: true }), 60);
+
+    function dismiss() {
+      overlay.classList.remove('is-open');
+      document.body.style.overflow = '';
+      markShown(); // suppress on subsequent SPA-navigations / refreshes within tab
+      document.removeEventListener('keydown', onKey);
+      ['nav.topnav', 'main', 'footer'].forEach(sel => {
+        const el = document.querySelector(sel);
+        if (el) { el.removeAttribute('inert'); el.removeAttribute('aria-hidden'); }
+      });
+      setTimeout(() => {
+        overlay.remove();
+        if (previousFocus && typeof previousFocus.focus === 'function') previousFocus.focus();
+      }, 360);
+    }
+
+    function focusableIn(root) {
+      return Array.from(root.querySelectorAll(
+        'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'
+      )).filter(el => el.offsetParent !== null && !el.hasAttribute('hidden'));
+    }
+
+    function onKey(e) {
+      if (e.key === 'Escape') { e.preventDefault(); dismiss(); return; }
+      if (e.key !== 'Tab') return;
+      const f = focusableIn(overlay);
+      if (!f.length) return;
+      const first = f[0], last = f[f.length - 1];
+      const active = document.activeElement;
+      if (e.shiftKey && (active === first || !overlay.contains(active))) {
+        e.preventDefault(); last.focus();
+      } else if (!e.shiftKey && (active === last || !overlay.contains(active))) {
+        e.preventDefault(); first.focus();
+      }
+    }
+
+    overlay.querySelector('.intro-btn').addEventListener('click', dismiss);
+    document.addEventListener('keydown', onKey);
+
+    // Mode toggle (reader / streamer)
+    const tabs = overlay.querySelectorAll('.intro-tab');
+    const panes = {
+      reader: overlay.querySelector('#intro-pane-reader'),
+      streamer: overlay.querySelector('#intro-pane-streamer'),
+    };
+    const titleByMode = {
+      reader: 'Об этом материале',
+      streamer: 'Обращение автора',
+    };
+    const titleEl = overlay.querySelector('[data-mode-title]');
+    tabs.forEach(t => {
+      t.addEventListener('click', () => {
+        const mode = t.dataset.mode;
+        tabs.forEach(b => {
+          const on = b === t;
+          b.classList.toggle('is-active', on);
+          b.setAttribute('aria-selected', on ? 'true' : 'false');
+        });
+        Object.entries(panes).forEach(([k, el]) => {
+          if (!el) return;
+          const on = k === mode;
+          el.classList.toggle('is-active', on);
+          if (on) el.removeAttribute('hidden'); else el.setAttribute('hidden', '');
+        });
+        if (titleEl) titleEl.textContent = titleByMode[mode] || titleByMode.reader;
+      });
+    });
+
+    // Copy-button inside the streamer pane
+    const copyBtn = overlay.querySelector('[data-copy]');
+    if (copyBtn) {
+      copyBtn.addEventListener('click', async (e) => {
+        e.stopPropagation();
+        const text = Array.from(
+          overlay.querySelectorAll('.intro-streamer-body > p')
+        ).map(p => p.textContent.trim()).join('\n\n');
+        try {
+          if (navigator.clipboard) await navigator.clipboard.writeText(text);
+          else throw new Error('no clipboard');
+        } catch {
+          const t = document.createElement('textarea');
+          t.value = text; t.style.position = 'fixed'; t.style.opacity = '0';
+          document.body.appendChild(t); t.select();
+          try { document.execCommand('copy'); } catch (_) {}
+          document.body.removeChild(t);
+        }
+        copyBtn.classList.add('is-copied');
+        setTimeout(() => copyBtn.classList.remove('is-copied'), 1800);
+      });
+    }
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+  else init();
+})();

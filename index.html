@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Реальные позиции пяти парламентских фракций Госдумы по голосованиям в области цифровых и гражданских свобод, 2019–2025">
+<title>Голосование без выбора · Реальные позиции фракций Госдумы 2019–2025</title>
+
+<link rel="canonical" href="https://im-not-a-human.github.io/ru-elections/">
+
+<!-- Open Graph / Twitter cards -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Голосование без выбора">
+<meta property="og:title" content="Голосование без выбора — 14 партий, 5 фракций, один голос">
+<meta property="og:description" content="Реальные позиции пяти парламентских фракций Госдумы и девяти внепарламентских партий и спойлеров. По данным api.duma.gov.ru, ЦИК и declarator.org. 300 тыс. мобилизованы за 36 часов; 32,5% бюджета-2025 на оборону; ноль голосов «против» от оппозиции.">
+<meta property="og:url" content="https://im-not-a-human.github.io/ru-elections/">
+<meta property="og:image" content="https://im-not-a-human.github.io/ru-elections/assets/og/home.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Голосование без выбора · 6 из 30 ограничительных законов вызвали фракционное «против» от оппозиции">
+<meta property="og:locale" content="ru_RU">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Голосование без выбора — 14 партий, 5 фракций, один голос">
+<meta name="twitter:description" content="Реальные позиции пяти парламентских фракций Госдумы и девяти внепарламентских партий и спойлеров. По данным api.duma.gov.ru, ЦИК и declarator.org. 300 тыс. мобилизованы за 36 часов; 32,5% бюджета-2025 на оборону; ноль голосов «против» от оппозиции.">
+<meta name="twitter:image" content="https://im-not-a-human.github.io/ru-elections/assets/og/home.png">
+<link rel="icon" href="data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'&gt;&lt;rect width='32' height='32' rx='6' fill='%231A1815'/&gt;&lt;text x='16' y='22' text-anchor='middle' font-family='Unbounded,sans-serif' font-weight='900' font-size='18' fill='%23F0EAD6'&gt;Г&lt;/text&gt;&lt;/svg&gt;">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;700;900&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Lora:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/layout.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/home.css">
+<link rel="stylesheet" href="assets/css/home-compromat.css">
+<link rel="stylesheet" href="assets/css/elections.css">
+<link rel="stylesheet" href="assets/css/tsenzura.css">
+<link rel="stylesheet" href="assets/css/presentation.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<noscript>
+  <div style="background: #FEF3C7; border-bottom: 2px solid #B45309; padding: 14px 20px; text-align: center; font-size: 14px;">
+    JavaScript отключён. На этой странице большая часть содержимого (статистика, карточки 14 партий, матрица голосований, графики, хроника) подгружается скриптом и видна не будет. Включите JS или перейдите по статическим ссылкам в навигации к страницам с первоисточниками.
+  </div>
+</noscript>
+
+<a class="skip-link" href="#main">К содержанию</a>
+
+<div class="dev-banner" role="status">
+  <strong>Сайт в разработке.</strong> Контент собирается AI-агентами под наблюдением автора. Возможны неточности и визуальные баги — пишите через <a href="#" data-open-feedback>обратную связь</a>.
+</div>
+
+<nav class="topnav">
+  <div class="wrap">
+    <div class="nav-row">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">Г</span>
+        <span class="brand-text">Голосование без выбора</span>
+      </a>
+      <nav class="page-toggle" id="pageToggle" aria-label="Разделы сайта">
+        <a href="index.html" class="is-current" aria-current="page">
+          <span class="lbl-full">Голосования</span>
+          <span class="lbl-short">Дума</span>
+        </a>
+        <a href="vybory.html">
+          <span class="lbl-full">Математика выборов</span>
+          <span class="lbl-short">Выборы</span>
+        </a>
+        <a href="tsenzura.html">
+          <span class="lbl-full">Цифровые ограничения</span>
+          <span class="lbl-short">Рунет</span>
+        </a>
+        <a href="dokumenty.html">
+          <span class="lbl-full">Документы</span>
+          <span class="lbl-short">Архив</span>
+        </a>
+      </nav>
+      <div class="nav-links">
+        <a href="#parties-extended">Партии</a>
+        <a href="#matrix">Голосования</a>
+        <a href="#cross-cutting">Сюжеты</a>
+        <a href="#paradox">Парадокс</a>
+        <a href="#timeline">Хроника</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main id="main" data-page="home">
+
+<aside id="mainTOC" class="main-toc" aria-label="Содержание страницы">
+  <div class="main-toc-h">Содержание</div>
+  <a href="#hero" data-target="hero" class="toc-cur"><span class="num">1</span> Главное</a>
+  <a href="#parties-extended" data-target="parties"><span class="num">2</span> Партии</a>
+  <a href="#matrix" data-target="matrix"><span class="num">3</span> Голосования</a>
+  <a href="#cross-cutting" data-target="sujety"><span class="num">4</span> Сюжеты</a>
+  <a href="#docs-panel" data-target="docs"><span class="num">5</span> Документы</a>
+  <a href="#paradox" data-target="paradox"><span class="num">6</span> Парадокс</a>
+  <a href="#timeline" data-target="timeline"><span class="num">7</span> Хроника</a>
+  <a href="#conclusion" data-target="conclusion"><span class="num">8</span> Выводы</a>
+  <div class="main-toc-progress">
+    <div class="main-toc-progress-bar"><div class="main-toc-progress-fill" id="mainTOCProgress"></div></div>
+  </div>
+</aside>
+
+<!-- HERO -->
+<section id="hero" class="hero" data-toc-id="hero">
+  <div class="wrap">
+    <div class="hero-meta">
+      <div class="hero-meta-item"><span>Аналитический отчёт</span></div>
+      <div class="hero-meta-item"><span class="mono">2019—2025</span></div>
+      <div class="hero-meta-item"><span>VII—VIII созывы Госдумы</span></div>
+    </div>
+
+    <h1 class="display">Голосование <em>без</em><br><span class="accent">выбора.</span></h1>
+
+    <div class="hero-kicker">
+      <div class="hero-kicker-num">6 <small>/ 30</small></div>
+      <div class="hero-kicker-text">из 30 ограничительных законов вызвали фракционное «против» хотя бы от одной оппозиционной фракции. Ещё 3 — частичное «против» части фракции. Семь лет голосований 2019—2025 по интернету, гражданским свободам, мобилизации и бюджетам.</div>
+    </div>
+
+    <p class="hero-deck">
+      Реальные позиции пяти парламентских фракций — <strong>«Единой России», КПРФ, ЛДПР, СРЗП и «Новых людей»</strong> — в области цифровых и гражданских свобод. Не риторика на сайтах партий, а <a href="https://vote.duma.gov.ru" class="src-link" target="_blank" rel="noopener">кнопка, нажатая в зале заседаний</a>.
+    </p>
+
+    <div class="hero-stats" id="heroStats" aria-label="Ключевые цифры исследования"></div>
+
+    <a href="vybory.html" class="cross-cta" aria-label="Перейти на страницу «Математика выборов»">
+      <div class="cross-cta-num">02</div>
+      <div class="cross-cta-body">
+        <div class="cross-cta-eyebrow">Вторая страница сайта</div>
+        <div class="cross-cta-title">Математика выборов</div>
+        <div class="cross-cta-text">Если 72% мест в Думе у одной партии звучит как «нормальный парламент» — посмотрите, как 49,82% голосов превращаются в это большинство. Калькулятор сценариев, тепловая карта, лестница большинств.</div>
+      </div>
+      <div class="cross-cta-arrow" aria-hidden="true">→</div>
+    </a>
+
+    <a href="tsenzura.html" class="cross-cta" aria-label="Перейти на страницу «Цифровые ограничения»">
+      <div class="cross-cta-num">03</div>
+      <div class="cross-cta-body">
+        <div class="cross-cta-eyebrow">Третья страница сайта</div>
+        <div class="cross-cta-title">Цифровые ограничения 2021–2026</div>
+        <div class="cross-cta-text">Если те же фракции принимают пакет «безопасности» — посмотрите, что эти законы реально дают. Хищения у граждан выросли с 14,2 до 29,3 млрд ₽; атаки БПЛА — с 6,2 до 23+ тыс. в год; 1 730 компаний получили легальный VPN, гражданин — штраф до 500 тыс. ₽ за «рекламу» VPN. Карта противоречий, threat-model, калькулятор ущерба.</div>
+      </div>
+      <div class="cross-cta-arrow" aria-hidden="true">→</div>
+    </a>
+  </div>
+</section>
+
+<!-- METHODOLOGY -->
+<section>
+  <div class="wrap-narrow">
+    <span class="section-label">О методике</span>
+    <h2 style="font-size: 36px; margin-bottom: 16px; letter-spacing: -0.02em;">Как читать этот отчёт</h2>
+    <p style="font-size: 17px; line-height: 1.65; color: var(--ink-soft);">
+      В отчёте проанализировано 18 ключевых законов в области цифровых и гражданских свобод за 2019–2025 годы плюс вспомогательные голосования по социальной политике для контекста. Все данные основаны на официальных источниках Государственной Думы, государственных СМИ и независимых проверочных публикациях.
+    </p>
+
+    <div class="src-list" aria-label="Главные источники проекта">
+      <div class="src-list-title">Опорные источники</div>
+      <a href="https://sozd.duma.gov.ru" target="_blank" rel="noopener">СОЗД ГД РФ</a>
+      <a href="https://vote.duma.gov.ru" target="_blank" rel="noopener">vote.duma.gov.ru</a>
+      <a href="http://duma.gov.ru" target="_blank" rel="noopener">Госдума / стенограммы</a>
+      <a href="http://publication.pravo.gov.ru" target="_blank" rel="noopener">publication.pravo.gov.ru</a>
+      <a href="http://www.kremlin.ru/acts" target="_blank" rel="noopener">kremlin.ru / акты</a>
+    </div>
+
+    <details class="collapsible">
+      <summary>Источники, оговорки и ограничения</summary>
+      <div class="meth-content">
+        <p><strong>Основные источники:</strong> sozd.duma.gov.ru (карточки законопроектов), стенограммы пленарных заседаний duma.gov.ru, поимённые результаты vote.duma.gov.ru, публикации ТАСС, РИА, «Российской газеты», «Парламентской газеты», «Коммерсанта», «Ведомостей», РБК, Forbes, «Интерфакса», а также партийные сайты er.ru, kprf.ru, ldpr.ru, spravedlivo.ru, newpeople.ru. Для контекста использованы материалы «Роскомсвободы», «ОВД-Инфо», «Медузы», «Новой газеты».</p>
+        <p><strong>Принципиальная оговорка о «реальном влиянии оппозиции».</strong> «Единая Россия» располагает 325 мандатами из 450 — это конституционное большинство, достаточное для принятия любого закона без единого голоса оппозиции. Поэтому даже консолидированное голосование «против» от КПРФ, ЛДПР, СРЗП и «Новых людей» не способно блокировать инициативы власти. Голосование превращается из инструмента влияния в инструмент <strong>политического позиционирования</strong>. Ключевой вопрос — насколько даже это «дешёвое» позиционирование используется фракциями.</p>
+        <p><strong>«Оппозиция справа».</strong> Часть голосов «против» у КПРФ и СРЗП — это не возражения против ограничений, а требования сделать их <strong>жёстче</strong>. Так, Нина Останина (КПРФ) при принятии закона о пропаганде ЛГБТ требовала ввести уголовную ответственность; КПРФ предлагала уголовку за «пропаганду чайлдфри». Это надо отделять от настоящей либеральной оппозиции.</p>
+        <p><strong>Технические ограничения.</strong> Прямой автоматизированный парсинг sozd.duma.gov.ru и vote.duma.gov.ru ограничен техническими средствами защиты, поэтому точные пофракционные цифры собраны из вторичных источников; там, где они недоступны, это явно отмечено.</p>
+      </div>
+    </details>
+
+    <details class="collapsible">
+      <summary>Об авторе и позиции</summary>
+      <div class="meth-content">
+        <p>Автор сайта — <strong>не политолог и не социолог</strong>; научная и профессиональная специализация — в смежной технической области (системы автоматизации, AI-агенты).</p>
+        <p>Сайт — <strong>экспериментальный проект</strong>: вся аналитика, расчёты, тексты и интерактивные виджеты подготовлены силами AI-агентов под контролем автора, что и является частью его специальности. Цель эксперимента — показать, что современные инструменты позволяют любому собрать многослойный аналитический материал по открытым данным и проверить его на состоятельность.</p>
+        <p>Это <strong>аналитика по публичным данным, а не политическая агитация</strong>. Сайт не содержит призывов к каким-либо действиям, не аффилирован с политическими движениями или организациями и не имеет цели дискредитировать органы власти. Каждое утверждение подкреплено ссылкой на первоисточник; читатель волен делать собственные выводы.</p>
+        <p>Если вы заметили фактическую неточность — пожалуйста, оформите PR в репозиторий проекта (<span class="mono">github.com/im-not-a-human/ru-elections</span>); материал поддерживается и обновляется по мере получения замечаний.</p>
+      </div>
+    </details>
+
+    <details class="collapsible">
+      <summary>О критериях источников</summary>
+      <div class="meth-content">
+        <p>Сайт опирается прежде всего на <strong>первичные документы</strong>: тексты законов, постановления ЦИК, стенограммы Госдумы, поимённые результаты голосований. Где приводятся <strong>цитаты публичных комментаторов</strong> (Шульман, Галлямов, Кынев, Кац, Любарев и др.) — это иллюстрация позиций, а не подтверждение фактов; факты подтверждаются только первоисточниками.</p>
+        <p>Автор сайта <strong>не идентифицирует себя ни с одним из политических лагерей</strong> — ни «либеральным», ни «государственническим» — и не опирается на оценки отдельных публицистов как на самостоятельный аргумент. Включение цитаты в материал не означает поддержки автором цитируемого лица или его деятельности.</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- 14 PARTIES BY CATEGORY -->
+<section id="parties-extended" data-toc-id="parties">
+  <div class="wrap">
+    <span class="section-label">Партии — все 14</span>
+    <h2 style="font-size: clamp(36px, 5vw, 56px); letter-spacing: -0.03em; max-width: 800px; line-height: 1; margin-bottom: 16px;">14 партий, одна система.</h2>
+    <p style="font-size: 18px; color: var(--ink-soft); max-width: 760px; margin-bottom: 28px;">Карточки разбиты по категориям: парламентские, внепарламентские, спойлеры. Каждая ведёт на отдельную страницу с полным досье.</p>
+    <div id="extendedParties"></div>
+  </div>
+</section>
+
+<!-- THE BIG MATRIX -->
+<section id="matrix" data-toc-id="matrix">
+  <div class="wrap">
+    <span class="section-label">Главная карта</span>
+    <h2 style="font-size: clamp(36px, 5vw, 56px); letter-spacing: -0.03em; max-width: 800px; line-height: 1; margin-bottom: 16px;">Матрица голосований.</h2>
+    <p style="font-size: 18px; color: var(--ink-soft); max-width: 700px; line-height: 1.55;">
+      Каждая клетка — одно голосование одной фракции. <strong style="color:var(--vote-za)">Красный</strong> — «за» закон. <strong style="color:var(--vote-against)">Зелёный</strong> — «против». Кликните по любому закону, чтобы увидеть детали. Кликните по партии — чтобы увидеть её портрет.
+    </p>
+
+    <div class="matrix-controls">
+      <span class="filter-label">Фильтр:</span>
+      <button class="filter-btn active" data-filter="all">Все законы</button>
+      <button class="filter-btn" data-filter="digital">Только цифровые свободы</button>
+      <button class="filter-btn" data-filter="civil">Только гражданские свободы</button>
+      <button class="filter-btn" data-filter="opposed">Где была оппозиция</button>
+    </div>
+
+    <div class="matrix-container">
+      <table class="matrix-table" id="matrixTable">
+        <thead>
+          <tr>
+            <th class="law-head">Закон</th>
+            <th class="party-head" data-party="ER"><span class="party-pill" style="background: var(--party-er)">ЕР</span></th>
+            <th class="party-head" data-party="KPRF"><span class="party-pill" style="background: var(--party-kprf)">КПРФ</span></th>
+            <th class="party-head" data-party="LDPR"><span class="party-pill" style="background: var(--party-ldpr); color: white">ЛДПР</span></th>
+            <th class="party-head" data-party="SR"><span class="party-pill" style="background: var(--party-sr)">СРЗП</span></th>
+            <th class="party-head" data-party="NL"><span class="party-pill" style="background: var(--party-nl)">НЛ</span></th>
+          </tr>
+        </thead>
+        <tbody id="matrixBody"></tbody>
+      </table>
+
+      <div class="matrix-legend">
+        <div class="legend-item"><div class="legend-swatch" style="background: var(--vote-za-bg)"></div>За (фракционно)</div>
+        <div class="legend-item"><div class="legend-swatch" style="background: var(--vote-against-bg)"></div>Против (фракционно)</div>
+        <div class="legend-item"><div class="legend-swatch" style="background: var(--vote-abstain-bg)"></div>Воздержались</div>
+        <div class="legend-item"><div class="legend-swatch" style="background: linear-gradient(135deg, var(--vote-against-bg) 50%, var(--vote-za-bg) 50%)"></div>Часть фракции против</div>
+        <div class="legend-item"><div class="legend-swatch" style="background: var(--vote-didnt-bg)"></div>Не голосовали (тактика)</div>
+        <div class="legend-item"><div class="legend-swatch" style="background: repeating-linear-gradient(45deg, var(--vote-absent-bg), var(--vote-absent-bg) 4px, transparent 4px, transparent 8px); border: 1px dashed var(--line);"></div>Партии не было в Думе</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTY PORTRAITS — старая модальная галерея пяти парламентских партий
+     (id #parties → #party-portraits, чтобы не конфликтовать с новой 14-карточной
+     секцией #parties-extended, на которую теперь указывают header и sticky-TOC). -->
+<section id="party-portraits">
+  <div class="wrap">
+    <span class="section-label">Парламентская пятёрка крупным планом</span>
+    <h2 style="font-size: clamp(36px, 5vw, 56px); letter-spacing: -0.03em; max-width: 800px; line-height: 1; margin-bottom: 16px;">Пять портретов.</h2>
+    <p style="font-size: 18px; color: var(--ink-soft); max-width: 700px;">Кликните на любую партию — откроется её полный портрет: что декларирует, как голосует, и где разница.</p>
+    <div class="party-grid" id="partyGrid"></div>
+  </div>
+</section>
+
+<!-- CROSS-CUTTING PLOTS -->
+<section id="cross-cutting" data-toc-id="sujety">
+  <div class="wrap">
+    <span class="section-label">Сквозные сюжеты</span>
+    <h2 style="font-size: clamp(36px, 5vw, 56px); letter-spacing: -0.03em; max-width: 800px; line-height: 1; margin-bottom: 16px;">Шесть феноменов системы.</h2>
+    <p style="font-size: 18px; color: var(--ink-soft); max-width: 720px; margin-bottom: 28px;">Не отдельные партии — закономерности. Каждый сюжет — отдельная глубокая статья со ссылками на документы.</p>
+    <div id="crossCuttingCards"></div>
+  </div>
+</section>
+
+<!-- DOCUMENTS PANEL -->
+<section id="docs-panel" data-toc-id="docs">
+  <div class="wrap">
+    <div class="dp-card">
+      <div class="dp-meta">
+        <span class="section-label" style="color:rgba(255,255,255,0.55)">Документы</span>
+      </div>
+      <h3>233 файла. 190 МБ. Всё проверяемо.</h3>
+      <p>
+        Указы Президента, карточки <code>sozd.duma.gov.ru</code>, поимённые голосования с <code>api.duma.gov.ru</code>,
+        OFAC SDN, UK Sanctions, Litvinenko Inquiry, тексты ФЗ, декларации, реестр иноагентов (1191 запись),
+        госконтракты. Скачаны на этот сайт — без необходимости заходить на российские госсайты.
+      </p>
+      <a href="dokumenty.html" class="dp-cta">→ Открыть эксплорер документов</a>
+    </div>
+  </div>
+</section>
+
+<!-- THE PARADOX -->
+<section id="paradox" data-toc-id="paradox" class="paradox-container">
+  <div class="wrap">
+    <span class="section-label">Главный парадокс</span>
+    <h2 style="font-size: clamp(36px, 5vw, 56px); letter-spacing: -0.03em; max-width: 900px; line-height: 1; margin-bottom: 24px; color: white;">
+      Свободы — единый блок.<br>Социалка — настоящий конфликт.
+    </h2>
+    <p style="font-size: 18px; color: rgba(255,255,255,0.7); max-width: 720px; line-height: 1.55;">
+      Ось реального политического конфликта в Думе проходит не по линии «свобода против контроля», а по линии «социал-демократический курс против рыночного». По интернету и иноагентам — пять фракций единый блок. По бюджету и пенсиям — настоящие разногласия.
+    </p>
+
+    <div class="paradox-grid">
+      <div class="paradox-card dim">
+        <div class="paradox-card-label">Цифровые и гражданские свободы</div>
+        <h3>Здесь оппозиции почти нет</h3>
+        <div class="paradox-stat-mini">11<span style="font-size: 0.5em">%</span></div>
+        <div class="paradox-card-text">
+          средний показатель «против» по 30 ограничительным законам 2019—2025 у четырёх оппозиционных фракций. Фракционных эпизодов реального «против» за 7 лет — единичны: концентрация в 2019 (пакет Клишаса, суверенный Рунет) и 2025 (закон о VPN ФЗ-281).
+        </div>
+      </div>
+      <div class="paradox-card bright">
+        <div class="paradox-card-label">Социально-экономическая политика</div>
+        <h3>Здесь конфликт реальный</h3>
+        <div class="paradox-stat-mini">100<span style="font-size: 0.5em">%</span></div>
+        <div class="paradox-card-text">
+          КПРФ, ЛДПР и СР голосовали против пенсионной реформы 2018 фракционно (102 «против» суммарно). Бюджеты 2024 и 2025 — КПРФ и СРЗП фракционно «против» / воздержались. Это последняя устойчивая ось разделения в Думе.
+        </div>
+      </div>
+    </div>
+
+    <div class="comparison-bars" style="margin-top: 60px; color: white;">
+      <div class="comp-block">
+        <h3 style="color: white">Поддержка ограничений интернета и свобод</h3>
+        <div class="comp-block-sub" style="color: rgba(255,255,255,0.6)" id="bars-digital-sub">% голосов «за» по ограничительным законам</div>
+        <div id="bars-digital"></div>
+      </div>
+      <div class="comp-block">
+        <h3 style="color: white">Поддержка ограничительной соцполитики</h3>
+        <div class="comp-block-sub" style="color: rgba(255,255,255,0.6)">% голосов «за» по пенсионной реформе, НДС, бюджетам</div>
+        <div id="bars-social"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section id="timeline" data-toc-id="timeline">
+  <div class="wrap-narrow">
+    <span class="section-label">Хроника</span>
+    <h2 style="font-size: clamp(36px, 5vw, 56px); letter-spacing: -0.03em; max-width: 800px; line-height: 1; margin-bottom: 16px;">Семь лет, пять цветов.</h2>
+    <p style="font-size: 18px; color: var(--ink-soft); margin-bottom: 0;">
+      Ключевые ограничительные законы с указанием реакции оппозиции. Зелёная точка — был фракционный протест от хотя бы одной оппозиционной партии. Кликните по событию для деталей.
+    </p>
+    <div class="timeline-wrap" id="timelineList"></div>
+  </div>
+</section>
+
+<!-- DYNAMIC CHART -->
+<section id="chart-section">
+  <div class="wrap">
+    <span class="section-label">Динамика по годам</span>
+    <h2 style="font-size: clamp(36px, 5vw, 56px); letter-spacing: -0.03em; max-width: 800px; line-height: 1; margin-bottom: 16px;">Семь лет в столбик.</h2>
+    <p style="font-size: 18px; color: var(--ink-soft); max-width: 700px; line-height: 1.55;">
+      Сколько раз в год оппозиция голосовала против ограничений — и почему 2019 и 2025 выделяются на фоне «чёрной дыры» 2020–2024.
+    </p>
+
+    <div style="background: var(--bg-paper); border: 1px solid var(--line); border-radius: 12px; padding: 32px; margin-top: 32px;">
+      <div style="position: relative; width: 100%; height: 360px;">
+        <canvas id="yearsChart" role="img" aria-label="Столбчатая диаграмма случаев фракционного «против» от оппозиции по годам с 2019 по 2025">График случаев фракционного «против» по годам.</canvas>
+      </div>
+      <p style="font-size: 12px; color: var(--ink-muted); margin-top: 16px; line-height: 1.5;">
+        «Полголоса» = одна фракция воздержалась или часть фракции проголосовала против. Тёмные столбики — реальное фракционное «против».
+      </p>
+    </div>
+
+    <div style="margin-top: 60px;">
+      <h3 style="font-size: 26px; margin-bottom: 24px;">Кто чаще всего отступал от провластной линии</h3>
+      <div style="background: var(--bg-paper); border: 1px solid var(--line); border-radius: 12px; padding: 32px;">
+        <div style="position: relative; width: 100%; height: 320px;">
+          <canvas id="oppositionChart" role="img" aria-label="Горизонтальные столбики: количество эпизодов отступления от провластной линии по партиям">КПРФ — 5 эпизодов, Новые люди — 2, СРЗП — 2, ЛДПР — 1, ЕР — 0.</canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONCLUSION -->
+<section id="conclusion" data-toc-id="conclusion">
+  <div class="wrap">
+    <span class="section-label">Выводы</span>
+    <h2 style="font-size: clamp(36px, 5vw, 56px); letter-spacing: -0.03em; max-width: 900px; line-height: 1; margin-bottom: 16px;">Что показывают цифры.</h2>
+
+    <div class="conclusion-grid">
+      <div class="conclusion-block">
+        <h3>Главный паттерн</h3>
+        <p>Семь лет голосований раскрывают парадокс: <strong>ось реального политического конфликта проходит не по линии «свобода против контроля», а по линии «социал-демократический курс против рыночного»</strong>.</p>
+        <p>По любому ограничению интернета и гражданских прав от пяти фракций ожидается единогласная поддержка с поправкой ±5%. По бюджету и налогам — устойчивое деление 3 фракции на 2.</p>
+        <p>Закон о VPN от 22 июля 2025 года — пока единственный тревожный сигнал для системы: впервые за созыв две фракции (КПРФ и «Новые люди») открыто проголосовали против ограничения цифровых свобод по принципиальным мотивам.</p>
+      </div>
+      <div class="conclusion-block">
+        <h3>Что это значит для избирателя</h3>
+        <p><strong>Голосуйте по социалке — выбор есть.</strong> Реальное противостояние между правым (ЕР+ЛДПР+НЛ) и левым (КПРФ+СРЗП) флангами по налогам, бюджету и пенсиям — это устойчивая, документированная динамика.</p>
+        <p><strong>Голосуйте по цифровым свободам — выбора почти нет.</strong> За исключением минимального и эпизодического протеста «Новых людей» и КПРФ, парламентский контур работает как единый механизм по сужению цифрового и информационного пространства.</p>
+        <p style="margin-top: 18px;">→ <a href="vybory.html" style="color: var(--accent); font-weight: 600;">Но и сами выборы — отдельный аттракцион. Посмотрите математику.</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer id="sources">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>Об этом отчёте</h4>
+        <p>Все данные собраны из публичных источников. Этот отчёт — не партийная агитация, а попытка показать реальную картину голосований без интерпретаций.</p>
+        <p style="margin-top: 12px;">Лицензия: CC BY 4.0. Можно копировать, изменять, переиспользовать со ссылкой на источник.</p>
+      </div>
+      <div>
+        <h4>Официальные источники</h4>
+        <a href="https://sozd.duma.gov.ru" target="_blank" rel="noopener">СОЗД ГД РФ ↗</a>
+        <a href="https://vote.duma.gov.ru" target="_blank" rel="noopener">Голосования ГД ↗</a>
+        <a href="http://duma.gov.ru" target="_blank" rel="noopener">Госдума ↗</a>
+        <a href="https://www.rg.ru" target="_blank" rel="noopener">Российская газета ↗</a>
+        <a href="https://www.pnp.ru" target="_blank" rel="noopener">Парламентская газета ↗</a>
+      </div>
+      <div>
+        <h4>Сайты партий</h4>
+        <a href="https://er.ru" target="_blank" rel="noopener">er.ru — Единая Россия ↗</a>
+        <a href="https://kprf.ru" target="_blank" rel="noopener">kprf.ru — КПРФ ↗</a>
+        <a href="https://ldpr.ru" target="_blank" rel="noopener">ldpr.ru — ЛДПР ↗</a>
+        <a href="https://spravedlivo.ru" target="_blank" rel="noopener">spravedlivo.ru — СРЗП ↗</a>
+        <a href="https://newpeople.ru" target="_blank" rel="noopener">newpeople.ru — Новые люди ↗</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 · Голосование без выбора</div>
+      <div class="mono">v1.3 · обновлено 2026-05-04</div>
+    </div>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalContent" hidden>
+  <div class="modal" id="modal">
+    <button class="modal-close" id="modalClose" aria-label="Закрыть">×</button>
+    <div id="modalContent"></div>
+  </div>
+</div>
+
+<!-- TOOLTIP -->
+<div class="tooltip" id="tooltip"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script src="assets/js/lib/lang-switch.js"></script>
+
+<!-- data — ВСЁ для обеих страниц (нужно для SPA-навигации) -->
+<script src="assets/js/data/parties.js"></script>
+<script src="assets/js/data/hero-stats.js"></script>
+<script src="assets/js/data/extended-parties.js"></script>
+<script src="assets/js/data/cross-cutting.js"></script>
+<script src="assets/js/data/laws.js"></script>
+<script src="assets/js/data/social-laws.js"></script>
+<script src="assets/js/data/elections.js"></script>
+<script src="assets/js/data/digital-numbers.js"></script>
+<script src="assets/js/data/digital-events.js"></script>
+<script src="assets/js/data/contradictions.js"></script>
+<script src="assets/js/data/threat-matrix.js"></script>
+<script src="assets/js/data/digital-platforms.js"></script>
+<script src="assets/js/data/digital-fraud.js"></script>
+<script src="assets/js/data/whitelist.js"></script>
+<script src="assets/js/data/intl-comparison.js"></script>
+<script src="assets/js/data/digital-quotes.js"></script>
+<script src="assets/js/data/digital-sources.js"></script>
+
+<!-- lib -->
+<script src="assets/js/lib/dom.js"></script>
+<script src="assets/js/lib/modal.js"></script>
+<script src="assets/js/lib/tooltip.js"></script>
+<script src="assets/js/lib/reveal.js"></script>
+<script src="assets/js/lib/counter.js"></script>
+<script src="assets/js/lib/spoiler.js"></script>
+<script src="assets/js/lib/intro.js"></script>
+<script src="assets/js/lib/page-toggle-ping.js"></script>
+<script src="assets/js/lib/reading-progress.js"></script>
+<script src="assets/js/lib/scroll-steps.js"></script>
+<script src="assets/js/lib/scroll-spy.js"></script>
+<script src="assets/js/lib/feedback.js"></script>
+<script src="assets/js/lib/github-fab.js"></script>
+<script src="assets/js/lib/presentation.js"></script>
+
+<!-- components -->
+<script src="assets/js/components/matrix.js"></script>
+<script src="assets/js/components/party-cards.js"></script>
+<script src="assets/js/components/timeline.js"></script>
+<script src="assets/js/components/comparison-bars.js"></script>
+<script src="assets/js/components/law-modal.js"></script>
+<script src="assets/js/components/party-modal.js"></script>
+<script src="assets/js/components/hero-stats.js"></script>
+<script src="assets/js/components/extended-parties.js"></script>
+<script src="assets/js/components/cross-cutting-cards.js"></script>
+<script src="assets/js/components/digital-numbers.js"></script>
+<script src="assets/js/components/digital-timeline.js"></script>
+<script src="assets/js/components/contradiction-matrix.js"></script>
+<script src="assets/js/components/threat-matrix.js"></script>
+<script src="assets/js/components/selectivity-cards.js"></script>
+<script src="assets/js/components/digital-sources.js"></script>
+<script src="assets/js/components/digital-modal.js"></script>
+
+<!-- charts -->
+<script src="assets/js/charts/defaults.js"></script>
+<script src="assets/js/charts/years-chart.js"></script>
+<script src="assets/js/charts/opposition-chart.js"></script>
+<script src="assets/js/charts/waffle.js"></script>
+<script src="assets/js/charts/districts.js"></script>
+<script src="assets/js/charts/distortion.js"></script>
+<script src="assets/js/charts/gauge.js"></script>
+<script src="assets/js/charts/flow.js"></script>
+<script src="assets/js/charts/shpilkin-chart.js"></script>
+<script src="assets/js/charts/ladder.js"></script>
+<script src="assets/js/charts/heatmap.js"></script>
+<script src="assets/js/charts/calculator.js"></script>
+<script src="assets/js/charts/vpn-growth.js"></script>
+<script src="assets/js/charts/whitelist-growth.js"></script>
+<script src="assets/js/charts/messenger-comparison.js"></script>
+<script src="assets/js/charts/youtube-throttling.js"></script>
+<script src="assets/js/charts/fraud-vs-laws.js"></script>
+<script src="assets/js/charts/drone-attacks.js"></script>
+<script src="assets/js/charts/it-crime.js"></script>
+<script src="assets/js/charts/child-suicide.js"></script>
+<script src="assets/js/charts/freedom-on-net.js"></script>
+<script src="assets/js/charts/regulation-compare.js"></script>
+<script src="assets/js/charts/shutdown-cost-calc.js"></script>
+
+<!-- page init (all — SPA router calls the right one on transition) -->
+<script src="assets/js/pages/home.js"></script>
+<script src="assets/js/pages/elections.js"></script>
+<script src="assets/js/pages/tsenzura.js"></script>
+
+<!-- presentation deck for this page -->
+<script src="assets/js/decks/home.js"></script>
+
+</body>
+</html>

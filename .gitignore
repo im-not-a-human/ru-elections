@@ -1,0 +1,18 @@
+# Local dev / test artifacts
+output/
+*.log
+.DS_Store
+node_modules/
+.test/
+.coop/
+.playwright-mcp/
+feedback-worker/.wrangler/
+
+# Claude Code harness artifacts
+.claude/
+.superpowers/
+.git.bak/
+
+# Legacy nested ignores kept for safety
+research/compromat/.superpowers/
+.superpowers/.claude/

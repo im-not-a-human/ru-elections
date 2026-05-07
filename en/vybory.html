@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The mathematics of Russian elections: why United Russia wins under almost any scenario. The mixed system 225+225, the 5% threshold, petal-shaped redistricting, DEG (remote electronic voting), 'doppelganger' candidates, 'locomotive' candidates — with calculations, a scenario calculator, and links to primary sources.">
+<title>Election Maths · The Machine of Guaranteed Victory</title>
+
+<link rel="canonical" href="https://im-not-a-human.github.io/ru-elections/en/vybory.html">
+<link rel="alternate" hreflang="ru" href="https://im-not-a-human.github.io/ru-elections/vybory.html">
+<link rel="alternate" hreflang="en" href="https://im-not-a-human.github.io/ru-elections/en/vybory.html">
+<link rel="alternate" hreflang="x-default" href="https://im-not-a-human.github.io/ru-elections/vybory.html">
+
+<!-- Open Graph / Twitter cards -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Voting Without a Choice">
+<meta property="og:title" content="The Machine of Guaranteed Victory · 49.82% → 72%">
+<meta property="og:description" content="How 49.82% of votes for United Russia become 72% of seats in the Duma. The mixed system, the threshold, redistricting, DEG. Scenario calculator + primary sources.">
+<meta property="og:url" content="https://im-not-a-human.github.io/ru-elections/en/vybory.html">
+<meta property="og:image" content="https://im-not-a-human.github.io/ru-elections/assets/og/vybory.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="49.82% → 72%: how votes become seats in the Duma">
+<meta property="og:locale" content="en_GB">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Machine of Guaranteed Victory · 49.82% → 72%">
+<meta name="twitter:description" content="How 49.82% of votes become 72% of seats in the Duma. Scenario calculator and calculations.">
+<meta name="twitter:image" content="https://im-not-a-human.github.io/ru-elections/assets/og/vybory.png">
+<link rel="icon" href="data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'&gt;&lt;rect width='32' height='32' rx='6' fill='%231A1815'/&gt;&lt;text x='16' y='22' text-anchor='middle' font-family='Unbounded,sans-serif' font-weight='900' font-size='18' fill='%23F0EAD6'&gt;Г&lt;/text&gt;&lt;/svg&gt;">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;700;900&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Lora:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/tokens.css">
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/layout.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/home.css">
+<link rel="stylesheet" href="../assets/css/elections.css">
+<link rel="stylesheet" href="../assets/css/tsenzura.css">
+<link rel="stylesheet" href="../assets/css/presentation.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<noscript>
+  <div style="background: #FEF3C7; border-bottom: 2px solid #B45309; padding: 14px 20px; text-align: center; font-size: 14px;">
+    JavaScript is disabled. Text sections and tables are fully accessible; the interactive calculator and charts (heatmap, majority ladder) are unavailable.
+  </div>
+</noscript>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="dev-banner" role="status">
+  <strong>Site under development.</strong> Content is assembled by AI agents under the author's supervision. Inaccuracies and visual bugs are possible — please write via <a href="#" data-open-feedback>feedback</a>.
+</div>
+
+<nav class="topnav">
+  <div class="wrap">
+    <div class="nav-row">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">Г</span>
+        <span class="brand-text">Voting Without a Choice</span>
+      </a>
+      <nav class="page-toggle" id="pageToggle" aria-label="Site sections">
+        <a href="index.html">
+          <span class="lbl-full">Votes</span>
+          <span class="lbl-short">Duma</span>
+        </a>
+        <a href="vybory.html" class="is-current" aria-current="page">
+          <span class="lbl-full">Election Maths</span>
+          <span class="lbl-short">Elections</span>
+        </a>
+        <a href="tsenzura.html">
+          <span class="lbl-full">Digital Restrictions</span>
+          <span class="lbl-short">Runet</span>
+        </a>
+        <a href="dokumenty.html">
+          <span class="lbl-full">Documents</span>
+          <span class="lbl-short">Archive</span>
+        </a>
+      </nav>
+      <div class="nav-links">
+        <a href="#one-mandate">Districts</a>
+        <a href="#barrier">Threshold</a>
+        <a href="#deg">DEG</a>
+        <a href="#calculator-section">Calculator</a>
+        <a href="#theatre">Circus</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main id="main" data-page="elections">
+
+<aside id="mainTOC" class="main-toc" aria-label="Page contents">
+  <div class="main-toc-h">Contents</div>
+  <a href="#disproportion" data-target="disproportion" class="toc-cur"><span class="num">1</span> Disproportion</a>
+  <a href="#one-mandate" data-target="one-mandate"><span class="num">2</span> Districts</a>
+  <a href="#barrier" data-target="barrier"><span class="num">3</span> Threshold 5%</a>
+  <a href="#gerrymandering" data-target="gerrymandering"><span class="num">4</span> Geography</a>
+  <a href="#deg" data-target="deg"><span class="num">5</span> DEG</a>
+  <a href="#tricks" data-target="tricks"><span class="num">6</span> Tricks</a>
+  <a href="#nadezhdin" data-target="nadezhdin"><span class="num">7</span> Nadezhdin</a>
+  <a href="#shpilkin" data-target="shpilkin"><span class="num">8</span> Shpilkin</a>
+  <a href="#admin" data-target="admin"><span class="num">9</span> Admin</a>
+  <a href="#voices" data-target="voices"><span class="num">10</span> Voices</a>
+  <a href="#calculator-section" data-target="calculator"><span class="num">11</span> Calculator</a>
+  <a href="#majority-section" data-target="majority"><span class="num">12</span> Majority</a>
+  <a href="#history" data-target="history"><span class="num">13</span> History</a>
+  <a href="#theatre" data-target="theatre"><span class="num">14</span> Circus</a>
+  <div class="main-toc-progress">
+    <div class="main-toc-progress-bar"><div class="main-toc-progress-fill" id="mainTOCProgress"></div></div>
+  </div>
+</aside>
+
+<!-- HERO -->
+<section class="elections-hero">
+  <div class="wrap">
+    <div class="hero-meta" style="margin-bottom: 28px;">
+      <div class="hero-meta-item"><span>Site section</span></div>
+      <div class="hero-meta-item"><span class="mono">State Duma 2021 · Presidential election 2024</span></div>
+      <div class="hero-meta-item"><span>Calculations from primary sources</span></div>
+    </div>
+
+    <h1 class="display">The machine<br><em>of guaranteed</em><br><span class="accent">victory.</span></h1>
+
+    <div class="elections-kicker">
+      <div class="elections-kicker-num">49.82%</div>
+      <div class="elections-kicker-arrow">→</div>
+      <div class="elections-kicker-num alert">72%</div>
+      <div class="elections-kicker-text">of votes become seats in the Duma. We break it down layer by layer.</div>
+    </div>
+
+    <p class="elections-hero-deck">
+      On the previous page, you can see how five factions vote in almost identical fashion. That raises a question — couldn't voters simply 'elect someone else'?
+      The short answer is: <strong>no — the arithmetic of elections works in one direction only</strong>.
+      United Russia received <a href="http://www.cikrf.ru/analog/ediny-den-golosovaniya-2021/itogi/" class="src-link" target="_blank" rel="noopener"><strong>49.82% of the party-list vote — but 72% of seats in the Duma</strong> (324 of 450)</a>. Additionally, of the five winning independent candidates, <strong>two</strong> joined the United Russia faction.
+      For the party to lose even a simple majority, it would need to fall below roughly 30% on the party list <strong>and</strong> lose at least 75 of the 225 single-member constituencies simultaneously — a scenario without precedent in post-Soviet Russian history.
+      This is not popularity. It is a structural property of the system. Let us break it down layer by layer.
+    </p>
+
+    <div class="big-numbers">
+      <div class="big-number">
+        <div class="big-number-num"><span class="counter" data-target="49.82" data-decimals="2" data-suffix="%">49.82%</span></div>
+        <div class="big-number-label">party-list vote share for United Russia, 2021</div>
+      </div>
+      <div class="big-number">
+        <div class="big-number-num alert"><span class="counter" data-target="72" data-suffix="%">72%</span></div>
+        <div class="big-number-label">of Duma seats for United Russia after distribution</div>
+      </div>
+      <div class="big-number">
+        <div class="big-number-num"><span class="counter" data-target="198" data-suffix="/225">198/225</span></div>
+        <div class="big-number-label">single-member constituencies won by United Russia</div>
+      </div>
+      <div class="big-number">
+        <div class="big-number-num alert"><span class="counter" data-target="14" data-suffix=" mn">14 mn</span></div>
+        <div class="big-number-label">'fabricated' votes — Shpilkin's estimate</div>
+      </div>
+    </div>
+
+    <div class="toc-cards">
+      <a class="toc-card" href="#disproportion">
+        <div class="toc-card-num">01</div>
+        <div class="toc-card-title">Votes → seats: where the distortion lies</div>
+      </a>
+      <a class="toc-card" href="#one-mandate">
+        <div class="toc-card-num">02</div>
+        <div class="toc-card-title">'Winner takes all'</div>
+      </a>
+      <a class="toc-card" href="#barrier">
+        <div class="toc-card-num">03</div>
+        <div class="toc-card-title">The 5% threshold and the Hare method</div>
+      </a>
+      <a class="toc-card" href="#gerrymandering">
+        <div class="toc-card-num">04</div>
+        <div class="toc-card-title">Petal-shaped redistricting</div>
+      </a>
+      <a class="toc-card" href="#deg">
+        <div class="toc-card-num">05</div>
+        <div class="toc-card-title">DEG: overnight reversal</div>
+      </a>
+      <a class="toc-card" href="#tricks">
+        <div class="toc-card-num">06</div>
+        <div class="toc-card-title">'Doppelgangers', locomotive candidates, and the filter</div>
+      </a>
+      <a class="toc-card" href="#nadezhdin">
+        <div class="toc-card-num">06b</div>
+        <div class="toc-card-title">The Nadezhdin case, 2024</div>
+      </a>
+      <a class="toc-card" href="#shpilkin">
+        <div class="toc-card-num">07</div>
+        <div class="toc-card-title">The Shpilkin method</div>
+      </a>
+      <a class="toc-card" href="#admin">
+        <div class="toc-card-num">08</div>
+        <div class="toc-card-title">Administrative resources and public-sector employees</div>
+      </a>
+      <a class="toc-card" href="#voices">
+        <div class="toc-card-num">09</div>
+        <div class="toc-card-title">The authorities' own voices</div>
+      </a>
+      <a class="toc-card" href="#calculator-section">
+        <div class="toc-card-num">10</div>
+        <div class="toc-card-title">Scenario calculator</div>
+      </a>
+      <a class="toc-card" href="#majority-section">
+        <div class="toc-card-num">11</div>
+        <div class="toc-card-title">Majority ladder</div>
+      </a>
+      <a class="toc-card" href="#history">
+        <div class="toc-card-num">12</div>
+        <div class="toc-card-title">History of electoral changes 2005–2025</div>
+      </a>
+    </div>
+
+    <div class="src-list" aria-label="Key sources for this page">
+      <div class="src-list-title">Key sources</div>
+      <a href="http://www.cikrf.ru" target="_blank" rel="noopener">CEC (Russia's Central Election Commission)</a>
+      <a href="http://publication.pravo.gov.ru" target="_blank" rel="noopener">publication.pravo.gov.ru</a>
+      <a href="http://www.kremlin.ru/acts" target="_blank" rel="noopener">kremlin.ru / acts</a>
+      <a href="https://golosinfo.org" target="_blank" rel="noopener">Golos</a>
+      <a href="https://electoralpolitics.org" target="_blank" rel="noopener">Electoral Politics</a>
+    </div>
+  </div>
+</section>
+
+<!-- 01 DISPROPORTION -->
+<section id="disproportion" data-toc-id="disproportion">
+  <div class="wrap">
+    <span class="section-label">01 · Distortion at the start</span>
+    <h2 class="section-h2">Votes do not equal seats.</h2>
+    <p class="section-lead">
+      In a genuinely proportional system, the share of votes and the share of seats should match. Russia's 2021 picture looks like this:
+    </p>
+
+    <div id="distortionChart" style="margin-top: 36px;"></div>
+
+    <div class="callout-result reveal" id="share-22pp" style="margin-top: 32px;">
+      <div class="callout-num alert">+22<small>pp</small></div>
+      <div class="callout-text">
+        gap between United Russia's vote share and its seat share. This 22-percentage-point 'bonus' is created by the mixed system — half of all seats are decided on a winner-takes-all basis.
+        Without single-member constituencies, the 'party of power' would hold a simple majority (~56%), not a constitutional one (72%).
+      </div>
+    </div>
+
+    <div class="split-2" style="margin-top: 36px;">
+      <div class="split-card">
+        <div class="split-card-label">United Russia's current Duma share</div>
+        <div id="gaugeEr" class="reveal" style="margin: 12px auto 16px;"></div>
+        <div class="split-card-text" style="text-align: center;">324 of 450 seats — a constitutional majority sufficient to amend the Constitution without a single vote from the opposition.</div>
+      </div>
+      <div class="split-card dark spoiler" data-spoiler>
+        <button class="spoiler-cover" type="button" aria-expanded="false" aria-controls="real-support-spoiler" aria-label="Show estimate of real support">
+          <div class="spoiler-cover-label">Contested estimate · click to expand</div>
+          <div class="spoiler-cover-hint">shows the result after accounting for estimates of electoral fraud</div>
+        </button>
+        <div class="spoiler-content" id="real-support-spoiler" aria-hidden="true">
+          <div class="split-card-label">If estimated fraud is removed</div>
+          <div id="gaugeRealEr" class="reveal" style="margin: 12px auto 16px;"></div>
+          <div class="split-card-text" style="text-align: center;">Estimated real support for United Russia according to independent analysts (Shpilkin, Golos). ~32% of votes become 72% of seats — a twofold distortion.</div>
+        </div>
+      </div>
+    </div>
+    <p style="font-size: 12px; color: var(--ink-muted); margin-top: 12px; line-height: 1.5;">
+      The figure on the right is an <strong>estimate by independent analysts</strong>, not official CEC data. The method and its justification are in the section <a href="#shpilkin" style="color: var(--accent); font-weight:600;">'The Shpilkin method'</a>.
+    </p>
+
+    <div class="src-list" aria-label="Sources for the 'Distortion' section">
+      <div class="src-list-title">Section sources</div>
+      <a href="http://www.cikrf.ru/analog/ediny-den-golosovaniya-2021/itogi/" target="_blank" rel="noopener">CEC — 2021 results</a>
+      <a href="http://publication.pravo.gov.ru/document/0001201402230002" target="_blank" rel="noopener">Federal Law No. 20-FZ of 22.02.2014</a>
+      <a href="https://duma.gov.ru/duma/factions/" target="_blank" rel="noopener">State Duma: faction composition</a>
+    </div>
+  </div>
+</section>
+
+<!-- 02 ONE-MANDATE DISTRICTS -->
+<section id="one-mandate" data-toc-id="one-mandate">
+  <div class="wrap">
+    <span class="section-label">02 · The main mechanism</span>
+    <h2 class="section-h2">225 districts, 198 — United Russia.</h2>
+    <p class="section-lead">
+      In 2014 the electoral system reverted to a mixed format (<strong>Federal Law No. 20-FZ of 22.02.2014, Art. 3</strong>) — 225 seats via party lists and <strong>225 seats via single-member constituencies</strong>: 1 constituency → 1 deputy, won by whoever receives the most votes. Not a majority. Not half. Simply the most.
+    </p>
+    <p class="section-lead">
+      In 2016 United Russia won <strong>203 constituencies out of 225 (90.2%)</strong>; in 2021 — <strong>198 out of 225 (88.0%)</strong>. CPRF — 9, SRZP — 8, LDPR — 2, others — 1 each. Single-member seats account for over 60% of United Russia's total mandate count: <strong>without the majoritarian component, the 'party of power' would have neither a constitutional nor even a simple majority</strong>.
+    </p>
+
+    <div class="two-col districts-section-grid">
+      <div>
+        <div id="districtsGrid"></div>
+        <p style="font-size: 12px; color: var(--ink-muted); margin-top: 14px; line-height: 1.5;">
+          Each square = 1 single-member constituency. Colour = winning party. The map is schematic, but the colour ratio is accurate (CEC, 2021).
+        </p>
+      </div>
+      <div>
+        <div class="big-number-num" style="font-size: 80px; line-height: 1; margin-bottom: 14px; color: var(--party-er);">88<small>%</small></div>
+        <p style="font-size: 16px; line-height: 1.6; color: var(--ink-soft); max-width: 360px;">
+          of single-member mandates in 2021 went to <strong>United Russia</strong> — on 49.82% of the party-list vote. An amplification effect of nearly twofold.
+        </p>
+        <ul style="margin-top: 20px; padding-left: 18px; font-size: 14px; line-height: 1.7; color: var(--ink-soft);">
+          <li>United Russia — <strong>198</strong> constituencies</li>
+          <li>CPRF — 9</li>
+          <li>A Just Russia – For Truth (SRZP) — 8</li>
+          <li>LDPR — 2</li>
+          <li>New People — 0</li>
+          <li>others and independents — 8</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 style="font-size: 28px; margin-top: 80px; margin-bottom: 16px;">A worked example — let's calculate</h3>
+    <p style="font-size: 16px; color: var(--ink-soft); max-width: 720px;">
+      An illustrative constituency. The parameters are realistic averages for large Russian cities in 2021.
+    </p>
+
+    <div class="derivation reveal">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-text">
+          The constituency has <strong>500,000</strong> registered voters. Turnout — 40% (typical for large cities).<br>
+          <span class="formula"><em>N</em> = 500,000 × 0.40 = <b>200,000</b> voters</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-text">
+          Votes are spread among five parties. United Russia — 35%, CPRF — 22%, New People — 16%, LDPR — 14%, SRZP — 13%.<br>
+          <span class="formula"><em>V<sub>UR</sub></em> = 200,000 × 0.35 = <b>70,000</b> votes</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-text">
+          70,000 votes is <strong>the highest total</strong> in the constituency. That is enough to take the entire mandate, even though 65% of voters chose someone else.<br>
+          <span class="formula"><em>m</em> = arg max <em>V<sub>i</sub></em> → <b>United Russia wins</b></span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-text">
+          The deputy 'represents' <strong>14% of all registered voters in the constituency</strong> (70,000 / 500,000). The other 86% either voted against, or did not turn out at all.<br>
+          <span class="formula">legitimacy = 70,000 / 500,000 = <b>14%</b></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout-result reveal" id="share-bonus-11">
+      <div class="callout-num alert">14<small>%</small></div>
+      <div class="callout-text">
+        of real support is enough for a deputy to 'represent' the entire constituency. Actual 2021 winners obtained their mandates with the backing of roughly <strong>15–25% of all registered voters</strong> in the constituency (among those who turned out, the figure was typically a third or more).
+      </div>
+    </div>
+
+    <div class="method-note">
+      <strong>Sources:</strong> Federal Law No. 20-FZ
+      (<a href="http://www.kremlin.ru/acts/bank/38146" target="_blank" rel="noopener">kremlin.ru</a>);
+      official CEC results 2021
+      (<a href="http://www.cikrf.ru/analog/ediny-den-golosovaniya-2021/p_itogi/" target="_blank" rel="noopener">cikrf.ru</a>);
+      statistical analysis by Arkady Lyubarev (Аркадий Любарев)
+      (<a href="https://electoralpolitics.org/ru/articles/statisticheskie-kharakteristiki-vyborov-v-gosudarstvennuiu-dumu-2021-goda/" target="_blank" rel="noopener">electoralpolitics.org</a>).
+    </div>
+  </div>
+</section>
+
+<!-- 03 BARRIER -->
+<section id="barrier" data-toc-id="barrier">
+  <div class="wrap">
+    <span class="section-label">03 · The 5% threshold</span>
+    <h2 class="section-h2">~9% of votes in the bin — and United Russia gets +11 seats as a gift.</h2>
+    <p class="section-lead">
+      Under the party-list system, only parties that clear 5% enter the Duma. Votes cast for all 'non-systemic' parties <strong>are not counted at all</strong>: they are redistributed among the qualifying parties using the Hare-Niemeyer method (<strong>Art. 89 of Federal Law No. 20-FZ</strong>). In practice, the largest party receives the lion's share of this 'bonus'.
+    </p>
+
+    <div class="two-col-narrow barrier-section-grid">
+      <div>
+        <div id="barrierWaffle"></div>
+        <p style="font-size: 12px; color: var(--ink-muted); margin-top: 14px; line-height: 1.5; max-width: 320px;">
+          100 squares = 100% of all who voted. Grey squares = votes that never 'reached' the Duma.
+        </p>
+      </div>
+      <div>
+        <div id="barrierWaffleLegend"></div>
+
+        <div class="callout-result" id="share-14pct" style="margin-top: 28px;">
+          <div class="callout-num">+11</div>
+          <div class="callout-text">
+            seats were received by United Russia as a 'gift' from the 5% threshold in 2021. If all 225 seats had been distributed among all parties in the federal constituency (including the ~8.85% cast for sub-threshold parties), United Russia with 49.82% would have received 115 seats instead of 126. CPRF +4, LDPR +2, SRZP +2, New People +1. Of the 20 'bonus' seats, <strong>11 went to United Russia</strong>.
+            <details class="footnote-dark">
+              <summary>Methodological note</summary>
+              The calculation uses the aggregated group 'parties &lt; 5%'; with individual breakdowns for all 14 parties the United Russia bonus is around +12 seats and the total bonus is around 21. The ±1 discrepancy is a consequence of remainder rounding under the Hare-Niemeyer method.
+            </details>
+          </div>
+        </div>
+
+        <p style="margin-top: 24px; font-size: 15px; color: var(--ink-soft); line-height: 1.65;">
+          In 2016 the effect was starker: ~10% of votes went to sub-threshold parties (Yabloko 1.99%, Communists of Russia 2.27%, Party of Pensioners 1.73%), and United Russia with 54.20% received <strong>140 seats instead of the ~122 it would have had under pure proportional representation</strong>.
+        </p>
+      </div>
+    </div>
+
+    <div class="method-note">
+      <strong>Hare-Niemeyer method</strong> (Hare quota + largest remainder): the total votes of qualifying parties is divided by 225 to produce an 'electoral quotient'. The Imperial method and the d'Hondt method are not used in Russia. Method text: <a href="https://www.consultant.ru/document/cons_doc_LAW_159349/e6cd1497922b90f3027e9f4927b4958dc7e9a42f/" target="_blank" rel="noopener">consultant.ru</a>.
+    </div>
+  </div>
+</section>
+
+<!-- 04 GERRYMANDERING -->
+<section id="gerrymandering" data-toc-id="gerrymandering">
+  <div class="wrap">
+    <span class="section-label">04 · Petal-shaped redistricting</span>
+    <h2 class="section-h2">Geography versus demography.</h2>
+    <p style="font-size: 17px; line-height: 1.7; color: var(--ink-soft);">
+      Constituencies in Moscow, St Petersburg, and other large cities were drawn so that protest-oriented central districts are joined to loyal peripheries or rural areas. The votes of an opposition-minded city are 'diluted'. The map of 225 constituencies was approved by <strong>CEC Resolution No. 304/1740-6 of 02.09.2015</strong> and codified in <strong>Federal Law No. 300-FZ of 03.11.2015</strong>.
+    </p>
+
+    <p style="font-size: 17px; line-height: 1.7; color: var(--ink-soft); margin-top: 20px;">
+      Lenta.ru, 20.10.2015: 'The principal novelty of the new redistricting was <strong>the combining, within a single single-member constituency, of parts of a regional capital with adjacent rural districts</strong>. Experts dubbed this principle "petal-shaped" redistricting.'
+    </p>
+
+    <div class="callout-result reveal" id="share-gerry-14-9" style="margin-top: 32px;">
+      <div class="callout-num">14 → 9</div>
+      <div class="callout-text">
+        14 Moscow districts that voted in opposition in 2013 were split across 9 of the 15 constituencies — almost every one 'drowned' in a more loyalist mass. Analysis by Golos / Lyubarev / Buzin.
+      </div>
+    </div>
+
+    <div style="margin-top: 28px; padding: 24px; background: var(--bg-paper); border: 1px solid var(--line); border-radius: 12px;">
+      <h4 style="font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-muted); margin-bottom: 14px;">Specific 'petals', 2016–2021</h4>
+      <ul style="font-size: 15px; line-height: 1.7; color: var(--ink-soft); padding-left: 18px;">
+        <li><strong>No. 208 'Tsentralny'</strong> — the entire Central Administrative District (Tverskoy, Khamovniki, Arbat…) is joined to industrial districts of the South-East Administrative District (Lefortovo, Pechatniki, Yuzhnoportuny).</li>
+        <li><strong>No. 207 'Khovrinsky'</strong> — districts of the Northern Administrative District + <strong>Zelenograd</strong> (a physical exclave separated from Moscow by 25 km of Moscow Oblast).</li>
+        <li><strong>No. 196 'Babushkinsky'</strong> — non-contiguous districts from two different administrative districts (East and North-East).</li>
+        <li>Constituencies Nos. 200, 204, 209, 210 — 'spokes' running from the centre to the outskirts across several districts.</li>
+      </ul>
+    </div>
+
+    <div class="method-note">
+      <strong>Sources:</strong>
+      <a href="http://cikrf.ru/activity/docs/postanovleniya/27656/" target="_blank" rel="noopener">CEC Resolution 304/1740-6</a>;
+      Golos — <a href="https://golosinfo.org/articles/54731" target="_blank" rel="noopener">'How the constituencies were drawn'</a>;
+      RBC — <a href="https://www.rbc.ru/politics/29/04/2014/57041bfa9a794761c0ce96e1" target="_blank" rel="noopener">'New redistricting reduces opposition chances'</a>;
+      <a href="https://lenta.ru/news/2015/10/20/narezka" target="_blank" rel="noopener">Lenta.ru on 'petal-shaped' redistricting</a>.
+    </div>
+  </div>
+</section>
+
+<!-- 05 DEG -->
+<section id="deg" data-toc-id="deg">
+  <div class="wrap">
+    <span class="section-label">05 · Electronic voting</span>
+    <h2 class="section-h2">DEG (remote electronic voting) — the final touch.</h2>
+    <p class="section-lead">
+      If the arithmetic, redistricting, and threshold are still not enough — remote electronic voting (DEG) is added. In Moscow in 2021, its results were published in a separate protocol, after 99% of paper ballots had already been counted. The Moscow platform had a <strong>'deferred decision' function</strong>: within 24 hours a voter could change their vote, and only the last vote was recorded. Approximately <strong>294,000 people</strong> used this function.
+    </p>
+    <p class="section-lead">
+      In <strong>8 of the 15</strong> Moscow single-member constituencies, opposition candidates / candidates backed by Smart Voting were leading on paper ballots — but lost once the DEG results were published. Six of them were CPRF candidates (<strong>Rashkin, Lobanov, Parfyonov, Udaltsova, Obukhov, Grebennik</strong>), plus <strong>Bryukhanova</strong> (independent) and <strong>Mitrokhin</strong> (Yabloko). <strong>Moscow 2021 divergence:</strong> offline — United Russia 30.2% / CPRF 30.2% (neck and neck). Including DEG: <strong>United Russia 36.96% / CPRF 22.66%</strong>. In the DEG-only segment: <strong>United Russia 44.77% / CPRF 15.53%</strong>.
+    </p>
+
+    <p style="margin-top: 24px; font-size: 13px; color: var(--ink-muted); line-height: 1.55;">
+      <strong style="color: var(--ink);">How to read these numbers:</strong> paper and DEG vote totals are absolute figures from Meduza. Final percentages are shares of all valid ballots in the constituency (per official CEC results), including votes for other candidates and spoilt ballots.
+    </p>
+
+    <div class="matrix-container" style="margin-top: 16px;">
+      <table class="deg-table" style="width: 100%; border-collapse: separate; border-spacing: 0 8px; font-size: 14px;">
+        <thead>
+          <tr style="text-align: left; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-muted); font-weight: 600;">
+            <th style="padding: 8px 12px; min-width: 130px;">Constituency</th>
+            <th style="padding: 8px 12px;">Opposition (paper)</th>
+            <th style="padding: 8px 12px;">DEG layer</th>
+            <th style="padding: 8px 12px;">Winner (final)</th>
+            <th style="padding: 8px 12px; min-width: 200px;">What happened</th>
+          </tr>
+        </thead>
+        <tbody id="degBody" style="font-size: 13px;"></tbody>
+      </table>
+    </div>
+
+    <div class="method-note">
+      <strong>Legal basis:</strong> Federal Law No. 154-FZ of 23.05.2020 (DEG mechanisms and postal voting), Federal Law No. 152-FZ of 23.05.2020 (DEG pilot in Moscow), <strong>Federal Law No. 267-FZ of 31.07.2020</strong> (voting over up to three consecutive days), Federal Law No. 60-FZ of 14.03.2022.
+      <br><strong>Sources:</strong>
+      <a href="https://zona.media/chronicle/electrovote" target="_blank" rel="noopener">Zona.media — charts of the 'overnight reversal'</a>;
+      <a href="https://www.rbc.ru/rbcfreenews/614793d19a794741288c0037" target="_blank" rel="noopener">RBC — the Kuntsevsky No. 197 case</a>;
+      <a href="https://www.kommersant.ru/doc/4996309" target="_blank" rel="noopener">Kommersant — 'Electronic results diverged from paper'</a>;
+      <a href="https://novayagazeta.ru/articles/2021/09/20/oppozitsionnye-kandidaty-v-moskve-v-poslednii-moment-ustupili-spisku-sobianina-posle-dobavleniia-novykh-protokolov-news" target="_blank" rel="noopener">Novaya Gazeta</a>.
+    </div>
+
+    <div class="modal-quote" style="margin-top: 32px;">
+      <div class="modal-quote-text">'Those who categorically oppose the use of DEG technology in elections are people with a cave-dweller mentality.'</div>
+      <div class="modal-quote-author">— Ella Pamfilova, CEC Chair (<a href="https://tass.ru/politika/11941697" target="_blank" rel="noopener" style="color:inherit;">TASS, 20.07.2021</a>)</div>
+    </div>
+
+    <div class="src-list" aria-label="Sources for the DEG section">
+      <div class="src-list-title">Section sources</div>
+      <a href="https://zona.media/chronicle/electrovote" target="_blank" rel="noopener">Zona.media — charts of the 'overnight reversal'</a>
+      <a href="https://www.rbc.ru/rbcfreenews/614793d19a794741288c0037" target="_blank" rel="noopener">RBC — Kuntsevsky constituency No. 197</a>
+      <a href="https://www.kommersant.ru/doc/4996309" target="_blank" rel="noopener">Kommersant, 21.09.2021</a>
+      <a href="https://novayagazeta.ru/articles/2021/09/20/oppozitsionnye-kandidaty-v-moskve-v-poslednii-moment-ustupili-spisku-sobianina-posle-dobavleniia-novykh-protokolov-news" target="_blank" rel="noopener">Novaya Gazeta, 20.09.2021</a>
+      <a href="https://tass.ru/politika/11941697" target="_blank" rel="noopener">TASS / Pamfilova, 20.07.2021</a>
+    </div>
+  </div>
+</section>
+
+<!-- 06 TRICKS — doppelgangers, locomotive candidates, filter -->
+<section id="tricks" data-toc-id="tricks">
+  <div class="wrap">
+    <span class="section-label">06 · Fine-grained tools</span>
+    <h2 class="section-h2">'Doppelganger' candidates, 'locomotive' candidates, and the filter.</h2>
+    <p class="section-lead">
+      Beyond the 'heavy artillery' (constituencies + DEG + threshold), there are targeted tools for deciding specific close-run constituencies.
+    </p>
+
+    <h3 style="font-size: 24px; margin-top: 50px; margin-bottom: 8px;">Three 'Boris Vishnevskys'</h3>
+    <p style="color: var(--ink-soft); margin-bottom: 18px;">
+      St Petersburg, 2021 — two namesakes who had changed their names beforehand were fielded against the original opposition candidate Viktor Vishnevsky. These are 'doppelganger' candidates (candidates with deliberately confusable names). Ella Pamfilova called it 'the lowest, most extreme point of decline for political technologists'. Not one of them was removed.
+    </p>
+    <div class="mini-card" id="doublesCard"></div>
+
+    <h3 style="font-size: 24px; margin-top: 50px; margin-bottom: 8px;">Arranged races</h3>
+    <p style="color: var(--ink-soft); margin-bottom: 18px;">
+      In 2021 United Russia deliberately did not field candidates in several constituencies, ceding them to 'allies'. Of the five winning independents, two immediately joined the United Russia faction.
+    </p>
+    <div class="mini-cards" id="dealsList"></div>
+
+    <h3 style="font-size: 24px; margin-top: 50px; margin-bottom: 8px;">'Locomotive' candidates — the top 5 of United Russia's 2021 list</h3>
+    <p style="color: var(--ink-soft); margin-bottom: 18px;">
+      'Locomotive' candidates (public figures who appear on party lists to attract votes, then decline the seat) headed United Russia's list at the party congress. By CEC Resolution of 29.09.2021, four of the five declined their mandates — 'technical' deputies lower down the list took their places instead. <strong>United Russia had 66 vacant mandates in total.</strong>
+    </p>
+    <div class="mini-cards" id="locomotivesList"></div>
+
+    <h3 style="font-size: 24px; margin-top: 50px; margin-bottom: 8px;">The candidate filter: Federal Law No. 157-FZ (the anti-FBK law)</h3>
+    <p style="color: var(--ink-soft); line-height: 1.65;">
+      Adopted <strong>5 days before</strong> the Moscow City Court designated the Anti-Corruption Foundation (FBK) an 'extremist' organisation. It prohibited the following from standing for election:
+    </p>
+    <ul style="font-size: 15px; line-height: 1.7; color: var(--ink-soft); padding-left: 18px; margin-top: 12px;">
+      <li><strong>Founders and leaders</strong> of 'extremist' organisations — for 5 years;</li>
+      <li><strong>Ordinary members and associated persons</strong> — for 3 years;</li>
+      <li>With <strong>retroactive effect</strong>: the restriction applies to conduct for 3 years (for leaders) or 1 year (for ordinary members) before the court ruling.</li>
+    </ul>
+    <p style="color: var(--ink-soft); margin-top: 14px;">
+      United Russia deputy A. Alshevskikh cited the figure: 'Almost <strong>11,000 people are implicated in extremist activities and terrorism</strong>.' In 2021, 174 independents filed to stand in constituencies — 11 were registered.
+    </p>
+
+    <div class="method-note">
+      <strong>Sources:</strong>
+      <a href="http://www.kremlin.ru/acts/bank/46795" target="_blank" rel="noopener">Federal Law No. 157-FZ (kremlin.ru)</a>;
+      <a href="https://www.fontanka.ru/2021/07/17/70030205/" target="_blank" rel="noopener">Fontanka — Vishnevsky doppelgangers</a>;
+      <a href="https://rg.ru/2021/09/29/cik-lavrov-i-shojgu-ne-priniali-dumskie-mandaty.html" target="_blank" rel="noopener">Rossiyskaya Gazeta — 'Lavrov and Shoigu declined Duma mandates'</a>;
+      <a href="https://www.kommersant.ru/doc/4977944" target="_blank" rel="noopener">Kommersant — independents 2021</a>.
+    </div>
+  </div>
+</section>
+
+<!-- 06b NADEZHDIN — case 2024, selective signature scrutiny -->
+<section id="nadezhdin" data-toc-id="nadezhdin">
+  <div class="wrap">
+    <span class="section-label">06b · Case study 2024</span>
+    <h2 class="section-h2">15.3% versus 0.15%. Selective rigour.</h2>
+    <p class="section-lead">
+      The signature-rejection threshold is formally identical for all candidates. In practice, one candidate's signatures are found to contain 0.15% defects, another's 15.3%. The case of <strong>Boris Nadezhdin</strong> in 2024 shows how a universal norm from <strong>Art. 38 of Federal Law No. 19-FZ 'On the Election of the President of the Russian Federation'</strong> can be applied selectively — and why.
+    </p>
+
+    <div class="case-compare">
+      <div class="case-card case-card--for">
+        <div class="case-card-name">Vladimir Putin</div>
+        <div class="case-card-num">0.15%</div>
+        <div class="case-card-detail">
+          defective signatures<br>
+          315,000 signatures · self-nominated<br>
+          <strong>Registered</strong>
+        </div>
+      </div>
+      <div class="case-card case-card--against">
+        <div class="case-card-name">Boris Nadezhdin</div>
+        <div class="case-card-num">15.3%</div>
+        <div class="case-card-detail">
+          defects in the sample of 60,000<br>
+          105,000 signatures · 'Civic Initiative' party<br>
+          <strong>Registration refused</strong>
+        </div>
+      </div>
+    </div>
+
+    <p style="font-size: 13px; color: var(--ink-muted); margin-bottom: 32px; line-height: 1.55;">
+      The difference is a factor of <strong>102</strong>. The legal norm is identical: the permissible defect rate for registering a presidential candidate — <strong>no more than 5%</strong> (Art. 38 of Federal Law No. 19-FZ).
+    </p>
+
+    <h3 style="font-size: 24px; margin-top: 50px; margin-bottom: 8px;">What happened</h3>
+    <p style="color: var(--ink-soft); margin-bottom: 14px;">
+      Boris Nadezhdin — a former State Duma deputy, nominated in December 2023 by the non-parliamentary 'Civic Initiative' party as a candidate who publicly advocated ending the military operation in Ukraine and resuming negotiations. To register he was required to collect <strong>no fewer than 100,000 and no more than 105,000 signatures</strong> from voters (no more than 2,500 from any one constituent territory of the Russian Federation).
+    </p>
+    <p style="color: var(--ink-soft); margin-bottom: 14px;">
+      The campaign ran without any visible administrative support — funded by crowdfunding. By mid-January 2024, <strong>hours-long queues</strong> had formed at signature-collection points in dozens of Russian cities and abroad. On 23 January the campaign announced 101,607 collected signatures; by 25 January — 150,000 (draft total). On 31 January Nadezhdin submitted exactly <strong>105,000 signatures</strong> to the CEC — the statutory maximum.
+    </p>
+    <p style="color: var(--ink-soft);">
+      The CEC verified 60,000 signatures by random sampling. On 8 February 2024 it ruled: <strong>9,147 signatures were declared invalid</strong> — that is <strong>15.348%</strong> of the sample. With the permissible threshold at 5%, registration was refused. On 21 February the Supreme Court upheld the refusal; on 4 March the ruling entered into force.
+    </p>
+
+    <h3 style="font-size: 24px; margin-top: 50px; margin-bottom: 14px;">Four applications — four outcomes</h3>
+    <div class="case-table-wrap">
+      <table class="case-table">
+        <thead>
+          <tr>
+            <th>Candidate</th>
+            <th>Party / nomination</th>
+            <th>Signatures submitted</th>
+            <th>CEC defect rate</th>
+            <th>Decision</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>V. Putin</strong></td>
+            <td>Self-nominated</td>
+            <td>315,000</td>
+            <td class="num-good">0.15%</td>
+            <td>Registered 29.01</td>
+          </tr>
+          <tr>
+            <td><strong>Ye. Duntsova</strong></td>
+            <td>Self-nominated</td>
+            <td>—</td>
+            <td>—</td>
+            <td>Refused 23.12.2023 — at the document stage, before signature collection</td>
+          </tr>
+          <tr>
+            <td><strong>S. Malinkovich</strong></td>
+            <td>'Communists of Russia'</td>
+            <td>~105,000</td>
+            <td>&gt; 5%</td>
+            <td>Refused 08.02 — on the same day as Nadezhdin</td>
+          </tr>
+          <tr class="is-flagged">
+            <td><strong>B. Nadezhdin</strong></td>
+            <td>'Civic Initiative'</td>
+            <td>105,000 (104,734)</td>
+            <td class="num-bad">15.348%</td>
+            <td>Refused 08.02 — had advocated ending the military operation in Ukraine</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size: 13px; color: var(--ink-muted); margin-top: 8px; line-height: 1.55;">
+      Four candidates remained on the ballot, none of whom had called for an end to the military operation: Putin (self-nominated), Kharitonov (CPRF), Slutsky (LDPR), Davankov (New People).
+    </p>
+
+    <h3 style="font-size: 24px; margin-top: 50px; margin-bottom: 14px;">How experts read this case</h3>
+
+    <div class="case-quote">
+      <p>'Nadezhdin will be registered only if the Kremlin decides that his presence on the ballot serves the interests of Putin's campaign.'</p>
+      <div class="case-quote-cite">— Abbas Gallyamov (Аббас Галлямов), political analyst (Moscow Times, 22.01.2024 — 17 days before the refusal)</div>
+    </div>
+
+    <p style="color: var(--ink-soft); margin-bottom: 14px;">
+      Nadezhdin's admission to the signature-collection stage did not look accidental: he had for many years been a <strong>systemic player</strong> — he had taken part in United Russia's primaries, been elected from A Just Russia – For Truth, and was a frequent guest on federal state television talk shows. Against the backdrop of Yekaterina Duntsova, who had been refused by the CEC at the document stage (December 2023), Nadezhdin appeared 'safe' — and was let through.
+    </p>
+
+    <p style="color: var(--ink-soft); margin-bottom: 14px;">
+      The outlet Verstka, citing three sources close to the Presidential Administration, had written as early as the end of January that Nadezhdin was <strong>originally a pre-approved candidate</strong> — meaning his nomination had been authorised by the Kremlin as a 'safe gauge of public sentiment'. But when he simultaneously criticised the military operation in Ukraine and personally challenged Putin, and queues formed at signature-collection points, the calculation changed. According to the same sources, the CEC 'had planned, even before verification, to withdraw the candidacy on the basis of low signature quality' (via <a href="https://www.currenttime.tv/a/boris-nadezhdin-nabral-100-tysyach-podpisey/32788649.html" target="_blank" rel="noopener">Current Time</a>).
+    </p>
+
+    <p style="color: var(--ink-soft);">
+      On 23 January 2024, Kremlin spokesperson <strong>Dmitry Peskov</strong> officially stated: 'The Kremlin did not approve Nadezhdin's nomination and does not regard him as a rival.' The statement came after hours-long queues had already formed outside campaign offices — an ambiguous signal: both as a sincere denial and as a defensive remark made once the situation ceased to fit the original script.
+    </p>
+
+    <div class="case-quote">
+      <p>'The signature drive for Nadezhdin showed that people exist and can self-organise. Few genuinely believed in Nadezhdin's registration.'</p>
+      <div class="case-quote-cite">— Alexander Kynev (Александр Кынев), political analyst (via Agentstvo, 08.02.2024)</div>
+    </div>
+
+    <div class="case-quote">
+      <p>'I don't remember Boris Borisovich like this from the third convocation of the State Duma. He was a fairly cuddly party functionary back then, and now he's some kind of berserker.'</p>
+      <div class="case-quote-cite">— Yekaterina Schulmann (Екатерина Шульман), political scientist (<a href="https://echofm.online/programs/intervyu/razgovor-ekateriny-shulman-s-borisom-nadezhdinym" target="_blank" rel="noopener" style="color: inherit;">Echo, 22.01.2024</a> — after a livestream with Nadezhdin)</div>
+    </div>
+
+    <div class="case-quote">
+      <p>'The removal of an opponent who, though the principal challenger, is still relatively weak at this stage — on such a trivial technicality — signals that the system does not feel confident at all.'</p>
+      <div class="case-quote-cite">— Maxim Katz (Максим Кац), politician (08.02.2024)</div>
+    </div>
+
+    <div class="method-note" style="margin-top: 40px;">
+      <strong>A pre-approved candidate, not a 'spoiler'.</strong>
+      According to sources within the Presidential Administration (via Verstka), Nadezhdin started out as a <em>pre-approved</em> candidate — one permitted by the authorities as a controlled channel for protest sentiment. Such a figure is sometimes called a 'Kremlin spoiler', but in the classical sense that is imprecise: a spoiler draws votes away from a competitor, whereas here the aim was different — a controlled outlet for discontent. Once queues formed at signature points and Nadezhdin's rhetoric about ending the military operation became prominent, approval was withdrawn; the refusal was formalised via the standard signature-verification mechanism.
+    </div>
+
+    <h3 style="font-size: 24px; margin-top: 50px; margin-bottom: 8px;">What the case reveals</h3>
+    <p style="color: var(--ink-soft); margin-bottom: 14px;">
+      The 5% defect limit on signatures is a <strong>universal regulator</strong> that allows the CEC to admit or exclude any candidate by political decision, while remaining formally within the law. Parliamentary parties do not need to collect signatures at all. Pre-approved self-nominees have a 0.15% defect rate. A candidate whose campaign has slipped out of control scores 15.348%.
+    </p>
+    <p style="color: var(--ink-soft); margin-bottom: 14px;">
+      This is not a breach of the law. It is <strong>the law itself, working as designed</strong>. Any non-parliamentary candidate lacking access to administrative resources is statistically almost certain to produce signatures with a defect rate above 5% — particularly if the verification procedure is applied rigorously. The question of how rigorously to apply it is decided not at the CEC, but in the Presidential Administration.
+    </p>
+    <p style="color: var(--ink-soft); margin-bottom: 14px;">
+      After the refusal, Nadezhdin himself put it this way: 'I have no complaints against the electoral commission. My complaints are against the legislators who made a law under which it is impossible to collect signatures.'
+    </p>
+    <p style="color: var(--ink-soft);">
+      An indirect indicator of the political significance of the case: <strong>Vladimir Putin himself publicly commented on the refusal</strong>, attributing it to 'the unsatisfactory work of Nadezhdin's pre-election campaign team' (<a href="https://lenta.ru/tags/persons/nadezhdin-boris/" target="_blank" rel="noopener">Lenta.ru</a>). The President extremely rarely comments on the registration of obscure candidates; such a remark is a signal that for the Kremlin this was by no means a routine matter.
+    </p>
+
+    <div class="method-note">
+      <strong>Sources:</strong>
+      TASS — <a href="https://tass.ru/politika/19863433" target="_blank" rel="noopener">submission of signatures to CEC (31.01.2024)</a>;
+      <a href="https://tass.ru/politika/20052077" target="_blank" rel="noopener">Supreme Court ruling (21.02.2024)</a>;
+      <a href="https://tass.ru/politika/20146673" target="_blank" rel="noopener">appeal (04.03.2024)</a>.
+      RBC — <a href="https://www.rbc.ru/politics/08/02/2024/65c494f49a79479861318aa0" target="_blank" rel="noopener">9,147 invalid signatures</a>;
+      <a href="https://www.rbc.ru/politics/08/02/2024/65c49b539a794748375d286b" target="_blank" rel="noopener">registration refused</a>;
+      <a href="https://www.rbc.ru/politics/05/02/2024/65c09b829a79472239ca16b1" target="_blank" rel="noopener">15% defect rate</a>.
+      Interfax — <a href="https://www.interfax.ru/russia/947229" target="_blank" rel="noopener">Supreme Court dismissed the claim</a>.
+      Vedomosti — <a href="https://www.vedomosti.ru/politics/articles/2024/01/24/1016439-tri-kandidata-sobrali-podpisi-dlya-uchastiya-v-prezidentskih-viborah" target="_blank" rel="noopener">comparison of signature-collection efforts</a>.
+      RIA Novosti — <a href="https://ria.ru/20240205/nadezhdin-1925451232.html" target="_blank" rel="noopener">Nadezhdin's comment on the 15% defect rate</a>.
+      Forbes — <a href="https://www.forbes.ru/society/504770-nadezdin-soobsil-o-sbore-bolee-100-000-podpisej-dla-vydvizenia-v-prezidenty" target="_blank" rel="noopener">collection of 100,000 signatures</a>.
+      Moscow Times — <a href="https://www.moscowtimes.ru/2024/01/22/bezopasnii-protest-ili-proekt-kremlya-pochemu-vistroilis-ocheredi-iz-zhelayuschih-otdat-podpis-za-nadezhdina-a119133" target="_blank" rel="noopener">Gallyamov analysis, queues outside campaign offices</a>.
+      Echo — <a href="https://echofm.online/programs/intervyu/razgovor-ekateriny-shulman-s-borisom-nadezhdinym" target="_blank" rel="noopener">Schulmann in conversation with Nadezhdin (22.01.2024)</a>.
+      Current Time — <a href="https://www.currenttime.tv/a/boris-nadezhdin-nabral-100-tysyach-podpisey/32788649.html" target="_blank" rel="noopener">Verstka's sources in the Presidential Administration</a>.
+      Lenta.ru — <a href="https://lenta.ru/tags/persons/nadezhdin-boris/" target="_blank" rel="noopener">Putin's comment on the refusal</a>.
+      Statute: Art. 38 of Federal Law No. 19-FZ — <a href="https://www.consultant.ru/document/cons_doc_LAW_40445/" target="_blank" rel="noopener">consultant.ru</a>.
+    </div>
+  </div>
+</section>
+
+<!-- 07 SHPILKIN -->
+<section id="shpilkin" data-toc-id="shpilkin">
+  <div class="wrap">
+    <span class="section-label">07 · The Shpilkin method</span>
+    <h2 class="section-h2">When mathematics detects anomalies.</h2>
+    <p class="section-lead">
+      In a genuine election, a party's vote share <strong>statistically should not depend on turnout</strong>. If at polling stations with 90% turnout the 'party of power' receives 80%, while at stations with 35% turnout it receives 30%, that is a strong <em>statistical indicator of protocol falsification</em> — regardless of how the falsification occurred (ballot stuffing, rewriting, 'carousel' fraud).
+    </p>
+    <p class="section-lead">
+      The physicist Sergei Shpilkin (Сергей Шпилькин) has since 2007 been identifying 'combs', 'Churov spikes', and 'comet tails' — mathematical signatures of ballot stuffing. According to his estimates:
+    </p>
+
+    <div style="background: var(--bg-paper); border: 1px solid var(--line); border-radius: 12px; padding: 32px; margin-top: 32px;">
+      <div style="position: relative; width: 100%; height: 360px;">
+        <canvas id="shpilkinChart" role="img" aria-label="Bar chart: millions of anomalous votes in favour of the ruling party across different election years">2011 — 14 mn, 2016 — 10 mn, 2018 — 10 mn, 2020 — 22 mn, 2021 — 13.8 mn, 2024 — 22 mn.</canvas>
+      </div>
+      <p style="font-size: 12px; color: var(--ink-muted); margin-top: 16px; line-height: 1.5;">
+        Anomalous ('fabricated') votes in favour of the ruling party — estimates by Sergei Shpilkin and analysts at Novaya Gazeta, iStories, and Golos. Figures are in millions of votes above what a genuine distribution would explain.
+      </p>
+    </div>
+
+    <div class="callout-result reveal" id="share-funding-7x" style="margin-top: 32px;">
+      <div class="callout-num">~14 → 22 mn</div>
+      <div class="callout-text">
+        Across the two most recent elections — State Duma 2021 (~14 mn) and Presidential 2024 (~22 mn). If these estimates are correct, United Russia's real support in 2021 was around 31–33%, and Putin's in 2024 around 67–80%, with a significantly lower genuine turnout.
+      </div>
+    </div>
+
+    <div class="method-note">
+      <strong>Method:</strong> in the absence of manipulation, the histogram of 'turnout → party share' should resemble a 2D normal distribution (single peak). When ballot stuffing occurs, a second 'tail' appears: at stations with anomalously high turnout, the ruling party receives an anomalously high share. The area of the 'tail' equals the volume of stuffing.
+      <br><strong>Detail:</strong>
+      <a href="https://novayagazeta.ru/articles/2021/09/21/shpilkin-edinaia-rossiia-poluchila-14-mln-anomalnykh-golosov-bez-falsifikatsii-partiia-vlasti-nabiraet-31-33-news" target="_blank" rel="noopener">Novaya Gazeta / Shpilkin (2021)</a>;
+      <a href="https://istories.media/news/2024/03/18/pochti-22-mln-golosov-poluchennikh-vladimirom-putinim-bili-sfalsifitsirovani-podschitali-vazhnie-istorii-po-metodu-shpilkina/" target="_blank" rel="noopener">iStories (2024)</a>;
+      <a href="https://golosinfo.org/articles/146796" target="_blank" rel="noopener">Golos (2024)</a>.
+    </div>
+
+    <h3 style="font-size: 24px; margin-top: 60px; margin-bottom: 20px; letter-spacing: -0.01em;">Sceptics' objections and the counter-arguments</h3>
+
+    <div class="opponent-grid">
+      <div class="opponent-card opponent-card--against">
+        <div class="opponent-card-label">What the critics say</div>
+        <p>
+          Some pro-government political scientists and academics (Fuad <strong>Aleskerov</strong>, HSE; corresponding member of the Russian Academy of Sciences Gadzhimet <strong>Safaraliyev</strong>; RAS academician Viktor <strong>Soyfer</strong>; Andrei <strong>Dakhin</strong>, RANEPA) argue: the method assumes a homogeneous electorate, while Russian voters vary greatly between regions. The bimodal distribution, in their view, is an artefact of aggregating socially heterogeneous groups (rural vs urban), not a necessary sign of ballot stuffing.
+        </p>
+        <p>
+          A more serious academic challenger is <strong>Kirill Kalinin</strong> (Hoover Institution, Stanford; PhD from the University of Michigan, a student of Walter Mebane). Applying Mebane's digit tests to the 2018 elections, he obtained an estimate of ~320,000 fraudulent votes — dozens of times lower than Shpilkin's figure.
+        </p>
+        <div class="opponent-links">
+          <a href="https://www.hse.ru/expertise/news/757696397.html" target="_blank" rel="noopener">HSE / fact-check of the method (2024) ↗</a>
+          <a href="https://lenta.ru/news/2024/03/19/eksperty-raskritikovali-metod-matematika-shpilkina/" target="_blank" rel="noopener">Lenta.ru: experts against the method ↗</a>
+          <a href="https://meduza.io/feature/2018/05/07/issledovatel-iz-stenforda-schitaet-chto-falsifikatsiy-na-vyborah-prezidenta-rossii-bylo-ochen-malo-kak-on-eto-vychislil" target="_blank" rel="noopener">Meduza: Kalinin vs Shpilkin ↗</a>
+        </div>
+      </div>
+
+      <div class="opponent-card opponent-card--for">
+        <div class="opponent-card-label">What Shpilkin and co-authors reply</div>
+        <p>
+          The method is not home-made 'trickery', but part of the international school of <em>election forensics</em>. Rural–urban differences produce different <em>levels</em> of turnout, but not a different <em>slope</em> of the 'turnout → leading party's share' relationship with a sharp inflection — and it is precisely that inflection that the method detects.
+        </p>
+        <p>
+          Dmitry Kobak (Дмитрий Кобак) (neuroscientist, Tübingen) is a co-author, not an opponent: their joint paper 'Putin's peaks' (Significance, 2018) identified an independent signature of fraud — anomalous peaks at round percentages (50%, 55%, 60%, 65%, 70%, 75%, 80%, 85%, 90%, 95%), which cannot be explained by sociology alone. Peter Klimek et al. (PNAS, 2012) identified the same 'fingerprints' (incremental + extreme fraud) in an international dataset; the Complexity Science Hub estimated the ballot stuffing in the 2021 Duma elections at ~20 percentage points.
+        </p>
+        <div class="opponent-links">
+          <a href="https://rss.onlinelibrary.wiley.com/doi/full/10.1111/j.1740-9713.2018.01141.x" target="_blank" rel="noopener">Putin's peaks · Significance, 2018 ↗</a>
+          <a href="https://www.pnas.org/doi/10.1073/pnas.1210722109" target="_blank" rel="noopener">Klimek et al. · PNAS, 2012 ↗</a>
+          <a href="https://www.csh.ac.at/wp-content/uploads/2021/10/CSH-Policy-Brief-5-2021-Russian-Elections.pdf" target="_blank" rel="noopener">CSH Policy Brief: Russia 2021 ↗</a>
+          <a href="https://github.com/dkobak/elections" target="_blank" rel="noopener">Kobak's open code · GitHub ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <p class="method-note" style="margin-top: 16px;">
+      This site treats the figure of 14 / 22 mn as an <strong>estimate</strong>, not as an 'official CEC fact'. The debate within the election-forensics community is genuine, and readers are entitled to see both sides. The fact that Kalinin, working with the same data, obtains a figure orders of magnitude smaller does not eliminate the anomalies — but it does set a range of credibility for the estimate.
+    </p>
+  </div>
+</section>
+
+<!-- 08 ADMIN — public-sector employees + 152 ₽/vote -->
+<section id="admin" data-toc-id="admin">
+  <div class="wrap">
+    <span class="section-label">08 · Administrative resources</span>
+    <h2 class="section-h2">17.5 million direct, 60 million dependent.</h2>
+    <p class="section-lead">
+      In Russia approximately <strong>17.5 million people</strong> work in the public sector (government and municipal employees, military personnel, security services, doctors, teachers). A further ~43 million are pensioners — in total <strong>≈ 60 million people, or 42% of the population</strong>, whose incomes depend directly on the state. This is a structural electoral resource — the largest in the world after China's.
+    </p>
+
+    <div id="budgetnikiBars"></div>
+
+    <h3 style="font-size: 24px; margin-top: 60px; margin-bottom: 12px;">152 roubles for every vote — annually</h3>
+    <p style="color: var(--ink-soft); line-height: 1.65;">
+      Art. 33 of Federal Law No. 95-FZ 'On Political Parties': for each vote received in Duma elections, a party receives <strong>152 roubles from the budget — annually</strong> (from 2009 — 20 roubles, from 2013 — 50, from 2015 — 110, from 2017 — 152). In 2024 the parties' revenues were:
+    </p>
+
+    <div class="mini-cards" style="margin-top: 18px;">
+      <div class="mini-card"><div class="mini-card-title">United Russia · 10.9 bn ₽</div>4.27 bn from the budget · 4.55 bn from donations</div>
+      <div class="mini-card"><div class="mini-card-title">CPRF · 1.6 bn ₽</div>~86% — from the budget</div>
+      <div class="mini-card"><div class="mini-card-title">SRZP · 755 mn ₽</div>~84% — from the budget</div>
+      <div class="mini-card"><div class="mini-card-title">LDPR · 741 mn ₽</div>~87% — from the budget</div>
+      <div class="mini-card"><div class="mini-card-title">New People · 495 mn ₽</div><strong>92%</strong> — from the budget</div>
+    </div>
+
+    <div class="callout-result reveal" id="share-shpilkin" style="margin-top: 32px;">
+      <div class="callout-num">×7</div>
+      <div class="callout-text">
+        United Russia receives from the budget more than all four opposition parties combined. The more votes this year, the more money for the next election — a <strong>positive feedback loop</strong> built into statute.
+      </div>
+    </div>
+
+    <div class="method-note">
+      <strong>Sources:</strong>
+      <a href="https://base.garant.ru/183523/79232c367b45a2128d6a8d7ae0217075/" target="_blank" rel="noopener">Federal Law No. 95-FZ, Art. 33</a> (152 roubles/vote);
+      <a href="https://rosstat.gov.ru" target="_blank" rel="noopener">Rosstat</a>;
+      <a href="https://kapital-rus.ru/articles/article/budjetnikami_okazalas_polovina_rossiyan_bolee_60_mln_chelovek_zavisyat_ot_b/" target="_blank" rel="noopener">ING/NKR — analysis of state-dependent population</a>;
+      CEC via TAdviser — party finances 2024.
+    </div>
+  </div>
+</section>
+
+<!-- 09 VOICES OF POWER -->
+<section id="voices" data-toc-id="voices">
+  <div class="wrap">
+    <span class="section-label">09 · The authorities' own voices</span>
+    <h2 class="section-h2">They explain it themselves.</h2>
+    <p class="section-lead">
+      The centrepiece of this section is the complete absence of any 'opposition' interpretation. Below are direct quotes from the people who operate the electoral system: Volodin (Duma Speaker), Pamfilova (CEC Chair), Turchak (United Russia Secretary-General), Reut (Deputy Chair of the Moscow City Election Commission). They describe the logic of the system as a 'foundation', 'stability', and a 'full dress rehearsal'.
+    </p>
+
+    <div id="quotesGrid" class="quotes-grid"></div>
+  </div>
+</section>
+
+<!-- 10 CALCULATOR -->
+<section id="calculator-section" data-toc-id="calculator">
+  <div class="wrap">
+    <span class="section-label">10 · Scenario calculator</span>
+    <h2 class="section-h2">Move the sliders. See for yourself.</h2>
+    <p class="section-lead">
+      What would need to happen for United Russia to lose its majority? Adjust the party-list share for United Russia, the votes for other parties, and the number of single-member constituencies won. Seat distribution follows the real Hare-Niemeyer method. Below — three 'indicator lights': simple majority (≥226), constitutional majority (≥300), super-majority (≥338).
+    </p>
+
+    <div class="calc-presets" style="margin-top: 24px;">
+      <button class="calc-preset is-fact" data-preset="fact">Actual 2021 (49.82% / 198)</button>
+      <button class="calc-preset" data-preset="dip">Moderate decline (40% / 180)</button>
+      <button class="calc-preset" data-preset="loss">Significant decline (30% / 110)</button>
+      <button class="calc-preset" data-preset="collapse">Hypothetical collapse (25% / 80)</button>
+      <button class="calc-preset" id="calc-reset">⟲ Reset</button>
+    </div>
+
+    <div class="calculator" id="calculator">
+      <div class="calc-controls">
+        <h4>Controls</h4>
+
+        <div class="calc-slider-row">
+          <div class="calc-slider-label">United Russia (list)</div>
+          <input type="range" data-key="p_list" min="10" max="60" step="0.5" value="49.82">
+          <div class="calc-slider-value" data-bind="p_list">49.82%</div>
+        </div>
+        <div class="calc-slider-row">
+          <div class="calc-slider-label">CPRF <small>(list)</small></div>
+          <input type="range" data-key="kprf" min="0" max="35" step="0.5" value="18.93">
+          <div class="calc-slider-value" data-bind="kprf">18.93%</div>
+        </div>
+        <div class="calc-slider-row">
+          <div class="calc-slider-label">LDPR</div>
+          <input type="range" data-key="ldpr" min="0" max="25" step="0.5" value="7.55">
+          <div class="calc-slider-value" data-bind="ldpr">7.55%</div>
+        </div>
+        <div class="calc-slider-row">
+          <div class="calc-slider-label">SRZP</div>
+          <input type="range" data-key="sr" min="0" max="25" step="0.5" value="7.46">
+          <div class="calc-slider-value" data-bind="sr">7.46%</div>
+        </div>
+        <div class="calc-slider-row">
+          <div class="calc-slider-label">New People</div>
+          <input type="range" data-key="nl" min="0" max="25" step="0.5" value="5.32">
+          <div class="calc-slider-value" data-bind="nl">5.32%</div>
+        </div>
+
+        <h4 style="margin-top: 24px;">Constituencies</h4>
+        <div class="calc-slider-row">
+          <div class="calc-slider-label">United Russia won</div>
+          <input type="range" data-key="smd" min="0" max="225" step="1" value="198">
+          <div class="calc-slider-value" data-bind="smd">198</div>
+        </div>
+        <div class="calc-slider-row">
+          <div class="calc-slider-label">Non-faction <small>loyalists</small></div>
+          <input type="range" data-key="loyalists" min="0" max="30" step="1" value="2">
+          <div class="calc-slider-value" data-bind="loyalists">2</div>
+        </div>
+      </div>
+
+      <div class="calc-output">
+        <div class="calc-output-formula">
+          <b id="calc-list">126</b> seats from the party list (Hare-Niemeyer)<br>
+          + <b id="calc-smd">198</b> from constituencies<br>
+          + <b id="calc-loyalists">2</b> non-faction loyalists (independents who joined the United Russia faction)
+        </div>
+        <div class="calc-output-total"><span id="calc-total">326</span><small>of 450</small></div>
+        <div class="calc-output-pct" id="calc-pct">72.4%</div>
+
+        <div class="calc-lamps">
+          <div class="calc-lamp" id="lamp-simple">
+            <div class="calc-lamp-num">≥226</div>
+            <div class="calc-lamp-label">Simple</div>
+          </div>
+          <div class="calc-lamp" id="lamp-const">
+            <div class="calc-lamp-num">≥300</div>
+            <div class="calc-lamp-label">Const.</div>
+          </div>
+          <div class="calc-lamp" id="lamp-super">
+            <div class="calc-lamp-num">≥338</div>
+            <div class="calc-lamp-label">Super</div>
+          </div>
+        </div>
+
+        <div class="calc-ladder-track">
+          <div class="calc-ladder-fill" id="calc-ladder-fill"></div>
+        </div>
+        <div class="calc-ladder-meta mono">0 — 226 — 300 — 338 — 450</div>
+
+        <div class="calc-output-verdict" id="calc-verdict"></div>
+        <div class="calc-norm-warn" id="calc-norm-warn" style="display:none;"></div>
+      </div>
+    </div>
+
+    <p style="font-size: 12px; color: var(--ink-muted); margin-top: 14px; line-height: 1.5;">
+      Algorithm: <code style="background: var(--bg-paper); padding: 1px 6px; border-radius: 3px; border: 1px solid var(--line); font-size: 11px;">distributeHareNiemeyer(parties, 225)</code> — an exact reproduction of the method in Art. 89 of Federal Law No. 20-FZ.
+      Parties receiving &lt; 5% are excluded (threshold). If fewer than two parties reach 5%, or their combined share is ≤50%, the threshold is lowered progressively (second part of Art. 88).
+      With &lt; 2 qualifying parties the scenario is considered under-determined (a warning is displayed).
+      Independents are added as 'loyalists' (Reznik, Babashov, 2021).
+    </p>
+  </div>
+</section>
+
+<!-- 11 MAJORITY LADDER + COUNTERFACTUALS -->
+<section id="majority-section" data-toc-id="majority">
+  <div class="wrap">
+    <span class="section-label">11 · Majority ladder</span>
+    <h2 class="section-h2">A cushion that is hard to lose.</h2>
+    <p class="section-lead">
+      Different decisions in the Duma require different vote thresholds. United Russia officially holds 324 mandates (with two affiliated independents — 326) — sufficient for any decision short of amendments to Chapters 1, 2, and 9 of the Constitution (which require convening a Constitutional Assembly). To fall to a simple majority (226), it would need to lose <strong>98 mandates at once</strong>.
+    </p>
+
+    <div id="ladderChart"></div>
+
+    <h3 style="font-size: 28px; margin-top: 60px; margin-bottom: 16px;">'What if…'</h3>
+    <p style="font-size: 16px; color: var(--ink-soft); max-width: 720px;">
+      The same 49.82% of votes from 2021 under different electoral systems. It is clear that the system actually chosen is not 'neutral', but rather the one that maximises United Russia's seat share among realistic alternatives.
+    </p>
+    <div id="counterfactuals" style="margin-top: 28px;"></div>
+  </div>
+</section>
+
+<!-- 12 HEATMAP — inverse problem -->
+<section id="heatmap-section">
+  <div class="wrap">
+    <span class="section-label">Heatmap of the inverse problem</span>
+    <h2 class="section-h2">How far would United Russia need to fall to lose the Duma.</h2>
+    <p class="section-lead">
+      This shows what would need to happen for United Russia to lose the Duma. The vertical axis is its party-list vote share. The horizontal axis is how many single-member constituencies it won. The figure in each cell is the resulting number of Duma seats. The <strong>green</strong> corner at the bottom left contains the only scenarios in which United Russia lacks even a simple majority — there are very few of them. The <strong>red</strong> zone — where United Russia has enough seats for any decision, including constitutional amendments — occupies most of the table.
+    </p>
+
+    <div class="heatmap-summary">
+      <strong>Key point:</strong> for United Russia to lose even a simple majority, it would simultaneously need to fall below ~30% on the party list <strong>and</strong> win fewer than 75 constituencies out of 225. Both at once — a scenario without precedent.
+    </div>
+    <div class="heatmap-scroll-hint">swipe to see the full table</div>
+    <div class="heatmap-wrap">
+      <div id="heatmapChart"></div>
+    </div>
+    <div id="heatmapLegend"></div>
+
+    <div class="callout-result reveal" id="share-heatmap" style="margin-top: 32px;">
+      <div class="callout-num">≈30% × ≈75</div>
+      <div class="callout-text">
+        Even if United Russia takes only 30% of the party-list vote, it needs only ~75 constituencies out of 225 for a simple majority. To lose the Duma it would need to fall below both thresholds simultaneously. There is no precedent for this in post-Soviet history.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 13 HISTORY -->
+<section id="history" data-toc-id="history">
+  <div class="wrap">
+    <span class="section-label">12 · Timeline</span>
+    <h2 class="section-h2">History of electoral changes 2005–2025.</h2>
+    <p class="section-lead">
+      Every change to the electoral system was justified as 'liberalisation', 'security', or 'convenience for citizens'. Taken together, they form a consistent pattern of reinforcing the structural advantages of the party of power.
+    </p>
+
+    <div class="history-table" id="historyTable"></div>
+
+    <div class="method-note">
+      All cited federal laws are available at kremlin.ru/acts, base.garant.ru, consultant.ru, and pravo.gov.ru.
+    </div>
+  </div>
+</section>
+
+<!-- 14 FLOW -->
+<section id="flow-section">
+  <div class="wrap">
+    <span class="section-label">Overview</span>
+    <h2 class="section-h2">How 49.82% become 72%.</h2>
+    <p class="section-lead">
+      On the left — the actual 2021 voting results (how voters voted). On the right — the final distribution of Duma seats. In between — all the mechanisms described on this page.
+    </p>
+
+    <div id="flowVotesSeats"></div>
+
+    <p style="font-size: 13px; color: var(--ink-muted); margin-top: 24px; line-height: 1.5;">
+      'LDPR+SRZP' are combined for simplicity. The 'others' category includes all parties that did not clear the 5% threshold; in the right-hand column it includes mandates for independents and for Rodina, Party of Growth, and Civil Platform.
+    </p>
+  </div>
+</section>
+
+<!-- 15 THEATRE -->
+<section id="theatre" data-toc-id="theatre" class="theatre">
+  <div class="wrap">
+    <span class="section-label">Conclusions</span>
+    <h2 class="section-h2" style="color: white;">The circus is over.<br>No refunds.</h2>
+
+    <p>
+      Let us bring together all 14 mechanisms:
+    </p>
+    <ol style="font-size: 16px; line-height: 1.75; color: rgba(255,255,255,0.85); margin: 24px 0 24px 24px; columns: 2; column-gap: 32px;">
+      <li><strong>Mixed system 225+225</strong> — the principal multiplier.</li>
+      <li><strong>5% threshold + Hare-Niemeyer</strong> — +11 seats as a bonus.</li>
+      <li><strong>Petal-shaped redistricting</strong> — urban protest diluted.</li>
+      <li><strong>Independents and allied constituencies</strong> — 5 non-opposition mandates in 2021; of them 2 (Reznik, Babashov) joined the United Russia faction.</li>
+      <li><strong>Spoilers and 'doppelganger' candidates</strong> — precision tools for close-run constituencies.</li>
+      <li><strong>Refused registration</strong> — the law against FBK and the signature-defect mechanism (see <a href="#nadezhdin" style="color: #FCA5A5;">the Nadezhdin case 2024</a>).</li>
+      <li><strong>DEG</strong> — overnight reversal in 8 of 15 Moscow constituencies, 2021.</li>
+      <li><strong>Three-day voting</strong> — reduced observability.</li>
+      <li><strong>Media accreditation + observers</strong> — reduced public verification.</li>
+      <li><strong>Municipal filter</strong> — governorships accessible only with United Russia's approval.</li>
+      <li><strong>Public-sector employees + 60 million state-dependent</strong> — structural electorate.</li>
+      <li><strong>'Locomotive' candidates on the list</strong> — boosting the party-list rating.</li>
+      <li><strong>Budget funding at 152 roubles/vote</strong> — ~4.3 bn roubles/year for United Russia.</li>
+      <li><strong>Foreign agents barred from elections</strong> (Federal Law No. 99-FZ of 15.05.2024) — candidates must relinquish foreign-agent status to register; restrictions also apply to observers and designated representatives.</li>
+    </ol>
+
+    <p>
+      Each mechanism in isolation can be justified by 'technical necessity' or 'protection against chaos'.
+      Together they operate as a single machine — <strong>guaranteed to preserve the constitutional majority of one party regardless of how people actually vote</strong>.
+    </p>
+
+    <p style="margin-top: 24px;">
+      <strong>This is 'electoral authoritarianism'</strong> — a system in which there are elections, but no real choice.
+      Political scientists Levitsky and Way, in their 2010 survey, identified Russia as the only one among 35 'competitive-authoritarian' regimes to have fully degraded into 'closed' authoritarianism.
+      Vladimir Gel'man describes the same process as 'the rise and decline of electoral authoritarianism' — the rise occurred. The decline continues.
+    </p>
+
+    <p style="margin-top: 24px; font-size: 19px; line-height: 1.5;">
+      Understanding this does not mean giving up. It means seeing the system for what it is, and ceasing to expect from it what it cannot deliver — above all from an electoral process that it manages itself.
+    </p>
+
+    <p style="margin-top: 32px;">
+      → Return to the <a href="index.html" style="color: #FCA5A5; font-weight: 600;">page on faction voting records</a>. Now it is clear that this 72% is not a mirror of the popular will. It is a technology. And that technology operates not only inside the Duma, but upstream — at every stage of the electoral process.
+    </p>
+  </div>
+</section>
+
+<!-- SOURCES -->
+<section>
+  <div class="wrap">
+    <span class="section-label">Sources</span>
+    <h2 class="section-h2">Every figure comes from primary sources.</h2>
+    <p class="section-lead">
+      Statutory texts, official CEC results, academic papers, publications by independent analysts.
+      Click — the original opens.
+    </p>
+    <div class="sources-grid" id="sourcesList"></div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>About this page</h4>
+        <p>An analytical page from the 'Voting Without a Choice' project. All calculations are available for verification — links to primary sources are provided in every section. Illustrative examples are clearly labelled as such.</p>
+        <p style="margin-top: 12px;">Licence: CC BY 4.0. May be reproduced and adapted with attribution.</p>
+      </div>
+      <div>
+        <h4>Institutional sources</h4>
+        <a href="http://www.cikrf.ru" target="_blank" rel="noopener">CEC ↗</a>
+        <a href="http://www.kremlin.ru/acts" target="_blank" rel="noopener">Legislation database (Kremlin) ↗</a>
+        <a href="https://base.garant.ru" target="_blank" rel="noopener">GARANT ↗</a>
+      </div>
+      <div>
+        <h4>Independent expertise</h4>
+        <a href="https://golosinfo.org" target="_blank" rel="noopener">Golos ↗</a>
+        <a href="https://electoralpolitics.org" target="_blank" rel="noopener">Electoral Politics ↗</a>
+        <a href="https://istories.media" target="_blank" rel="noopener">iStories ↗</a>
+        <a href="https://meduza.io" target="_blank" rel="noopener">Meduza ↗</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 · Voting Without a Choice · Election Maths</div>
+      <div class="mono">v1.4 · updated 2026-05-04 · CEC data 2021–2024 / votes 2019–2025</div>
+    </div>
+  </div>
+</footer>
+
+<!-- MODAL (used by feedback FAB; this page has no native modals of its own) -->
+<div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalContent" hidden>
+  <div class="modal" id="modal">
+    <button class="modal-close" id="modalClose" aria-label="Close">×</button>
+    <div id="modalContent"></div>
+  </div>
+</div>
+
+<!-- TOOLTIP (used by waffle, districts) -->
+<div class="tooltip" id="tooltip"></div>
+
+<!-- Chart.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script src="../assets/js/lib/lang-switch.js"></script>
+
+<!-- data — all files for both pages (needed for SPA navigation) -->
+<script src="../assets/js/data/en/parties.js"></script>
+<script src="../assets/js/data/en/laws.js"></script>
+<script src="../assets/js/data/en/social-laws.js"></script>
+<script src="../assets/js/data/en/elections.js"></script>
+<script src="../assets/js/data/en/digital-numbers.js"></script>
+<script src="../assets/js/data/en/digital-events.js"></script>
+<script src="../assets/js/data/en/contradictions.js"></script>
+<script src="../assets/js/data/en/threat-matrix.js"></script>
+<script src="../assets/js/data/en/digital-platforms.js"></script>
+<script src="../assets/js/data/en/digital-fraud.js"></script>
+<script src="../assets/js/data/en/whitelist.js"></script>
+<script src="../assets/js/data/en/intl-comparison.js"></script>
+<script src="../assets/js/data/en/digital-quotes.js"></script>
+<script src="../assets/js/data/en/digital-sources.js"></script>
+
+<!-- lib -->
+<script src="../assets/js/lib/en/dom.js"></script>
+<script src="../assets/js/lib/modal.js"></script>
+<script src="../assets/js/lib/tooltip.js"></script>
+<script src="../assets/js/lib/reveal.js"></script>
+<script src="../assets/js/lib/en/counter.js"></script>
+<script src="../assets/js/lib/spoiler.js"></script>
+<script src="../assets/js/lib/en/intro.js"></script>
+<script src="../assets/js/lib/page-toggle-ping.js"></script>
+<script src="../assets/js/lib/reading-progress.js"></script>
+<script src="../assets/js/lib/scroll-steps.js"></script>
+<script src="../assets/js/lib/scroll-spy.js"></script>
+<script src="../assets/js/lib/en/feedback.js"></script>
+<script src="../assets/js/lib/en/github-fab.js"></script>
+<script src="../assets/js/lib/en/presentation.js"></script>
+
+<!-- components -->
+<script src="../assets/js/components/matrix.js"></script>
+<script src="../assets/js/components/party-cards.js"></script>
+<script src="../assets/js/components/timeline.js"></script>
+<script src="../assets/js/components/comparison-bars.js"></script>
+<script src="../assets/js/components/en/law-modal.js"></script>
+<script src="../assets/js/components/en/party-modal.js"></script>
+<script src="../assets/js/components/digital-numbers.js"></script>
+<script src="../assets/js/components/en/digital-timeline.js"></script>
+<script src="../assets/js/components/en/contradiction-matrix.js"></script>
+<script src="../assets/js/components/en/threat-matrix.js"></script>
+<script src="../assets/js/components/selectivity-cards.js"></script>
+<script src="../assets/js/components/en/digital-sources.js"></script>
+<script src="../assets/js/components/en/digital-modal.js"></script>
+
+<!-- charts -->
+<script src="../assets/js/charts/defaults.js"></script>
+<script src="../assets/js/charts/en/years-chart.js"></script>
+<script src="../assets/js/charts/en/opposition-chart.js"></script>
+<script src="../assets/js/charts/waffle.js"></script>
+<script src="../assets/js/charts/en/districts.js"></script>
+<script src="../assets/js/charts/en/distortion.js"></script>
+<script src="../assets/js/charts/gauge.js"></script>
+<script src="../assets/js/charts/flow.js"></script>
+<script src="../assets/js/charts/en/shpilkin-chart.js"></script>
+<script src="../assets/js/charts/en/ladder.js"></script>
+<script src="../assets/js/charts/en/heatmap.js"></script>
+<script src="../assets/js/charts/en/calculator.js"></script>
+<script src="../assets/js/charts/en/vpn-growth.js"></script>
+<script src="../assets/js/charts/en/whitelist-growth.js"></script>
+<script src="../assets/js/charts/en/messenger-comparison.js"></script>
+<script src="../assets/js/charts/en/youtube-throttling.js"></script>
+<script src="../assets/js/charts/en/fraud-vs-laws.js"></script>
+<script src="../assets/js/charts/en/drone-attacks.js"></script>
+<script src="../assets/js/charts/en/it-crime.js"></script>
+<script src="../assets/js/charts/en/child-suicide.js"></script>
+<script src="../assets/js/charts/en/freedom-on-net.js"></script>
+<script src="../assets/js/charts/en/regulation-compare.js"></script>
+<script src="../assets/js/charts/en/shutdown-cost-calc.js"></script>
+
+<!-- page init (all — SPA router calls the right one on transition) -->
+<script src="../assets/js/pages/en/home.js"></script>
+<script src="../assets/js/pages/en/elections.js"></script>
+<script src="../assets/js/pages/en/tsenzura.js"></script>
+
+<!-- presentation deck for this page -->
+<script src="../assets/js/decks/elections.js"></script>
+
+</body>
+</html>

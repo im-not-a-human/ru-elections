@@ -1,0 +1,237 @@
+// EN translation of assets/js/data/contradictions.js
+// Sync source: assets/js/data/contradictions.js
+// Glossary: research/i18n_glossary_draft.md
+// Editorial rules: research/i18n_locked_decisions.md
+
+window.CONTRADICTIONS = [
+  {
+    id: 1,
+    tag: 'vpn',
+    declared: 'Mass VPN blocking: VPNs provide access to banned content and create security threats',
+    actual: 'RKN simultaneously creates exemptions for businesses and technical processes: 64 organisations (2021) → 1,730 companies (04.2026)',
+    contradiction: 'If VPN is dangerous as a category — why is the same tool permitted for "approved" actors? What is being banned is not the technology but uncontrolled mass access.',
+    detail: 'In 2017, Federal Law No. 276-FZ introduced Article 15.8, explicitly exempting anonymisers "provided that the circle of users is determined in advance by their owners". In 2021, when Roskomnadzor (Russia\'s federal media and telecommunications regulator) announced the blocking of six major VPNs, it acknowledged that 27 companies were using them across 33 technical processes, with 100+ IP addresses on the exemptions list. By April 2026, the "whitelist" had grown to more than 57,000 addresses and subnets across 1,730 companies.',
+    sources: [
+      { name: 'Роскомнадзор, 03.09.2021', url: 'https://old.rkn.gov.ru/news/rsoc/news73836.htm' },
+      { name: 'Интерфакс, 22.04.2026', url: 'https://www.interfax.ru/russia/1085410' },
+    ],
+  },
+  {
+    id: 2,
+    tag: 'vpn',
+    declared: 'Corporate VPN access in 2026: for companies\' operational needs',
+    actual: '1,730 companies, 57,000+ addresses and subnets; in 2025 government agencies spent ₽14.1 billion on VPNs',
+    contradiction: 'A permissive regime: businesses depend on an application and their status; ordinary citizens do not have that option. A two-tier architecture.',
+    detail: 'RKN confirmed to the magazine Profil that access had been granted "to more than 57,000 addresses and subnets for 1,730 companies". RBC reported that "government agencies have spent ₽14.1 billion on VPN since the start of the year". On 30.03.2026, the Ministry of Digital Development, Communications and Mass Media (Mincifry) required more than 20 of the largest IT companies — Sber, Yandex, VK, Wildberries — to block users with unrecognised VPNs.',
+    sources: [
+      { name: 'Интерфакс, 22.04.2026', url: 'https://www.interfax.ru/russia/1085410' },
+      { name: 'Pravo.ru, 30.03.2026 (Минцифры)', url: 'https://pravo.ru/news/262459/' },
+    ],
+  },
+  {
+    id: 3,
+    tag: 'drones',
+    declared: '"SIM cool-down period": combating the use of SIM cards in drones',
+    actual: 'The restriction applies to people after roaming or inactivity; lifted via CAPTCHA / call centre',
+    contradiction: 'A measure ostensibly targeting "equipment" in practice becomes a mass check of users.',
+    detail: 'From 10.11.2025, Russian citizens and holders of foreign SIM cards have their mobile internet and SMS blocked for 24 hours after returning from abroad or after prolonged inactivity (>72 hours). Restoration is via CAPTCHA, SMS, a link, or a call centre. SberMobile stated: "the primary objective is to combat the use of SIM cards in drones".',
+    sources: [
+      { name: 'РБК, 28.11.2025', url: 'https://www.rbc.ru/rbcfreenews/692985d69a79471457093cc8' },
+      { name: 'Коммерсант, 07.11.2025', url: 'https://www.kommersant.ru/doc/8181485' },
+    ],
+  },
+  {
+    id: 4,
+    tag: 'drones',
+    declared: 'Foreign SIM cards: drones use SIMs after crossing the border',
+    actual: 'Experts: some drones may use Russian SIMs, radio channels, satellite links, autopilot, inertial or visual navigation',
+    contradiction: 'The measure closes one narrow scenario out of many possible ones.',
+    detail: 'Sergei Beskrestnov ("Flash"), adviser to Ukraine\'s Ministry of Defence (via InoSMI / Wirtualna Polska, 21.04.2026): Russian "Geraniums" are being widely fitted with Tele2 SIM cards in roaming via Poland, Belarus, and Romania. Vz.ru (16.07.2025): "since spring 2025 — mass use of 4G modems on long-range drones". Drones can also use radio channels, Starlink, autopilot, inertial or visual navigation.',
+    sources: [
+      { name: 'Ведомости, 09.08.2025', url: 'https://www.vedomosti.ru/technology/articles/2025/08/09/1130511-novie-pravila-ispolzovaniya-interneta' },
+      { name: 'IFRI MilTech War 2026', url: 'https://www.ifri.org/en/studies/mapping-miltech-war-eight-lessons-ukraines-battlefield' },
+    ],
+  },
+  {
+    id: 5,
+    tag: 'drones',
+    declared: 'Regional mobile internet shutdowns: protection from drone attacks',
+    actual: 'Access Now / "Na svyazi" documented shutdowns where no attacks had occurred or where the correlation was weak; Sergei Shoigu (March 2026): "not a single region is protected"',
+    contradiction: 'Geographic scope and frequency exceed the immediate military necessity, while effectiveness remains unproven.',
+    detail: 'Top10VPN estimated the cost of internet shutdowns in Russia in 2025 at $11.9 billion over 37,166 hours of restrictions. Russia was the world leader by duration of shutdowns in 2025. According to the Security Council, drone attacks grew from 6,200 (2024) to 23,000+ (2025) — a 3.7-fold increase, in parallel with the expansion of the measures.',
+    sources: [
+      { name: 'Top10VPN COST', url: 'https://www.top10vpn.com/research/cost-of-internet-shutdowns/' },
+      { name: 'Access Now', url: 'https://www.accessnow.org/russias-record-war-on-connectivity/' },
+    ],
+  },
+  {
+    id: 6,
+    tag: 'whitelist',
+    declared: '"Whitelist": to reduce inconvenience during restrictions',
+    actual: 'Only selected resources work; the list expands over weeks to 500+ services; the condition for inclusion is Russian computing infrastructure',
+    contradiction: 'A jurisdictional filter for a permitted internet, rather than simply a "connectivity on / off" toggle.',
+    detail: 'Since September 2025, Mincifry has been updating the whitelist weekly. By April 2026 it contained more than 500 Russian services. The condition for inclusion: computing infrastructure must be located in Russia. The list includes: Gosuslugi, Yandex, VK, Mail.ru, MAX, Ozon, Wildberries, Avito, Dzen, Rutube, Mir, DEG (remote electronic voting), and the websites of mobile operators and the President.',
+    sources: [
+      { name: 'Интерфакс, 19.09.2025', url: 'https://www.interfax.ru/russia/1048120' },
+      { name: 'Forbes, 23.04.2026', url: 'https://www.forbes.ru/tekhnologii/559771-mincifry-rassirilo-belyj-spisok-dostupnyh-pri-otklucenii-interneta-sajtov' },
+    ],
+  },
+  {
+    id: 7,
+    tag: 'whitelist',
+    declared: '"All everyday services remain accessible": household services should continue to function',
+    actual: 'AP / HRW: disruptions to banks, taxis, maps, ATMs, parking systems, and even whitelisted services',
+    contradiction: 'The promised "softness" of the regime does not survive real-world scrutiny.',
+    detail: 'During Moscow\'s mobile internet shutdowns in March 2026, AKIT (Russia\'s e-commerce association) estimated losses to Moscow businesses over 5 days at ₽3–5 billion. Simple arithmetic: ₽0.6–1.0 billion per day. Affected services included couriers, taxis, car-sharing, offline retail, small businesses, and payment services. Opora Rossii: 94.7% of small and medium-sized businesses (SMBs) reported deteriorating conditions in early 2026.',
+    sources: [
+      { name: 'AP', url: 'https://apnews.com/article/russia-internet-outage-cellphone-app-disruptions-1792cfb177c26682efdb8046e0f9b063' },
+      { name: 'АКИТ', url: 'https://www.akit.ru/news/kak-massovye-otklyucheniya-interneta-povliyali-na-stolichnyj-biznes' },
+    ],
+  },
+  {
+    id: 8,
+    tag: 'whitelist',
+    declared: 'Drones as the rationale: restrictions are precisely targeted against drones',
+    actual: 'The whitelist includes MAX, VK, Rutube, online marketplaces, pro-government media, DEG, and the websites of the President and mobile operators',
+    contradiction: 'The selection of services cannot be explained by the anti-drone objective alone. The criterion is jurisdictional, not technical.',
+    detail: 'If the measure were explained solely by drones, it would be unclear why it is necessary to determine which media outlets, marketplaces, messengers, video services, and commercial platforms remain accessible. For an anti-drone objective, what matters is the ability of equipment to transmit data — not the media or commercial affiliation of a website. However, for a digital sovereignty model based on jurisdictional control, these criteria are entirely logical. The condition for inclusion on the whitelist is Russian computing infrastructure.',
+    sources: [
+      { name: 'Reuters, 05.09.2025', url: 'https://www.reuters.com/technology/russia-lists-local-apps-that-will-survive-its-internet-blackouts-2025-09-05/' },
+      { name: 'Интерфакс, 19.09.2025', url: 'https://www.interfax.ru/russia/1048120' },
+      { name: 'Forbes, 23.04.2026', url: 'https://www.forbes.ru/tekhnologii/559771-mincifry-rassirilo-belyj-spisok-dostupnyh-pri-otklucenii-interneta-sajtov' },
+    ],
+  },
+  {
+    id: 9,
+    tag: 'law',
+    declared: 'Legal accountability: shutdowns are a state necessity',
+    actual: 'A law of 02.2026 exempts operators from liability to subscribers when FSB (Russia\'s Federal Security Service) issues a demand',
+    contradiction: 'Risks and costs are transferred to the user; legal protection accrues to operators and the state.',
+    detail: 'The law signed by Putin on 20.02.2026: operators are required to suspend services on demand from the FSB; they are released from liability to subscribers. Pravo.ru noted that the wording changed during deliberation — "request" was replaced with "demand", and references to the government and security threats as limiting conditions were removed. The circumstances are determined by presidential decrees.',
+    sources: [
+      { name: 'РБК, 20.02.2026', url: 'https://www.rbc.ru/rbcfreenews/6998bacd9a7947720c215815' },
+      { name: 'Pravo.ru, 17.02.2026', url: 'https://pravo.ru/news/262459/' },
+    ],
+  },
+  {
+    id: 10,
+    tag: 'msgr',
+    declared: 'Instagram / Meta: ban due to Meta\'s "extremist activities"',
+    actual: 'Instagram / Facebook are banned; WhatsApp, from the same Meta, is preserved; the Tverskoy court ruling explicitly excludes WhatsApp',
+    contradiction: 'The application of logic to platforms within a single corporation is selective and utilitarian.',
+    detail: 'Tverskoy District Court (case No. 02-2473/2022, 21.03.2022): "The ruling does not apply to the activities of the WhatsApp messenger of Meta, owing to the absence of functions for the public dissemination of information." Restrictions on WhatsApp only began in 2024–2025, in parallel with the rollout of MAX. RKN officially confirmed "partial restriction" of voice calls in Telegram and WhatsApp on 13.08.2025.',
+    sources: [
+      { name: 'РБК, 20.06.2022', url: 'https://www.rbc.ru/technology_and_media/20/06/2022/62b076d99a79474b3991e5b4' },
+      { name: 'РБК, 13.08.2025', url: 'https://www.rbc.ru/politics/13/08/2025/689c8c7c9a79479b1087586d' },
+    ],
+  },
+  {
+    id: 11,
+    tag: 'msb',
+    declared: 'Instagram and business: security / extremism',
+    actual: '73% of small businesses stopped using Instagram due to legal risks; decline in sales and advertising revenue',
+    contradiction: 'The measure harms not only the ostensible "threat" but also the sales channel of small and medium-sized businesses.',
+    detail: 'RAEK / HSE via TASS (18.05.2022): 73% of small entrepreneurs stopped using Instagram. Forbes (March 2022): 67% lost income. Gazeta.ru: in the beauty segment, 91% of shops maintained communities on Instagram; up to 80% of targeted advertising budgets went to Instagram/Facebook. Tax losses from the advertising ban — ₽1.4 billion in 2026.',
+    sources: [
+      { name: 'ТАСС, 18.05.2022', url: 'https://tass.ru/ekonomika/14655339' },
+      { name: 'Forbes, 27.08.2025', url: 'https://www.forbes.ru/biznes/544703-eksperty-sprognozirovali-poteri-budzeta-iz-za-zapreta-na-reklamu-v-instagram' },
+    ],
+  },
+  {
+    id: 12,
+    tag: 'msgr',
+    declared: 'YouTube slowdown: "technical degradation" of Google Global Cache',
+    actual: 'Google denies it; Alexander Khinshtein (Александр Хинштейн) reveals the political nature of the decision; traffic index fell 6.3-fold',
+    contradiction: 'The technical explanation coexisted with politically motivated platform punishment.',
+    detail: 'Khinshtein (Telegram, 25–26.07.2024): "The \'degradation\' of YouTube is a forced step directed not against Russian users but against the administration of a foreign resource." Google (via RIA Novosti, 23.12.2024): "[it] is not the result of any technical problems or actions on the part of Google." TCP connections were throttled to 128 kbps from 01.08.2024.',
+    sources: [
+      { name: 'РБК, 26.07.2024', url: 'https://www.rbc.ru/technology_and_media/26/07/2024/66a393d79a794754343bc1de' },
+      { name: 'РБК, 02.08.2024', url: 'https://www.rbc.ru/technology_and_media/02/08/2024/66ac42089a79470ef13d71eb' },
+    ],
+  },
+  {
+    id: 13,
+    tag: 'msgr',
+    declared: 'Telegram / WhatsApp calls: anti-fraud, anti-extortion, anti-terrorism',
+    actual: 'Some fraud migrated to international telephony; overall theft volume per CBR grew from ₽14.2 billion (2022) to ₽29.3 billion (2025)',
+    contradiction: 'The measure shifts the channel but does not eliminate the problem.',
+    detail: 'A partial success: RKN reported a 40% reduction in fraudulent calls following the restrictions (Kommersant, 22.10.2025). However, ComNews (20.08.2025): operators recorded an increase in fraud from foreign numbers. Sberbank (Federation Council, January 2026): total harm ₽295 billion per year. A discrepancy with CBR statistics of eleven-fold.',
+    sources: [
+      { name: 'Коммерсант, 22.10.2025', url: 'https://www.kommersant.ru/doc/8140609' },
+      { name: 'ComNews, 20.08.2025', url: 'https://www.comnews.ru/content/240797/2025-08-20/2025-w34/1007/moshenniki-telegram-i-whatsapp-peretekli-trubu' },
+    ],
+  },
+  {
+    id: 14,
+    tag: 'msgr',
+    declared: 'MAX: "a convenient national service", anti-fraud',
+    actual: 'MAX is mandatory for pre-installation, included in the whitelist, and receives integrations; 39% reach versus 78% for WhatsApp; the Russian Armed Forces have banned MAX at the front',
+    contradiction: 'The restriction policy coincides with the promotion of a controlled platform. Regulatory dominance does not equal actual adoption.',
+    detail: 'MAX: Federal Law No. 156-FZ of 24.06.2025; mandatory pre-installation from 01.09.2025; mandatory housing-block chats for utilities from 16.12.2025. Does not use end-to-end encryption; messages are stored on VK servers in decrypted form; integrated with the FSB, MVD (Ministry of Internal Affairs), FTS, and CBR. VK budget via Mincifry in 2025 — ₽43.5 billion (10% of Mincifry\'s total budget). iStories (23.02.2026): Russian Armed Forces units have been banned from using MAX at the front.',
+    sources: [
+      { name: 'Интерфакс, 21.08.2025', url: 'https://www.interfax.ru/digital/1043261' },
+      { name: 'Mediascope', url: 'https://mediascope.net' },
+    ],
+  },
+  {
+    id: 15,
+    tag: 'law',
+    declared: 'Combating "illegal content": block only what is prohibited',
+    actual: 'Expansion to banning the "popularisation" of VPNs, throttling, whitelist-only mode, and fines for "searching"',
+    contradiction: 'The focus shifts from specific content to access infrastructure.',
+    detail: 'Federal Law No. 281-FZ of 31.07.2025 introduced Article 13.53 of the Code of Administrative Offences — a fine of ₽3,000–5,000 for "the intentional search for knowingly extremist materials" (including via VPN), and expanded Article 14.3 — fines for advertising VPNs of up to ₽500,000 for legal entities. The ban on "popularising" circumvention tools came into force from 01.03.2024. At the time of entry into force, the Ministry of Justice register contained approximately 5,411 "extremist materials". Khinshtein had revealed the political character of the YouTube throttling as a "forced step against a foreign resource".',
+    sources: [
+      { name: 'publication.pravo.gov.ru № 0001202507310012', url: 'http://publication.pravo.gov.ru/document/0001202507310012' },
+      { name: 'РБК, 26.07.2024', url: 'https://www.rbc.ru/technology_and_media/26/07/2024/66a393d79a794754343bc1de' },
+    ],
+  },
+  {
+    id: 16,
+    tag: 'law',
+    declared: '"Temporary measure": restrictions during a period of threat',
+    actual: 'Whitelists are updated weekly and expanded to 500+ services; the FSB receives a formalised right to demand disconnections',
+    contradiction: 'A temporary emergency solution becomes institutionalised.',
+    detail: 'From 19.09.2025, Mincifry has been updating the list weekly. By 04.2026 — 500+ services. On 17.02.2026, the State Duma passed amendments on the suspension of communications at FSB demand; "request" was replaced with "demand", and the grounds are determined by presidential decrees.',
+    sources: [
+      { name: 'Интерфакс, 19.09.2025', url: 'https://www.interfax.ru/russia/1048120' },
+      { name: 'Pravo.ru, 17.02.2026', url: 'https://pravo.ru/news/262459/' },
+    ],
+  },
+  {
+    id: 17,
+    tag: 'econ',
+    declared: 'Citizens\' safety: protecting the population',
+    actual: 'People lose access to maps, payments, delivery services, ATMs, taxis; certain groups lose income; 94.7% of SMBs report deterioration',
+    contradiction: 'Physical security is set against economic and everyday security without any public balancing of the trade-offs.',
+    detail: 'Opora Rossii (2026, sample ~3,300): 94.7% of SMBs reported deterioration, 76.5% significant deterioration, 68.7% a fall in revenue, 5.4% ceased operations. Kyberdom (n=1,226): 64% of companies experienced problems in communicating with clients and partners. Top10VPN: $11.9 billion in losses from shutdowns over 2025. AP: during Moscow\'s internet outages in March 2026, disruptions to banks, taxis, ATMs, and parking systems.',
+    sources: [
+      { name: 'AP, 2026', url: 'https://apnews.com/article/russia-internet-outage-cellphone-app-disruptions-1792cfb177c26682efdb8046e0f9b063' },
+      { name: 'АКИТ', url: 'https://www.akit.ru/news/kak-massovye-otklyucheniya-interneta-povliyali-na-stolichnyj-biznes' },
+      { name: 'Top10VPN', url: 'https://www.top10vpn.com/research/cost-of-internet-shutdowns/' },
+    ],
+  },
+  {
+    id: 18,
+    tag: 'intl',
+    declared: 'International comparison: "digital sovereignty"',
+    actual: 'Similar patterns in China, Iran, and Belarus: national internet, platform filtering, shutdowns, pressure on VPNs',
+    contradiction: 'Russia is moving not towards neutral cybersecurity but towards a model of a controlled network.',
+    detail: 'Freedom on the Net 2025: Russia 17/100 (Not Free, a new low, half the 30/100 score in 2021), China 9/100, Iran 13/100, Belarus 20/100. RSF Press Freedom Index 2025: Russia 171/180. The Russian system differs from democratic models (NetzDG, DSA, Online Safety Act) in the absence of judicial oversight, the right of appeal, and the existence of administrative liability for users who search for content.',
+    sources: [
+      { name: 'Freedom House Russia 2025', url: 'https://freedomhouse.org/country/russia/freedom-net/2025' },
+      { name: 'HRW Russia 30.07.2025', url: 'https://www.hrw.org/news/2025/07/30/russia-internet-blocking-disruptions-and-increasing-isolation' },
+    ],
+  },
+];
+
+window.CONTRADICTION_TAGS = [
+  { id: 'all', label: 'All 18' },
+  { id: 'vpn', label: 'VPN' },
+  { id: 'drones', label: 'Drones · SIM' },
+  { id: 'whitelist', label: 'Whitelists' },
+  { id: 'msgr', label: 'Platforms' },
+  { id: 'msb', label: 'Business' },
+  { id: 'law', label: 'Law' },
+  { id: 'econ', label: 'Economy' },
+  { id: 'intl', label: 'Comparison' },
+];

@@ -1,0 +1,461 @@
+/* Presentation mode — fullscreen slide deck overlay.
+   Engine: assets/js/lib/presentation.js
+   Decks:  assets/js/decks/{home,elections,tsenzura}.js
+   Each page declares window.PresentSlides; the engine relocates the
+   referenced sections into a dark "stage" overlay one slide at a time. */
+
+/* ---------- FAB trigger ---------- */
+.present-fab {
+  position: fixed;
+  right: 24px;
+  bottom: 92px; /* sits above the feedback round button */
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--bg);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(185,28,28,0.32);
+  z-index: 90;
+  transition: transform 0.2s var(--ease-out), background 0.2s var(--ease-out), box-shadow 0.2s var(--ease-out);
+}
+.present-fab:hover {
+  background: var(--ink);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.28);
+}
+.present-fab:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+.present-fab svg { width: 22px; height: 22px; display: block; }
+@media (max-width: 600px) {
+  .present-fab { right: 16px; bottom: 80px; width: 48px; height: 48px; }
+  .present-fab svg { width: 20px; height: 20px; }
+}
+@media print, (max-width: 480px) {
+  /* On very narrow screens hide present-fab — slides need viewport room. */
+}
+@media print {
+  .present-fab { display: none !important; }
+}
+
+/* ---------- Body lock while presenting ---------- */
+body.is-present { overflow: hidden; }
+body.is-present > main,
+body.is-present > .topnav,
+body.is-present > footer,
+body.is-present > .dev-banner,
+body.is-present .main-toc,
+body.is-present .reading-progress,
+body.is-present .lang-fab,
+body.is-present .feedback-fab,
+body.is-present .present-fab,
+body.is-present .intro-overlay,
+body.is-present > .scroll-steps,
+body.is-present > #pageTogglePing { display: none !important; }
+
+/* Modal & tooltip must float above the presentation overlay (1000). */
+body.is-present .modal-overlay { z-index: 1100; }
+body.is-present .tooltip { z-index: 1100; }
+body.is-present .hotspot-pop { z-index: 1100; }
+body.is-present .lg-bio-dialog { z-index: 1100; }
+
+/* ---------- Overlay shell ---------- */
+.present-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background: #0E0C09;
+  color: #F0EAD6;
+  font-family: 'Manrope', system-ui, sans-serif;
+}
+.present-overlay::before {
+  /* warm vignette so content "spotlights" on the dark stage */
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 50% 35%, rgba(255,235,200,0.06), transparent 65%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ---------- Header ---------- */
+.present-header {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 18px 28px;
+  border-bottom: 1px solid rgba(240,234,214,0.08);
+  background: rgba(14,12,9,0.85);
+  backdrop-filter: blur(8px);
+}
+.present-counter {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  color: #C0B79F;
+  padding: 6px 10px;
+  border: 1px solid rgba(240,234,214,0.18);
+  border-radius: 100px;
+  white-space: nowrap;
+}
+.present-title {
+  flex: 1;
+  margin: 0;
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  letter-spacing: -0.01em;
+  color: #F0EAD6;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.present-actions { display: flex; gap: 8px; }
+.present-fs-btn,
+.present-close {
+  width: 38px; height: 38px;
+  border-radius: 100px;
+  background: transparent;
+  color: #C0B79F;
+  border: 1px solid rgba(240,234,214,0.18);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s var(--ease-out), color 0.15s var(--ease-out), border-color 0.15s var(--ease-out);
+}
+.present-fs-btn:hover,
+.present-close:hover {
+  background: rgba(240,234,214,0.08);
+  color: #F0EAD6;
+  border-color: rgba(240,234,214,0.32);
+}
+.present-fs-btn:focus-visible,
+.present-close:focus-visible { outline: 2px solid #B91C1C; outline-offset: 3px; }
+.present-fs-btn svg { width: 18px; height: 18px; }
+.present-close { font-size: 22px; line-height: 1; padding-bottom: 2px; }
+
+/* ---------- Stage ---------- */
+.present-stage {
+  position: relative;
+  z-index: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  outline: none;
+  padding: 36px clamp(16px, 4vw, 56px) 24px;
+}
+.present-stage::-webkit-scrollbar { width: 10px; }
+.present-stage::-webkit-scrollbar-track { background: transparent; }
+.present-stage::-webkit-scrollbar-thumb {
+  background: rgba(240,234,214,0.18);
+  border-radius: 5px;
+}
+.present-stage::-webkit-scrollbar-thumb:hover { background: rgba(240,234,214,0.32); }
+
+/* ---------- Slide container ---------- */
+.present-slide {
+  max-width: min(1320px, 100%);
+  margin: 0 auto;
+  display: grid;
+  gap: clamp(20px, 3vw, 36px);
+}
+.present-slide[data-layout="cover"] { gap: clamp(28px, 4vw, 56px); }
+.present-slide[data-layout="split"] {
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+}
+.present-slide[data-layout="dashboard"] {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+@media (max-width: 900px) {
+  .present-slide[data-layout="split"],
+  .present-slide[data-layout="dashboard"] { grid-template-columns: 1fr; }
+}
+
+/* ---------- Section restyling inside a slide ---------- */
+.present-stage section,
+.present-stage > .present-slide > section {
+  padding: clamp(24px, 3.2vw, 56px) clamp(20px, 3vw, 56px);
+  border-radius: 18px;
+  background: var(--bg, #F0EAD6);
+  color: var(--ink, #1A1815);
+  box-shadow: 0 30px 60px -25px rgba(0,0,0,0.55), 0 0 0 1px rgba(240,234,214,0.05);
+  /* Stage handles its own scroll; sections must allow content to grow,
+     otherwise large viz / leader-grid / cv-timeline get clipped and the
+     slide looks "empty". */
+  overflow: visible;
+  display: block !important;
+  visibility: visible !important;
+}
+.present-stage section .wrap,
+.present-stage section .wrap-narrow {
+  max-width: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Sections that already use the dark "paradox" background — keep their look */
+.present-stage section.paradox-container,
+.present-stage section.theatre {
+  background: #1A1815;
+  color: #F0EAD6;
+  box-shadow: 0 30px 60px -25px rgba(0,0,0,0.7), 0 0 0 1px rgba(240,234,214,0.07);
+}
+
+/* Bigger headings on stage */
+.present-stage section h1,
+.present-stage section h2 {
+  font-size: clamp(34px, 4.2vw, 64px) !important;
+  line-height: 1.02;
+  letter-spacing: -0.025em;
+  margin-bottom: 18px;
+}
+.present-stage section h3 { font-size: clamp(22px, 2.4vw, 32px); }
+.present-stage section .section-label {
+  font-size: 12px;
+  letter-spacing: 0.18em;
+}
+
+/* Hero on cover slide — center, hide cross-page CTAs */
+.present-slide[data-layout="cover"] .hero { padding-top: clamp(24px, 4vw, 64px); }
+.present-slide[data-layout="cover"] .cross-cta,
+.present-slide[data-layout="cover"] .src-list,
+.present-slide[data-layout="cover"] details.collapsible { display: none; }
+.present-slide[data-layout="cover"] .hero h1.display { font-size: clamp(56px, 9vw, 140px); }
+
+/* Hide things that don't make sense on a slide */
+.present-stage .reveal { opacity: 1 !important; transform: none !important; }
+.present-stage details.collapsible { display: none; } /* methodology lives in normal scroll */
+.present-stage .src-link::after { content: ''; }
+
+/* Force charts to fill */
+.present-stage canvas { max-width: 100%; }
+
+/* Compact source lists */
+.present-stage .src-list { padding: 16px; }
+
+/* ---------- Pilot/tier-1 viz components inside slides ---------- */
+/* Visual-first sections relocate without their .party-page-layout wrapper, so
+   the inner .wrap and viz-mount elements should reflow. */
+.present-stage .viz-mount {
+  margin: 24px 0;
+  display: block !important;
+  visibility: visible !important;
+  min-height: 80px;        /* avoid 0-height collapse if SVG mis-sized */
+}
+.present-stage .viz-mount svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+.present-stage .viz-mount-cap {
+  font-size: 13px;
+  text-align: center;
+  margin: 8px auto 0;
+  max-width: 720px;
+}
+
+/* Vertical crisis-viz fits inside slide width */
+.present-stage .cv-timeline { max-width: 100%; padding: 16px 8px; }
+.present-stage .cv-card { padding: 10px 14px; }
+
+/* Leader grid re-flow on slide */
+.present-stage .leader-grid { gap: 14px; display: grid; }
+.present-stage .lg-bio-btn,
+.present-stage .lg-tier-header { display: block; }
+.present-stage .lg-card { display: grid; }
+
+/* Hotspot SVG hit-areas should stay clickable */
+.present-stage .hs { cursor: pointer; }
+
+/* Section sub-headings (h3 in pilot/tier-1) */
+.present-stage .section-h3 {
+  font-size: clamp(20px, 2.4vw, 30px);
+  margin: 18px 0 10px;
+}
+.present-stage .section-lead { font-size: clamp(14px, 1.4vw, 18px); }
+
+/* Force flat sources visible (not hidden as collapsible) */
+.present-stage .src-list { display: block; }
+.present-stage .src-list-title { font-size: 11px; }
+
+/* Tables inside slides — keep them visible and scrollable horizontally */
+.present-stage .table-wrap { overflow-x: auto; }
+.present-stage table { width: 100%; }
+
+/* The matrix table (index.html) needs explicit display restoration in case
+   any home.css rule conditionally hides it. */
+.present-stage .matrix-container { display: block; overflow-x: auto; }
+.present-stage .matrix-table { display: table; }
+
+/* ---------- Slide enter animation ---------- */
+.present-slide--enter {
+  opacity: 0;
+  transform: translateY(18px) scale(0.99);
+}
+.present-slide--enter-active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition: opacity 360ms var(--ease-out, cubic-bezier(0.22,1,0.36,1)),
+              transform 480ms var(--ease-out, cubic-bezier(0.22,1,0.36,1));
+}
+.present-slide--enter > section,
+.present-slide--enter > div {
+  opacity: 0;
+  transform: translateY(14px);
+}
+.present-slide--enter-active > section,
+.present-slide--enter-active > div {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 480ms var(--ease-out), transform 560ms var(--ease-out);
+}
+.present-slide--enter-active > *:nth-child(2) { transition-delay: 80ms; }
+.present-slide--enter-active > *:nth-child(3) { transition-delay: 140ms; }
+.present-slide--enter-active > *:nth-child(4) { transition-delay: 200ms; }
+
+@media (prefers-reduced-motion: reduce) {
+  .present-slide--enter,
+  .present-slide--enter-active,
+  .present-slide--enter > *,
+  .present-slide--enter-active > * {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* ---------- Bottom navigation ---------- */
+.present-nav {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 14px 28px 18px;
+  border-top: 1px solid rgba(240,234,214,0.08);
+  background: rgba(14,12,9,0.85);
+  backdrop-filter: blur(8px);
+}
+.present-prev,
+.present-next {
+  width: 44px; height: 44px;
+  border-radius: 100px;
+  background: transparent;
+  border: 1px solid rgba(240,234,214,0.22);
+  color: #F0EAD6;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.18s var(--ease-out), border-color 0.18s var(--ease-out), transform 0.15s var(--ease-out);
+}
+.present-prev:hover,
+.present-next:hover {
+  background: rgba(240,234,214,0.10);
+  border-color: rgba(240,234,214,0.45);
+}
+.present-prev:active,
+.present-next:active { transform: scale(0.94); }
+.present-prev:focus-visible,
+.present-next:focus-visible { outline: 2px solid #B91C1C; outline-offset: 3px; }
+.present-prev:disabled,
+.present-next:disabled { opacity: 0.3; cursor: not-allowed; }
+.present-prev svg,
+.present-next svg { width: 18px; height: 18px; }
+
+.present-dots {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  max-width: 60vw;
+  justify-content: center;
+}
+.present-dot {
+  width: 9px; height: 9px;
+  border-radius: 50%;
+  background: rgba(240,234,214,0.22);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: background 0.18s var(--ease-out), transform 0.18s var(--ease-out);
+}
+.present-dot:hover { background: rgba(240,234,214,0.45); transform: scale(1.2); }
+.present-dot.is-current {
+  background: #B91C1C;
+  width: 22px;
+  border-radius: 100px;
+}
+.present-dot:focus-visible { outline: 2px solid #B91C1C; outline-offset: 2px; }
+
+/* ---------- Top progress bar ---------- */
+.present-progress {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: rgba(240,234,214,0.06);
+  z-index: 3;
+  overflow: hidden;
+}
+.present-progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #B91C1C, #E0A800);
+  transition: width 380ms var(--ease-out);
+}
+@media (prefers-reduced-motion: reduce) {
+  .present-progress-bar { transition: none; }
+}
+
+/* ---------- Hint below nav (only first slide) ---------- */
+.present-hint {
+  position: absolute;
+  left: 50%; transform: translateX(-50%);
+  bottom: 88px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: rgba(240,234,214,0.5);
+  letter-spacing: 0.06em;
+  pointer-events: none;
+  opacity: 0;
+  animation: present-hint-fade 4s ease-out forwards;
+  animation-delay: 600ms;
+}
+@keyframes present-hint-fade {
+  0%   { opacity: 0; transform: translate(-50%, 8px); }
+  20%  { opacity: 1; transform: translate(-50%, 0); }
+  80%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .present-hint { animation: none; opacity: 0.6; }
+}
+
+/* ---------- Mobile tweaks ---------- */
+@media (max-width: 720px) {
+  .present-header { padding: 12px 14px; gap: 10px; }
+  .present-title { font-size: 14px; }
+  .present-counter { font-size: 11px; padding: 4px 8px; }
+  .present-fs-btn { display: none; }
+  .present-close { width: 34px; height: 34px; }
+  .present-stage { padding: 20px 12px 16px; }
+  .present-stage section h1,
+  .present-stage section h2 { font-size: clamp(28px, 7vw, 44px) !important; }
+  .present-nav { padding: 10px 14px 14px; gap: 10px; }
+  .present-dots { max-width: 50vw; gap: 5px; }
+  .present-dot { width: 7px; height: 7px; }
+  .present-dot.is-current { width: 18px; }
+}

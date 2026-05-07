@@ -1,0 +1,2410 @@
+
+
+
+
+
+
+
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Даванков Владислав Андреевич - официальная декларация.
+    ,   </title>
+    
+    
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4T8LH2GTDR"></script>
+<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/404074cc83c30621d97f77cd6/0363239d10585da63a17c13a4.js");</script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-4T8LH2GTDR');
+</script>
+    
+    
+    <script src="https://unpkg.com/htmx.org"></script>
+    
+    
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+                    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+                    crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js"
+                    integrity="sha384-FzT3vTVGXqf7wRfy8k4BiyzvbNfeYjK+frTVqZeNDFl8woCbF0CYG6g2fMEFFo/i"
+                    crossorigin="anonymous"></script>
+
+            <script>
+                // Fall back to a local copy, if the CDN fails
+                if (!window.jQuery)
+                {
+                    // JS
+                    document.write('<script src="/static/js/jquery-2.2.4.js"><\/script>');
+                    document.write('<script src="/static/js/main/bootstrap-3.3.7.js"><\/script>');
+                    document.write('<script src="/static/js/jquery.form.js"><\/script>');
+                    // CSS
+                    document.write('<link href="/static/css/main/bootstrap.min.css" type="text/css" rel="stylesheet" \/>');
+                }
+            </script>
+		
+
+     
+      <script type="text/javascript" src="/static/js/all.js"></script>
+      <script type="text/javascript" src="/static/js/popups.js"></script>
+    
+
+    
+
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+        <script src="https://cdn.rawgit.com/leongersen/noUiSlider/master/distribute/nouislider.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/randomcolor/0.5.4/randomColor.min.js"></script>
+        <script>
+            if (!window.noUiSlider) {
+                document.write('<script src="/static/js/nouislider.js"><\/script>');
+            }
+            if (!window.randomColor) {
+                document.write('<script src="/static/js/randomColor-0.5.4.js"><\/script>');
+            }
+            if (!window.Chart) {
+                document.write('<script src="/static/js/Chart.bundle-2.9.3.js"><\/script>');
+            }
+        </script>
+    
+
+    <script src="/static/js/declaration-time-charts.js"></script>
+    <script type="text/javascript" src="/static/js/pages/search.js"></script>
+
+    <script>
+        var personId = 399390;
+        var personFullName = "Даванков Владислав Андреевич";
+        var personShortName = "Даванков В. А.";
+    </script>
+
+    <script>
+        function getCookie(name) {
+            var cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                var cookies = document.cookie.split(';');
+                for (var i = 0; i < cookies.length; i++) {
+                    var cookie = cookies[i].trim();
+                    // Does this cookie string begin with the name we want?
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+
+        var csrftoken = getCookie('csrftoken');
+
+        function csrfSafeMethod(method) {
+            // these HTTP methods do not require CSRF protection
+            return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+        }
+
+        $.ajaxSetup({
+            beforeSend: function (xhr, settings) {
+                if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+                    xhr.setRequestHeader("X-CSRFToken", csrftoken);
+                }
+            }
+        });
+
+        function getMeta() {
+            var map = {};
+            var metas = document.getElementsByTagName('meta');
+            for (var i = 0; i < metas.length; i++) {
+                var name = metas[i].getAttribute('property') || metas[i].getAttribute('http-equiv') || metas[i].getAttribute('name');
+                if (name !== null) {
+                    map[name.replace(/^og:/g, '')] = metas[i].getAttribute('content');
+                }
+            }
+
+            res = document.getElementById('result');
+            if (res != undefined) {
+                map["description"] = 'Декларатор: "' + res.innerHTML + '"';
+            }
+            res = document.getElementById('resultpos');
+            if (res != undefined) {
+
+                map["url"] += '&pos=' + res.value;
+                s = readCookie('s');
+                if (s != undefined) {
+                    map["url"] += '&s=' + s;
+                }
+            }
+
+            return map;
+        }
+
+        function share(type) {
+            var url;
+            var data = getMeta();
+
+            switch (type) {
+                case 'vkontakte':
+                    url = 'http://vkontakte.ru/share.php?'
+                        + 'url=' + encodeURIComponent(data.url)
+                        + '&title=' + encodeURIComponent(data.title)
+                        + '&description=' + encodeURIComponent(data.description)
+                        + '&image=' + encodeURIComponent(data.image)
+                        + '&noparse=true'
+                    ;
+                    break;
+
+                case 'odnoklassniki':
+                    url = 'https://connect.ok.ru/offer?'
+                        + 'url=' + encodeURIComponent(data.url)
+                        + '&title=' + encodeURIComponent(data.title + ' ' + data.description)
+                        + '&imageUrl=' + encodeURIComponent(data.image)
+                    ;
+                    break;
+
+                case 'facebook':
+                    url = 'https://www.facebook.com/sharer/sharer.php?'
+                        + 'u=' + encodeURIComponent(data.url)
+                        + '&title=' + encodeURIComponent(data.title)
+                        + '&description=' + encodeURIComponent(data.description)
+                        + '&quote=' + encodeURIComponent(data.description)
+                        + '&picture=' + encodeURIComponent(data.image)
+                    ;
+                    break;
+
+                case 'twitter':
+                    url = 'https://twitter.com/share?'
+                        + 'text=' + encodeURIComponent(data.title + ' ' + data.description)
+                        + '&url=' + encodeURIComponent(data.url)
+                        + '&counturl=' + encodeURIComponent(data.url)
+                    ;
+                    break;
+
+                case 'telegram':
+                    url = 'https://telegram.me/share/url?'
+                        + 'url=' + encodeURIComponent(data.url)
+                        + '&text=' + encodeURIComponent(data.title + ' ' + data.description + ' ' + data.image)
+                    ;
+                    break;
+
+                case 'mailru':
+                    url = 'http://connect.mail.ru/share?'
+                        + 'url=' + encodeURIComponent(data.url)
+                        + '&title=' + encodeURIComponent(data.title)
+                        + '&description=' + encodeURIComponent(data.description)
+                        + '&imageurl=' + encodeURIComponent(data.image)
+                    ;
+                    break;
+            }
+
+            window.open(url, '', 'toolbar=0,status=0,width=626,height=436');
+        }
+
+    </script>
+
+    <script src="/static/js/pages/search_persons.js"></script>
+    <script src="/static/js/pages/persons_detail.js"></script>
+    <script src="/static/js/pages/person_ajax_detail.js"></script>
+    <script src="/static/js/pages/person_ajax_alert.js"></script>
+    
+    <script>
+        $(document).ready(function () {
+            if ($('[data-toggle="tooltip"]').tooltip)
+                $('[data-toggle="tooltip"]').tooltip({html: true});
+
+            $('.tooltip-person-index').on('shown.bs.tooltip', function () {
+                if (typeof window.ym !== undefined) {
+                    ym(11022841, 'reachGoal', 'index-tooltip');
+                }
+            })
+
+            $('.tooltips_subscribe_updates').on('mouseleave', function () {
+                $(this).tooltip('hide');
+            })
+
+            $('.tooltips_download_person_csv_report').on('mouseleave', function () {
+                $(this).tooltip('hide');
+            })
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $("#person_add_photo").on("submit", function (event) {
+                event.preventDefault();
+                let formData = new FormData(this);
+                $.ajax({
+                    type: $(this).attr('method'),
+                    url: $(this).attr('action'),
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    beforeSend: function (xhr) {
+                        xhr.setRequestHeader("X-CSRFToken", 'K1G6cKBje5QcNv72P8vpHJunrNrzG7v7LKA3Kz4sNvRzCY480G25WEslUItV7uky');
+                    },
+                    success: function (data) {
+                        $("#add_photo_modal").modal('hide');
+                        $('#person_success_messages').empty().append(data.message);
+                        $('#person_success_messages').removeClass('hidden');
+                        setTimeout(() => {
+                            $('#person_success_messages').empty().addClass('hidden');
+                            location.reload();
+                        }, 3000);
+                    },
+                    error: function (data) {
+                        $('#add_photo_errors').empty();
+                        if (data.responseJSON) {
+                            $('#add_photo_errors').empty();
+                            Object.values(data.responseJSON.errors).forEach(function (e) {
+                                $('#add_photo_errors').append(`<div class="add-photo-errors">${e}</div>`);
+                            })
+                            $('#add_photo_errors').removeClass('fade');
+                        }
+                    }
+                });
+            });
+        })
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $("#person_add_photo_url").on("submit", function (event) {
+                event.preventDefault();
+                let formData = new FormData(this);
+                $.ajax({
+                    type: $(this).attr('method'),
+                    url: $(this).attr('action'),
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    beforeSend: function (xhr) {
+                        xhr.setRequestHeader("X-CSRFToken", 'K1G6cKBje5QcNv72P8vpHJunrNrzG7v7LKA3Kz4sNvRzCY480G25WEslUItV7uky');
+                    },
+                    success: function (data) {
+                        $("#add_photo_url_modal").modal('hide');
+                        $('#person_success_messages').empty().append(data.message);
+                        $('#person_success_messages').removeClass('hidden');
+                        setTimeout(() => {
+                            $('#person_success_messages').empty().addClass('hidden');
+                            location.reload();
+                        }, 3000);
+                    },
+                    error: function (data) {
+                        $('#add_photo_url_errors').empty();
+                        if (data.responseJSON) {
+                            $('#add_photo_url_errors').empty();
+                            Object.values(data.responseJSON.errors).forEach(function (e) {
+                                $('#add_photo_url_errors').append(`<div class="add-photo-url-errors">${e}</div>`);
+                            })
+                            $('#add_photo_url_errors').removeClass('fade');
+                        }
+                    }
+                });
+            });
+        })
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $("#person_add_wiki").on("submit", function (event) {
+                event.preventDefault();
+                let formData = new FormData(this);
+                $.ajax({
+                    type: $(this).attr('method'),
+                    url: $(this).attr('action'),
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    beforeSend: function (xhr) {
+                        xhr.setRequestHeader("X-CSRFToken", 'K1G6cKBje5QcNv72P8vpHJunrNrzG7v7LKA3Kz4sNvRzCY480G25WEslUItV7uky');
+                    },
+                    success: function (data) {
+                        $('#add_wiki_modal').modal('hide');
+                        let wikipedia = data.wikipedia;
+                        $('#add_wiki_btn').replaceWith(
+                            `<a href="${wikipedia}" class="fab fa-wikipedia-w social-btn social-btn-w" title="wikipedia" target="_blank"></a>`
+                        );
+                        $('#person_success_messages').empty().append(data.message);
+                        $('#person_success_messages').removeClass('hidden');
+                        setTimeout(() => $('#person_success_messages').empty().addClass('hidden'), 3000);
+                    },
+                    error: function (data) {
+                        $('#add_wiki_errors').empty();
+                        if (data.responseJSON) {
+                            Object.values(data.responseJSON.errors).forEach(function (e) {
+                                $('#add_wiki_errors').append(`<div>${e}</div>`);
+                            })
+                            $('#add_wiki_errors').removeClass('fade');
+                        }
+                    }
+                });
+            });
+        })
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $("#person_add_comment").on("submit", function (event) {
+                event.preventDefault();
+                let formData = new FormData(this);
+                
+                let body = this.getElementsByTagName("iframe")[0].contentDocument.getElementsByTagName("body")[0].innerHTML;
+                formData.append('body', body);
+                $.ajax({
+                    type: $(this).attr('method'),
+                    url: $(this).attr('action'),
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    beforeSend: function (xhr) {
+                        xhr.setRequestHeader("X-CSRFToken", 'K1G6cKBje5QcNv72P8vpHJunrNrzG7v7LKA3Kz4sNvRzCY480G25WEslUItV7uky');
+                    },
+                    success: function (data) {
+                        $('#person_comments').append(data.html);
+                        $('#add_comment_success').empty().append(data.message);
+                        $('#add_comment_success').removeClass('hidden');
+                        setTimeout(() => $('#add_comment_success').empty().addClass('hidden'), 3000);
+                    },
+                    error: function (data) {
+                        $('#add_comment_errors').empty();
+                        if (data.responseJSON) {
+                            Object.values(data.responseJSON.errors).forEach(function (e) {
+                                $('#add_comment_errors').append(`<div>${e}</div>`);
+                            })
+                            $('#add_comment_errors').removeClass('hidden');
+                            setTimeout(() => $('#add_comment_errors').empty().addClass('hidden'), 3000);
+                        }
+                    }
+                });
+            });
+        })
+    </script>
+
+    
+
+    <script>
+        $(document).ready(function () {
+            const fileInput = document.getElementById('add_person_photo_input');
+            fileInput.onchange = () => {
+                $("#add_photo_modal").modal('show');
+            }
+        })
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            const deletePhotoButton = document.getElementById('person_delete_photo');
+            if (deletePhotoButton) {
+                deletePhotoButton.onclick = () => {
+                    $("#delete_photo_modal").modal('show');
+                }
+            }
+        })
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $("#person_add_person_proof").on("submit", function (event) {
+                event.preventDefault();
+                const progressBar = document.getElementById('proof_progress_bar');
+                progressBar.classList.remove('not-visible');
+                let formData = new FormData(this);
+                $.ajax({
+                    type: $(this).attr('method'),
+                    url: $(this).attr('action'),
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    beforeSend: function (xhr) {
+                        xhr.setRequestHeader("X-CSRFToken", 'K1G6cKBje5QcNv72P8vpHJunrNrzG7v7LKA3Kz4sNvRzCY480G25WEslUItV7uky');
+                    },
+                    xhr: function () {
+                        const xhr = new window.XMLHttpRequest();
+                        xhr.upload.addEventListener('progress', e => {
+                            if ((e.lengthComputable) && (e.total > 3000000)) {
+                                const percent = e.loaded / e.total * 100;
+                                progressBar.innerHTML = `<div class="progress proof-progress"><div class="progress-bar"
+                                                        role="progressbar" style="width: ${percent}%"
+                                                        aria-valuenow="${percent}" aria-valuemin="0"
+                                                        aria-valuemax="100"></div></div><label>Идет загрузка файла. Пожалуйста, на закрывайте окно браузера.</label>`
+                            }
+                        })
+                        return xhr
+                    },
+                    success: function (data) {
+                        $("#add_person_proof_modal").modal('hide');
+                        location.reload();
+                    },
+                    error: function (data) {
+                        $('#person_proof_errors').empty();
+                        if (data.responseJSON) {
+                            $('#person_proof_errors').empty();
+                            Object.values(data.responseJSON.errors).forEach(function (e) {
+                                $('#person_proof_errors').append(`<div>${e}</div>`);
+                            })
+                            $('#person_proof_errors').removeClass('fade');
+                        }
+                    }
+                });
+            });
+        })
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $('#delete_photo_submit').on('click', function (event) {
+                event.preventDefault();
+                let data = '';
+                $.ajax({
+                    type: 'POST',
+                    url: "/person/399390/delete_photo",
+                    data: data,
+                    beforeSend: function (xhr) {
+                        xhr.setRequestHeader("X-CSRFToken", 'K1G6cKBje5QcNv72P8vpHJunrNrzG7v7LKA3Kz4sNvRzCY480G25WEslUItV7uky');
+                    },
+                    success: function (data) {
+                        location.reload();
+                    },
+                    error: function (data) {
+                        $('#person_delete_photo').remove();
+                        $('#delete_photo_errors').empty();
+                        if (data.responseJSON) {
+                            $('#delete_photo_errors').append(
+                                `<div class="delete-photo-errors">${data.responseJSON.error}</div>`
+                            );
+                            $('#delete_photo_errors').removeClass('fade');
+                        }
+                    }
+                });
+            });
+        })
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $('#person_proof_cancel').on('click', function (event) {
+                $('#add_person_proof_input').val('');
+                $('#person_proof_comment').val('');
+                $('#person_proof_errors').empty().addClass('fade');
+                location.reload();
+            })
+        })
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $('#person_photo_cancel').on('click', function (event) {
+                $('#add_person_photo_input').val('');
+                $('#photo_source').val('');
+                $('#add_photo_errors').empty().addClass('fade');
+                location.reload();
+            })
+        })
+    </script>
+
+
+    
+    
+     
+		  
+			  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:400,600,700&subset=cyrillic" />
+		  
+
+		  <link href="/static/css/base.css" type="text/css" rel="stylesheet" />
+	    <link href="/static/css/common.css" type="text/css" rel="stylesheet" />
+	    <link href="/static/css/formup.css" type="text/css" rel="stylesheet" />
+
+      <link href="/static/fontawesome/css/fontawesome.css" rel="stylesheet">
+      <link href="/static/fontawesome/css/brands.css" rel="stylesheet">
+      <link href="/static/fontawesome/css/solid.css" rel="stylesheet">
+	  
+
+    
+
+    
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+              integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+              crossorigin="anonymous">
+        <link rel="stylesheet"
+              href="https://cdn.rawgit.com/leongersen/noUiSlider/master/distribute/nouislider.min.css">
+    
+
+    <link href="/static/css/pages/person.css" type="text/css" rel="stylesheet"/>
+    <link href="/static/css/pages/document.css" type="text/css" rel="stylesheet"/>
+    <link href="/static/css/person/bootstrap-social.css" type="text/css" rel="stylesheet"/>
+    <style>
+        .extra {
+            display: none;
+        }
+    </style>
+
+    
+    <link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico" />
+
+    
+      
+    
+
+    
+    
+        
+        
+    
+
+    
+    
+
+    <meta name="keywords"
+          content="Владислав, Даванков, коррупция, доходы чиновников, декларация, декларации о доходах, декларации чиновников, отчетность, задекларировано">
+
+    <meta property="og:title"
+          content="Даванков Владислав Андреевич - официальная декларация">
+    
+        <meta name="description"
+              content="Мэр города Москвы, Кандидат на должность главы региона (Новые люди) . 2022 год: доход 9622303,56 руб., недвижимое имущество 3 695 м2., транспортные средства: 2 шт."/>
+        <meta property="og:description"
+              content="Мэр города Москвы, Кандидат на должность главы региона (Новые люди) . 2022 год: доход 9622303,56 руб., недвижимое имущество 3 695 м2., транспортные средства: 2 шт.">
+    
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://declarator.org/person/399390/">
+    
+        <meta property="og:image" content="https://declarator.org/media/person/photos/Sholban_Kara-ool_and_Vladislav_Davankov_19-12-2023_cropped.jpg">
+    
+
+    
+      
+</head>
+
+<body>
+
+
+    <!-- Yandex.Metrika counter -->
+<script type="text/javascript"> (function (m, e, t, r, i, k, a) {
+    m[i] = m[i] || function () {
+        (m[i].a = m[i].a || []).push(arguments)
+    };
+    m[i].l = 1 * new Date();
+    k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+})(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+ym(11022841, "init", {clickmap: true, trackLinks: true, accurateTrackBounce: true, webvisor: true}); </script>
+<noscript>
+    <div><img src="https://mc.yandex.ru/watch/11022841" style="position:absolute; left:-9999px;" alt=""/></div>
+</noscript> <!-- /Yandex.Metrika counter -->
+
+
+
+
+
+    <div class="header" id="sticky-header">
+      <div class="content">
+        <div class="title">
+          <a href="/"><img src="/static/img/main/declarator-logo-new.png"></a>
+        </div>
+        <ul class="main_menu">
+            
+            <li class="element">
+                
+                  <a class="soft" href="https://t.me/okogosudarevobot">Телеграм-бот</a>
+                
+            </li>
+            
+            <li class="element">
+                
+                    <a class="soft" href="/about/">О проекте</a>
+                
+            </li>
+            
+            <li class="element">
+                
+                  <a class="soft" href="https://t.me/declarator_org/28">Исследование</a>
+                
+            </li>
+            
+            <li class="element">
+                
+                  <a class="soft" href="https://t.me/declarator_org">Телеграм</a>
+                
+            </li>
+            
+        </ul>
+
+        
+<form class="lang_switcher" action="/change_lang/" method="POST" id="change_language_form">
+
+    <input type="hidden" name="csrfmiddlewaretoken" value="K1G6cKBje5QcNv72P8vpHJunrNrzG7v7LKA3Kz4sNvRzCY480G25WEslUItV7uky">
+
+    <div><a href="/en/person/399390/" lang_code="en" class="change_language">ENG</a></div>
+    <div><a href="/person/399390/" lang_code="ru" class="change_language">РУС</a></div>
+
+</form>
+
+
+        <div class="auth">
+            <img class="user-avatar" src="/static/img/person/silhouette.png" alt="">
+          
+
+            <ul id="user-panel" class="auth_block">
+                <li>
+                    <a rel="nofollow" class="soft" href="/accounts/login/?next=/person/399390/">
+                    Войти
+                    </a> / <a class="soft" href="/accounts/signup/">Регистрация</a>
+                </li>
+                <li>
+                    <a rel="nofollow" class="soft" href="/accounts/reset-password/">Напомнить пароль</a>
+                </li>
+            </ul>
+
+          
+        </div>
+      </div>
+    </div>
+    <script>
+        window.onscroll = function() {myFunction()};
+        var header = document.getElementById("sticky-header");
+        var sticky = header.offsetTop;
+        function myFunction() {
+          if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+          } else {
+            header.classList.remove("sticky");
+          }
+        }
+    </script>
+
+
+
+    <div class="page_body person-sub-header">
+        <div class="person-sub-header-banner"><div><a href="https://t.me/declarator_org" target="_blank"><img alt="" src="/media/uploads/lulululu/2025/01/14/ban_top_25_32_935045f252294276b4f3954382acf25a.png" style="height:32px; width:620px" /></a></div></div>
+        <div class="searching person-sub-header-search">
+            <div class="input-wrapper">
+                <input type="text" class="search" name="search" id="main_search_input" value=""
+                   placeholder="Поиск людей, органов власти и регионов" autocomplete="off"
+                   onclick="ym(11022841, 'reachGoal', 'searchForm'); return true;">
+                <button id="search_img">&#128269;</button>
+                <img class="search_loading" src="/static/img/search/search-timer.gif" alt="Loading" />
+            </div>
+            <div class="ajax-search-results" id="ajax_search_results"></div>
+        </div>
+    </div>
+
+    <div class="page_body person-sub-header person-sub-header-buttons">
+        <div class="person-sub-header-banner">
+            <a class="person-all-persons-link" href="/person/">&lt; Все должностные лица</a>
+        </div>
+        <div class="person-sub-header-search">
+            <button class="btn person-complaint" id="person-complaint">Сообщить о коррупции</button>
+            <button class="btn person-alert-message" id="person-alert-message">Сообщить об ошибке</button>
+        </div>
+    </div>
+
+    <div class="page_body person-new">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        <div class="alert alert-success hidden" role="alert" id="person_success_messages"></div>
+        <div class="alert alert-success hidden" role="alert" id="person_error_messages"></div>
+        <div class="person_header person-new__header">
+            <div class="person-description">
+                <div class="lobbist">
+                    
+                        <div class="photo">
+                            
+                                <img src="/media/cache/ba/b7/bab7142b7718344b5bc44e45535c1ab7.png" alt="photo" width="195" height="255">
+                            
+                        </div>
+                        
+                    
+                    <div class="person-user-lists">
+                        <a class="person-user-lists-button" id="personUserListsButton">
+                            Входит в списки (1)
+                        </a>
+                        <a class="user-list-add-person-button" id="userListAddPersonButton">
+                            + Добавить в список
+                        </a>
+                    </div>
+                </div>
+
+                <div class="desc-contaiter">
+                    <div class="row row-flex row-min-height">
+                        <div class="col-xs-11 column-flex">
+                            <div class="profile-info">
+                                <h1 class="title">
+                                    Даванков Владислав Андреевич
+                                    
+                                    
+                                </h1>
+
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="row">
+                                            
+                                                <div class="col-xs-3 person-header social-btns">
+                                                    
+                                                        <h4>В сети</h4>
+                                                    
+                                                    
+                                                        
+                                                            <a href="https://ru.wikipedia.org/wiki/Даванков,_Владислав_Андреевич"
+                                                               class="fab fa-wikipedia-w social-btn social-btn-w"
+                                                               title="wikipedia" target="_blank"></a>
+                                                        
+                                                    
+                                                    
+                                                        <a href="https://www.facebook.com/davankov"
+                                                           class="fab fa-facebook social-btn social-btn-w"
+                                                           title="facebook" target="_blank"></a>
+                                                    
+                                                    
+                                                    
+                                                        <a href="https://vk.com/vladdavankov"
+                                                           class="fab fa-vk social-btn social-btn-w" title="vkontakte"
+                                                           target="_blank"></a>
+                                                    
+                                                    
+                                                </div>
+                                            
+                                            
+                                                <div class="col-xs-3 person-header redflag-idx">
+                                                    <h4>Индекс декларатора</h4>
+                                                    <span class="tooltip-text tooltip-person-index"
+                                                          data-toggle="tooltip"
+                                                          data-placement="bottom"
+                                                          data-title="<p>Индекс Декларатора основан на аномальных значениях в декларациях и иных факторах. Подробности о значении индекса конкретной персоны доступны для зарегистрированных пользователей. Подробнее о методологи Индекса по адресу:&nbsp;<br />
+declarator.org/index_methodology</p>">
+                                                        <span class="redflag-index">
+                                                            
+                                                                ░░░
+                                                            
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                            
+                                            
+                                                <div class="col-xs-3 person-header life-period">
+                                                    <h4>Дата рождения</h4>
+                                                    <span class="person-text">25.02.1984</span>
+                                                </div>
+                                            
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <p class="person-text">
+                                            ИНН
+                                            
+                                                <span data-toggle="tooltip" data-placement="bottom"
+                                                      data-title="ИНН доступен для авторизованных пользователей. Зарегистрируйтесь или войдите">
+                                            ░░░░░░░░░░░░
+                                        </span>
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+                            
+                            
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <p class="person-text">
+                                            Входит в санкционные списки: Австралия, Бельгия, Великобритания, Европейский союз, Канада, Новая Зеландия, Соединенные Штаты Америки, Франция, Швейцария, Япония.
+                                        </p>
+                                    </div>
+                                </div>
+                            
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <p class="person-text">
+                                        
+                                            Данные о законопроектах и голосовании депутата Государственной думы доступны на ресурсе о лоббистах <a href="https://dumabingo.org/person/399390">ДумаБинго</a>.
+                                        
+                                    </p>
+                                </div>
+                            </div>
+                            
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <p class="person-text">Место учебы: исторический факультет МГУ</p>
+                                    </div>
+                                </div>
+                            
+                            
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <p class="person-text">
+                                            В браке &mdash; по данным деклараций 2021.
+                                        </p>
+                                    </div>
+                                </div>
+                            
+                            
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <p class="person-text">
+                                            Несовершеннолетний ребенок (дети) &mdash; по данным деклараций 2021.
+                                        </p>
+                                    </div>
+                                </div>
+                            
+                        </div>
+                        
+                            <div class="col-xs-1">
+                                <p class="person-text photo_description">
+                                <span class="photo_source"><a
+                                        
+                                            href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Sholban_Kara-ool_and_Vladislav_Davankov_%2819-12-2023%29_%28cropped%29.jpg/500px-Sholban_Kara-ool_and_Vladislav_Davankov_%2819-12-2023%29_%28cropped%29.jpg" target="_blank" style="white-space: nowrap;
+                                    overflow: hidden; text-overflow: ellipsis; display: block"
+                                        
+                                >
+                                
+                                    Источник фотографии:<br>Википедия
+                                
+                                </a></span>
+                                </p>
+                            </div>
+                        
+                    </div>
+                </div>
+
+                
+                    <div class="person-proofs" id="person_proofs">
+                    <ul>
+                        
+                            <li>
+                                <div>
+                                    <div class="person-proof-comment-wrapper">
+                                        <div class="person-proof-comment-file">
+                                            <span class="tooltip-text"
+                                                  data-toggle="tooltip"
+                                                  data-placement="top"
+                                                  data-title="Скачать файл">
+                                                <a href="/media/person/proofs/davankov.zip" download>
+                                                    <i class="fas fa-file-download"></i>
+                                                </a>
+                                            </span>
+                                        </div>
+                                        <div class="person-proof-comment-text">
+                                            <p class="person-proof-comment">
+                                                Instagram davankov
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <p class="person-proof-author-wrapper">
+                                        
+                                        01.04.2022 21:40
+                                    </p>
+                                </div>
+                            </li>
+                        
+                    </ul>
+                </div>
+                
+
+
+
+
+
+
+                <div class="modal fade" id="add_photo_modal" tabindex="-1" role="dialog"
+                     aria-labelledby="add_photo_modal_label"
+                     aria-hidden="true">
+                    <div class="modal-dialog modal-lg add-photo-form">
+                        <div class="modal-content">
+                            <div class="modal-body add-photo-form">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                                        id="person_photo_cancel">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <form id="person_add_photo" class="form-group" method="POST"
+                                      enctype="multipart/form-data"
+                                      action="/person/399390/add_photo">
+                                    <input type="hidden" name="csrfmiddlewaretoken" value="K1G6cKBje5QcNv72P8vpHJunrNrzG7v7LKA3Kz4sNvRzCY480G25WEslUItV7uky">
+                                    <input name="photo" type="file" accept="image/*" id="add_person_photo_input"
+                                           style="display: none">
+                                    <label class="photo-source-label" for="add_photo_source">
+                                        Источник фотографии (копирайт)
+                                    </label>
+                                    <input class="form-control photo-source-input" type="text" name="photo_source"
+                                           id="add_photo_source">
+                                    
+                                        <div class="captcha"><script src="https://www.google.com/recaptcha/api.js"></script>
+<script>
+    // Submit function to be called, after reCAPTCHA was successful.
+    var onSubmit_1a6c6f4f985f4552840fcc3f0dbd4751 = function(token) {
+        console.log("reCAPTCHA validated for 'data-widget-uuid=\"1a6c6f4f985f4552840fcc3f0dbd4751\"'")
+    };
+</script>
+
+<div
+     class="g-recaptcha" data-sitekey="6Lcwe_cZAAAAABQ0gjREk-oyoy6ny-RnwrDqt9jT" id="id_captcha" data-widget-uuid="1a6c6f4f985f4552840fcc3f0dbd4751" data-callback="onSubmit_1a6c6f4f985f4552840fcc3f0dbd4751" data-size="normal"
+>
+</div></div>
+                                    
+                                    <div class="alert alert-danger fade mt-5" role="alert" id="add_photo_errors"></div>
+                                    <button type="submit" class="submit-add-photo"
+                                            onclick="ym(11022841,'reachGoal','add-photo')">Добавить фотографию</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="delete_photo_modal" tabindex="-1" role="dialog"
+                     aria-labelledby="delete_photo_modal_label" aria-hidden="true">
+                    <div class="modal-dialog modal-lg add-photo-form">
+                        <div class="modal-content">
+                            <div class="modal-body add-photo-form">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <div class="alert alert-danger fade mt-5" role="alert" id="delete_photo_errors"></div>
+                                <button type="submit" class="submit-delete-photo" id="delete_photo_submit">
+                                    Удалить фотографию?
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="add_photo_url_modal" tabindex="-1" role="dialog"
+                     aria-labelledby="add_photo_url_modal_label" aria-hidden="true">
+                    <div class="modal-dialog modal-lg add-photo-url-form">
+                        <div class="modal-content">
+                            <div class="modal-body add-photo-url-form">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <form class="form-group" method="POST" id="person_add_photo_url"
+                                      action="/person/399390/add_photo_url">
+                                    <input type="hidden" name="csrfmiddlewaretoken" value="K1G6cKBje5QcNv72P8vpHJunrNrzG7v7LKA3Kz4sNvRzCY480G25WEslUItV7uky">
+                                    <label class="file-url-label"
+                                           for="file_url">Cсылка на фотографию</label>
+                                    <input class="form-control file-url-input" type="url" name="file_url" id="file_url">
+                                    <label class="photo-url-source-label" for="add_photo_url_source">
+                                        Источник фотографии (копирайт)
+                                    </label>
+                                    <input class="form-control photo-source-input" type="text" name="photo_source"
+                                           id="add_photo_url_source">
+                                    
+                                        <div class="captcha"><script src="https://www.google.com/recaptcha/api.js"></script>
+<script>
+    // Submit function to be called, after reCAPTCHA was successful.
+    var onSubmit_1a6c6f4f985f4552840fcc3f0dbd4751 = function(token) {
+        console.log("reCAPTCHA validated for 'data-widget-uuid=\"1a6c6f4f985f4552840fcc3f0dbd4751\"'")
+    };
+</script>
+
+<div
+     class="g-recaptcha" data-sitekey="6Lcwe_cZAAAAABQ0gjREk-oyoy6ny-RnwrDqt9jT" id="id_captcha" data-widget-uuid="1a6c6f4f985f4552840fcc3f0dbd4751" data-callback="onSubmit_1a6c6f4f985f4552840fcc3f0dbd4751" data-size="normal"
+>
+</div></div>
+                                    
+                                    <div class="alert alert-danger fade" role="alert" id="add_photo_url_errors"></div>
+                                    <button type="submit" class="submit-add-photo-url"
+                                            onclick="ym(11022841,'reachGoal','add-photo-url')">Добавить ссылку</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="add_wiki_modal" tabindex="-1" role="dialog"
+                     aria-labelledby="add_wiki_modal_label"
+                     aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title"
+                                    id="add_wiki_modal_label">Добавить ссылку на Википедию</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form id="person_add_wiki" class="form-group" method="POST"
+                                      action="/person/399390/add_wiki">
+                                    <input type="hidden" name="csrfmiddlewaretoken" value="K1G6cKBje5QcNv72P8vpHJunrNrzG7v7LKA3Kz4sNvRzCY480G25WEslUItV7uky">
+                                    <label class="" for="id_wikipedia">Ссылка на Википедию:</label>
+                                    <input class="form-control" type="text" name="wikipedia" id="id_wikipedia">
+                                    
+                                        <div class="captcha"><script src="https://www.google.com/recaptcha/api.js"></script>
+<script>
+    // Submit function to be called, after reCAPTCHA was successful.
+    var onSubmit_2a392097690d44d999f8031d8c783d4e = function(token) {
+        console.log("reCAPTCHA validated for 'data-widget-uuid=\"2a392097690d44d999f8031d8c783d4e\"'")
+    };
+</script>
+
+<div
+     class="g-recaptcha" data-sitekey="6Lcwe_cZAAAAABQ0gjREk-oyoy6ny-RnwrDqt9jT" id="id_captcha" data-widget-uuid="2a392097690d44d999f8031d8c783d4e" data-callback="onSubmit_2a392097690d44d999f8031d8c783d4e" data-size="normal"
+>
+</div></div>
+                                    
+                                    <div class="alert alert-danger fade mt-5" role="alert" id="add_wiki_errors"></div>
+                                    <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">
+                                        Отменить
+                                    </button>
+                                    <button type="submit" class="btn btn-outline-success"
+                                            onclick="ym(11022841,'reachGoal','wikilink')">Отправить</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="add_person_proof_modal" tabindex="-1" role="dialog"
+                     aria-labelledby="add_person_proof_modal_label"
+                     aria-hidden="true">
+                    <div class="modal-dialog modal-lg person-add-person-proof">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title"
+                                    id="add_person_proof_modal_label">Публикация документа</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form id="person_add_person_proof" class="form-group" method="POST"
+                                      enctype="multipart/form-data"
+                                      action="/person/399390/add_proof">
+                                    <input type="hidden" name="csrfmiddlewaretoken" value="K1G6cKBje5QcNv72P8vpHJunrNrzG7v7LKA3Kz4sNvRzCY480G25WEslUItV7uky">
+                                    <input name="image" type="file" id="add_person_proof_input" style="display: none">
+                                    <div id="add_person_proof_input_label"></div>
+                                    <label for="person_proof_comment">Комментарий к документу (публичный):</label>
+                                    <textarea class="form-control" name="comment" cols="40" rows="10"
+                                              id="person_proof_comment"></textarea>
+                                    
+                                        <label for="person_proof_file_author">Автор файла (публикуется):</label>
+                                        <input class="form-control" type="text" name="file_author"
+                                               id="person_proof_file_author">
+                                        <div class="captcha"><script src="https://www.google.com/recaptcha/api.js"></script>
+<script>
+    // Submit function to be called, after reCAPTCHA was successful.
+    var onSubmit_872b00da00fd4ea1b35e549423e9af80 = function(token) {
+        console.log("reCAPTCHA validated for 'data-widget-uuid=\"872b00da00fd4ea1b35e549423e9af80\"'")
+    };
+</script>
+
+<div
+     class="g-recaptcha" data-sitekey="6Lcwe_cZAAAAABQ0gjREk-oyoy6ny-RnwrDqt9jT" id="id_captcha" data-widget-uuid="872b00da00fd4ea1b35e549423e9af80" data-callback="onSubmit_872b00da00fd4ea1b35e549423e9af80" data-size="normal"
+>
+</div></div>
+                                    
+                                    <div class="alert alert-danger fade mt-5" role="alert" id="person_proof_errors">
+                                    </div>
+                                    <div id="proof_progress_bar" class="not-visible"></div>
+                                    <button type="submit" class="add-person-proof-submit"
+                                            onclick="ym(11022841,'reachGoal','personproof')">Опубликовать</button>
+                                    <button type="button" class="add-person-proof-cancel" data-dismiss="modal"
+                                            id="person_proof_cancel">Закрыть</button>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+
+            
+                <table class="person-events person-new__table">
+                    <thead>
+                        <tr>
+                            <th>Событие</th>
+                            <th>Должность</th>
+                            <th>Офис</th>
+                            <th>Источник</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    
+                        <tr id="event-29223">
+                            <td class="person-events-title">
+                                <div class="person-new__title person-events-title-element">
+                                    Избрание 2021
+                                </div>
+                                
+                                
+                                    <div class="declaration_type">VIII созыв  Государственной Думы РФ</div>
+                                
+                            </td>
+                            <td class="person">
+                                <div class="declaration_type">
+                                    Депутат фракции Новые люди
+                                </div>
+                            </td>
+                            <td class="person">
+                                <div class="declaration_type">
+                                    
+                                        <a href="/office/14">
+                                            Государственная Дума
+                                        </a>
+                                    
+                                </div>
+                            </td>
+                            <td class="person">
+                                <div class="show_person_details">
+                                    
+                                        <a href="https://ru.wikipedia.org/wiki/Даванков,_Владислав_Андреевич" target="_blank">
+                                            Перейти
+                                        </a>
+                                    
+                                </div>
+                            </td>
+                        </tr>
+                    
+                    </tbody>
+                </table>
+            
+
+            <div id="charts" class="person-new__charts" style="display:none">
+                <div id="charts-toolbar" style="display:none">
+                    <div class="dropdown pull-left">
+                        <button class="btn btn-success dropdown-toggle btn-space person-new__button1" type="button"
+                                id="add-menu"
+                                data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="true">
+                            <span>Сравнить</span>
+                        </button>
+                        <div class="dropdown-menu" id="add_to_comparison_menu" style="padding: 5px">
+                            <input id="add_to_comparison_text" type="text" class="search form-control"
+                                   placeholder="Поиск">
+                            <ul id="add_to_comparison_items" class="list list-group">
+                            </ul>
+                        </div>
+                    </div>
+                    <a class="pull-left" href="/person/399390/charts/">
+                        <button class="btn btn-info btn-space person-new__button1" type="button">
+                            На отдельной странице
+                        </button>
+                    </a>
+                    <button class="btn btn-danger btn-space person-new__button1" style="display:none" type="button"
+                            id="removeAddedPersons">
+                        Очистить
+                    </button>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-4 person-new__chart">
+                        <canvas id="income" height="220px" style="display:none"></canvas>
+                    </div>
+                    <div class="col-xs-4 person-new__chart">
+                        <canvas id="realestate" height="220px" style="display:none"></canvas>
+                    </div>
+                    <div class="col-xs-4 person-new__chart">
+                        <canvas id="vehicles" height="220px" style="display:none"></canvas>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        
+
+            
+            
+            <table class="person-table-with-banner document_transcription person-new__table">
+                <tr>
+                    <th>
+                        <a href="https://rosdek.org/people/davankov_vladislav_andreevich" style="color: #9b9b9b;" target="_blank">
+                            Декларация,
+                        </a>
+                        статус, учреждение
+                    </th>
+                    <th>Доход, руб.</th>
+                    <th>Недвижимость, м<sup>2</sup></th>
+                    <th>Транспорт, шт.</th>
+                    <th></th>
+                    
+                </tr>
+
+                
+                
+                
+                
+                    
+
+
+
+
+
+
+<tr
+    
+    
+    id="id-section_summary-68094877"
+>
+
+    <td class="person">
+        <a name="section68094877"></a>
+
+        
+        <div class="declaration_type">
+            <a href="/section/68094877/" class="person-new__title">
+                Предвыборная декларация 2023
+            </a>
+            
+                <span class="tooltip-text section_verified_icon"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      data-title="Проверено модератором">
+                        <img src="/static/img/main/tick.png"/>
+                    </span>
+            
+        </div>
+
+        
+        <div>
+            <span class="person-new__text">Кандидат на должность президента РФ </span>
+        </div>
+
+        
+        <div class="office person-new__link">
+            <a href="/office/449">
+                Президент Российской Федерации
+            </a>
+        </div>
+
+        
+        
+            <div class="party">
+                Партия: Новые люди
+            </div>
+        
+
+        
+        <div class="show_details">
+            <span sectionReady="0" idSection="68094877"
+                  class="show_person_details">Показать подробности</span>
+        </div>
+    </td>
+    
+        
+
+
+
+
+
+  <td class="income person-new__title">
+  	 
+	 <div class="tooltip_text">
+		 76 915 250 руб.
+		 
+		 <span class="tooltip-icon"
+		    data-toggle="tooltip"
+		    data-placement="top"
+		    data-title="Годовой доход должностного лица из всех источников, задекларированный в официальном порядке.">
+		 </span>
+		 
+	 </div>
+  </td>
+
+
+
+
+    <td class="real_estate">
+    	
+        <div class="total_square person-new__title tooltip_text">
+			3 695 м2.
+			
+			<span class="tooltip-icon"
+	        	data-toggle="tooltip"
+		    	data-placement="top"
+		    	data-title="<p>Совокупная площадь задекларированной&nbsp;<br />
+недвижимости в собственности,&nbsp;включая&nbsp;<br />
+объекты с долевым участием.</p>"></span>
+	        
+		</div>
+    </td>
+
+
+
+
+    <td class="vehicles">
+		
+    	<div class="total_count person-new__title">
+    		2 шт.
+			
+			<span class="tooltip-icon"
+	        	data-toggle="tooltip"
+		    	data-placement="top"
+		    	data-title="Количество транспортных средств разного типа, упомянутых в данной декларации."></span>
+				  
+    	</div> 
+    </td>
+
+
+
+<td>
+    <div class="show_details verify_section">
+        <span class="tooltip-text section_verified_icon"
+              data-toggle="tooltip"
+              data-placement="top"
+              data-title="Сообщить об ошибке">
+            <i class="fas fa-exclamation-triangle fa-lg section-alert section_alert_message"
+               data-section="68094877"></i>
+        </span>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    
+</td>
+
+    
+</tr>
+<tr class="section_detailed" id="id-section_detailed-68094877">
+
+    <td>
+        <div class="show_details">
+            <span onClick="$('#id-section_detailed-68094877').hide(200)">Скрыть подробности</span>
+        </div>
+
+        
+    </td>
+
+    <td id="id-repalce_person_section_properties-68094877"
+        colspan="5">
+
+    </td>
+
+</tr>
+ 
+                    
+                    
+                
+                    
+
+
+
+
+
+
+<tr
+     class="even"
+    
+    id="id-section_summary-68082595"
+>
+
+    <td class="person">
+        <a name="section68082595"></a>
+
+        
+        <div class="declaration_type">
+            <a href="/section/68082595/" class="person-new__title">
+                Предвыборная декларация 2022
+            </a>
+            
+                <span class="tooltip-text section_verified_icon"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      data-title="Проверено модератором">
+                        <img src="/static/img/main/tick.png"/>
+                    </span>
+            
+        </div>
+
+        
+        <div>
+            <span class="person-new__text">Кандидат на должность главы региона (Новые люди) </span>
+        </div>
+
+        
+        <div class="office person-new__link">
+            <a href="/office/258">
+                Мэр города Москвы
+            </a>
+        </div>
+
+        
+        
+
+        
+        <div class="show_details">
+            <span sectionReady="0" idSection="68082595"
+                  class="show_person_details">Показать подробности</span>
+        </div>
+    </td>
+    
+        
+
+
+
+
+
+  <td class="income person-new__title">
+  	 
+	 <div class="tooltip_text">
+		 9 622 304 руб.
+		 
+		 <span class="tooltip-icon"
+		    data-toggle="tooltip"
+		    data-placement="top"
+		    data-title="Годовой доход должностного лица из всех источников, задекларированный в официальном порядке.">
+		 </span>
+		 
+	 </div>
+  </td>
+
+
+
+
+    <td class="real_estate">
+    	
+        <div class="total_square person-new__title tooltip_text">
+			3 695 м2.
+			
+			<span class="tooltip-icon"
+	        	data-toggle="tooltip"
+		    	data-placement="top"
+		    	data-title="<p>Совокупная площадь задекларированной&nbsp;<br />
+недвижимости в собственности,&nbsp;включая&nbsp;<br />
+объекты с долевым участием.</p>"></span>
+	        
+		</div>
+    </td>
+
+
+
+
+    <td class="vehicles">
+		
+    	<div class="total_count person-new__title">
+    		2 шт.
+			
+			<span class="tooltip-icon"
+	        	data-toggle="tooltip"
+		    	data-placement="top"
+		    	data-title="Количество транспортных средств разного типа, упомянутых в данной декларации."></span>
+				  
+    	</div> 
+    </td>
+
+
+
+<td>
+    <div class="show_details verify_section">
+        <span class="tooltip-text section_verified_icon"
+              data-toggle="tooltip"
+              data-placement="top"
+              data-title="Сообщить об ошибке">
+            <i class="fas fa-exclamation-triangle fa-lg section-alert section_alert_message"
+               data-section="68082595"></i>
+        </span>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    
+</td>
+
+    
+</tr>
+<tr class="section_detailed" id="id-section_detailed-68082595">
+
+    <td>
+        <div class="show_details">
+            <span onClick="$('#id-section_detailed-68082595').hide(200)">Скрыть подробности</span>
+        </div>
+
+        
+    </td>
+
+    <td id="id-repalce_person_section_properties-68082595"
+        colspan="5">
+
+    </td>
+
+</tr>
+ 
+                    
+                    
+                
+                    
+
+
+
+
+
+
+<tr
+    
+    
+    id="id-section_summary-22194776"
+>
+
+    <td class="person">
+        <a name="section22194776"></a>
+
+        
+        <div class="declaration_type">
+            <a href="/section/22194776/" class="person-new__title">
+                Антикоррупционная декларация 2021
+            </a>
+            
+                <span class="tooltip-text section_verified_icon"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      data-title="Проверено модератором">
+                        <img src="/static/img/main/tick.png"/>
+                    </span>
+            
+        </div>
+
+        
+        <div>
+            <span class="person-new__text">Депутат государственной думы, заместитель председателя ГД (Новые люди) </span>
+        </div>
+
+        
+        <div class="office person-new__link">
+            <a href="/office/14">
+                Государственная Дума
+            </a>
+        </div>
+
+        
+        
+
+        
+        <div class="show_details">
+            <span sectionReady="0" idSection="22194776"
+                  class="show_person_details">Показать подробности</span>
+        </div>
+    </td>
+    
+        
+
+
+
+
+
+  <td class="income person-new__title">
+  	 
+	 <div class="tooltip_text">
+		 5 088 795 руб.
+		 
+		 <span class="tooltip-icon"
+		    data-toggle="tooltip"
+		    data-placement="top"
+		    data-title="Годовой доход должностного лица из всех источников, задекларированный в официальном порядке.">
+		 </span>
+		 
+	 </div>
+  </td>
+
+
+
+
+    <td class="real_estate">
+    	
+        <div class="total_square person-new__title tooltip_text">
+			3 695 м2.
+			
+			<span class="tooltip-icon"
+	        	data-toggle="tooltip"
+		    	data-placement="top"
+		    	data-title="<p>Совокупная площадь задекларированной&nbsp;<br />
+недвижимости в собственности,&nbsp;включая&nbsp;<br />
+объекты с долевым участием.</p>"></span>
+	        
+		</div>
+    </td>
+
+
+
+
+    <td class="vehicles">
+		
+    	<div class="total_count person-new__title">
+    		2 шт.
+			
+			<span class="tooltip-icon"
+	        	data-toggle="tooltip"
+		    	data-placement="top"
+		    	data-title="Количество транспортных средств разного типа, упомянутых в данной декларации."></span>
+				  
+    	</div> 
+    </td>
+
+
+
+<td>
+    <div class="show_details verify_section">
+        <span class="tooltip-text section_verified_icon"
+              data-toggle="tooltip"
+              data-placement="top"
+              data-title="Сообщить об ошибке">
+            <i class="fas fa-exclamation-triangle fa-lg section-alert section_alert_message"
+               data-section="22194776"></i>
+        </span>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    
+</td>
+
+    
+</tr>
+<tr class="section_detailed" id="id-section_detailed-22194776">
+
+    <td>
+        <div class="show_details">
+            <span onClick="$('#id-section_detailed-22194776').hide(200)">Скрыть подробности</span>
+        </div>
+
+        
+    </td>
+
+    <td id="id-repalce_person_section_properties-22194776"
+        colspan="5">
+
+    </td>
+
+</tr>
+ 
+                    
+                    
+                
+                    
+
+
+
+
+
+
+<tr
+     class="even"
+    
+    id="id-section_summary-19366930"
+>
+
+    <td class="person">
+        <a name="section19366930"></a>
+
+        
+        <div class="declaration_type">
+            <a href="/section/19366930/" class="person-new__title">
+                Предвыборная декларация 2020
+            </a>
+            
+        </div>
+
+        
+        <div>
+            <span class="person-new__text"> </span>
+        </div>
+
+        
+        <div class="office person-new__link">
+            <a href="/office/14">
+                Государственная Дума
+            </a>
+        </div>
+
+        
+        
+
+        
+        <div class="show_details">
+            <span sectionReady="0" idSection="19366930"
+                  class="show_person_details">Показать подробности</span>
+        </div>
+    </td>
+    
+        
+
+
+
+
+
+  <td class="income person-new__title">
+  	 
+	 <div class="tooltip_text">
+		 5 970 564 руб.
+		 
+		 <span class="tooltip-icon"
+		    data-toggle="tooltip"
+		    data-placement="top"
+		    data-title="Годовой доход должностного лица из всех источников, задекларированный в официальном порядке.">
+		 </span>
+		 
+	 </div>
+  </td>
+
+
+
+
+    <td class="real_estate">
+    	
+        <div class="total_square person-new__title tooltip_text">
+			3 695 м2.
+			
+			<span class="tooltip-icon"
+	        	data-toggle="tooltip"
+		    	data-placement="top"
+		    	data-title="<p>Совокупная площадь задекларированной&nbsp;<br />
+недвижимости в собственности,&nbsp;включая&nbsp;<br />
+объекты с долевым участием.</p>"></span>
+	        
+		</div>
+    </td>
+
+
+
+
+    <td class="vehicles">
+		
+    	<div class="total_count person-new__title">
+    		1 шт.
+			
+			<span class="tooltip-icon"
+	        	data-toggle="tooltip"
+		    	data-placement="top"
+		    	data-title="Количество транспортных средств разного типа, упомянутых в данной декларации."></span>
+				  
+    	</div> 
+    </td>
+
+
+
+<td>
+    <div class="show_details verify_section">
+        <span class="tooltip-text section_verified_icon"
+              data-toggle="tooltip"
+              data-placement="top"
+              data-title="Сообщить об ошибке">
+            <i class="fas fa-exclamation-triangle fa-lg section-alert section_alert_message"
+               data-section="19366930"></i>
+        </span>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    
+</td>
+
+    
+</tr>
+<tr class="section_detailed" id="id-section_detailed-19366930">
+
+    <td>
+        <div class="show_details">
+            <span onClick="$('#id-section_detailed-19366930').hide(200)">Скрыть подробности</span>
+        </div>
+
+        
+    </td>
+
+    <td id="id-repalce_person_section_properties-19366930"
+        colspan="5">
+
+    </td>
+
+</tr>
+ 
+                    
+                    
+                
+
+            </table>
+
+            
+
+            
+
+            <div class="page_body person-second-banner">
+                <p><a href="https://t.me/declarator_org/12" target="_blank"><img alt="" src="/media/uploads/lulululu/2025/01/14/ban_car_25_70a993ea60c34d8c96999ec8055f1c2d.png" style="height:57px; width:983px" /></a></p>
+
+<p>&nbsp;</p>
+            </div>
+
+            <div class="form-group table-bottom-buttons">
+            <div>
+                
+                    <a class="btn btn-default person-new__button2 tooltips_download_person_csv_report"
+                       onclick="yaCounter11022841.reachGoal('person_csv_report')" data-toggle="tooltip"
+                       data-placement="bottom" data-title="Выгружать данные могут только авторизованные пользователи. Если вам нужен отчет в виде таблицы, зарегистрируйтесь или авторизуйтесь в сервисе."
+                       data-trigger="click">
+                        Скачать все данные в таблице
+                    </a>
+                
+                <div class="share-person">
+                    <button class="btn btn-default person-new__button2" href="javascript:void(0);"
+                            onclick="$(this).next().toggleClass('share-person__info_hidden');">Поделиться</button>
+                    <div class="share-person__info share-person__info_hidden">
+                        <p class="share-person__help">Вы можете добавить данный код Вашу страницу:</p>
+                        <div class="share-person__copy">
+                            &lt;iframe width="800" height="800" type="text/html"
+                            allowfullscreen="allowfullscreen"
+                            webkitallowfullscreen="webkitallowfullscreen"
+                            mozallowfullscreen="mozallowfullscreen"
+                            src="https://declarator.org/person/399390/?share=true"&gt;
+                            &lt;/iframe&gt;
+                        </div>
+                        <button href="javascript:void(0);" class="btn btn-default"
+                                id="copy">Скопировать</button>
+                    </div>
+                </div>
+
+                
+                <div class="modal fade" id="person_alert_modal" role="dialog">
+                    <div class="modal-dialog">
+
+                        
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Сообщите об ошибке</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="select_of_errors">Что случилось:</label>
+                                    <select class="form-control" id="select_of_errors">
+                                        <option id="list_of_errors"></option>
+                                    </select>
+                                    <label for="description_of_error">Описание проблемы:</label>
+                                    <textarea class="form-control" name="" id="description_of_error" maxlength="2000"
+                                              style="width: 568px; height: 170px"></textarea>
+                                </div>
+                                <div class="alert alert-danger fade mt-5" role="alert" id="person_alert_errors"></div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary send_error_alert"
+                                        onclick="ym(11022841,'reachGoal','error-report')">Отправить</button>
+                                <button type="button" class="btn btn-default"
+                                        data-dismiss="modal">Закрыть</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                
+                <div class="modal fade" id="person_complaint_modal" role="dialog">
+                    <div class="modal-dialog">
+                        
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Сообщение о коррупции</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="description_of_complaint">
+                                        Суть нарушения <span style="color: red">*</span>:
+                                    </label>
+                                    <textarea class="form-control" name="" id="description_of_complaint" maxlength="2000"
+                                              style="width: 568px; height: 110px" placeholder="Если у вас есть подтверждающие документы, загрузите их в любое облачное хранилище (например, на гуглдиск), откройте к ним доступ по ссылке и добавьте ссылку в текст"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="links_of_complaint">Ссылки на публикации:</label>
+                                    <textarea class="form-control" name="" id="links_of_complaint" maxlength="2000"
+                                              style="width: 568px; height: 110px" placeholder="Если в СМИ есть публикации, относящееся к сути вашего сообщения, укажите их"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contacts_of_complaint">Как с вами связаться?:</label>
+                                    <textarea class="form-control" name="" id="contacts_of_complaint" maxlength="2000"
+                                              style="width: 568px; height: 50px" placeholder="Это может потребоваться для уточнения информации. Например, ваш email или профиль в Телеграме"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="personal_data_agreement">
+                                        Соглашаюсь на обработку своих персональных данных <span style="color: red">*</span>:
+                                    </label>
+                                    <input type="checkbox" id="personal_data_agreement" name="personal_data_agreement" />
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button id="send_person_complaint" type="button" class="btn btn-primary" disabled="disabled">
+                                    Отправить
+                                </button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">
+                                    Закрыть
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="modal fade" id="section_alert_modal" role="dialog">
+                    <div class="modal-dialog">
+
+                        
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Сообщите об ошибке</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <input type="hidden" id="section_id">
+                                    <label for="select_of_section_errors">Что случилось:</label>
+                                    <select class="form-control" id="select_of_section_errors">
+                                        <option id="list_of_section_errors"></option>
+                                    </select>
+                                    <label for="description_of_section_error">Описание проблемы:</label>
+                                    <textarea class="form-control" name="" id="description_of_section_error"
+                                              maxlength="2000"
+                                              style="width: 568px; height: 170px"></textarea>
+                                </div>
+                                <div class="alert alert-danger fade mt-5" role="alert" id="section_alert_errors"></div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary send_section_error_alert"
+                                        onclick="ym(11022841,'reachGoal','sectionerror')">Отправить</button>
+                                <button type="button" class="btn btn-default"
+                                        data-dismiss="modal">Закрыть</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        
+
+        <div class="form-group person-comments">
+            <form action="/person/399390/add_comment" method="POST" id="person_add_comment">
+                <label for="addPersonComment">
+                    Добавить комментарий 
+                    <a href="https://rosdek.org/people/davankov_vladislav_andreevich" style="color: #333;" target="_blank">
+                        к персоне
+                    </a>
+                </label>
+                <br>
+                <br>
+                <link href="/static/ckeditor/ckeditor.css" media="all" rel="stylesheet">
+<script src="/static/ckeditor/ckeditor-init.js" data-ckeditor-basepath="/static/ckeditor/ckeditor/" id="ckeditor-init-script"></script>
+<script src="/static/ckeditor/ckeditor/ckeditor.js"></script>
+<script src="/static/ckeditor/fixups.js"></script>
+                <div class="django-ckeditor-widget" data-field-id="id_body" style="display: inline-block;">
+    <textarea name="body" cols="40" rows="10" required id="id_body" data-processed="0" data-config="{&quot;skin&quot;: &quot;moono-lisa&quot;, &quot;toolbar_Basic&quot;: [[&quot;Source&quot;, &quot;-&quot;, &quot;Bold&quot;, &quot;Italic&quot;]], &quot;toolbar_Full&quot;: [[&quot;Styles&quot;, &quot;Format&quot;, &quot;Bold&quot;, &quot;Italic&quot;, &quot;Underline&quot;, &quot;Strike&quot;, &quot;SpellChecker&quot;, &quot;Undo&quot;, &quot;Redo&quot;], [&quot;Link&quot;, &quot;Unlink&quot;, &quot;Anchor&quot;], [&quot;Image&quot;, &quot;Flash&quot;, &quot;Table&quot;, &quot;HorizontalRule&quot;], [&quot;TextColor&quot;, &quot;BGColor&quot;], [&quot;Smiley&quot;, &quot;SpecialChar&quot;], [&quot;Source&quot;]], &quot;toolbar&quot;: [[&quot;Cut&quot;, &quot;Copy&quot;, &quot;Paste&quot;, &quot;-&quot;, &quot;Undo&quot;, &quot;Redo&quot;], [&quot;Bold&quot;, &quot;Italic&quot;, &quot;Strike&quot;, &quot;-&quot;, &quot;Link&quot;, &quot;Unlink&quot;], [&quot;Iframe&quot;], [&quot;Preview&quot;, &quot;Maximize&quot;], [&quot;Sourcedialog&quot;]], &quot;height&quot;: 150, &quot;width&quot;: &quot;auto&quot;, &quot;filebrowserWindowWidth&quot;: 940, &quot;filebrowserWindowHeight&quot;: 725, &quot;extraPlugins&quot;: &quot;uploadimage,sourcedialog&quot;, &quot;extraAllowedContent&quot;: &quot;iframe&quot;, &quot;toolbarCanCollapse&quot;: false, &quot;autoParagraph&quot;: false, &quot;language&quot;: &quot;ru&quot;, &quot;versionCheck&quot;: false}" data-external-plugin-resources="[]" data-id="id_body" data-type="ckeditortype"></textarea>
+</div>
+                <br>
+                
+                    <div class="captcha"><script src="https://www.google.com/recaptcha/api.js"></script>
+<script>
+    // Submit function to be called, after reCAPTCHA was successful.
+    var onSubmit_29cf65f56d5a4bd1a6da74d8e504ce91 = function(token) {
+        console.log("reCAPTCHA validated for 'data-widget-uuid=\"29cf65f56d5a4bd1a6da74d8e504ce91\"'")
+    };
+</script>
+
+<div
+     class="g-recaptcha" data-sitekey="6Lcwe_cZAAAAABQ0gjREk-oyoy6ny-RnwrDqt9jT" id="id_captcha" data-widget-uuid="29cf65f56d5a4bd1a6da74d8e504ce91" data-callback="onSubmit_29cf65f56d5a4bd1a6da74d8e504ce91" data-size="normal"
+>
+</div></div>
+                
+                <div class="alert alert-success hidden" role="alert" id="add_comment_success"></div>
+                <div class="alert alert-danger hidden" role="alert" id="add_comment_errors"></div>
+                <button type="submit" class="btn btn-default person-new__button2" style="margin-top: 10px"
+                        onclick="yaCounter11022841.reachGoal('add-person-text')">
+                    Добавить
+                </button>
+                
+                    <h4 class="person-comments">Комментарии:</h4>
+                    <ul class="list-group" id="person_comments">
+                        
+                            <li class="list-group-item" style="margin-top: 5px">
+                            <span style="opacity: 0.5">
+                                19.01.2024
+                                
+                            </span>
+                                <div id="person_comment_1437">
+                                    
+                                        Один лишь вопрос, после дохода в &nbsp;77миллионов в год, научите, как себе ни в чем себе не отказывать на 12609₽ &nbsp;пенсиона в месяц?!!
+                                    
+                                </div>
+                            </li>
+                        
+                            <li class="list-group-item" style="margin-top: 5px">
+                            <span style="opacity: 0.5">
+                                29.02.2024
+                                
+                            </span>
+                                <div id="person_comment_2518">
+                                    
+                                        6 млн в месяц , нормальный доход. Нет денег но вы держитесь!!!
+                                    
+                                </div>
+                            </li>
+                        
+                    </ul>
+                
+            </form>
+        </div>
+    </div>
+
+    <div class="js-modal" id="personUserListsModal">
+        <div class="js-modal-content modal-person-user-lists">
+            <span class="close" id="personUserListsClose">&times;</span>
+            <h3 class="user-modal-header">Персона входит в списки</h3>
+            <div class="js-modal-body">
+                <table class="person-user-lists-table">
+                    <thead>
+                    <tr class="user-lists-table-row">
+                        <th class="name-column">Список</th>
+                        <th class="user-column">Автор</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    
+                        <tr class="user-lists-table-row">
+                            <td>
+                                <a target="_blank" href="/lists/60">
+                                    Выпускники МГУ
+                                </a>
+                            </td>
+                            <td>Andrew.J</td>
+                        </tr>
+                    
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="js-modal" id="userListAddPersonModal">
+        <div class="js-modal-content modal-add-person" id="userListAddPersonModalContent">
+            <span class="close" id="userListAddPersonClose">&times;</span>
+            <h3 class="add-person-modal-header">Добавить в список</h3>
+            <input class="search-user-list-input" type="search" placeholder="Поиск списка" required=""
+                   id="searchUserListInput" name="name" autocomplete="off">
+            <div class="add-person-modal-user-lists">
+                <table class="user-lists-modal-table" id="userLists"></table>
+            </div>
+            <div class="collapse" id="collapseCreateUserList">
+                <div class="create-user-list-form">
+                    <input class="create-user-list-input" type="text" name="name" maxlength="50" required=""
+                           id="userListName" placeholder="Название нового списка">
+                    <button type="submit" class="user-button user-filled-button submit-add-user-button"
+                            onclick="userListCreate()">Создать и добавить
+                    </button>
+                </div>
+            </div>
+            <a class="user-list-create-button" data-toggle="collapse" data-target="#collapseCreateUserList"
+               aria-expanded="true" aria-controls="collapseCreateUserList">
+                + Создать новый список
+            </a>
+        </div>
+    </div>
+
+
+<div class="footer">
+  <div class="content">
+
+
+
+
+
+    <div class="decl-copyright">
+      <p>&copy; 2011&mdash;2026</p>
+      <p>
+          
+      </p>
+      <p>
+        По всем вопросам: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="96fbf7fffad6f2f3f5faf7e4f7e2f9e4b8f9e4f1">[email&#160;protected]</a>
+      </p>
+    </div>
+
+
+
+ 
+    <div class="disclaimer">
+        <a href="/opendata/">Открытые данные</a>
+        <p>Сведения, представленные на сайте, собраны из открытых<br />
+источников и <a href="https://declarator.org/about/disclaimer/">носят справочный характер</a>.</p>
+
+<p><a href="https://declarator.org/about/partners/">Партнеры Декларатора</a></p>
+    </div>
+  </div>
+</div>
+
+
+
+  <div class="modal fade" tabindex="-1" role="dialog" id="modal">
+      <div class="modal-dialog" role="document">
+          <div class="fire-modal-content"></div>
+      </div>
+  </div>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="/static/js/jquery.bootstrap.modal.forms.min.js"></script>
+
+  <script type="text/javascript">
+    $(function () {
+
+      $(".fire-popup").modalForm({
+        formURL: "/subscription_popup/?next=/person/399390/",
+        modalContent: ".fire-modal-content",
+      });
+
+    
+    
+    
+    
+    
+
+    });
+  </script>
+
+
+<button class="fire-popup" type="button" name="button" style="display:none;" ></button>
+
+<script>
+    function fadein(el) {
+        el.style.display = 'block';
+        el.classList.remove('fadeout');
+    }
+
+    function fadeout(el) {
+        setTimeout(function() {
+            el.style.display = "none";
+        }, 400);
+        el.classList.add('fadeout');
+    }
+</script>
+
+
+    <script>
+        $(document).ready(function () {
+            let showChar = 1000;
+            let ellipsestext = "...";
+            let moretext = "Показать >";
+            let lesstext = "Скрыть";
+
+            $('.person-comment').each(function () {
+                let content = $(this).html().trim();
+                if (content.length > showChar) {
+                    let c = content.substr(0, showChar);
+                    let h = content.substr(showChar, content.length - showChar);
+                    let html = c + '<span class="moreellipses">' + ellipsestext + '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
+                    $(this).html(html);
+                }
+            });
+
+            $(".morelink").click(function () {
+                if ($(this).hasClass("less")) {
+                    $(this).removeClass("less");
+                    $(this).html(moretext);
+                } else {
+                    $(this).addClass("less");
+                    $(this).html(lesstext);
+                }
+                $(this).parent().prev().toggle();
+                $(this).prev().toggle();
+                return false;
+            });
+        });
+    </script>
+
+    <script>
+        function addPersonToSubscription() {
+            let data = {};
+            data.person_pk = personId;
+            data.user_pk = '';
+            $.ajax({
+                type: 'POST',
+                url: "/accounts/create_person_subscription/",
+                data: data,
+                beforeSend: function (xhr) {
+                    xhr.setRequestHeader("X-CSRFToken", 'K1G6cKBje5QcNv72P8vpHJunrNrzG7v7LKA3Kz4sNvRzCY480G25WEslUItV7uky');
+                },
+                success: function (data) {
+                    $('#person_success_messages').empty().append(data.message).removeClass('hidden');
+                    setTimeout(() => {
+                        $('#person_success_messages').empty().addClass('hidden');
+                    }, 3000);
+                },
+                error: function (data) {
+                    $('#person_error_messages').empty()
+                    Object.values(data.responseJSON.errors).forEach(function (e) {
+                        $('#person_error_messages').append(`<div>${e}</div>`);
+                    })
+                    $('#person_error_messages').removeClass('hidden');
+                    setTimeout(() => {
+                        $('#person_error_messages').empty().addClass('hidden');
+                    }, 3000);
+                }
+            });
+        }
+    </script>
+
+    <script>
+        let personUserListsModal = document.getElementById("personUserListsModal");
+        let userListAddPersonModal = document.getElementById("userListAddPersonModal");
+
+        document.getElementById("personUserListsButton").onclick = function () {
+            fadein(personUserListsModal);
+        }
+        document.getElementById("personUserListsClose").onclick = function () {
+            fadeout(personUserListsModal);
+        }
+
+        document.getElementById("userListAddPersonButton").onclick = function () {
+            fadein(userListAddPersonModal);
+        }
+        document.getElementById("userListAddPersonClose").onclick = function () {
+            fadeout(userListAddPersonModal);
+        }
+
+        window.onclick = function (event) {
+            if ([personUserListsModal, userListAddPersonModal].includes(event.target)) {
+                fadeout(event.target);
+            }
+        }
+    </script>
+
+    <script>
+        function userListAddPerson(person_pk, user_list_pk) {
+            let data = {};
+            data.user_list_pk = user_list_pk;
+            data.person_pk = person_pk;
+            $.ajax({
+                type: 'POST',
+                url: "/management/user_lists/add_person",
+                data: data,
+                beforeSend: function (xhr) {
+                    xhr.setRequestHeader("X-CSRFToken", 'K1G6cKBje5QcNv72P8vpHJunrNrzG7v7LKA3Kz4sNvRzCY480G25WEslUItV7uky');
+                },
+                success: function (data) {
+                    fadeout(userListAddPersonModal);
+                    $('#person_success_messages').empty().append(data.message).removeClass('hidden');
+                    setTimeout(() => {
+                        $('#person_success_messages').empty().addClass('hidden');
+                        location.reload();
+                    }, 3000);
+                }
+            });
+        }
+    </script>
+
+    <script>
+        function userListCreate(e) {
+            let data = {};
+            data.name = $('#userListName').val();
+            data.person_id = personId;
+            $.ajax({
+                type: 'POST',
+                url: "/management/user_lists/create_user_list_add_person",
+                data: data,
+                beforeSend: function (xhr) {
+                    xhr.setRequestHeader("X-CSRFToken", 'K1G6cKBje5QcNv72P8vpHJunrNrzG7v7LKA3Kz4sNvRzCY480G25WEslUItV7uky');
+                },
+                success: function (data) {
+                    fadeout(userListAddPersonModal);
+                    $('#person_success_messages').empty().append(data.message).removeClass('hidden');
+                    setTimeout(() => {
+                        $('#person_success_messages').empty().addClass('hidden');
+                        location.reload();
+                    }, 3000);
+                }
+            });
+        }
+    </script>
+
+    <script>
+        let currentRequest = null;
+        document.getElementById('searchUserListInput').oninput = function () {
+            let data = {};
+            data.search = this.value;
+            currentRequest = $.ajax({
+                type: 'GET',
+                url: "/person/399390/filtered_user_lists",
+                data: data,
+                beforeSend: function () {
+                    if (currentRequest != null) {
+                        currentRequest.abort();
+                    }
+                },
+                success: function (data) {
+                    const personId = '399390';
+                    let userLists = data.user_lists;
+                    let userListsWrapper = $('#userLists');
+                    userListsWrapper.empty();
+                    if (userLists) {
+                        userLists.forEach(function (userList) {
+                            let info = '';
+                            info = `<div><p class="user-lists-item">${userList.name}</p></div>`;
+                            let button;
+                            button = `<button class="user-button user-filled-button" onclick="userListAddPerson(${personId}, ${userList.id})">Добавить</button>`
+                            userListsWrapper.append(`<tr><td class="modal-table-info">${info}</td><td class="modal-table-button" align="right">${button}</td></tr>`)
+                        });
+                    }
+                },
+            });
+        }
+    </script>
+
+    
+
+
+
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9f6b28ed6a1c9d94',t:'MTc3NzkzNjAyNw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
