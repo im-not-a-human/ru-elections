@@ -36,6 +36,10 @@ window.openLawModal = function (lawId) {
           }).join('')}
         </div>
         ${law.voteResults ? `<p style="font-size:13px; color:var(--ink-muted); margin-top:14px;" class="mono">Итог III чтения: за ${law.voteResults.za} · против ${law.voteResults.against} · возд. ${law.voteResults.abstain}</p>` : ''}
+        ${(window.VOTE_MAPPING && window.VOTE_MAPPING[law.id]) ? `
+          <button type="button" class="modal-deputy-btn" data-law-id="${law.id}">
+            Посмотреть поимённо →
+          </button>` : ''}
       </div>
 
       <div class="modal-section">
@@ -74,5 +78,9 @@ window.openLawModal = function (lawId) {
       </div>
     </div>
   `;
+  const deputyBtn = content.querySelector('.modal-deputy-btn');
+  if (deputyBtn) deputyBtn.addEventListener('click', () => {
+    if (typeof window.openDeputyPanel === 'function') window.openDeputyPanel(deputyBtn.dataset.lawId);
+  });
   openModal();
 };

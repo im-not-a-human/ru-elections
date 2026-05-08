@@ -16,3 +16,6 @@ feedback-worker/.wrangler/
 # Legacy nested ignores kept for safety
 research/compromat/.superpowers/
 .superpowers/.claude/
+
+# Secrets
+.env

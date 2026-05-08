@@ -41,6 +41,35 @@
   --vote-absent: #D6D3D1;
   --vote-absent-bg: #F5F4F1;
 
+  /* Deputy panel — литеральные цвета голоса депутата (не путать с --vote-* выше,
+     где семантика обратная: «против репрессивного закона» = зелёный). */
+  --deputy-for:        #2A8B3E;
+  --deputy-for-bg:     #E6F1E8;
+  --deputy-against:    #C0392B;
+  --deputy-against-bg: #FAEAE7;
+  --deputy-abstain:    #D89B2D;
+  --deputy-abstain-bg: #FBF1DE;
+  --deputy-absent:     #9B958B;
+  --deputy-absent-bg:  #F0EEEA;
+
+  /* Deputy panel v2 — vertical-stacked redesign (sticky bar + sections).
+     Cream-on-cream palette, separate from --deputy-* above. */
+  --dp-bg:           #F2EBD8;
+  --dp-bg-tinted:    #E8DFC4;
+  --dp-bg-search:    #F2EBD8;
+  --dp-ink:          #2C2620;
+  --dp-ink-muted:    #6B5F4A;
+  --dp-ink-faded:    #9A8C72;
+  --dp-rule:         #B8A87E;
+  --dp-rule-soft:    #D4C99F;
+  --dp-accent:       #8B6F3A;
+  --dp-active-bg:    #2C2620;
+  --dp-active-fg:    #F2EBD8;
+  --dp-vote-for:     #4A7D3A;
+  --dp-vote-against: #C0392B;
+  --dp-vote-abstain: #C77E2D;
+  --dp-vote-absent:  #B8A87E;
+
   --max: 1280px;
 
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
